@@ -1,0 +1,40 @@
+create database dbgraciaschool1;
+
+create table graciauser (
+    userID INT NOT NULL AUTO_INCREMENT,
+    nama_depan VARCHAR(500) NOT NULL,
+    nama_belakang VARCHAR(500),
+    password VARCHAR(500) NOT NULL,
+    gender VARCHAR(50),
+    tanggal_lahir DATE,
+    alamat VARCHAR(500),
+    foto VARCHAR(500),
+    role VARCHAR(50),
+    PRIMARY KEY(userID)
+);
+
+create table kelas (
+    kelasID INT NOT NULL AUTO_INCREMENT,
+    nama_kelas VARCHAR(500) NOT NULL,
+    lokasi VARCHAR(500),
+    PRIMARY KEY(kelasID)
+);
+
+create table mapel (
+    mapelID INT NOT NULL AUTO_INCREMENT,
+    nama_mapel VARCHAR(500) NOT NULL,
+    userID INT,
+    PRIMARY KEY(mapelID),
+    FOREIGN KEY(userid) REFERENCES graciauser(userID)
+);
+
+CREATE TABLE nilai (
+    nilaiID INT NOT NULL AUTO_INCREMENT,
+    userID INT NOT NULL,
+    mapelID INT NOT NULL,
+    nilai DOUBLE,
+    semester VARCHAR(10),
+    PRIMARY KEY(nilaiID),
+    FOREIGN KEY(userID) REFERENCES graciauser(userID),
+    FOREIGN KEY(mapelID) REFERENCES mapel(mapelID)
+);
