@@ -1,0 +1,2 @@
+;
+<?php echo $__env->make('components.navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\Kevin Hadinata\Desktop\WebProg\week8\resources\views/home.blade.php ENDPATH**/ ?>
