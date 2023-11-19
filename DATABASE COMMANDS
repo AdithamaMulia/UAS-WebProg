@@ -1,6 +1,6 @@
 create database dbgraciaschool1;
 
-create table graciauser (
+CREATE TABLE graciauser (
     userID INT NOT NULL AUTO_INCREMENT,
     nama_depan VARCHAR(500) NOT NULL,
     nama_belakang VARCHAR(500),
@@ -9,23 +9,27 @@ create table graciauser (
     tanggal_lahir DATE,
     alamat VARCHAR(500),
     foto VARCHAR(500),
-    role VARCHAR(50),
-    PRIMARY KEY(userID)
+    role ENUM('student', 'teacher', 'admin') NOT NULL,
+    PRIMARY KEY(userID),
+    INDEX idx_nama_depan (nama_depan),
+    INDEX idx_nama_belakang (nama_belakang)
 );
 
-create table kelas (
+CREATE TABLE kelas (
     kelasID INT NOT NULL AUTO_INCREMENT,
     nama_kelas VARCHAR(500) NOT NULL,
     lokasi VARCHAR(500),
-    PRIMARY KEY(kelasID)
+    PRIMARY KEY(kelasID),
+    INDEX idx_nama_kelas (nama_kelas)
 );
 
-create table mapel (
+CREATE TABLE mapel (
     mapelID INT NOT NULL AUTO_INCREMENT,
     nama_mapel VARCHAR(500) NOT NULL,
     userID INT,
     PRIMARY KEY(mapelID),
-    FOREIGN KEY(userid) REFERENCES graciauser(userID)
+    FOREIGN KEY(userID) REFERENCES graciauser(userID),
+    INDEX idx_nama_mapel (nama_mapel)
 );
 
 CREATE TABLE nilai (
@@ -36,5 +40,6 @@ CREATE TABLE nilai (
     semester VARCHAR(10),
     PRIMARY KEY(nilaiID),
     FOREIGN KEY(userID) REFERENCES graciauser(userID),
-    FOREIGN KEY(mapelID) REFERENCES mapel(mapelID)
+    FOREIGN KEY(mapelID) REFERENCES mapel(mapelID),
+    INDEX idx_semester (semester)
 );
