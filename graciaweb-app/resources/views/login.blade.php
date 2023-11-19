@@ -81,9 +81,14 @@
         .btn:hover {
             background-color: #0056b3;
         }
+        .background{
+            background: rgba(0,0,0,0.7) url('../img/sekolah1.jpg');
+            background-size: cover;
+            background-blend-mode: darken;
+        }
     </style>
 </head>
-<body style="background-color: #a4a4a4;">
+<body class="background">
     <div class="card">
         <h2>Login</h2>
         <form>
