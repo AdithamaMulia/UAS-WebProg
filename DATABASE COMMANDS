@@ -19,11 +19,20 @@ CREATE TABLE kelas (
     kelasID INT NOT NULL AUTO_INCREMENT,
     nama_kelas VARCHAR(500) NOT NULL,
     deskripsi VARCHAR(500),
-    lokasi VARCHAR(500),
-    tanggal DATE,
     PRIMARY KEY(kelasID),
     INDEX idx_nama_kelas (nama_kelas)
 );
+
+CREATE TABLE absensi (
+    absenID INT NOT NULL AUTO_INCREMENT,
+    kelasID INT NOT NULL,
+    userID INT NOT NULL,
+    tanggal DATE NOT NULL,
+    keterangan ENUM('Hadir', 'Sakit', 'Izin', 'Tanpa Keterangan') NOT NULL,
+    PRIMARY KEY(absenID),
+    FOREIGN KEY(kelasID) REFERENCES kelas(kelasID),
+    FOREIGN KEY(userID) REFERENCES graciauser(userID),
+)
 
 CREATE TABLE mapel (
     mapelID INT NOT NULL AUTO_INCREMENT,
@@ -38,7 +47,14 @@ CREATE TABLE nilai (
     nilaiID INT NOT NULL AUTO_INCREMENT,
     userID INT NOT NULL,
     mapelID INT NOT NULL,
-    nilai DOUBLE,
+    nilaiT1 DOUBLE,
+    nilaiT2 DOUBLE,
+    nilaiT3 DOUBLE,
+    nilaiUTS DOUBLE,
+    nilaiUAS DOUBLE,
+    nilaiUH1 DOUBLE,
+    nilaiUH2 DOUBLE,
+    nilaiAkhir DOUBLE,
     semester VARCHAR(10),
     PRIMARY KEY(nilaiID),
     FOREIGN KEY(userID) REFERENCES graciauser(userID),
