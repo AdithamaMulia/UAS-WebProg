@@ -4,6 +4,7 @@
     <title>Absen Siswa</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         h1 {
             background: linear-gradient(to right, #1f67bf, #40d6ff);
@@ -29,14 +30,25 @@
             padding: 8px;
             text-align: left;
         }
+        .box-main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 100%;
+            margin: auto;
+            margin-top : 20px;
+            height: 100%;
+        }
     </style>
 </head>
 <body style="background-color: #a4a4a4;">
-<div class="container">
-    <h1>Absensi Siswa</h1>
+@include('navbar')
+<div class="box-main">
     <br />
     <div class="card mb-3" style="width:100%; max-width: 1200px;">
-        <h2 style="padding-left: 15px;">Daftar Siswa</h2>
+        <h2 style="padding-left: 15px; font-size: 30px;">Daftar Siswa</h2>
+        <br />
+        <p style="padding-left: 15px;">Tanggal : </p>
         <div class="card-body">
             <div class="row" style="padding-left: 15px;">
             <?php
@@ -59,9 +71,10 @@
                         <td style="width: 250px;">No. Induk</td>
                         <td style="width: 20px; text-align: center;"><input type="checkbox" id="remember" name="remember"></td>
                         <td style="width: 180px;"><select id="dropdown">
-                        <option value="option1">Sakit</option>
-                        <option value="option2">Izin</option>
-                        <option value="option3">Tanpa Keterangan</option>
+                        <option value="hadir">Hadir</option>
+                        <option value="sakit">Sakit</option>
+                        <option value="izin">Izin</option>
+                        <option value="tanpaketerangan">Tanpa Keterangan</option>
                     </select></td>
                     </tr>
                     ';

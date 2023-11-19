@@ -27,6 +27,9 @@
             <li>
                 <a class="hover:text-gray-500" href="{{ url('/enroll-now') }}">Enroll Now</a>
             </li>
+            <li>
+                <a class="hover:text-gray-500" href="{{ url('/enroll-now') }}">Admin</a>
+            </li>
         </ul>
     </div>
     <div class="flex items-center gap-6">

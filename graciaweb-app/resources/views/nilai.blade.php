@@ -49,6 +49,7 @@
                         <td colspan="3" style="text-align: center;">Nilai Tugas</td>
                         <td style="text-align: center; vertical-align: middle;" rowspan="2">Nilai UTS</td>
                         <td style="text-align: center; vertical-align: middle;" rowspan="2">Nilai UAS</td>
+                        <td style="text-align: center; vertical-align: middle;" rowspan="2">Nilai Akhir</td>
                     </tr>
                     <tr>
                         <td style="max-width: 20px; text-align: center;">1</td>
@@ -65,6 +66,7 @@
                         <td style="max-width: 20px; text-align: center;">2</td>
                         <td style="max-width: 20px; text-align: center;">3</td>
                         <td style="max-width: 20px; text-align: center;">1</td>
+                        <td style="max-width: 20px; text-align: center;">2</td>
                         <td style="max-width: 20px; text-align: center;">2</td>
                     </tr>
                     ';
