@@ -62,7 +62,7 @@
     <div class="box-main">
         <br />
         <div class="card mb-3"  style= "width:100%; max-width: 1400px;">
-            <h2 style="padding-left: 15px; font-size: 24px">Class</h2>
+            <h2 style="padding-left: 15px; font-size: 30px">Class</h2>
             <div class="card-body">
                 <div class="row">
                 <?php
