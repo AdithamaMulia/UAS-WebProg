@@ -1,1 +1,0 @@
-<?php /**PATH C:\xampp\htdocs\Webpro\UAS Webpro\resources\views/posts/test.blade.php ENDPATH**/ ?>
