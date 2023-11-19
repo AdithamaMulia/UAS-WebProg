@@ -18,7 +18,9 @@ CREATE TABLE graciauser (
 CREATE TABLE kelas (
     kelasID INT NOT NULL AUTO_INCREMENT,
     nama_kelas VARCHAR(500) NOT NULL,
+    deskripsi VARCHAR(500),
     lokasi VARCHAR(500),
+    tanggal DATE,
     PRIMARY KEY(kelasID),
     INDEX idx_nama_kelas (nama_kelas)
 );
