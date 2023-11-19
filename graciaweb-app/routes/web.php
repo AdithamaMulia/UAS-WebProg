@@ -13,6 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// murid
+Route::get('/', function () {return view('index');});
+Route::get('/nilaimapel', function () {return view('nilai');});
+Route::get('/raport', function () {return view('nilai1');});
+
+// guru
+Route::get('/absen', function () {return view('absen');});
+Route::get('/tambahmurid', function () {return view('addsiswa');});
+Route::get('/mapel', function () {return view('course');});
+
+// admin
+Route::get('/adminpage1', function () {return view('crudsiswa');});
