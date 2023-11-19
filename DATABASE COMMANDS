@@ -8,7 +8,7 @@ CREATE TABLE graciauser (
     gender VARCHAR(50),
     tanggal_lahir DATE,
     alamat VARCHAR(500),
-    foto VARCHAR(500),
+    nik VARCHAR(500),
     role ENUM('student', 'teacher', 'admin') NOT NULL,
     PRIMARY KEY(userID),
     INDEX idx_nama_depan (nama_depan),
