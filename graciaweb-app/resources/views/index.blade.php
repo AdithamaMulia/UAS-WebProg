@@ -7,50 +7,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <title>Sekolah</title>
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/responsive.css">
-    <link rel="shortcut icon" href="./Img/LogoSekolah.png" type="image">
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
+    <link rel="shortcut icon" href="{{ asset('img') }}/LogoSekolah.png" type="image">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
-    <header class="bg-white">
-        <nav class="flex justify-between items-center w-[92%] mx-auto">
-            <div class="flex items-center">
-                <img class="w-16 cursor-pointer" src="Img/LogoSekolah.png" alt="...">
-                <p class="ml-2"><strong>Sekolah Gracia</strong></p>
-            </div>
-            <div class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
-                <ul class="flex md:flex-row flex-col md:items-center gap-7">
-                    <li>
-                        <a class="hover:text-gray-500" href="{{ url('/student-information') }}">Student Information</a>
-                    </li>
-                    <li>
-                        <a class="hover:text-gray-500" href="{{ url('/course') }}">Course Overview</a>
-                    </li>
-                    <li>
-                        <a class="hover:text-gray-500" href="#contact">Contact Us</a>
-                    </li>
-                    <li>
-                        <a class="hover:text-gray-500" href="{{ url('/about-us') }}">About Us</a>
-                    </li>
-                    <li>
-                        <a class="hover:text-gray-500" href="{{ url('/enroll-now') }}">Enroll Now</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="flex items-center gap-6">
-                <button class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">Login</button>
-                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
-            </div>
-        </nav>
-    </header>
-
-
-
-
+    @include('navbar')
     <section class="background firstSection">
         <div class="box-main">
             <div class="firstHalf">
@@ -60,7 +26,7 @@
             </div>
 
             <div class="secondHalf">
-                <img src="{{ asset('Img') }}/LogoSekolah.png" alt="">
+                <img src="{{ asset('img') }}/LogoSekolah.png" alt="">
             </div>
         </div>
     </section>
@@ -73,7 +39,7 @@
         <p class="sectionSubTag text-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro in molestias maxime. Iusto rem dolorum necessitatibus, reprehenderit nam, laborum tenetur eius ducimus officia, corrupti adipisci. Perspiciatis, sed excepturi saepe iure incidunt harum reiciendis eius consectetur neque error. Deleniti voluptatum totam accusantium, ipsum quas quidem cupiditate molestias porro, maiores vero praesentium sed dolore placeat delectus harum animi?</p>
         </div>
         <div class="thumbnail">
-            <img src="{{ asset('Img') }}/siswa2.jpg" alt="laptop image" class="imgFluid">
+            <img src="{{ asset('img') }}/siswa2.jpg" alt="laptop image" class="imgFluid">
         </div>
     </section>
 
@@ -83,7 +49,7 @@
         <p class="sectionSubTag text-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro in molestias maxime. Iusto rem dolorum necessitatibus, reprehenderit nam, laborum tenetur eius ducimus officia, corrupti adipisci. Perspiciatis, sed excepturi saepe iure incidunt harum reiciendis eius consectetur neque error. Deleniti voluptatum totam accusantium, ipsum quas quidem cupiditate molestias porro, maiores vero praesentium sed dolore placeat delectus harum animi?</p>
         </div>
         <div class="thumbnail">
-            <img src="{{ asset('Img') }}/sekolah1.jpg" alt="laptop image" class="imgFluid">
+            <img src="{{ asset('img') }}/sekolah1.jpg" alt="laptop image" class="imgFluid">
         </div>
     </section>
 
@@ -93,7 +59,7 @@
         <p class="sectionSubTag text-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro in molestias maxime. Iusto rem dolorum necessitatibus, reprehenderit nam, laborum tenetur eius ducimus officia, corrupti adipisci. Perspiciatis, sed excepturi saepe iure incidunt harum reiciendis eius consectetur neque error. Deleniti voluptatum totam accusantium, ipsum quas quidem cupiditate molestias porro, maiores vero praesentium sed dolore placeat delectus harum animi?</p>
         </div>
         <div class="thumbnail">
-            <img src="{{ asset('Img') }}/join-us.jpg" alt="laptop image" class="imgFluid hack">
+            <img src="{{ asset('img') }}/join-us.jpg" alt="laptop image" class="imgFluid hack">
         </div>
     </section>
     <br/>
