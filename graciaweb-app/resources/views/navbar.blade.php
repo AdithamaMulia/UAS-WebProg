@@ -28,7 +28,7 @@
                 <a class="hover:text-gray-500" href="{{ url('/enroll-now') }}">Enroll Now</a>
             </li>
             <li>
-                <a class="hover:text-gray-500" href="{{ url('/enroll-now') }}">Admin</a>
+                <a class="hover:text-gray-500" href="{{ url('/adminpage2') }}">Admin</a>
             </li>
         </ul>
     </div>

@@ -28,3 +28,9 @@ Route::get('/login', function () {return view('login');});
 
 // admin
 Route::get('/adminpage1', function () {return view('crudsiswa');});
+Route::get('/adminpage2', function () {return view('crudkelas');});
+Route::get('/adminpage3', function () {return view('crudmurid');});
+Route::get('/adminpage4', function () {return view('crudnilai');});
+Route::get('/adminpage5', function () {return view('tambahsiswa');});
+Route::get('/adminpage6', function () {return view('tambahkelas');});
+Route::get('/adminpage7', function () {return view('tambahnilai');});
