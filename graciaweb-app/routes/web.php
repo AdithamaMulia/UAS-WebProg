@@ -22,6 +22,8 @@ Route::get('/raport', function () {return view('nilai1');});
 Route::get('/absen', function () {return view('absen');});
 Route::get('/tambahmurid', function () {return view('addsiswa');});
 Route::get('/mapel', function () {return view('course');});
+Route::get('/kelas', function () {return view('kelas');});
+Route::get('/list', function () {return view('pilihan');});
 
 // admin
 Route::get('/adminpage1', function () {return view('crudsiswa');});
