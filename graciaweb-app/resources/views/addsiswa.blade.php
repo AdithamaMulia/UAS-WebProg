@@ -85,8 +85,8 @@
                 ?>
             </div>
             <br />
-            <a href="crudsiswa.php" class="btn btn-primary">Tambah Data</a>
-            <a href="#" class="btn btn-primary">Back</a>
+            <a href="{{ url('/adminpage1') }}" class="btn btn-primary">Tambah Data</a>
+            <a href="{{ url('/list') }}" class="btn btn-primary">Back</a>
             </div>
     </div>
 </div>

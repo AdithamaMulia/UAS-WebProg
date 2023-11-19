@@ -24,6 +24,7 @@ Route::get('/tambahmurid', function () {return view('addsiswa');});
 Route::get('/mapel', function () {return view('course');});
 Route::get('/kelas', function () {return view('kelas');});
 Route::get('/list', function () {return view('pilihan');});
+Route::get('/login', function () {return view('login');});
 
 // admin
 Route::get('/adminpage1', function () {return view('crudsiswa');});

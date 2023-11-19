@@ -73,7 +73,7 @@
 <body style="background-color: #a4a4a4;">
     <div class="card">
         <h2 style="text-align: left;">Tambah Daftar Siswa</h2>
-        <form action="addsiswa.php" method="get">
+        <form action="{{ url('/tambahmurid') }}" method="get">
             <div class="form-group">
                 <label for="nama">Nama</label>
                 <input type="text" id="nama" name="nama" style="width: 100%; max-width: 280px;" placeholder="Nama Siswa" required>
@@ -118,7 +118,7 @@
                 <button type="submit" class="btn">Tambah Siswa</button>
                 <br />
                 <br />
-                <a href="addsiswa.php" class="btn btn-primary" style="text-decoration: none;">Back</a>
+                <a href="{{ url('/tambahmurid') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
             </div>
         </form>
     </div>
