@@ -72,19 +72,19 @@
 </head>
 <body style="background-color: #a4a4a4;">
     <div class="card">
-        <h2 style="text-align: left;">Tambah Daftar Siswa</h2>
-        <form action="{{ url('/adminpage3') }}" method="get">
+        <h2 style="text-align: left;">Tambah Siswa</h2>
+        <form action="{{ url('/adminpage8') }}" method="get">
             <div class="form-group">
-                <label for="nama">Nama</label>
-                <input type="text" id="nama" name="nama" style="width: 100%; max-width: 280px;" placeholder="Nama Siswa" required>
+                <label for="nama">Nama Depan</label>
+                <input type="text" id="nama" name="nama" style="width: 100%; max-width: 280px;" placeholder="Nama Depan" required>
             </div>
             <div class="form-group">
-                <label for="induk">No. Induk</label>
-                <input type="text" id="induk" name="induk" style="width: 100%; max-width: 280px;" placeholder="No. Induk" required>
+                <label for="induk">Nama Belakang</label>
+                <input type="text" id="induk" name="induk" style="width: 100%; max-width: 280px;" placeholder="Nama Belakang" required>
             </div>
             <div class="form-group">
-                <label for="tempat">Tempat Lahir</label>
-                <input type="text" id="tempat" name="tempat" style="width: 100%; max-width: 280px;" placeholder="Tempat Lahir" required>
+                <label for="tempat">Password</label>
+                <input type="text" id="tempat" name="tempat" style="width: 100%; max-width: 280px;" placeholder="Password" required>
             </div>
             <div class="form-group">
                 <label for="tanggal">Tanggal Lahir</label>
@@ -96,29 +96,27 @@
                 <input type="radio" name="gender" value="f" /> Perempuan
             </div>
             <br />
+            <div class="form-group">
+                <label for="tempat">Alamat</label>
+                <input type="text" id="tempat" name="tempat" style="width: 100%; max-width: 280px;" placeholder="Alamat" required>
+            </div>
+            <div class="form-group">
+                <label for="tempat">NIK</label>
+                <input type="text" id="tempat" name="tempat" style="width: 100%; max-width: 280px;" placeholder="NIK" required>
+            </div>
             <div>
-                <label for="pilihan">Agama</label>
+                <label for="pilihan">Role</label>
                 <br />
                 <select id="pilihan" name="pilihan" style="width :100%; max-width:300px; height: 30px; font-size: 18px; margin-top: 5px;">
-                    <option value="opsi1">Islam</option>
-                    <option value="opsi2">Kristen</option>
-                    <option value="opsi3">Khatolik</option>
-                    <option value="opsi4">Buddha</option>
-                    <option value="opsi5">Hindu</option>
-                    <option value="opsi6">Khonghucu</option>
+                    <option value="murid">Murid</option>
                 </select>
             </div>
             <br />
-            <div class="form-group">
-                <label for="alamat">Alamat</label>
-                <input type="text" id="alamat" name="alamat" style="width: 100%; max-width: 280px;" placeholder="Alamat" required>
-            </div>
-            <br />
             <div class="btn-container" style="text-align: left;">
-                <button type="submit" class="btn">Tambah Siswa</button>
+                <button type="submit" class="btn">Tambah User</button>
                 <br />
                 <br />
-                <a href="{{ url('/adminpage3') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
+                <a href="{{ url('/adminpage8') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
             </div>
         </form>
     </div>

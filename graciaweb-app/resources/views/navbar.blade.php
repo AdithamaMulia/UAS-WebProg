@@ -2,7 +2,7 @@
 <header class="bg-white">
 <nav class="flex justify-between items-center w-[92%] mx-auto">
     <div class="flex items-center">
-        <a href="{{ url('/') }}">
+        <a href="{{ url('/home') }}">
             <img class="w-16 cursor-pointer" src="Img/LogoSekolah.png" alt="...">
         </a>
         <p class="ml-2"><strong>Sekolah Gracia</strong></p>
@@ -10,7 +10,7 @@
     <div class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
         <ul class="flex md:flex-row flex-col md:items-center gap-7">
         <li>
-                <a class="hover:text-gray-500" href="{{ url('/') }}">Home</a>
+                <a class="hover:text-gray-500" href="{{ url('/home') }}">Home</a>
             </li>
             <li>
                 <a class="hover:text-gray-500" href="{{ url('/kelas') }}">Class List</a>
