@@ -19,11 +19,13 @@ CREATE TABLE graciauser (
 
 CREATE TABLE kelas (
     kelasID INT NOT NULL AUTO_INCREMENT,
+    userID INT,
     nama_kelas VARCHAR(500) NOT NULL,
     deskripsi VARCHAR(500),
     created_at TIMESTAMP,
     update_at TIMESTAMP,
     PRIMARY KEY(kelasID),
+    FOREIGN KEY(userID) REFERENCES graciauser(userID),
     INDEX idx_nama_kelas (nama_kelas)
 );
 
