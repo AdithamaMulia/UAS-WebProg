@@ -76,15 +76,15 @@
         <form action="{{ url('/adminpage8') }}" method="get">
             <div class="form-group">
                 <label for="nama">Nama Depan</label>
-                <input type="text" id="nama" name="nama" style="width: 100%; max-width: 280px;" placeholder="Nama Siswa" required>
+                <input type="text" id="nama" name="nama" style="width: 100%; max-width: 280px;" placeholder="Nama Depan" required>
             </div>
             <div class="form-group">
                 <label for="induk">Nama Belakang</label>
-                <input type="text" id="induk" name="induk" style="width: 100%; max-width: 280px;" placeholder="No. Induk" required>
+                <input type="text" id="induk" name="induk" style="width: 100%; max-width: 280px;" placeholder="Nama Belakang" required>
             </div>
             <div class="form-group">
                 <label for="tempat">Password</label>
-                <input type="text" id="tempat" name="tempat" style="width: 100%; max-width: 280px;" placeholder="Tempat Lahir" required>
+                <input type="text" id="tempat" name="tempat" style="width: 100%; max-width: 280px;" placeholder="Password" required>
             </div>
             <div class="form-group">
                 <label for="tanggal">Tanggal Lahir</label>
@@ -95,15 +95,15 @@
                 <input type="radio" name="gender" value="m" /> Laki-laki
                 <input type="radio" name="gender" value="f" /> Perempuan
             </div>
+            <br />
             <div class="form-group">
                 <label for="tempat">Alamat</label>
-                <input type="text" id="tempat" name="tempat" style="width: 100%; max-width: 280px;" placeholder="Tempat Lahir" required>
+                <input type="text" id="tempat" name="tempat" style="width: 100%; max-width: 280px;" placeholder="Alamat" required>
             </div>
             <div class="form-group">
                 <label for="tempat">NIK</label>
-                <input type="text" id="tempat" name="tempat" style="width: 100%; max-width: 280px;" placeholder="Tempat Lahir" required>
+                <input type="text" id="tempat" name="tempat" style="width: 100%; max-width: 280px;" placeholder="NIK" required>
             </div>
-            <br />
             <div>
                 <label for="pilihan">Role</label>
                 <br />
