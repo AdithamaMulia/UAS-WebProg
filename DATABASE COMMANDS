@@ -9,6 +9,8 @@ CREATE TABLE graciauser (
     tanggal_lahir DATE,
     alamat VARCHAR(500),
     nik VARCHAR(500),
+    created_at TIMESTAMP,
+    update_at TIMESTAMP,
     role ENUM('student', 'teacher', 'admin') NOT NULL,
     PRIMARY KEY(userID),
     INDEX idx_nama_depan (nama_depan),
@@ -19,6 +21,8 @@ CREATE TABLE kelas (
     kelasID INT NOT NULL AUTO_INCREMENT,
     nama_kelas VARCHAR(500) NOT NULL,
     deskripsi VARCHAR(500),
+    created_at TIMESTAMP,
+    update_at TIMESTAMP,
     PRIMARY KEY(kelasID),
     INDEX idx_nama_kelas (nama_kelas)
 );
@@ -29,6 +33,8 @@ CREATE TABLE absensi (
     userID INT NOT NULL,
     tanggal DATE NOT NULL,
     keterangan ENUM('Hadir', 'Sakit', 'Izin', 'Tanpa Keterangan') NOT NULL,
+    created_at TIMESTAMP,
+    update_at TIMESTAMP,
     PRIMARY KEY(absenID),
     FOREIGN KEY(kelasID) REFERENCES kelas(kelasID),
     FOREIGN KEY(userID) REFERENCES graciauser(userID)
@@ -38,6 +44,8 @@ CREATE TABLE mapel (
     mapelID INT NOT NULL AUTO_INCREMENT,
     nama_mapel VARCHAR(500) NOT NULL,
     userID INT,
+    created_at TIMESTAMP,
+    update_at TIMESTAMP,
     PRIMARY KEY(mapelID),
     FOREIGN KEY(userID) REFERENCES graciauser(userID),
     INDEX idx_nama_mapel (nama_mapel)
@@ -56,6 +64,8 @@ CREATE TABLE nilai (
     nilaiUH2 DOUBLE,
     nilaiAkhir DOUBLE,
     semester VARCHAR(10),
+    created_at TIMESTAMP,
+    update_at TIMESTAMP,
     PRIMARY KEY(nilaiID),
     FOREIGN KEY(userID) REFERENCES graciauser(userID),
     FOREIGN KEY(mapelID) REFERENCES mapel(mapelID),
