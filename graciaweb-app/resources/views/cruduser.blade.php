@@ -20,7 +20,7 @@
 </head>
 <body>
     <h2>Welcome, Admin</h2>
-    <a class="nav-link" href="{{ url('/') }}" style="color: black;"><b>Home Page</b></a>
+    <a class="nav-link" href="{{ url('/home') }}" style="color: black;"><b>Home Page</b></a>
     <h3>User Murid</h3>
     <table>
         <tr>
@@ -105,6 +105,6 @@
             </tr>
     </table>
     <a href="{{ url('/adminpage9') }}">Add Data</a>
-    <a href="{{ url('/') }}">Back</a>
+    <a href="{{ url('/home') }}">Back</a>
 </body>
 </html>

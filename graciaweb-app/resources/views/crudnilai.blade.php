@@ -20,7 +20,7 @@
 </head>
 <body>
     <h2>Welcome, Admin</h2>
-    <a class="nav-link" href="{{ url('/') }}" style="color: black;"><b>Home Page</b></a>
+    <a class="nav-link" href="{{ url('/home') }}" style="color: black;"><b>Home Page</b></a>
     <h3>Nilai kelas 7a</h3>
     <table>
     <tr>
