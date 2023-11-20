@@ -31,8 +31,8 @@ CREATE TABLE absensi (
     keterangan ENUM('Hadir', 'Sakit', 'Izin', 'Tanpa Keterangan') NOT NULL,
     PRIMARY KEY(absenID),
     FOREIGN KEY(kelasID) REFERENCES kelas(kelasID),
-    FOREIGN KEY(userID) REFERENCES graciauser(userID),
-)
+    FOREIGN KEY(userID) REFERENCES graciauser(userID)
+);
 
 CREATE TABLE mapel (
     mapelID INT NOT NULL AUTO_INCREMENT,

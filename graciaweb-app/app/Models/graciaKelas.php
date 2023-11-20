@@ -1,11 +1,11 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Kelas extends Model
+class graciaKelas extends Model
 {
     protected $table = 'kelas';
-    protected $fillable = ['nama_kelas', 'lokasi'];
+    protected $fillable = ['kelasID', 'nama_kelas', 'deskripsi'];
 }

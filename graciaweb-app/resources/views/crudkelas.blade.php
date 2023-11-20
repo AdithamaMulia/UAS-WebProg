@@ -26,16 +26,17 @@
         <tr>
             <th style="max-width:20px;">No</th>
             <th>Kelas</th>
-            <th>deskripsi</th>
+            <th>Deskripsi</th>
             <th>Edit</th>
-
         </tr>
+        @foreach($classes as $key => $class)
             <tr>
-                <td style="max-width:20px;"></td>
-                <td><a href="{{ url('/adminpage3') }}" style="text-decoration: none;">Kelas</a></td>
-                <th></th>
-                <td><a href="edit_data.php?table=makanan&id=">Edit</a></td>
+                <td style="max-width:20px;">{{ $key + 1 }}</td>
+                <td><a href="{{ url('/adminpage3') }}" style="text-decoration: none;">{{ $class->nama_kelas }}</a></td>
+                <td>{{ $class->deskripsi }}</td>
+                <td><a href="{{ url('/edit_data.php') }}?table=makanan&id={{ $class->kelasID }}">Edit</a></td>
             </tr>
+        @endforeach
     </table>
     <a href="{{ url('/adminpage6') }}">Add Data</a>
     <br />

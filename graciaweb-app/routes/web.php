@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\KelasController;   
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // murid
-Route::get('/', function () {return view('index');});
+Route::get('/home', function () {return view('index');});
 Route::get('/nilaimapel', function () {return view('nilai');});
 Route::get('/raport', function () {return view('nilai1');});
 
@@ -28,7 +29,7 @@ Route::get('/login', function () {return view('login');});
 
 // admin
 Route::get('/adminpage1', function () {return view('crudsiswa');});
-Route::get('/adminpage2', function () {return view('crudkelas');});
+Route::get('/adminpage2', [KelasController::class, 'index']);
 Route::get('/adminpage3', function () {return view('crudmurid');});
 Route::get('/adminpage4', function () {return view('crudnilai');});
 Route::get('/adminpage5', function () {return view('tambahsiswa');});
