@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admin Page - OffCourse</title>
+    <title>CRUD Kelas</title>
     <style>
         table {
             border-collapse: collapse;

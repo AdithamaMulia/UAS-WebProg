@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD Siswa</title>
+    <title>Tambah User</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -72,7 +72,7 @@
 </head>
 <body style="background-color: #a4a4a4;">
     <div class="card">
-        <h2 style="text-align: left;">Tambah Daftar Siswa</h2>
+        <h2 style="text-align: left;">Tambah User</h2>
         <form action="{{ url('/adminpage8') }}" method="get">
             <div class="form-group">
                 <label for="nama">Nama Depan</label>
@@ -115,7 +115,7 @@
             </div>
             <br />
             <div class="btn-container" style="text-align: left;">
-                <button type="submit" class="btn">Tambah Siswa</button>
+                <button type="submit" class="btn">Tambah User</button>
                 <br />
                 <br />
                 <a href="{{ url('/adminpage8') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
