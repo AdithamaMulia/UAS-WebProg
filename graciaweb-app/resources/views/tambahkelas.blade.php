@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD Siswa</title>
+    <title>CRUD Kelas</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -72,8 +72,12 @@
 </head>
 <body style="background-color: #a4a4a4;">
     <div class="card">
-        <h2 style="text-align: left;">Tambah Daftar Siswa</h2>
-        <form action="{{ url('/adminpage2') }}" method="get">
+        <h2 style="text-align: left;">Tambah Daftar Kelas</h2>
+        @if(session('success'))
+            <div style="color: green;">{{ session('success') }}</div>
+        @endif
+        <form action="{{ url('/adminpage2') }}" method="post">
+        @csrf
             <div class="form-group">
                 <label for="kelas">Kelas</label>
                 <input type="text" id="kelas" name="kelas" style="width: 100%; max-width: 280px;" placeholder="Kelas" required>
