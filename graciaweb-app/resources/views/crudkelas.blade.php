@@ -38,10 +38,10 @@
                 <td>{{ $class->deskripsi }}</td>
                 <td>{{ $class->created_at }}</td>
                 <td>{{ $class->update_at }}</td>
-                <td><a href="{{ url('/edit_data.php') }}?table=makanan&id={{ $class->kelasID }}">Edit</a></td>
+                <td><a href="{{ url('/adminpage10/update/' . $class->kelasid) }}">Edit</a></td>
             </tr>
         @endforeach
-    </table>
+    </table>    
     <a href="{{ url('/adminpage6') }}">Add Data</a>
     <br />
     <a href="{{ url('/home') }}">Back</a>

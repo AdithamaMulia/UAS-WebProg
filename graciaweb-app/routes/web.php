@@ -32,6 +32,7 @@ Route::get('/login', function () {return view('login');});
 Route::get('/adminpage1', function () {return view('crudsiswa');});
 Route::get('/adminpage2', [KelasController::class, 'index']);
 Route::post('/adminpage2', [KelasController::class, 'store']);
+Route::post('/adminpage2/update/{id}', 'KelasController@update')->name('kelas.update');
 Route::get('/adminpage3', function () {return view('crudmurid');});
 Route::get('/adminpage4', function () {return view('crudnilai');});
 Route::get('/adminpage5', function () {return view('tambahsiswa');});

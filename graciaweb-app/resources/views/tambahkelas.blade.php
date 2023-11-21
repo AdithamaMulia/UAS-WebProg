@@ -80,7 +80,7 @@
         @csrf
             <div class="form-group">
                 <label for="kelas">Kelas</label>
-                <input type="text" id="kelas" name="kelas" style="width: 100%; max-width: 280px;" placeholder="Kelas" required>
+                <input type="text" id="kelas" name="kelas" style="width: 100%; max-width: 280px;" placeholder="Nama Kelas" required>
             </div>
             <div class="form-group">
                 <label for="deskripsi">Deskripsi</label>

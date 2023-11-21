@@ -28,4 +28,21 @@ class KelasController extends Controller
 
         return redirect('/adminpage2')->with('success', 'Data added successfully');
     }
+
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'kelas' => 'required',
+            'deskripsi' => 'required',
+        ]);
+
+        $kelas = graciaKelas::find($id);
+
+        $kelas->nama_kelas = $request->kelas;
+        $kelas->deskripsi = $request->deskripsi;
+
+        $kelas->save();
+
+        return redirect('/adminpage2')->with('success', 'Data updated successfully');
+    }
 }
