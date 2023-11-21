@@ -40,3 +40,5 @@ Route::get('/adminpage7', function () {return view('tambahnilai');});
 Route::get('/adminpage8', [UserController::class, 'index']);
 Route::post('/adminpage8', [UserController::class, 'store']);
 Route::get('/adminpage9', function () {return view('tambahuser');});
+Route::get('/adminpage10', function () {return view('editkelas');});
+Route::get('/adminpage11', function () {return view('edituser');});
