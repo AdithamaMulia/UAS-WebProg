@@ -73,42 +73,52 @@
 <body style="background-color: #a4a4a4;">
     <div class="card">
         <h2 style="text-align: left;">Tambah Siswa</h2>
-        <form action="{{ url('/adminpage8') }}" method="get">
+        <form action="{{ url('/adminpage8') }}" method="post">
             <div class="form-group">
-                <label for="nama">Nama Depan</label>
-                <input type="text" id="nama" name="nama" style="width: 100%; max-width: 280px;" placeholder="Nama Depan" required>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" style="width: 100%; max-width: 280px;" placeholder="Username" required>
             </div>
             <div class="form-group">
-                <label for="induk">Nama Belakang</label>
-                <input type="text" id="induk" name="induk" style="width: 100%; max-width: 280px;" placeholder="Nama Belakang" required>
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" style="width: 100%; max-width: 280px;" placeholder="Email" required>
             </div>
             <div class="form-group">
-                <label for="tempat">Password</label>
-                <input type="text" id="tempat" name="tempat" style="width: 100%; max-width: 280px;" placeholder="Password" required>
+                <label for="nama_depan">Nama Depan</label>
+                <input type="text" id="nama_depan" name="nama_depan" style="width: 100%; max-width: 280px;" placeholder="Nama Depan" required>
             </div>
             <div class="form-group">
-                <label for="tanggal">Tanggal Lahir</label>
-                <input type="text" id="tanggal" name="tanggal" style="width: 100%; max-width: 280px;" placeholder="Tanggal Lahir" required>
+                <label for="nama_belakang">Nama Belakang</label>
+                <input type="text" id="nama_belakang" name="nama_belakang" style="width: 100%; max-width: 280px;" placeholder="Nama Belakang" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" style="width: 100%; max-width: 280px;" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <label for="tanggal_lahir">Tanggal Lahir</label>
+                <input type="date" id="tanggal_lahir" name="tanggal_lahir" style="width: 100%; max-width: 280px;" placeholder="Tanggal Lahir" required>
             </div>
             <div>
                 <label>Jenis Kelamin</label>
-                <input type="radio" name="gender" value="m" /> Laki-laki
-                <input type="radio" name="gender" value="f" /> Perempuan
+                <div>
+                <input type="radio" id="gender_laki" name="gender" value="Laki-Laki" /> Laki-laki
+                <input type="radio" id="gender_perempuan" name="gender" value="Perempuan" /> Perempuan
+                </div>
             </div>
             <br />
             <div class="form-group">
-                <label for="tempat">Alamat</label>
-                <input type="text" id="tempat" name="tempat" style="width: 100%; max-width: 280px;" placeholder="Alamat" required>
+                <label for="alamat">Alamat</label>
+                <input type="text" id="alamat" name="alamat" style="width: 100%; max-width: 280px;" placeholder="Alamat" required>
             </div>
             <div class="form-group">
-                <label for="tempat">NIK</label>
-                <input type="text" id="tempat" name="tempat" style="width: 100%; max-width: 280px;" placeholder="NIK" required>
+                <label for="nik">NIK</label>
+                <input type="text" id="nik" name="nik" style="width: 100%; max-width: 280px;" placeholder="NIK" required>
             </div>
             <div>
-                <label for="pilihan">Role</label>
+                <label for="role">Role</label>
                 <br />
-                <select id="pilihan" name="pilihan" style="width :100%; max-width:300px; height: 30px; font-size: 18px; margin-top: 5px;">
-                    <option value="murid">Murid</option>
+                <select id="role" name="role" style="width :100%; max-width:300px; height: 30px; font-size: 18px; margin-top: 5px;">
+                    <option value="student">Murid</option>
                 </select>
             </div>
             <br />

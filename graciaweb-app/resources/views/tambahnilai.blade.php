@@ -75,32 +75,32 @@
         <h2 style="text-align: left;">Tambah Nilai</h2>
         <form action="{{ url('/adminpage4') }}" method="get">
             <div class="form-group">
-                <label for="nama">Tugas 1</label>
-                <input type="text" id="nama" name="nama" style="width: 100%; max-width: 280px;" placeholder="Tugas 1">
+                <label for="nilaiT1">Tugas 1</label>
+                <input type="text" id="nilaiT1" name="nilaiT1" style="width: 100%; max-width: 280px;" placeholder="Tugas 1">
             </div>
             <div class="form-group">
-                <label for="induk">Tugas 2</label>
-                <input type="text" id="induk" name="induk" style="width: 100%; max-width: 280px;" placeholder="Tugas 2">
+                <label for="nilaiT2">Tugas 2</label>
+                <input type="text" id="nilaiT2" name="nilaiT2" style="width: 100%; max-width: 280px;" placeholder="Tugas 2">
             </div>
             <div class="form-group">
-                <label for="tempat">Tugas 3</label>
-                <input type="text" id="tempat" name="tempat" style="width: 100%; max-width: 280px;" placeholder="Tugas 3">
+                <label for="nilaiT3">Tugas 3</label>
+                <input type="text" id="nilaiT3" name="nilaiT3" style="width: 100%; max-width: 280px;" placeholder="Tugas 3">
             </div>
             <div class="form-group">
-                <label for="tanggal">Ulangan 1</label>
-                <input type="text" id="tanggal" name="tanggal" style="width: 100%; max-width: 280px;" placeholder="Ulangan 1">
+                <label for="nilaiUH1">Ulangan 1</label>
+                <input type="text" id="nilaiUH1" name="nilaiUH1" style="width: 100%; max-width: 280px;" placeholder="Ulangan 1">
             </div>
             <div class="form-group">
-                <label for="tanggal">Ulangan 2</label>
-                <input type="text" id="tanggal" name="tanggal" style="width: 100%; max-width: 280px;" placeholder="Ulangan 2">
+                <label for="nilaiUH2">Ulangan 2</label>
+                <input type="text" id="nilaiUH2" name="nilaiUH2" style="width: 100%; max-width: 280px;" placeholder="Ulangan 2">
             </div>
             <div class="form-group">
-                <label for="tanggal">UTS</label>
-                <input type="text" id="tanggal" name="tanggal" style="width: 100%; max-width: 280px;" placeholder="UTS">
+                <label for="nilaiUTS">UTS</label>
+                <input type="text" id="nilaiUTS" name="nilaiUTS" style="width: 100%; max-width: 280px;" placeholder="UTS">
             </div>
             <div class="form-group">
-                <label for="tanggal">UAS</label>
-                <input type="text" id="tanggal" name="tanggal" style="width: 100%; max-width: 280px;" placeholder="UAS">
+                <label for="nilaiUAS">UAS</label>
+                <input type="text" id="nilaiUAS" name="nilaiUAS" style="width: 100%; max-width: 280px;" placeholder="UAS">
             </div>
             <br />
             <div class="btn-container" style="text-align: left;">
