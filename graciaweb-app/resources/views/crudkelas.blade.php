@@ -27,6 +27,8 @@
             <th style="max-width:20px;">No</th>
             <th>Kelas</th>
             <th>Deskripsi</th>
+            <th>Tgl. Dibuat</th>
+            <th>Last Update</th>
             <th>Edit</th>
         </tr>
         @foreach($classes as $key => $class)
@@ -34,6 +36,8 @@
                 <td style="max-width:20px;">{{ $key + 1 }}</td>
                 <td><a href="{{ url('/adminpage3') }}" style="text-decoration: none;">{{ $class->nama_kelas }}</a></td>
                 <td>{{ $class->deskripsi }}</td>
+                <td>{{ $class->created_at }}</td>
+                <td>{{ $class->update_at }}</td>
                 <td><a href="{{ url('/edit_data.php') }}?table=makanan&id={{ $class->kelasID }}">Edit</a></td>
             </tr>
         @endforeach

@@ -20,89 +20,116 @@
 </head>
 <body>
     <h2>Welcome, Admin</h2>
-    <a class="nav-link" href="{{ url('/home') }}" style="color: black;"><b>Home Page</b></a>
+        @if(session('success'))
+            <div style="color: green;">{{ session('success') }}</div>
+        @endif
+    <a user="nav-link" href="{{ url('/home') }}" style="color: black;"><b>Home Page</b></a>
     <h3>User Murid</h3>
     <table>
         <tr>
             <th>ID</th>
-            <th>Nama Depan</th>
-            <th>Nama Belakang</th>
-            <th>Password</th>
-            <th>Gender</th>
-            <th>Tanggal Lahir</th>
-            <th>Alamat</th>
-            <th>NIK</th>
-            <th>Role</th>
-            <th>Edit</th>
-        </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td><a href="{{ url('/i') }}">Edit</a></td>
-            </tr>
-    </table>
-    <a href="{{ url('/adminpage9') }}">Add Data</a>
-    <h3>User Guru</h3>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Nama Depan</th>
-            <th>Nama Belakang</th>
-            <th>Password</th>
-            <th>Gender</th>
-            <th>Tanggal Lahir</th>
-            <th>Alamat</th>
-            <th>NIK</th>
-            <th>Role</th>
-            <th>Edit</th>
-        </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td><a href="{{ url('/i') }}">Edit</a></td>
-            </tr>
-    </table>
-    <a href="{{ url('/adminpage9') }}">Add Data</a>
-    <h3>User Admin</h3>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Nama Depan</th>
-            <th>Nama Belakang</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Nama</th>
             <th>Password</th>
             <th>Jenis Kelamin</th>
             <th>Tanggal Lahir</th>
             <th>Alamat</th>
             <th>NIK</th>
             <th>Role</th>
+            <th>Last Update</th>
+            <th>Tgl Dibuat</th>
             <th>Edit</th>
         </tr>
+        @foreach($users as $key => $user)
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td><a href="{{ url('/i') }}">Edit</a></td>
+                <td style="max-width:20px;">{{ $user->userID + 1 }}</td>
+                <td>{{ $user->username }}</td>
+                <td>{{ $user->email }}</td>
+                <td>{{ $user->nama_depan }}{{ $user->nama_belakang }}</td>
+                <td>{{ $user->password }}</td>
+                <td>{{ $user->gender }}</td>
+                <td>{{ $user->tanggal_lahir }}</td>
+                <td>{{ $user->alamat }}</td>
+                <td>{{ $user->nik }}</td>
+                <td>{{ $user->role }}</td>
+                <td>{{ $user->updated_at }}</td>
+                <td>{{ $user->created_at }}</td>
+                <td><a href="{{ url('/edit_data.php') }}?table=makanan&id={{ $user->userID }}">Edit</a></td>
             </tr>
+        @endforeach
+    </table>
+    <a href="{{ url('/adminpage9') }}">Add Data</a>
+    <h3>User Guru</h3>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Nama</th>
+            <th>Password</th>
+            <th>Jenis Kelamin</th>
+            <th>Tanggal Lahir</th>
+            <th>Alamat</th>
+            <th>NIK</th>
+            <th>Role</th>
+            <th>Last Update</th>
+            <th>Tgl Dibuat</th>
+            <th>Edit</th>
+        </tr>
+        @foreach($users as $key => $user)
+            <tr>
+                <td style="max-width:20px;">{{ $user->userID + 1 }}</td>
+                <td>{{ $user->username }}</td>
+                <td>{{ $user->email }}</td>
+                <td>{{ $user->nama_depan }}{{ $user->nama_belakang }}</td>
+                <td>{{ $user->password }}</td>
+                <td>{{ $user->gender }}</td>
+                <td>{{ $user->tanggal_lahir }}</td>
+                <td>{{ $user->alamat }}</td>
+                <td>{{ $user->nik }}</td>
+                <td>{{ $user->role }}</td>
+                <td>{{ $user->updated_at }}</td>
+                <td>{{ $user->created_at }}</td>
+                <td><a href="{{ url('/edit_data.php') }}?table=makanan&id={{ $user->userID }}">Edit</a></td>
+            </tr>
+        @endforeach
+    </table>
+    <a href="{{ url('/adminpage9') }}">Add Data</a>
+    <h3>User Admin</h3>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Nama</th>
+            <th>Password</th>
+            <th>Jenis Kelamin</th>
+            <th>Tanggal Lahir</th>
+            <th>Alamat</th>
+            <th>NIK</th>
+            <th>Role</th>
+            <th>Last Update</th>
+            <th>Tgl Dibuat</th>
+            <th>Edit</th>
+        </tr>
+        @foreach($users as $key => $user)
+            <tr>
+                <td style="max-width:20px;">{{ $user->userID + 1 }}</td>
+                <td>{{ $user->username }}</td>
+                <td>{{ $user->email }}</td>
+                <td>{{ $user->nama_depan }}{{ $user->nama_belakang }}</td>
+                <td>{{ $user->password }}</td>
+                <td>{{ $user->gender }}</td>
+                <td>{{ $user->tanggal_lahir }}</td>
+                <td>{{ $user->alamat }}</td>
+                <td>{{ $user->nik }}</td>
+                <td>{{ $user->role }}</td>
+                <td>{{ $user->updated_at }}</td>
+                <td>{{ $user->created_at }}</td>
+                <td><a href="{{ url('/edit_data.php') }}?table=makanan&id={{ $user->userID }}">Edit</a></td>
+            </tr>
+        @endforeach
     </table>
     <a href="{{ url('/adminpage9') }}">Add Data</a>
     <a href="{{ url('/home') }}">Back</a>

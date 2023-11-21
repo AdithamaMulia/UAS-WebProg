@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KelasController;   
+use App\Http\Controllers\UserController;   
 
 /*
 |--------------------------------------------------------------------------
@@ -36,5 +37,6 @@ Route::get('/adminpage4', function () {return view('crudnilai');});
 Route::get('/adminpage5', function () {return view('tambahsiswa');});
 Route::get('/adminpage6', function () {return view('tambahkelas');});
 Route::get('/adminpage7', function () {return view('tambahnilai');});
-Route::get('/adminpage8', function () {return view('cruduser');});
+Route::get('/adminpage8', [UserController::class, 'index']);
+Route::post('/adminpage8', [UserController::class, 'store']);
 Route::get('/adminpage9', function () {return view('tambahuser');});
