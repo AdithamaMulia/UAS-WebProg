@@ -33,14 +33,16 @@ CREATE TABLE kelas (
 
 CREATE TABLE absensi (
     absenID INT NOT NULL AUTO_INCREMENT,
-    kelasID INT NOT NULL,
-    userID INT NOT NULL,
-    tanggal DATE NOT NULL,
-    keterangan ENUM('Hadir', 'Sakit', 'Izin', 'Tanpa Keterangan') NOT NULL,
+    userID INT,
+    nama_depan VARCHAR(500),
+    nama_belakang VARCHAR(500),
+    tanggal DATE,
+    keterangan ENUM('Hadir', 'Sakit', 'Izin', 'Tanpa Keterangan'),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY(absenID),
-    FOREIGN KEY(kelasID) REFERENCES kelas(kelasID),
+    FOREIGN KEY(nama_depan) REFERENCES graciauser(nama_depan),
+    FOREIGN KEY(nama_belakang) REFERENCES graciauser(nama_belakang),
     FOREIGN KEY(userID) REFERENCES graciauser(userID)
 );
 
