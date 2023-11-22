@@ -3,18 +3,22 @@ create database dbgraciaschool1;
 CREATE TABLE graciauser (
     userID INT NOT NULL AUTO_INCREMENT,
     username VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL,
     nama_depan VARCHAR(255) NOT NULL,
     nama_belakang VARCHAR(255),
     password VARCHAR(255) NOT NULL,
-    gender VARCHAR(50),
+    gender ENUM('Laki-Laki', 'Perempuan'),
     tanggal_lahir DATE,
     alamat VARCHAR(255),
-    nik VARCHAR(255),
+    nis VARCHAR(255),
+    agama VARCHAR(255),
+    nama_orangtua VARCHAR(255),
+    tempat_lahir VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     role ENUM('student', 'teacher', 'admin') NOT NULL,
+    kelasID INT,
     PRIMARY KEY (userID),
+    FOREIGN KEY (kelasID) REFERENCES kelas(kelasID),
     INDEX idx_nama_depan (nama_depan),
     INDEX idx_nama_belakang (nama_belakang)
 );
@@ -33,7 +37,9 @@ CREATE TABLE kelas (
 
 CREATE TABLE absensi (
     absenID INT NOT NULL AUTO_INCREMENT,
+    kelasID INT NOT NULL,
     userID INT,
+    nama_kelas VARCHAR(500),
     nama_depan VARCHAR(500),
     nama_belakang VARCHAR(500),
     tanggal DATE,
@@ -43,6 +49,8 @@ CREATE TABLE absensi (
     PRIMARY KEY(absenID),
     FOREIGN KEY(nama_depan) REFERENCES graciauser(nama_depan),
     FOREIGN KEY(nama_belakang) REFERENCES graciauser(nama_belakang),
+    FOREIGN KEY(kelasID) REFERENCES kelas(kelasID),
+    FOREIGN KEY(nama_kelas) REFERENCES kelas(nama_kelas),
     FOREIGN KEY(userID) REFERENCES graciauser(userID)
 );
 
@@ -61,6 +69,7 @@ CREATE TABLE nilai (
     nilaiID INT NOT NULL AUTO_INCREMENT,
     userID INT NOT NULL,
     mapelID INT NOT NULL,
+    nama_mapel VARCHAR(500) NOT NULL,
     nilaiT1 DOUBLE,
     nilaiT2 DOUBLE,
     nilaiT3 DOUBLE,
@@ -68,12 +77,15 @@ CREATE TABLE nilai (
     nilaiUAS DOUBLE,
     nilaiUH1 DOUBLE,
     nilaiUH2 DOUBLE,
+    nilaiUH3 DOUBLE,
+    nilaiUH4 DOUBLE,
     nilaiAkhir DOUBLE,
-    semester VARCHAR(10),
+    semester ENUM('Ganjil', 'Genap'),  
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY(nilaiID),
     FOREIGN KEY(userID) REFERENCES graciauser(userID),
     FOREIGN KEY(mapelID) REFERENCES mapel(mapelID),
+    FOREIGN KEY(nama_mapel) REFERENCES mapel(nama_mapel),
     INDEX idx_semester (semester)
 );
