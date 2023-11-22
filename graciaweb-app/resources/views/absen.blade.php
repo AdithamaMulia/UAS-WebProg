@@ -58,7 +58,6 @@
                 <tr>
                 <td style="width: 20px;">No.</td>
                 <td style="width: 250px;">Nama</td>
-                <td style="width: 250x;">No. Induk</td>
                 <td style="width: 40px;">Kehadiran</td>
                 <td style="width: 180px;">Keterangan</td>
             </tr>
@@ -68,7 +67,6 @@
                     <tr>
                         <td style="width: 20px;">' . $i . '.</td>
                         <td style="width: 250px;">loren ipsum</td>
-                        <td style="width: 250px;">No. Induk</td>
                         <td style="width: 20px; text-align: center;"><input type="checkbox" id="remember" name="remember"></td>
                         <td style="width: 180px;"><select id="dropdown">
                         <option value="hadir">Hadir</option>
