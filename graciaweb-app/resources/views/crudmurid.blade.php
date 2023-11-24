@@ -26,7 +26,7 @@
         <tr>
             <th>No</th>
             <th>Nama Siswa</th>
-            <th>No. Induk</th>
+            <th>NIS</th>
             <th>Tempat Lahir</th>
             <th>Tanggal Lahir</th>
             <th>Jenis Kelamin</th>
@@ -54,7 +54,7 @@
         <tr>
             <th>No</th>
             <th>Nama Siswa</th>
-            <th>No. Induk</th>
+            <th>NIS</th>
             <th>Tempat Lahir</th>
             <th>Tanggal Lahir</th>
             <th>Jenis Kelamin</th>
@@ -82,7 +82,7 @@
         <tr>
             <th>No</th>
             <th>Nama Siswa</th>
-            <th>No. Induk</th>
+            <th>NIS</th>
             <th>Tempat Lahir</th>
             <th>Tanggal Lahir</th>
             <th>Jenis Kelamin</th>
@@ -110,7 +110,7 @@
         <tr>
             <th>No</th>
             <th>Nama Siswa</th>
-            <th>No. Induk</th>
+            <th>NIS</th>
             <th>Tempat Lahir</th>
             <th>Tanggal Lahir</th>
             <th>Jenis Kelamin</th>
@@ -138,7 +138,7 @@
         <tr>
             <th>No</th>
             <th>Nama Siswa</th>
-            <th>No. Induk</th>
+            <th>NIS</th>
             <th>Tempat Lahir</th>
             <th>Tanggal Lahir</th>
             <th>Jenis Kelamin</th>
@@ -166,7 +166,7 @@
         <tr>
             <th>No</th>
             <th>Nama Siswa</th>
-            <th>No. Induk</th>
+            <th>NIS</th>
             <th>Tempat Lahir</th>
             <th>Tanggal Lahir</th>
             <th>Jenis Kelamin</th>

@@ -97,7 +97,7 @@
             </div>
             <div class="form-group">
                 <label for="tempat_lahir">Tempat Lahir</label>
-                <input type="date" id="tanggal_lahir" name="tanggal_lahir" style="width: 100%; max-width: 280px;" placeholder="Tanggal Lahir" required>
+                <input type="text" id="tanggal_lahir" name="tanggal_lahir" style="width: 100%; max-width: 280px;" placeholder="Tempat Lahir" required>
             </div>
             <div class="form-group">
                 <label for="tanggal_lahir">Tanggal Lahir</label>
@@ -116,8 +116,8 @@
                 <input type="text" id="alamat" name="alamat" style="width: 100%; max-width: 280px;" placeholder="Alamat" required>
             </div>
             <div class="form-group">
-                <label for="nik">NIK</label>
-                <input type="text" id="nik" name="nik" style="width: 100%; max-width: 280px;" placeholder="NIK" required>
+                <label for="nis">NIS</label>
+                <input type="text" id="nis" name="nis" style="width: 100%; max-width: 280px;" placeholder="NIS" required>
             </div>
             <div>
                 <label for="role">Role : Murid</label>
