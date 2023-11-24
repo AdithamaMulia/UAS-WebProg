@@ -72,7 +72,7 @@
 </head>
 <body style="background-color: #a4a4a4;">
     <div class="card">
-        <h2 style="text-align: left;">Tambah Nilai</h2>
+        <h2 style="text-align: left;">Edit Nilai</h2>
         <form action="{{ url('/adminpage4') }}" method="get">
             <div class="form-group">
                 <label for="nilaiUH1">Ulangan 1</label>
@@ -100,7 +100,7 @@
             </div>
             <br />
             <div class="btn-container" style="text-align: left;">
-                <button type="submit" class="btn">Tambah Nilai</button>
+                <button type="submit" class="btn">Update Nilai</button>
                 <br />
                 <br />
                 <a href="{{ url('/adminpage4') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>

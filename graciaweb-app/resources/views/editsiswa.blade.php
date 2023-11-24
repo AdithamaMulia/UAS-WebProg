@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Siswa</title>
+    <title>Edit Siswa</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -125,7 +125,7 @@
             </div>
             <br />
             <div class="btn-container" style="text-align: left;">
-                <button type="submit" class="btn">Tambah User</button>
+                <button type="submit" class="btn">Update Siswa</button>
                 <br />
                 <br />
                 <a href="{{ url('/adminpage8') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>

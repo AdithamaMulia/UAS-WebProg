@@ -128,7 +128,7 @@
             </div>
             <br />
             <div class="btn-container" style="text-align: left;">
-                <button type="submit" class="btn">Tambah User</button>
+                <button type="submit" class="btn">Tambah Siswa</button>
                 <br />
                 <br />
                 <a href="{{ url('/adminpage8') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>

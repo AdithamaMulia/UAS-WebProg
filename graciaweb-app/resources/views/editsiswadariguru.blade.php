@@ -115,7 +115,7 @@
             </div>
             <br />
             <div class="btn-container" style="text-align: left;">
-                <button type="submit" class="btn">Tambah Siswa</button>
+                <button type="submit" class="btn">Update Siswa</button>
                 <br />
                 <br />
                 <a href="{{ url('/tambahmurid') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
