@@ -84,11 +84,11 @@
             </div>
             <div class="form-group">
                 <label for="nilaiUH3">Ulangan 3</label>
-                <input type="text" id="nilaiUH3" name="nilaiUH3" style="width: 100%; max-width: 280px;" placeholder="Ulangan 2">
+                <input type="text" id="nilaiUH3" name="nilaiUH3" style="width: 100%; max-width: 280px;" placeholder="Ulangan 3">
             </div>
             <div class="form-group">
                 <label for="nilaiUH4">Ulangan 4</label>
-                <input type="text" id="nilaiUH4" name="nilaiUH4" style="width: 100%; max-width: 280px;" placeholder="Ulangan 2">
+                <input type="text" id="nilaiUH4" name="nilaiUH4" style="width: 100%; max-width: 280px;" placeholder="Ulangan 4">
             </div>
             <div class="form-group">
                 <label for="nilaiUTS">UTS</label>

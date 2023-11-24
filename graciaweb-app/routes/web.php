@@ -45,3 +45,5 @@ Route::post('/adminuser', [UserController::class, 'store']);
 Route::get('/adminadduser', function () {return view('tambahuser');});
 Route::get('/admineditkelas', function () {return view('editkelas');});
 Route::get('/adminedituser', function () {return view('edituser');});
+Route::get('/admineditnilai', function () {return view('editnilai');});
+Route::get('/admineditsiswa', function () {return view('editsiswa');});
