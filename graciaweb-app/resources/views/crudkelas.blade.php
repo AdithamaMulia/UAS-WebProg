@@ -34,15 +34,15 @@
         @foreach($classes as $key => $class)
             <tr>
                 <td style="max-width:20px;">{{ $key + 1 }}</td>
-                <td><a href="{{ url('/adminpage3') }}" style="text-decoration: none;">{{ $class->nama_kelas }}</a></td>
+                <td><a href="{{ url('/adminkelas') }}" style="text-decoration: none;">{{ $class->nama_kelas }}</a></td>
                 <td>{{ $class->deskripsi }}</td>
                 <td>{{ $class->created_at }}</td>
                 <td>{{ $class->update_at }}</td>
-                <td><a href="{{ url('/adminpage10/update/' . $class->kelasid) }}">Edit</a></td>
+                <td><a href="{{ url('/admineditkelas/update/' . $class->kelasID) }}">Edit</a></td>
             </tr>
         @endforeach
     </table>    
-    <a href="{{ url('/adminpage6') }}">Add Data</a>
+    <a href="{{ url('/adminaddkelas') }}">Add Data</a>
     <br />
     <a href="{{ url('/home') }}">Back</a>
 </body>

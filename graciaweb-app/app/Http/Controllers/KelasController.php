@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class KelasController extends Controller
 {
+    protected $primarykey = 'kelasID';
     public function index()
     {
         $classes = graciaKelas::all();
@@ -26,23 +27,30 @@ class KelasController extends Controller
 
         $kelas->save();
 
-        return redirect('/adminpage2')->with('success', 'Data added successfully');
+        return redirect('/adminkelas')->with('success', 'Data added successfully');
     }
 
-    public function update(Request $request, $id)
+    public function edit($kelasID)
+    {
+        $classes = graciaKelas::find($kelasID);
+        return view('editkelas', ['classes' => $classes]);
+    }
+
+
+    public function update(Request $request, $kelasID)
     {
         $request->validate([
-            'kelas' => 'required',
+            'nama_kelas' => 'required',
             'deskripsi' => 'required',
         ]);
 
-        $kelas = graciaKelas::find($id);
+        $kelas = graciaKelas::find($kelasID);
 
-        $kelas->nama_kelas = $request->kelas;
+        $kelas->nama_kelas = $request->nama_kelas;
         $kelas->deskripsi = $request->deskripsi;
 
         $kelas->save();
 
-        return redirect('/adminpage2')->with('success', 'Data updated successfully');
+        return redirect('/adminkelas')->with('success', 'Data updated successfully');
     }
 }

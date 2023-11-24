@@ -74,22 +74,22 @@
     <div class="card">
         <h2 style="text-align: left;">Edit Kelas</h2>
         <div style="color: green;"></div>
-        <form action="{{ url('/adminpage2/update/' . $class->id) }}" method="post"> 
+        <form action="{{ url('/adminkelas/update/' . $class->kelasID) }}" method="post"> 
             @csrf
             <div class="form-group">
                 <label for="kelas">Kelas</label>
-                <input type="text" id="kelas" name="kelas" style="width: 100%; max-width: 280px;" placeholder="Nama Kelas" required>
+                <input type="text" id="deskripsi" name="deskripsi" style="width: 100%; max-width: 280px;" placeholder="{{ $class->nama_kelas }}" value="{{ $class->nama_kelas }}" required>
             </div>
             <div class="form-group">
                 <label for="deskripsi">Deskripsi</label>
-                <input type="text" id="deskripsi" name="deskripsi" style="width: 100%; max-width: 280px;" placeholder="Deskripsi" required>
+                <input type="text" id="deskripsi" name="deskripsi" style="width: 100%; max-width: 280px;" placeholder="{{ $class->deskripsi }}" value="{{ $class->deskripsi }}" required>
             </div>
             <br />
             <div class="btn-container">
                 <button type="submit" class="btn">Update Kelas</button>
                 <br />
                 <br />
-                <a href="{{ url('/adminpage2') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
+                <a href="{{ url('/adminkelas') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
             </div>
         </form>
     </div>

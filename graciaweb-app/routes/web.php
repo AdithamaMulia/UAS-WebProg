@@ -34,7 +34,7 @@ Route::get('/guruaddsiswa', function () {return view('crudsiswa');});
 // admin
 Route::get('/adminkelas', [KelasController::class, 'index']);
 Route::post('/adminkelas', [KelasController::class, 'store']);
-Route::post('/adminkelas/update/{id}', 'KelasController@update')->name('kelas.update');
+Route::post('/adminkelas/update/{id}', 'App\Http\Controllers\KelasController@update')->name('kelas.update');
 Route::get('/adminmurid', function () {return view('crudmurid');});
 Route::get('/adminnilai', function () {return view('crudnilai');});
 Route::get('/adminaddsiswa', function () {return view('tambahsiswa');});
@@ -43,7 +43,7 @@ Route::get('/adminaddnilai', function () {return view('tambahnilai');});
 Route::get('/adminuser', [UserController::class, 'index']);
 Route::post('/adminuser', [UserController::class, 'store']);
 Route::get('/adminadduser', function () {return view('tambahuser');});
-Route::get('/admineditkelas', function () {return view('editkelas');});
+Route::get('/admineditkelas/update/{id}', 'App\Http\Controllers\KelasController@edit')->name('admineditkelas.update');
 Route::get('/adminedituser', function () {return view('edituser');});
 Route::get('/admineditnilai', function () {return view('editnilai');});
 Route::get('/admineditsiswa', function () {return view('editsiswa');});

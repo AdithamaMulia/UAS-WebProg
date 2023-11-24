@@ -10,7 +10,7 @@ class AbsensiController extends Controller
     public function index()
     {
         $classes = graciaAbsen::all();
-        return view('crudAbsen', ['absen' => $absen]);
+        return view('crudabsen', ['absen' => $absen]);
     }
 
     public function store(Request $request)
@@ -18,14 +18,41 @@ class AbsensiController extends Controller
         $request->validate([
             'absen' => 'required',
             'deskripsi' => 'required',
+            'tanggal' => 'required',
+            'userID' => 'required',
+            'keterangan' => 'required',
         ]);
 
-        $absensi = new graciaabsen();
-        $absen->nama_absen = $request->absen;
-        $absen->deskripsi = $request->deskripsi;
+        $absen = new graciaAbsen();
+        $absen->kelasID = $request->kelasID;
+        $absen->tanggal = $request->tanggal;
+        $absen->userID = $request->userID;
+        $absen->keterangan = $request->keterangan;
 
         $absen->save();
 
-        return redirect('/adminpage2')->with('success', 'Data added successfully');
+        return redirect('/adminabsen')->with('success', 'Data added successfully');
+    }
+
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'absen' => 'required',
+            'deskripsi' => 'required',
+            'tanggal' => 'required',
+            'userID' => 'required',
+            'keterangan' => 'required',
+        ]);
+
+        $absen = graciaabsen::find($id);
+
+        $absen->kelasID = $request->kelasID;
+        $absen->tanggal = $request->tanggal;
+        $absen->userID = $request->userID;
+        $absen->keterangan = $request->keterangan;
+
+        $absen->save();
+
+        return redirect('/adminabsen')->with('success', 'Data updated successfully');
     }
 }
