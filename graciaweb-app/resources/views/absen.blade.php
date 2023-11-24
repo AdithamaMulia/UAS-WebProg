@@ -46,9 +46,12 @@
 <div class="box-main">
     <br />
     <div class="card mb-3" style="width:100%; max-width: 1200px;">
-        <h2 style="padding-left: 15px; font-size: 30px;">Daftar Siswa</h2>
+        <h2 style="padding-left: 15px; font-size: 30px;">Daftar Absen Siswa</h2>
         <br />
-        <p style="padding-left: 15px;">Tanggal : </p>
+        <div class="input-container" style="padding-left: 15px;">
+            <label for="tanggal">Tanggal:</label>
+            <input type="date" id="tanggal" name="tanggal" style="border: 1px solid #000;">
+        </div>
         <div class="card-body">
             <div class="row" style="padding-left: 15px;">
             <?php
@@ -68,12 +71,13 @@
                         <td style="width: 20px;">' . $i . '.</td>
                         <td style="width: 250px;">loren ipsum</td>
                         <td style="width: 20px; text-align: center;"><input type="checkbox" id="remember" name="remember"></td>
-                        <td style="width: 180px;"><select id="dropdown">
-                        <option value="hadir">Hadir</option>
-                        <option value="sakit">Sakit</option>
-                        <option value="izin">Izin</option>
-                        <option value="tanpaketerangan">Tanpa Keterangan</option>
-                    </select></td>
+                        <td style="width: 180px;">
+                        <select id="dropdown" style="border: 1px solid #000;">
+                            <option value="hadir">Hadir</option>
+                            <option value="sakit">Sakit</option>
+                            <option value="izin">Izin</option>
+                            <option value="tanpaketerangan">Tanpa Keterangan</option>
+                        </select></td>
                     </tr>
                     ';
                 }

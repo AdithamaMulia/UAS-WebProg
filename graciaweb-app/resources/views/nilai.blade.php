@@ -49,6 +49,12 @@
         <h2 style="padding-left: 15px; font-size: 30px;">Nilai Siswa</h2>
         <p style="padding-left: 15px;">Nama :</p>
         <p style="padding-left: 15px;">NIK :</p>
+        <div style ="padding-left: 15px;">
+                <select id="semester" name="semester" style="width :100%; max-width:300px; height: 30px; font-size: 18px; margin-top: 5px; border: 1px solid #000;">
+                    <option value="Ganjil">Ganjil</option>
+                    <option value="Genap">Genap</option>
+                </select>
+            </div>
         <div class="card-body">
             <div class="row">
                 <?php

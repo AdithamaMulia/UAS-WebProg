@@ -48,45 +48,39 @@
     <br />
     <div class="card mb-3" style="width:100%; max-width: 1200px;">
         <h2 style="padding-left: 15px; font-size: 30px;">Daftar Siswa</h2>
+        <br />
+        <h2 style="padding-left: 15px; font-size: 24px;">Siswa kelas ...</h2>
         <div class="card-body">
             <div class="row" style="padding-left: 15px;">
-            <?php
-                $numRows = 12;
-                echo '<table>';
-                echo '
+            <table>
                 <tr>
-                <td style="width: 30px;">No.</td>
-                <td style="width: 100px;">Nama</td>
-                <td style="width: 100px;">No. Induk</td>
-                <td style="width: 100px;">Tempat Lahir</td>
-                <td style="width: 100px;">Tanggal Lahir</td>
-                <td style="width: 100px;">Jenis Kelamin</td>
-                <td style="width: 100px;">Agama</td>
-                <td style="width: 100px;">Alamat</td>
-                <td style="width: 50px;">Edit</td>
-            </tr>
-                ';
-                for ($i = 1; $i <= $numRows; $i++) {
-                    echo '
+                    <th>No</th>
+                    <th>Nama Siswa</th>
+                    <th>NIS</th>
+                    <th>Tempat Lahir</th>
+                    <th>Tanggal Lahir</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Agama</th>
+                    <th>Alamat</th>
+                    <th>Edit</th>
+                    <th>Nilai</th>
+                </tr>
                     <tr>
-                        <td style="width: 30px;">' . $i . '.</td>
-                        <td style="width: 100px;">loren ipsum</td>
-                        <td style="width: 100px;">No. Induk</td>
-                        <td style="width: 100px;">Tempat Lahir</td>
-                        <td style="width: 100px;">Tanggal Lahir</td>
-                        <td style="width: 100px;">Jenis Kelamin</td>
-                        <td style="width: 100px;">Agama</td>
-                        <td style="width: 100px;">Alamat</td>
-                        <td style="width: 50px;"><a href="#">Edit</a></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="{{ url('/editsiswa') }}">Edit</a></td>
+                        <td><a href="{{ url('/nilaimapel') }}">Nilai</a></td>
                     </tr>
-                    ';
-                }
-                echo '</table>';
-                ?>
-            </div>
+            </table>
+            <a href="{{ url('/adminsiswa') }}">Add Data</a>
             <br />
-            <a href="{{ url('/adminpage1') }}" class="btn btn-primary">Tambah Data</a>
-            <a href="{{ url('/list') }}" class="btn btn-primary">Back</a>
+            <a href="{{ url('/list') }}">Back</a>
             </div>
     </div>
 </div>

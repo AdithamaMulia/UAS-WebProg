@@ -65,22 +65,31 @@
             <h2 style="padding-left: 15px; font-size: 30px">Class</h2>
             <div class="card-body">
                 <div class="row">
-                    <?php
-                    $classTexts = ["Daftar Siswa", "Daftar Absen", "Daftar Nilai"];
-
-                    for ($i = 1; $i <= 3; $i++) {
-                        echo '
-                        <div class="col-lg-4 mb-3">
-                            <a href="nilai' . $i . '.php" class="card-link no-underline">
-                                <div class="card" style="height: 300px; width: 100%; max-width: 400px; background-color: #63c9ff;">
-                                    <div class="card-body card-text-zoom" style="overflow: auto;">
-                                        <p style="color: black;"><b>' . $classTexts[$i-1] . '</b></p>
-                                    </div>
+                <?php
+                    echo '<div class="row justify-content-center">';
+                    echo "
+                    <div class=\"col-lg-4 mb-3\">
+                        <a href=\"{{ url('/') }}\" class=\"card-link no-underline\">
+                            <div class=\"card\" style=\"height: 300px; width: 100%; max-width: 400px; background-color: #63c9ff;\">
+                                <div class=\"card-body card-text-zoom\" style=\"overflow: auto;\">
+                                    <p style=\"color: black;\"><b>Daftar Siswa</b></p>
                                 </div>
-                            </a>
-                        </div>
-                        ';
-                    }
+                            </div>
+                        </a>
+                    </div>
+                    ";
+                    echo '
+                    <div class="col-lg-4 mb-3">
+                        <a href="nilai2.php" class="card-link no-underline">
+                            <div class="card" style="height: 300px; width: 100%; max-width: 400px; background-color: #63c9ff;">
+                                <div class="card-body card-text-zoom" style="overflow: auto;">
+                                    <p style="color: black;"><b>Daftar Absen</b></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    ';
+                    echo '</div>';
                     ?>
                 </div>
             </div>

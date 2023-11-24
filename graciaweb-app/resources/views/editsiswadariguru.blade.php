@@ -72,7 +72,7 @@
 </head>
 <body style="background-color: #a4a4a4;">
     <div class="card">
-        <h2 style="text-align: left;">Tambah Daftar Siswa</h2>
+        <h2 style="text-align: left;">Edit Daftar Siswa</h2>
         <form action="{{ url('/tambahmurid') }}" method="get">
             <div class="form-group">
                 <label for="nama">Nama</label>

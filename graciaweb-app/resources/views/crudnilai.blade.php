@@ -26,8 +26,7 @@
     <tr>
         <th style="max-width: 20px; text-align: center; vertical-align: middle;" rowspan="2">No</th>
         <th style="text-align: center; vertical-align: middle;" rowspan="2">Mata Pelajaran</th>
-        <th colspan="3" style="text-align: center;">Nilai Tugas</th>
-        <th colspan="2" style="text-align: center;">Nilai Ulangan</th>
+        <th colspan="4" style="text-align: center;">Nilai Ulangan</th>
         <th style="text-align: center; vertical-align: middle;" rowspan="2">Nilai UTS</th>
         <th style="text-align: center; vertical-align: middle;" rowspan="2">Nilai UAS</th>
         <th style="text-align: center; vertical-align: middle;" rowspan="2">Nilai Akhir</th>
@@ -37,13 +36,11 @@
         <th style="max-width: 20px; text-align: center;">1</th>
         <th style="max-width: 20px; text-align: center;">2</th>
         <th style="max-width: 20px; text-align: center;">3</th>
-        <th style="max-width: 20px; text-align: center;">1</th>
-        <th style="max-width: 20px; text-align: center;">2</th>
+        <th style="max-width: 20px; text-align: center;">4</th>
     </tr>
     <tr>
         <td style="max-width: 20px; text-align: center;"></td>
         <td style="text-align: center; vertical-align: middle;"></td>
-        <td style="max-width: 20px; text-align: center;"></td>
         <td style="max-width: 20px; text-align: center;"></td>
         <td style="max-width: 20px; text-align: center;"></td>
         <td style="max-width: 20px; text-align: center;"></td>
