@@ -183,33 +183,7 @@
         <div class="flex items-center justify-start">
         <img src="{{ asset('img') }}/musicroom.jpg" alt="laptop image" class="imgFluid ml-auto">
         </div>
-<<<<<<< HEAD
-    </section>
-    <br/>
-    <br/>
-    <section class="contact" id="contact">
-        <div class="contact-container">
-            <div class="contact-content">
-                <h2 class="section-title">Contact Us</h2>
-                <p class="section-description">We'd love to hear from you.</p>
-                <div class="contact-form">
-                    <h2>Contact Information:</h2>
-                    <a><i class="fas fa-light fa-phone">    021-5983597</i></a>
-                    <a href="https://www.instagram.com/schoolgracia/"><i class="fa-brands fa-instagram">    @schoolgracia</i></a>
-                    <br/>
-                </div>
-                <div class="contact-hours">
-                    <p>Opening Hours</p>
-                    <p>Mon-Fri 07:00 - 16:00</p>
-                    <p>Saturday 08.00- 12.00</p>
-                </div>
-                <br/>
-                <br/>
-                <i class="fas fa-light fa-location-dot">    Jl. Permata Sari A12 No. 007-009 Kelurahan Binong, Kecamatan Curug, Kabupaten Tangerang, Provinsi Banten</i>
-            </div>
-=======
           </div>
->>>>>>> e478b87adc513f65a66cda5eaf1d10385b56f835
         </div>
       </div>
       

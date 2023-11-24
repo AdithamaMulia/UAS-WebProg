@@ -17,6 +17,7 @@ use App\Http\Controllers\UserController;
 
 // murid
 Route::get('/home', function () {return view('index');});
+Route::get('/test', function () {return view('testing');});
 Route::get('/nilaimapel', function () {return view('nilai');});
 Route::get('/raport', function () {return view('nilai1');});
 
