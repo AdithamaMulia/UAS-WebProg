@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
-   
+
     <style>
       .gradient {
         background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
@@ -19,7 +19,7 @@
     </style>
   </head>
   <body class="l" style="font-family: 'Source Sans Pro', sans-serif;">
-  
+
   @include('navbar')
   <br />
     <div class="pt-24">
@@ -27,7 +27,7 @@
         <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
           <p class="uppercase tracking-loose w-full">Sekolah Gracia</p>
           <h1 class="my-4 text-5xl font-bold leading-tight">
-            The Best Education you 
+            The Best Education you
             Can Get!!
           </h1>
           <p class="leading-normal text-2xl mb-8">
@@ -89,7 +89,7 @@
     </div>
     </div>
           <div class="w-full sm:w-1/2 p-6">
-          
+
           </div>
           <section>
         </div>
@@ -183,37 +183,11 @@
         <div class="flex items-center justify-start">
         <img src="{{ asset('img') }}/musicroom.jpg" alt="laptop image" class="imgFluid ml-auto">
         </div>
-<<<<<<< HEAD
-    </section>
-    <br/>
-    <br/>
-    <section class="contact" id="contact">
-        <div class="contact-container">
-            <div class="contact-content">
-                <h2 class="section-title">Contact Us</h2>
-                <p class="section-description">We'd love to hear from you.</p>
-                <div class="contact-form">
-                    <h2>Contact Information:</h2>
-                    <a><i class="fas fa-light fa-phone">    021-5983597</i></a>
-                    <a href="https://www.instagram.com/schoolgracia/"><i class="fa-brands fa-instagram">    @schoolgracia</i></a>
-                    <br/>
-                </div>
-                <div class="contact-hours">
-                    <p>Opening Hours</p>
-                    <p>Mon-Fri 07:00 - 16:00</p>
-                    <p>Saturday 08.00- 12.00</p>
-                </div>
-                <br/>
-                <br/>
-                <i class="fas fa-light fa-location-dot">    Jl. Permata Sari A12 No. 007-009 Kelurahan Binong, Kecamatan Curug, Kabupaten Tangerang, Provinsi Banten</i>
-            </div>
-=======
           </div>
->>>>>>> e478b87adc513f65a66cda5eaf1d10385b56f835
         </div>
       </div>
-      
-    
+
+
     <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g transform="translate(-1.000000, -14.000000)" fill-rule="nonzero">
@@ -235,12 +209,12 @@
         </g>
       </g>
     </svg>
-     
+
   <section id="contact">
   <div class="contact-container flex justify-center items-center">
     <div class="contact-content text-center">
       <h2 class="section-title">Contact Us</h2>
-      <p class="section-description">We'd love to hear from you. Please fill out the form below.</p>
+      <p class="section-description">We'd love to hear from you.</p>
       <div class="contact-form">
         <h2>Contact Information:</h2>
         <a><i class="fas fa-light fa-phone">    021-5983597</i></a>
@@ -290,7 +264,7 @@
           navaction.classList.add("bg-white");
           navaction.classList.remove("text-white");
           navaction.classList.add("text-gray-800");
-      
+
           for (var i = 0; i < toToggle.length; i++) {
             toToggle[i].classList.add("text-white");
             toToggle[i].classList.remove("text-gray-800");
