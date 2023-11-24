@@ -75,24 +75,20 @@
         <h2 style="text-align: left;">Tambah Nilai</h2>
         <form action="{{ url('/adminpage4') }}" method="get">
             <div class="form-group">
-                <label for="nilaiT1">Tugas 1</label>
-                <input type="text" id="nilaiT1" name="nilaiT1" style="width: 100%; max-width: 280px;" placeholder="Tugas 1">
-            </div>
-            <div class="form-group">
-                <label for="nilaiT2">Tugas 2</label>
-                <input type="text" id="nilaiT2" name="nilaiT2" style="width: 100%; max-width: 280px;" placeholder="Tugas 2">
-            </div>
-            <div class="form-group">
-                <label for="nilaiT3">Tugas 3</label>
-                <input type="text" id="nilaiT3" name="nilaiT3" style="width: 100%; max-width: 280px;" placeholder="Tugas 3">
-            </div>
-            <div class="form-group">
                 <label for="nilaiUH1">Ulangan 1</label>
                 <input type="text" id="nilaiUH1" name="nilaiUH1" style="width: 100%; max-width: 280px;" placeholder="Ulangan 1">
             </div>
             <div class="form-group">
                 <label for="nilaiUH2">Ulangan 2</label>
                 <input type="text" id="nilaiUH2" name="nilaiUH2" style="width: 100%; max-width: 280px;" placeholder="Ulangan 2">
+            </div>
+            <div class="form-group">
+                <label for="nilaiUH3">Ulangan 3</label>
+                <input type="text" id="nilaiUH3" name="nilaiUH3" style="width: 100%; max-width: 280px;" placeholder="Ulangan 2">
+            </div>
+            <div class="form-group">
+                <label for="nilaiUH4">Ulangan 4</label>
+                <input type="text" id="nilaiUH4" name="nilaiUH4" style="width: 100%; max-width: 280px;" placeholder="Ulangan 2">
             </div>
             <div class="form-group">
                 <label for="nilaiUTS">UTS</label>

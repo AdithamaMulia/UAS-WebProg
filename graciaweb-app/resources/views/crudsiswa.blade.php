@@ -79,16 +79,16 @@
                 <input type="text" id="nama" name="nama" style="width: 100%; max-width: 280px;" placeholder="Nama Siswa" required>
             </div>
             <div class="form-group">
-                <label for="induk">No. Induk</label>
-                <input type="text" id="induk" name="induk" style="width: 100%; max-width: 280px;" placeholder="No. Induk" required>
+                <label for="nis">NIS</label>
+                <input type="text" id="nis" name="nis" style="width: 100%; max-width: 280px;" placeholder="No. Induk" required>
             </div>
             <div class="form-group">
-                <label for="tempat">Tempat Lahir</label>
-                <input type="text" id="tempat" name="tempat" style="width: 100%; max-width: 280px;" placeholder="Tempat Lahir" required>
+                <label for="tempat_lahir">Tempat Lahir</label>
+                <input type="text" id="tempat_lahir" name="tempat_lahir" style="width: 100%; max-width: 280px;" placeholder="Tempat Lahir" required>
             </div>
             <div class="form-group">
-                <label for="tanggal">Tanggal Lahir</label>
-                <input type="text" id="tanggal" name="tanggal" style="width: 100%; max-width: 280px;" placeholder="Tanggal Lahir" required>
+                <label for="tanggal_lahir">Tanggal Lahir</label>
+                <input type="text" id="tanggal_lahir" name="tanggal_lahir" style="width: 100%; max-width: 280px;" placeholder="Tanggal Lahir" required>
             </div>
             <div>
                 <label>Jenis Kelamin</label>
@@ -99,7 +99,7 @@
             <div>
                 <label for="pilihan">Agama</label>
                 <br />
-                <select id="pilihan" name="pilihan" style="width :100%; max-width:300px; height: 30px; font-size: 18px; margin-top: 5px;">
+                <select id="agama" name="agama" style="width :100%; max-width:300px; height: 30px; font-size: 18px; margin-top: 5px;">
                     <option value="opsi1">Islam</option>
                     <option value="opsi2">Kristen</option>
                     <option value="opsi3">Khatolik</option>

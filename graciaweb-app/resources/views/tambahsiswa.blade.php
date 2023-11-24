@@ -96,6 +96,10 @@
                 <input type="password" id="password" name="password" style="width: 100%; max-width: 280px;" placeholder="Password" required>
             </div>
             <div class="form-group">
+                <label for="tempat_lahir">Tempat Lahir</label>
+                <input type="date" id="tanggal_lahir" name="tanggal_lahir" style="width: 100%; max-width: 280px;" placeholder="Tanggal Lahir" required>
+            </div>
+            <div class="form-group">
                 <label for="tanggal_lahir">Tanggal Lahir</label>
                 <input type="date" id="tanggal_lahir" name="tanggal_lahir" style="width: 100%; max-width: 280px;" placeholder="Tanggal Lahir" required>
             </div>
