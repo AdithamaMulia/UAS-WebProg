@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\KelasController;   
-use App\Http\Controllers\UserController;   
+use App\Http\Controllers\KelasController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,7 +31,7 @@ Route::get('/editsiswa', function () {return view('editsiswadariguru');});
 Route::get('/guruaddsiswa', function () {return view('crudsiswa');});
 
 // admin
-Route::get('/adminlkelas', [KelasController::class, 'index']);
+Route::get('/adminkelas', [KelasController::class, 'index']);
 Route::post('/adminkelas', [KelasController::class, 'store']);
 Route::post('/adminkelas/update/{id}', 'KelasController@update')->name('kelas.update');
 Route::get('/adminmurid', function () {return view('crudmurid');});

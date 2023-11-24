@@ -68,7 +68,7 @@
         <div class="contact-container">
             <div class="contact-content">
                 <h2 class="section-title">Contact Us</h2>
-                <p class="section-description">We'd love to hear from you. Please fill out the form below.</p>
+                <p class="section-description">We'd love to hear from you.</p>
                 <div class="contact-form">
                     <h2>Contact Information:</h2>
                     <a><i class="fas fa-light fa-phone">    021-5983597</i></a>
