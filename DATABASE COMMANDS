@@ -39,18 +39,12 @@ CREATE TABLE absensi (
     absenID INT NOT NULL AUTO_INCREMENT,
     kelasID INT NOT NULL,
     userID INT,
-    nama_kelas VARCHAR(500),
-    nama_depan VARCHAR(500),
-    nama_belakang VARCHAR(500),
     tanggal DATE,
     keterangan ENUM('Hadir', 'Sakit', 'Izin', 'Tanpa Keterangan'),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY(absenID),
-    FOREIGN KEY(nama_depan) REFERENCES graciauser(nama_depan),
-    FOREIGN KEY(nama_belakang) REFERENCES graciauser(nama_belakang),
     FOREIGN KEY(kelasID) REFERENCES kelas(kelasID),
-    FOREIGN KEY(nama_kelas) REFERENCES kelas(nama_kelas),
     FOREIGN KEY(userID) REFERENCES graciauser(userID)
 );
 
@@ -69,7 +63,6 @@ CREATE TABLE nilai (
     nilaiID INT NOT NULL AUTO_INCREMENT,
     userID INT NOT NULL,
     mapelID INT NOT NULL,
-    nama_mapel VARCHAR(500) NOT NULL,
     nilaiT1 DOUBLE,
     nilaiT2 DOUBLE,
     nilaiT3 DOUBLE,
@@ -86,6 +79,5 @@ CREATE TABLE nilai (
     PRIMARY KEY(nilaiID),
     FOREIGN KEY(userID) REFERENCES graciauser(userID),
     FOREIGN KEY(mapelID) REFERENCES mapel(mapelID),
-    FOREIGN KEY(nama_mapel) REFERENCES mapel(nama_mapel),
     INDEX idx_semester (semester)
 );
