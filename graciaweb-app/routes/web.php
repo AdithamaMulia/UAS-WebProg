@@ -28,9 +28,9 @@ Route::get('/kelas', function () {return view('kelas');});
 Route::get('/list', function () {return view('pilihan');});
 Route::get('/login', function () {return view('login');});
 Route::get('/editsiswa', function () {return view('editsiswadariguru');});
+Route::get('/guruaddsiswa', function () {return view('crudsiswa');});
 
 // admin
-Route::get('/adminsiswa', function () {return view('crudsiswa');});
 Route::get('/adminlkelas', [KelasController::class, 'index']);
 Route::post('/adminkelas', [KelasController::class, 'store']);
 Route::post('/adminkelas/update/{id}', 'KelasController@update')->name('kelas.update');
