@@ -107,7 +107,7 @@
             <th>Jenis Kelamin</th>
             <th>Tanggal Lahir</th>
             <th>Alamat</th>
-            <th>NIK</th>
+            <th>NIS</th>
             <th>Role</th>
             <th>Last Update</th>
             <th>Tgl Dibuat</th>

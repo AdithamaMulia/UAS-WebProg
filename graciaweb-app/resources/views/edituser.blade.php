@@ -116,8 +116,8 @@
                 <input type="text" id="alamat" name="alamat" style="width: 100%; max-width: 280px;" placeholder="Alamat" required>
             </div>
             <div class="form-group">
-                <label for="nik">NIK</label>
-                <input type="text" id="nik" name="nik" style="width: 100%; max-width: 280px;" placeholder="NIK" required>
+                <label for="nis">NIS</label>
+                <input type="text" id="nis" name="nis" style="width: 100%; max-width: 280px;" placeholder="NIS" required>
             </div>
             <div>
                 <label for="role">Role</label>
