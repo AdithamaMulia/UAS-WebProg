@@ -32,9 +32,9 @@ Route::get('/editsiswa', function () {return view('editsiswadariguru');});
 Route::get('/guruaddsiswa', function () {return view('gurutambahsiswa');});
 
 // admin
-Route::get('/adminkelas', [KelasController::class, 'index']);
-Route::post('/adminkelas', [KelasController::class, 'store']);
-Route::post('/adminkelas/update/{kelasID}', 'App\Http\Controllers\KelasController@update')->name('kelas.update');
+Route::get('/adminkelasindex', [KelasController::class, 'index']);
+Route::post('/adminkelasadd', [KelasController::class, 'store']);
+Route::post('/adminkelasupdate/{kelasID}', [KelasController::class, 'update'])->name('adminkelas.update');
 Route::get('/adminmurid', function () {return view('crudmurid');});
 Route::get('/adminnilai', function () {return view('crudnilai');});
 Route::get('/adminaddsiswa', function () {return view('tambahsiswa');});

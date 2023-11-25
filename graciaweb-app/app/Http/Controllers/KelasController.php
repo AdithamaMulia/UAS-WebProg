@@ -26,7 +26,7 @@ class KelasController extends Controller
 
         $kelas->save();
 
-        return redirect('/adminkelas')->with('success', 'Data added successfully');
+        return redirect('/adminkelasindex')->with('success', 'Data added successfully');
     }
 
     public function edit($kelasID)
@@ -43,13 +43,12 @@ class KelasController extends Controller
             'deskripsi' => 'required',
         ]);
 
-        $kelas = graciaKelas::find($kelasID);
+        graciaKelas::where('kelasID', $kelasID)
+        ->update([
+            'nama_kelas' => $request->input('nama_kelas'),
+            'deskripsi' => $request->input('deskripsi'),
+        ]);
 
-        $kelas->nama_kelas = $request->nama_kelas;
-        $kelas->deskripsi = $request->deskripsi;
-
-        $kelas->save();
-
-        return redirect('/adminkelas')->with('success', 'Data updated successfully');
+        return redirect('/adminkelasindex')->with('success', 'Data updated successfully');
     }
 }

@@ -74,11 +74,11 @@
     <div class="card">
         <h2 style="text-align: left;">Edit Kelas</h2>
         <div style="color: green;"></div>
-        <form action="{{ url('/adminkelas/update/' . $class->kelasID) }}" method="post"> 
+        <form action="{{ route('adminkelas.update', ['kelasID' => $class->kelasID]) }}" method="post">
             @csrf
             <div class="form-group">
-                <label for="kelas">Kelas</label>
-                <input type="text" id="deskripsi" name="deskripsi" style="width: 100%; max-width: 280px;" placeholder="{{ $class->nama_kelas }}" value="{{ $class->nama_kelas }}" required>
+                <label for="nama_kelas">Kelas</label>
+                <input type="text" id="nama_kelas" name="nama_kelas" style="width: 100%; max-width: 280px;" placeholder="{{ $class->nama_kelas }}" value="{{ $class->nama_kelas }}" required>
             </div>
             <div class="form-group">
                 <label for="deskripsi">Deskripsi</label>
@@ -89,7 +89,7 @@
                 <button type="submit" class="btn">Update Kelas</button>
                 <br />
                 <br />
-                <a href="{{ url('/adminkelas') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
+                <a href="{{ url('/adminkelasindex') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
             </div>
         </form>
     </div>

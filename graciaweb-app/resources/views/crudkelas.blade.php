@@ -37,7 +37,7 @@
                 <td><a href="{{ url('/adminkelas') }}" style="text-decoration: none;">{{ $class->nama_kelas }}</a></td>
                 <td>{{ $class->deskripsi }}</td>
                 <td>{{ $class->created_at }}</td>
-                <td>{{ $class->update_at }}</td>
+                <td>{{ $class->updated_at }}</td>
                 <td><a href="{{ url('/admineditkelas/update/' . $class->kelasID) }}">Edit</a></td>
             </tr>
         @endforeach
