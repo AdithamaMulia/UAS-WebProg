@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 
 class KelasController extends Controller
 {
-    protected $primarykey = 'kelasID';
     public function index()
     {
         $classes = graciaKelas::all();
@@ -32,8 +31,8 @@ class KelasController extends Controller
 
     public function edit($kelasID)
     {
-        $classes = graciaKelas::find($kelasID);
-        return view('editkelas', ['classes' => $classes]);
+        $classes = graciaKelas::where('kelasID', $kelasID)->first();
+        return view('editkelas', ['class' => $classes]);
     }
 
 
