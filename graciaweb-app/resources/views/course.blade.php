@@ -55,6 +55,20 @@
             margin-top : 20px;
             height: 100%;
         }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000; 
+            background-color: #fff; 
+        }
+
+        .sticky-top {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
     </style>
 </head>
 <body style="background-color: #a4a4a4;">

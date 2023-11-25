@@ -29,13 +29,21 @@
     top: 0;
     z-index: 1000;
     }
+    
+    .gradient1 {
+        background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+      }
+    
+
+   
+
     </style>
   </head>
   <body class="l" style="font-family: 'Source Sans Pro', sans-serif;">
 
   @include('navbar')
   <br />
-    <div class="pt-24">
+  <div class="pt-24 gradient1" >
       <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
         <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
           <p class="uppercase tracking-loose w-full">Sekolah Gracia</p>

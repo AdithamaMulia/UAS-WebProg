@@ -101,7 +101,19 @@ h2 {
             background-color: #7285A5;
             padding: 40px;
         }
+    
+        .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 1000; 
+        background-color: #fff; 
+        }
 
+        .sticky-top {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        }
     </style>
 </head>
 @include('navbar')
