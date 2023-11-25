@@ -47,3 +47,6 @@ Route::get('/admineditkelas/update/{id}', 'App\Http\Controllers\KelasController@
 Route::get('/adminedituser', function () {return view('edituser');});
 Route::get('/admineditnilai', function () {return view('editnilai');});
 Route::get('/admineditsiswa', function () {return view('editsiswa');});
+Route::get('/adminmapel', function () {return view('crudmapel');});
+Route::get('/admineditmapel', function () {return view('editmapel');});
+Route::get('/adminaddmapel', function () {return view('tambahmapel');});
