@@ -291,4 +291,8 @@ html{
     cursor: pointer;
 }
 
+.navbar {
+    width: 100%; /* Change this value to your desired width */
+  }
+
 
