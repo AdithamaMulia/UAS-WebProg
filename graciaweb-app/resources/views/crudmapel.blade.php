@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CRUD Kelas</title>
+    <title>CRUD Mapel</title>
     <style>
         table {
             border-collapse: collapse;
@@ -26,21 +26,19 @@
         <tr>
             <th style="max-width:20px;">No</th>
             <th>Mata Pelajaran</th>
-            <th>Deskripsi</th>
+            <th>Kelas</th>
             <th>Tgl. Dibuat</th>
             <th>Last Update</th>
             <th>Edit</th>
         </tr>
-        @foreach($classes as $key => $class)
             <tr>
-                <td style="max-width:20px;">{{ $key + 1 }}</td>
-                <td><a href="{{ url('/adminkelas') }}" style="text-decoration: none;">{{ $class->nama_kelas }}</a></td>
-                <td>{{ $class->deskripsi }}</td>
-                <td>{{ $class->created_at }}</td>
-                <td>{{ $class->update_at }}</td>
-                <td><a href="{{ url('/admineditkelas/update/' . $class->kelasID) }}">Edit</a></td>
+                <td style="max-width:20px;"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a href="{{ url('/admineditkelas/update/') }}">Edit</a></td>
             </tr>
-        @endforeach
     </table>    
     <a href="{{ url('/adminaddkelas') }}">Add Data</a>
     <br />

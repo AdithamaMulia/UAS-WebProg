@@ -30,6 +30,8 @@
         <th style="text-align: center; vertical-align: middle;" rowspan="2">Nilai UTS</th>
         <th style="text-align: center; vertical-align: middle;" rowspan="2">Nilai UAS</th>
         <th style="text-align: center; vertical-align: middle;" rowspan="2">Nilai Akhir</th>
+        <th style="text-align: center; vertical-align: middle;" rowspan="2">Last Update</th>
+        <th style="text-align: center; vertical-align: middle;" rowspan="2">Tgl Dibuat</th>
         <th style="text-align: center; vertical-align: middle;" rowspan="2">Edit</th>
     </tr>
     <tr>
@@ -41,6 +43,8 @@
     <tr>
         <td style="max-width: 20px; text-align: center;"></td>
         <td style="text-align: center; vertical-align: middle;"></td>
+        <td style="max-width: 20px; text-align: center;"></td>
+        <td style="max-width: 20px; text-align: center;"></td>
         <td style="max-width: 20px; text-align: center;"></td>
         <td style="max-width: 20px; text-align: center;"></td>
         <td style="max-width: 20px; text-align: center;"></td>

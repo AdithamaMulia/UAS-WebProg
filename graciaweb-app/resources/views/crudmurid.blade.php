@@ -88,10 +88,14 @@
             <th>Jenis Kelamin</th>
             <th>Agama</th>
             <th>Alamat</th>
+            <th>Last Update</th>
+            <th>Tgl Dibuat</th>
             <th>Edit</th>
             <th>Nilai</th>
         </tr>
             <tr>
+                <td></td>
+                <td></td>
                 <td></td>
                 <td></td>
                 <td></td>

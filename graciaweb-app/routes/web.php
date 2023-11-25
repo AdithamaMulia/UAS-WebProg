@@ -29,7 +29,7 @@ Route::get('/kelas', function () {return view('kelas');});
 Route::get('/list', function () {return view('pilihan');});
 Route::get('/login', function () {return view('login');});
 Route::get('/editsiswa', function () {return view('editsiswadariguru');});
-Route::get('/guruaddsiswa', function () {return view('crudsiswa');});
+Route::get('/guruaddsiswa', function () {return view('gurutambahsiswa');});
 
 // admin
 Route::get('/adminkelas', [KelasController::class, 'index']);
