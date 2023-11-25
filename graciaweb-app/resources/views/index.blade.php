@@ -16,6 +16,19 @@
       .gradient {
         background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
       }
+
+      .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000; 
+      background-color: #fff; 
+     }
+
+     .sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    }
     </style>
   </head>
   <body class="l" style="font-family: 'Source Sans Pro', sans-serif;">

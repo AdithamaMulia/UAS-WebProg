@@ -1,5 +1,5 @@
     <?php ?>
-    <header class="bg-white">
+    <header class="bg-white sticky-top">
     <nav class="flex justify-between items-center w-[92%] h-[75px] mx-auto">
         <div class="flex items-center">
             <a href="{{ url('/home') }}">
