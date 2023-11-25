@@ -21,26 +21,35 @@ class MapelController extends Controller
 
         $mapel = new graciaMapel();
         $mapel->nama_mapel = $request->mapel;
+        $mapel->kelasID = $request->kelasID;
+        $mapel->tingkat = $request->tingkat;
 
         $mapel->save();
 
-        return redirect('/adminmapel')->with('success', 'Data added successfully');
+        return redirect('/adminmapelindex')->with('success', 'Data added successfully');
     }
 
-    public function update(Request $request, $id)
+    public function edit($mapelID)
+    {
+        $mapels = graciaMapel::where('mapelID', $mapelID)->first();
+        return view('editmapel', ['mapel' => $mapels]);
+    }
+
+    public function update(Request $request, $mapelID)
     {
         $request->validate([
-            'mapel' => 'required',
-            'userID' => 'required',
+            'nama_mapel' => 'required',
+            'kelasID' => 'required',
+            'tingkat' => 'required',
         ]);
 
-        $mapel = graciaMapel::find($id);
+        graciaKelas::where('mapelID', $mapelID)
+        ->update([
+            'nama_mapel' => $request->input('nama_mapel'),
+            'kelasID' => $request->input('kelasID'),
+            'tingkat' => $request->input('tingkat'),
+        ]);
 
-        $mapel->nama_mapel = $request->mapel;
-        $mapel->userID = $request->userID;
-
-        $mapel->save();
-
-        return redirect('/adminmapel')->with('success', 'Data updated successfully');
+        return redirect('/adminmapelindex')->with('success', 'Data updated successfully');
     }
 }
