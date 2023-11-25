@@ -16,9 +16,7 @@ CREATE TABLE graciauser (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     role ENUM('student', 'teacher', 'admin') NOT NULL,
-    kelasID INT,
     PRIMARY KEY (userID),
-    FOREIGN KEY (kelasID) REFERENCES kelas(kelasID),
     INDEX idx_nama_depan (nama_depan),
     INDEX idx_nama_belakang (nama_belakang)
 );
@@ -51,11 +49,12 @@ CREATE TABLE absensi (
 CREATE TABLE mapel (
     mapelID INT NOT NULL AUTO_INCREMENT,
     nama_mapel VARCHAR(500) NOT NULL,
-    userID INT,
+    kelasID INT,
+    tingkat ENUM('10', '11', '12'),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY(mapelID),
-    FOREIGN KEY(userID) REFERENCES graciauser(userID),
+    FOREIGN KEY(kelasID) REFERENCES kelas(kelasID),
     INDEX idx_nama_mapel (nama_mapel)
 );
 
