@@ -84,20 +84,13 @@
                 <label for="deskripsi">Deskripsi</label>
                 <input type="text" id="deskripsi" name="deskripsi" style="width: 100%; max-width: 280px;" placeholder="{{ $class->deskripsi }}" value="{{ $class->deskripsi }}" required>
             </div>
-            <div>
-                <label for="action">Action</label>
-                    <select id="action" name="action" style="width :100%; max-width:300px; height: 30px; font-size: 18px; margin-top: 5px;">
-                        <option value="edit">Edit</option>
-                        <option value="delete">Delete</option>
-                    </select>
-                </label>
-            </div>
             <br />
-            <div class="btn-container">
-                <button type="submit" class="btn">Submit</button>
+            <div class="btn-container" style="text-align: left;">
+                <button type="submit" class="btn">Edit Kelas</button>
+                <a href="{{ url('/') }}" class="btn btn-primary" style="text-decoration: none;">Delete</a>
                 <br />
                 <br />
-                <a href="{{ url('/adminkelasindex') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
+                <a href="{{ url('/adminpage4') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
             </div>
         </form>
     </div>
