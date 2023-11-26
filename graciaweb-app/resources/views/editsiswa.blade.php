@@ -73,7 +73,7 @@
 </head>
 <body style="background-color: #a4a4a4;">
     <div class="card">
-        <h2 style="text-align: left;">Tambah Siswa</h2>
+        <h2 style="text-align: left;">Edit Siswa</h2>
         <form action="{{ url('/adminpage8') }}" method="post">
             <div class="form-group">
                 <label for="username">Username</label>
