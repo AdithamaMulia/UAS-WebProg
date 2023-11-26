@@ -75,6 +75,10 @@
         <h2 style="text-align: left;">Edit Nilai</h2>
         <form action="{{ url('/adminpage4') }}" method="get">
             <div class="form-group">
+                <label for="mapel">Mata Pelajaran</label>
+                <input type="text" id="mapel" name="mapel" style="width: 100%; max-width: 280px;" placeholder="Mata pelajaran">
+            </div>
+            <div class="form-group">
                 <label for="nilaiUH1">Ulangan 1</label>
                 <input type="text" id="nilaiUH1" name="nilaiUH1" style="width: 100%; max-width: 280px;" placeholder="Ulangan 1">
             </div>
