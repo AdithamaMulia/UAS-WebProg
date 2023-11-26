@@ -17,7 +17,6 @@ use App\Http\Controllers\UserController;
 
 // murid
 Route::get('/home', function () {return view('index');});
-Route::get('/test', function () {return view('testing');});
 Route::get('/nilaimapel', function () {return view('nilai');});
 Route::get('/raport', function () {return view('nilai1');});
 
@@ -50,3 +49,7 @@ Route::get('/admineditsiswa', function () {return view('editsiswa');});
 Route::get('/adminmapel', function () {return view('crudmapel');});
 Route::get('/admineditmapel', function () {return view('editmapel');});
 Route::get('/adminaddmapel', function () {return view('tambahmapel');});
+
+// miscellanous
+Route::get('/test', function () {return view('testing');});
+Route::get('/backup', function () {return view('backup');});
