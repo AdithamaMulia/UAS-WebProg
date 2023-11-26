@@ -35,7 +35,12 @@
     .gradient1 {
     background: linear-gradient(90deg, #fffdd0 0%, #ffaa5c 50%, #ffcc33 100%);
     height: 100vh; 
-}
+    }
+
+    .imgFluid {
+      border-radius: 12px; 
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    }
     
 
    
@@ -61,7 +66,7 @@
         </button>
       </div>
       <div class="w-full md:w-3/5 py-6 text-center" data-aos="fade-left">
-        <img src="{{ asset('img') }}/sekolah1.jpg" alt="laptop image" class="imgFluid">
+      <img src="{{ asset('img') }}/sekolah1.jpg" alt="laptop image" class="imgFluid">
       </div>
     </div>
   </div>
