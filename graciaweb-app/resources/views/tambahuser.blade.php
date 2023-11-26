@@ -77,15 +77,11 @@
         @if(session('success'))
             <div style="color: green;">{{ session('success') }}</div>
         @endif
-        <form action="{{ url('/adminpage8') }}" method="post">
-            @csrf
+        <form action="{{ route('adminuser.add') }}" method="post">
+        @csrf
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" style="width: 100%; max-width: 280px;" placeholder="Username" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" style="width: 100%; max-width: 280px;" placeholder="Email" required>
             </div>
             <div class="form-group">
                 <label for="nama_depan">Nama Depan</label>
@@ -122,6 +118,18 @@
                 <label for="nis">NIS</label>
                 <input type="text" id="nis" name="nis" style="width: 100%; max-width: 280px;" placeholder="NIS" required>
             </div>
+            <div class="form-group">
+                <label for="nis">Agama</label>
+                <input type="text" id="Agama" name="Agama" style="width: 100%; max-width: 280px;" placeholder="Agama" required>
+            </div>
+            <div class="form-group">
+                <label for="nama_orangtua">Nama Orangtua</label>
+                <input type="text" id="nama_orangtua" name="nama_orangtua" style="width: 100%; max-width: 280px;" placeholder="Nama Orangtua" required>
+            </div>
+            <div class="form-group">
+                <label for="tempat_lahir">Tempat Lahir</label>
+                <input type="text" id="tempat_lahir" name="tempat_lahir" style="width: 100%; max-width: 280px;" placeholder="Tempat Lahir" required>
+            </div>
             <div>
                 <label for="role">Role</label>
                 <br />
@@ -136,7 +144,7 @@
                 <button type="submit" class="btn">Tambah User</button>
                 <br />
                 <br />
-                <a href="{{ url('/adminpage8') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
+                <a href="{{ url('/adminuserindex') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
             </div>
         </form>
     </div>

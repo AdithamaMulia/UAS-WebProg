@@ -35,6 +35,7 @@
             <th>Jenis Kelamin</th>
             <th>Tanggal Lahir</th>
             <th>Alamat</th>
+            <th>Agama</th>
             <th>NIK</th>
             <th>Role</th>
             <th>Last Update</th>
@@ -51,15 +52,16 @@
                 <td>{{ $user->gender }}</td>
                 <td>{{ $user->tanggal_lahir }}</td>
                 <td>{{ $user->alamat }}</td>
+                <td>{{ $user->agama }}</td>
                 <td>{{ $user->nik }}</td>
                 <td>{{ $user->role }}</td>
                 <td>{{ $user->updated_at }}</td>
                 <td>{{ $user->created_at }}</td>
-                <td><a href="{{ url('/edit_data.php') }}?table=makanan&id={{ $user->userID }}">Edit</a></td>
+                <td><a href="{{ url('/adminedituser/update/' . $user->userID) }}">Edit</a></td>
             </tr>
         @endforeach
     </table>
-    <a href="{{ url('/adminpage9') }}">Add Data</a>
+    <a href="{{ url('/adminadduser') }}">Add Data</a>
     <h3>User Guru</h3>
     <table>
         <tr>
@@ -71,6 +73,7 @@
             <th>Jenis Kelamin</th>
             <th>Tanggal Lahir</th>
             <th>Alamat</th>
+            <th>Agama</th>
             <th>NIK</th>
             <th>Role</th>
             <th>Last Update</th>
@@ -87,15 +90,16 @@
                 <td>{{ $user->gender }}</td>
                 <td>{{ $user->tanggal_lahir }}</td>
                 <td>{{ $user->alamat }}</td>
+                <td>{{ $user->agama }}</td>
                 <td>{{ $user->nik }}</td>
                 <td>{{ $user->role }}</td>
                 <td>{{ $user->updated_at }}</td>
                 <td>{{ $user->created_at }}</td>
-                <td><a href="{{ url('/edit_data.php') }}?table=makanan&id={{ $user->userID }}">Edit</a></td>
+                <td><a href="{{ url('/adminedituser/update/' . $user->userID) }}">Edit</a></td>
             </tr>
         @endforeach
     </table>
-    <a href="{{ url('/adminpage9') }}">Add Data</a>
+    <a href="{{ url('/adminadduser') }}">Add Data</a>
     <h3>User Admin</h3>
     <table>
         <tr>
@@ -107,6 +111,7 @@
             <th>Jenis Kelamin</th>
             <th>Tanggal Lahir</th>
             <th>Alamat</th>
+            <th>Agama</th>
             <th>NIS</th>
             <th>Role</th>
             <th>Last Update</th>
@@ -123,15 +128,16 @@
                 <td>{{ $user->gender }}</td>
                 <td>{{ $user->tanggal_lahir }}</td>
                 <td>{{ $user->alamat }}</td>
+                <td>{{ $user->agama }}</td>
                 <td>{{ $user->nik }}</td>
                 <td>{{ $user->role }}</td>
                 <td>{{ $user->updated_at }}</td>
                 <td>{{ $user->created_at }}</td>
-                <td><a href="{{ url('/edit_data.php') }}?table=makanan&id={{ $user->userID }}">Edit</a></td>
+                <td><a href="{{ url('/adminedituser/update/' . $user->userID) }}">Edit</a></td>
             </tr>
         @endforeach
     </table>
-    <a href="{{ url('/adminpage9') }}">Add Data</a>
+    <a href="{{ url('/adminadduser') }}">Add Data</a>
     <a href="{{ url('/home') }}">Back</a>
 </body>
 </html>

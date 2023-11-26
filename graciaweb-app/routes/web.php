@@ -32,20 +32,30 @@ Route::get('/guruaddsiswa', function () {return view('gurutambahsiswa');});
 
 // admin
 Route::get('/adminkelasindex', [KelasController::class, 'index']);
-Route::post('/adminkelasadd', [KelasController::class, 'store']);
+Route::post('/adminkelasadd', [KelasController::class, 'store'])->name('adminkelas.add');
 Route::post('/adminkelasupdate/{kelasID}', [KelasController::class, 'update'])->name('adminkelas.update');
+Route::get('/admineditkelas/update/{kelasID}', 'App\Http\Controllers\KelasController@edit')->name('admineditkelas.update');
+
+
 Route::get('/adminmurid', function () {return view('crudmurid');});
 Route::get('/adminnilai', function () {return view('crudnilai');});
 Route::get('/adminaddsiswa', function () {return view('tambahsiswa');});
 Route::get('/adminaddkelas', function () {return view('tambahkelas');});
+
 Route::get('/adminaddnilai', function () {return view('tambahnilai');});
-Route::get('/adminuser', [UserController::class, 'index']);
-Route::post('/adminuser', [UserController::class, 'store']);
 Route::get('/adminadduser', function () {return view('tambahuser');});
-Route::get('/admineditkelas/update/{kelasID}', 'App\Http\Controllers\KelasController@edit')->name('admineditkelas.update');
-Route::get('/adminedituser', function () {return view('edituser');});
+
+
+Route::get('/adminuserindex', [UserController::class, 'index']);
+Route::post('/adminuseradd', [UserController::class, 'store'])->name('adminuser.add');
+Route::post('/adminuserupdate/{userID}', [UserController::class, 'update'])->name('adminuser.update');
+Route::get('/adminedituser/update/{userID}', 'App\Http\Controllers\UserController@edit')->name('adminedituser.update');
+
+
 Route::get('/admineditnilai', function () {return view('editnilai');});
 Route::get('/admineditsiswa', function () {return view('editsiswa');});
+
+
 Route::get('/adminmapel', function () {return view('crudmapel');});
 Route::get('/admineditmapel', function () {return view('editmapel');});
 Route::get('/adminaddmapel', function () {return view('tambahmapel');});

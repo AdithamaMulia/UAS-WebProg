@@ -75,30 +75,27 @@
     <div class="card">
         <h2 style="text-align: left;">Edit User</h2>
             <div style="color: green;"></div>
-        <form action="{{ url('/adminpage8') }}" method="post">
+        <form action="{{ route('adminuser.update', ['userID' => $user->userID]) }}" method="post">
+            @csrf
             <div class="form-group">
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username" style="width: 100%; max-width: 280px;" placeholder="Username" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" style="width: 100%; max-width: 280px;" placeholder="Email" required>
+                <input type="text" id="username" name="username" style="width: 100%; max-width: 280px;" placeholder="{{ $user->username }}" required>
             </div>
             <div class="form-group">
                 <label for="nama_depan">Nama Depan</label>
-                <input type="text" id="nama_depan" name="nama_depan" style="width: 100%; max-width: 280px;" placeholder="Nama Depan" required>
+                <input type="text" id="nama_depan" name="nama_depan" style="width: 100%; max-width: 280px;" placeholder="{{ $user->nama_depan }}" required>
             </div>
             <div class="form-group">
                 <label for="nama_belakang">Nama Belakang</label>
-                <input type="text" id="nama_belakang" name="nama_belakang" style="width: 100%; max-width: 280px;" placeholder="Nama Belakang" required>
+                <input type="text" id="nama_belakang" name="nama_belakang" style="width: 100%; max-width: 280px;" placeholder="{{ $user->nama_belakang }}" required>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" style="width: 100%; max-width: 280px;" placeholder="Password" required>
+                <input type="password" id="password" name="password" style="width: 100%; max-width: 280px;" placeholder="{{ $user->password }}" required>
             </div>
             <div class="form-group">
                 <label for="tanggal_lahir">Tanggal Lahir</label>
-                <input type="date" id="tanggal_lahir" name="tanggal_lahir" style="width: 100%; max-width: 280px;" placeholder="Tanggal Lahir" required>
+                <input type="date" id="tanggal_lahir" name="tanggal_lahir" style="width: 100%; max-width: 280px;" placeholder="{{ $user->tanggal_lahir }}" required>
             </div>
             <div>
                 <label>Jenis Kelamin</label>
@@ -113,11 +110,23 @@
             <br />
             <div class="form-group">
                 <label for="alamat">Alamat</label>
-                <input type="text" id="alamat" name="alamat" style="width: 100%; max-width: 280px;" placeholder="Alamat" required>
+                <input type="text" id="alamat" name="alamat" style="width: 100%; max-width: 280px;" placeholder="{{ $user->alamat }}" required>
             </div>
             <div class="form-group">
                 <label for="nis">NIS</label>
-                <input type="text" id="nis" name="nis" style="width: 100%; max-width: 280px;" placeholder="NIS" required>
+                <input type="text" id="nis" name="nis" style="width: 100%; max-width: 280px;" placeholder="{{ $user->nis }}" required>
+            </div>
+            <div class="form-group">
+                <label for="agama">Agama</label>
+                <input type="text" id="agama" name="agama" style="width: 100%; max-width: 280px;" placeholder="{{ $user->agama }}" required>
+            </div>
+            <div class="form-group">
+                <label for="nama_orangtua">Nama Orangtua</label>
+                <input type="date" id="nama_orangtua" name="nama_orangtua" style="width: 100%; max-width: 280px;" placeholder="{{ $user->nama_orangtua }}" required>
+            </div>
+            <div class="form-group">
+                <label for="tempat_lahir">Tempat Lahir</label>
+                <input type="date" id="tempat_lahir" name="tempat_lahir" style="width: 100%; max-width: 280px;" placeholder="{{ $user->tempat_lahir }}" required>
             </div>
             <div>
                 <label for="role">Role</label>
@@ -134,7 +143,7 @@
                 <a href="{{ url('/') }}" class="btn btn-primary" style="text-decoration: none;">Delete</a>
                 <br />
                 <br />
-                <a href="{{ url('/adminpage4') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
+                <a href="{{ url('/adminuserindex') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
             </div>
         </form>
     </div>

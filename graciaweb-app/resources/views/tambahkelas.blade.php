@@ -76,7 +76,7 @@
         @if(session('success'))
             <div style="color: green;">{{ session('success') }}</div>
         @endif
-        <form action="{{ url('/adminkelas') }}" method="post">
+        <form action="{{ route('adminkelas.add') }}" method="post">
         @csrf
             <div class="form-group">
                 <label for="kelas">Kelas</label>
@@ -91,7 +91,7 @@
                 <button type="submit" class="btn">Tambah Kelas</button>
                 <br />
                 <br />
-                <a href="{{ url('/adminkelas') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
+                <a href="{{ url('/adminkelasindex') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
             </div>
         </form>
     </div>

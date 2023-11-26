@@ -30,6 +30,7 @@ class UserController extends Controller
             'role' => 'required',
         ]);
 
+        dd($request);
         $user = new graciaUser();
         $user->username = $request->username;
         $user->nama_depan = $request->nama_depan;
@@ -72,7 +73,7 @@ class UserController extends Controller
             'role' => 'required',
         ]);
 
-        graciaKelas::where('userID', $userID)
+        graciaUser::where('userID', $userID)
         ->update([
             'username' => $request->input('username'),
             'nama_depan' => $request->input('nama_depan'),
@@ -88,6 +89,6 @@ class UserController extends Controller
             'role' => $request->input('role'),
         ]);
 
-        return redirect('/adminmapelindex')->with('success', 'Data updated successfully');
+        return redirect('/adminuserindex')->with('success', 'Data updated successfully');
     }
 }
