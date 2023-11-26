@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <title>
       Gracia School
     </title>
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
     <style>
       .gradient {
@@ -43,28 +45,26 @@
   <body class="l" style="font-family: 'Source Sans Pro', sans-serif;">
 
   @include('navbar')
-  <div class="pt-24 gradient1" >
-      <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-        <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-          <p class="uppercase tracking-loose w-full">Sekolah Gracia</p>
-          <h1 class="my-4 text-5xl font-bold leading-tight">
-            The Best Education you
-            Can Get!!
-          </h1>
-          <p class="leading-normal text-2xl mb-8">
+  <div class="pt-24 gradient1">
+    <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center" data-aos="fade-up">
+      <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left" data-aos="fade-right">
+        <p class="uppercase tracking-loose w-full">Sekolah Gracia</p>
+        <h1 class="my-4 text-5xl font-bold leading-tight" data-aos="fade-left">
+          The Best Education you
+          Can Get!!
+        </h1>
+        <p class="leading-normal text-2xl mb-8" data-aos="fade-up">
           Providing quality education opens doors to a brighter future. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
-          </p>
-          <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-            Lets Begin!!
-          </button>
-        </div>
-        <div class="w-full md:w-3/5 py-6 text-center">
+        </p>
+        <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out" data-aos="zoom-in">
+          Lets Begin!!
+        </button>
+      </div>
+      <div class="w-full md:w-3/5 py-6 text-center" data-aos="fade-left">
         <img src="{{ asset('img') }}/sekolah1.jpg" alt="laptop image" class="imgFluid">
-        </div>
-        <br />
-        <br />
-        <br />
-        <br />
+      </div>
+    </div>
+  </div>
 
         <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
@@ -362,6 +362,12 @@
         }
         return false;
       }
+      AOS.init({
+      duration: 800,
+      once: true,
+      reverse: true
+    });
+
     </script>
   </body>
 </html>
