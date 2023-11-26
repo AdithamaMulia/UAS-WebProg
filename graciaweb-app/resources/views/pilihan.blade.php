@@ -8,8 +8,10 @@
 	<title>List</title>
 	<meta name="description" content="">
 	<meta name="keywords" content="">
+  <script src="https://cdn.tailwindcss.com"></script>
 
         <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+        <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
 
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
 
