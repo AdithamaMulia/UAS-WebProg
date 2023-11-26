@@ -45,7 +45,7 @@
                 <td></td>
                 <td></td>
                 <td><a href="edit_data.php?table=makanan&id=">Edit</a></td>
-                <td><a href="{{ url('/adminpage4') }}">Nilai</a></td>
+                <td><a href="{{ url('/adminnilai') }}">Nilai</a></td>
             </tr>
     </table>
     <a href="{{ url('/adminpage5') }}">Add Data</a>
@@ -73,7 +73,7 @@
                 <td></td>
                 <td></td>
                 <td><a href="edit_data.php?table=makanan&id=">Edit</a></td>
-                <td><a href="{{ url('/adminpage4') }}">Nilai</a></td>
+                <td><a href="{{ url('/adminnilai') }}">Nilai</a></td>
             </tr>
     </table>
     <a href="{{ url('/adminpage5') }}">Add Data</a>
@@ -105,7 +105,7 @@
                 <td></td>
                 <td></td>
                 <td><a href="edit_data.php?table=makanan&id=">Edit</a></td>
-                <td><a href="{{ url('/adminpage4') }}">Nilai</a></td>
+                <td><a href="{{ url('/adminnilai') }}">Nilai</a></td>
             </tr>
     </table>
     <a href="{{ url('/adminpage5') }}">Add Data</a>
@@ -133,7 +133,7 @@
                 <td></td>
                 <td></td>
                 <td><a href="edit_data.php?table=makanan&id=">Edit</a></td>
-                <td><a href="{{ url('/adminpage4') }}">Nilai</a></td>
+                <td><a href="{{ url('/adminnilai') }}">Nilai</a></td>
             </tr>
     </table>
     <a href="{{ url('/adminpage5') }}">Add Data</a>
@@ -161,7 +161,7 @@
                 <td></td>
                 <td></td>
                 <td><a href="edit_data.php?table=makanan&id=">Edit</a></td>
-                <td><a href="{{ url('/adminpage4') }}">Nilai</a></td>
+                <td><a href="{{ url('/adminnilai') }}">Nilai</a></td>
             </tr>
     </table>
     <a href="{{ url('/adminpage5') }}">Add Data</a>
@@ -189,7 +189,7 @@
                 <td></td>
                 <td></td>
                 <td><a href="edit_data.php?table=makanan&id=">Edit</a></td>
-                <td><a href="{{ url('/adminpage4') }}">Nilai</a></td>
+                <td><a href="{{ url('/adminnilai') }}">Nilai</a></td>
             </tr>
     </table>
     <a href="{{ url('/adminpage5') }}">Add Data</a>

@@ -21,7 +21,15 @@
 <body>
     <h2>Welcome, Admin</h2>
     <a class="nav-link" href="{{ url('/home') }}" style="color: black;"><b>Home Page</b></a>
-    <h3>Nilai kelas 7a</h3>
+    <h4>Nama : </h4>
+    <h4>NIS : </h4>
+    <div>
+        <select id="semester" name="semester" style="width :100%; max-width:300px; height: 30px; font-size: 18px; margin-top: 5px; border: 1px solid #000;">
+            <option value="Ganjil">Ganjil</option>
+            <option value="Genap">Genap</option>
+        </select>
+    </div>
+    <br />
     <table>
     <tr>
         <th style="max-width: 20px; text-align: center; vertical-align: middle;" rowspan="2">No</th>
