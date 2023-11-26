@@ -122,11 +122,11 @@
             </div>
             <div class="form-group">
                 <label for="nama_orangtua">Nama Orangtua</label>
-                <input type="date" id="nama_orangtua" name="nama_orangtua" style="width: 100%; max-width: 280px;" placeholder="{{ $user->nama_orangtua }}" required>
+                <input type="text" id="nama_orangtua" name="nama_orangtua" style="width: 100%; max-width: 280px;" placeholder="{{ $user->nama_orangtua }}" required>
             </div>
             <div class="form-group">
                 <label for="tempat_lahir">Tempat Lahir</label>
-                <input type="date" id="tempat_lahir" name="tempat_lahir" style="width: 100%; max-width: 280px;" placeholder="{{ $user->tempat_lahir }}" required>
+                <input type="text" id="tempat_lahir" name="tempat_lahir" style="width: 100%; max-width: 280px;" placeholder="{{ $user->tempat_lahir }}" required>
             </div>
             <div>
                 <label for="role">Role</label>

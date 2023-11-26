@@ -29,83 +29,6 @@
         <tr>
             <th>ID</th>
             <th>Username</th>
-            <th>Email</th>
-            <th>Nama</th>
-            <th>Password</th>
-            <th>Jenis Kelamin</th>
-            <th>Tanggal Lahir</th>
-            <th>Alamat</th>
-            <th>Agama</th>
-            <th>NIK</th>
-            <th>Role</th>
-            <th>Last Update</th>
-            <th>Tgl Dibuat</th>
-            <th>Edit</th>
-        </tr>
-        @foreach($users as $key => $user)
-            <tr>
-                <td style="max-width:20px;">{{ $user->userID + 1 }}</td>
-                <td>{{ $user->username }}</td>
-                <td>{{ $user->email }}</td>
-                <td>{{ $user->nama_depan }}{{ $user->nama_belakang }}</td>
-                <td>{{ $user->password }}</td>
-                <td>{{ $user->gender }}</td>
-                <td>{{ $user->tanggal_lahir }}</td>
-                <td>{{ $user->alamat }}</td>
-                <td>{{ $user->agama }}</td>
-                <td>{{ $user->nik }}</td>
-                <td>{{ $user->role }}</td>
-                <td>{{ $user->updated_at }}</td>
-                <td>{{ $user->created_at }}</td>
-                <td><a href="{{ url('/adminedituser/update/' . $user->userID) }}">Edit</a></td>
-            </tr>
-        @endforeach
-    </table>
-    <a href="{{ url('/adminadduser') }}">Add Data</a>
-    <h3>User Guru</h3>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Username</th>
-            <th>Email</th>
-            <th>Nama</th>
-            <th>Password</th>
-            <th>Jenis Kelamin</th>
-            <th>Tanggal Lahir</th>
-            <th>Alamat</th>
-            <th>Agama</th>
-            <th>NIK</th>
-            <th>Role</th>
-            <th>Last Update</th>
-            <th>Tgl Dibuat</th>
-            <th>Edit</th>
-        </tr>
-        @foreach($users as $key => $user)
-            <tr>
-                <td style="max-width:20px;">{{ $user->userID + 1 }}</td>
-                <td>{{ $user->username }}</td>
-                <td>{{ $user->email }}</td>
-                <td>{{ $user->nama_depan }}{{ $user->nama_belakang }}</td>
-                <td>{{ $user->password }}</td>
-                <td>{{ $user->gender }}</td>
-                <td>{{ $user->tanggal_lahir }}</td>
-                <td>{{ $user->alamat }}</td>
-                <td>{{ $user->agama }}</td>
-                <td>{{ $user->nik }}</td>
-                <td>{{ $user->role }}</td>
-                <td>{{ $user->updated_at }}</td>
-                <td>{{ $user->created_at }}</td>
-                <td><a href="{{ url('/adminedituser/update/' . $user->userID) }}">Edit</a></td>
-            </tr>
-        @endforeach
-    </table>
-    <a href="{{ url('/adminadduser') }}">Add Data</a>
-    <h3>User Admin</h3>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Username</th>
-            <th>Email</th>
             <th>Nama</th>
             <th>Password</th>
             <th>Jenis Kelamin</th>
@@ -120,16 +43,87 @@
         </tr>
         @foreach($users as $key => $user)
             <tr>
-                <td style="max-width:20px;">{{ $user->userID + 1 }}</td>
+                <td style="max-width:20px;">{{ $user->userID }}</td>
                 <td>{{ $user->username }}</td>
-                <td>{{ $user->email }}</td>
                 <td>{{ $user->nama_depan }}{{ $user->nama_belakang }}</td>
                 <td>{{ $user->password }}</td>
                 <td>{{ $user->gender }}</td>
                 <td>{{ $user->tanggal_lahir }}</td>
                 <td>{{ $user->alamat }}</td>
                 <td>{{ $user->agama }}</td>
-                <td>{{ $user->nik }}</td>
+                <td>{{ $user->nis }}</td>
+                <td>{{ $user->role }}</td>
+                <td>{{ $user->updated_at }}</td>
+                <td>{{ $user->created_at }}</td>
+                <td><a href="{{ url('/adminedituser/update/' . $user->userID) }}">Edit</a></td>
+            </tr>
+        @endforeach
+    </table>
+    <a href="{{ url('/adminadduser') }}">Add Data</a>
+    <h3>User Guru</h3>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Nama</th>
+            <th>Password</th>
+            <th>Jenis Kelamin</th>
+            <th>Tanggal Lahir</th>
+            <th>Alamat</th>
+            <th>Agama</th>
+            <th>NIS</th>
+            <th>Role</th>
+            <th>Last Update</th>
+            <th>Tgl Dibuat</th>
+            <th>Edit</th>
+        </tr>
+        @foreach($users as $key => $user)
+            <tr>
+                <td style="max-width:20px;">{{ $user->userID }}</td>
+                <td>{{ $user->username }}</td>
+                <td>{{ $user->nama_depan }}{{ $user->nama_belakang }}</td>
+                <td>{{ $user->password }}</td>
+                <td>{{ $user->gender }}</td>
+                <td>{{ $user->tanggal_lahir }}</td>
+                <td>{{ $user->alamat }}</td>
+                <td>{{ $user->agama }}</td>
+                <td>{{ $user->nis }}</td>
+                <td>{{ $user->role }}</td>
+                <td>{{ $user->updated_at }}</td>
+                <td>{{ $user->created_at }}</td>
+                <td><a href="{{ url('/adminedituser/update/' . $user->userID) }}">Edit</a></td>
+            </tr>
+        @endforeach
+    </table>
+    <a href="{{ url('/adminadduser') }}">Add Data</a>
+    <h3>User Admin</h3>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Nama</th>
+            <th>Password</th>
+            <th>Jenis Kelamin</th>
+            <th>Tanggal Lahir</th>
+            <th>Alamat</th>
+            <th>Agama</th>
+            <th>NIS</th>
+            <th>Role</th>
+            <th>Last Update</th>
+            <th>Tgl Dibuat</th>
+            <th>Edit</th>
+        </tr>
+        @foreach($users as $key => $user)
+            <tr>
+                <td style="max-width:20px;">{{ $user->userID }}</td>
+                <td>{{ $user->username }}</td>
+                <td>{{ $user->nama_depan }}{{ $user->nama_belakang }}</td>
+                <td>{{ $user->password }}</td>
+                <td>{{ $user->gender }}</td>
+                <td>{{ $user->tanggal_lahir }}</td>
+                <td>{{ $user->alamat }}</td>
+                <td>{{ $user->agama }}</td>
+                <td>{{ $user->nis }}</td>
                 <td>{{ $user->role }}</td>
                 <td>{{ $user->updated_at }}</td>
                 <td>{{ $user->created_at }}</td>

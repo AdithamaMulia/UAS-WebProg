@@ -30,7 +30,6 @@ class UserController extends Controller
             'role' => 'required',
         ]);
 
-        dd($request);
         $user = new graciaUser();
         $user->username = $request->username;
         $user->nama_depan = $request->nama_depan;
@@ -53,7 +52,7 @@ class UserController extends Controller
     public function edit($userID)
     {
         $user = graciaUser::where('userID', $userID)->first();
-        return view('edituser', ['users' => $user]);
+        return view('edituser', ['user' => $user]);
     }
 
     public function update(Request $request, $userID)

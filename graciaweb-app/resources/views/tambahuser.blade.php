@@ -89,15 +89,11 @@
             </div>
             <div class="form-group">
                 <label for="nama_belakang">Nama Belakang</label>
-                <input type="text" id="nama_belakang" name="nama_belakang" style="width: 100%; max-width: 280px;" placeholder="Nama Belakang" required>
+                <input type="text" id="nama_belakang" name="nama_belakang" style="width: 100%; max-width: 280px;" placeholder="Nama Belakang">
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" style="width: 100%; max-width: 280px;" placeholder="Password" required>
-            </div>
-            <div class="form-group">
-                <label for="tanggal_lahir">Tanggal Lahir</label>
-                <input type="date" id="tanggal_lahir" name="tanggal_lahir" style="width: 100%; max-width: 280px;" placeholder="Tanggal Lahir" required>
             </div>
             <div>
                 <label>Jenis Kelamin</label>
@@ -109,18 +105,22 @@
                     <label for="gender_perempuan">Perempuan</label>
                 </div>
             </div>
+            <div class="form-group">
+                <label for="tanggal_lahir">Tanggal Lahir</label>
+                <input type="date" id="tanggal_lahir" name="tanggal_lahir" style="width: 100%; max-width: 280px;" placeholder="Tanggal Lahir" required>
+            </div>
             <br />
             <div class="form-group">
                 <label for="alamat">Alamat</label>
-                <input type="text" id="alamat" name="alamat" style="width: 100%; max-width: 280px;" placeholder="Alamat" required>
+                <input type="text" id="alamat" name="alamat" style="width: 100%; max-width: 280px;" placeholder="Alamat">
             </div>
             <div class="form-group">
                 <label for="nis">NIS</label>
                 <input type="text" id="nis" name="nis" style="width: 100%; max-width: 280px;" placeholder="NIS" required>
             </div>
             <div class="form-group">
-                <label for="nis">Agama</label>
-                <input type="text" id="Agama" name="Agama" style="width: 100%; max-width: 280px;" placeholder="Agama" required>
+                <label for="agama">Agama</label>
+                <input type="text" id="agama" name="agama" style="width: 100%; max-width: 280px;" placeholder="Agama" required>
             </div>
             <div class="form-group">
                 <label for="nama_orangtua">Nama Orangtua</label>
