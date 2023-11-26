@@ -43,7 +43,6 @@
   <body class="l" style="font-family: 'Source Sans Pro', sans-serif;">
 
   @include('navbar')
-  <br />
   <div class="pt-24 gradient1" >
       <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
         <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
