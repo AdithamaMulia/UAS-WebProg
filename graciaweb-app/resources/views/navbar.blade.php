@@ -1,4 +1,12 @@
     <?php ?>
+
+    <style>
+       
+        header {
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+        
+    </style>
     <header class="bg-white sticky-top">
     <nav class="flex justify-between items-center w-[92%] h-[75px] mx-auto">
         <div class="flex items-center">
