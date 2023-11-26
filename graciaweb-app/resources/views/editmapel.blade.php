@@ -87,9 +87,17 @@
                     <option value="12">12</option>
                 </select>
             </div>
+            <div>
+                <label for="action">Action</label>
+                    <select id="action" name="action" style="width :100%; max-width:300px; height: 30px; font-size: 18px; margin-top: 5px;">
+                        <option value="edit">Edit</option>
+                        <option value="delete">Delete</option>
+                    </select>
+                </label>
+            </div>
             <br />
             <div class="btn-container">
-                <button type="submit" class="btn">Update Mapel</button>
+                <button type="submit" class="btn">Submit</button>
                 <br />
                 <br />
                 <a href="{{ url('/adminkelas') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>

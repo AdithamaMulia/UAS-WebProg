@@ -98,9 +98,17 @@
                 <label for="nilaiUAS">UAS</label>
                 <input type="text" id="nilaiUAS" name="nilaiUAS" style="width: 100%; max-width: 280px;" placeholder="UAS">
             </div>
+            <div>
+            <label for="action">Action</label>
+            <br />
+            <select id="action" name="action" style="width :100%; max-width:300px; height: 30px; font-size: 18px; margin-top: 5px;">
+                <option value="edit">Edit</option>
+                <option value="delete">Delete</option>
+            </select>
+            </div>
             <br />
             <div class="btn-container" style="text-align: left;">
-                <button type="submit" class="btn">Update Nilai</button>
+                <button type="submit" class="btn">Submit</button>
                 <br />
                 <br />
                 <a href="{{ url('/adminpage4') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
