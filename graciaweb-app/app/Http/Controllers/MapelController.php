@@ -20,7 +20,7 @@ class MapelController extends Controller
         ]);
 
         $mapel = new graciaMapel();
-        $mapel->nama_mapel = $request->mapel;
+        $mapel->nama_mapel = $request->nama_mapel;
         $mapel->kelasID = $request->kelasID;
         $mapel->tingkat = $request->tingkat;
 
@@ -43,7 +43,7 @@ class MapelController extends Controller
             'tingkat' => 'required',
         ]);
 
-        graciaKelas::where('mapelID', $mapelID)
+        graciaMapel::where('mapelID', $mapelID)
         ->update([
             'nama_mapel' => $request->input('nama_mapel'),
             'kelasID' => $request->input('kelasID'),

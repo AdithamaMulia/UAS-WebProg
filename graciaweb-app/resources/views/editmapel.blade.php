@@ -74,14 +74,20 @@
     <div class="card">
         <h2 style="text-align: left;">Edit Mapel</h2>
         <div style="color: green;"></div>
-        <form action="{{ url('/adminkelas/update/') }}" method="post"> 
+        <form action="{{ route('adminmapel.update', ['mapelID' => $mapel->mapelID]) }}" method="post"> 
+            @csrf
             <div class="form-group">
                 <label for="nama_mapel">Mata Pelajaran</label>
-                <input type="text" id="nama_mapel" name="nama_mapel" style="width: 100%; max-width: 280px;" placeholder="Mata Pelajaran" required>
+                <input type="text" id="nama_mapel" name="nama_mapel" style="width: 100%; max-width: 280px;" placeholder="{{ $mapel->nama_mapel }}" required>
             </div>
             <div class="form-group">
-                <label for="kelasID">Kelas</label>
-                <select id="kelasID" name="kelasID" style="width :100%; max-width:300px; height: 30px; font-size: 18px; margin-top: 5px;">
+                <label for="kelasID">ID Kelas</label>
+                <input type="text" id="kelasID" name="kelasID" style="width: 100%; max-width: 280px;" placeholder="{{ $mapel->kelasID }}" required>
+                <p>Must Use Existing ID Kelas</p> 
+            </div>
+            <div class="form-group">
+                <label for="tingkat">Kelas</label>
+                <select id="tingkat" name="tingkat" style="width :100%; max-width:300px; height: 30px; font-size: 18px; margin-top: 5px;">
                     <option value="10">10</option>
                     <option value="11">11</option>
                     <option value="12">12</option>
@@ -93,7 +99,7 @@
                 <a href="{{ url('/') }}" class="btn btn-primary" style="text-decoration: none;">Delete</a>
                 <br />
                 <br />
-                <a href="{{ url('/adminpage4') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
+                <a href="{{ url('/adminmapelindex') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
             </div>
         </form>
     </div>

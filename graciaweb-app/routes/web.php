@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KelasController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\MapelController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -41,7 +43,7 @@ Route::get('/adminmurid', function () {return view('crudmurid');});
 Route::get('/adminnilai', function () {return view('crudnilai');});
 Route::get('/adminaddsiswa', function () {return view('tambahsiswa');});
 Route::get('/adminaddkelas', function () {return view('tambahkelas');});
-
+Route::get('/adminaddmapel', function () {return view('tambahmapel');});
 Route::get('/adminaddnilai', function () {return view('tambahnilai');});
 Route::get('/adminadduser', function () {return view('tambahuser');});
 
@@ -56,9 +58,10 @@ Route::get('/admineditnilai', function () {return view('editnilai');});
 Route::get('/admineditsiswa', function () {return view('editsiswa');});
 
 
-Route::get('/adminmapel', function () {return view('crudmapel');});
-Route::get('/admineditmapel', function () {return view('editmapel');});
-Route::get('/adminaddmapel', function () {return view('tambahmapel');});
+Route::get('/adminmapelindex', [MapelController::class, 'index']);
+Route::post('/adminmapeladd', [MapelController::class, 'store'])->name('adminmapel.add');
+Route::post('/adminmapelupdate/{mapelID}', [MapelController::class, 'update'])->name('adminmapel.update');
+Route::get('/admineditmapel/update/{mapelID}', 'App\Http\Controllers\MapelController@edit')->name('admineditmapel.update');
 
 // miscellanous
 Route::get('/test', function () {return view('testing');});
