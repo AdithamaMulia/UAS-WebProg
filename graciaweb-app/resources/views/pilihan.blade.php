@@ -68,7 +68,7 @@
            
           <div class="flex justify-center w-full">
           <div class="col-lg-4 mb-3 mr-4">
-              <a href="nilaiX.php" class="card-link no-underline">
+              <a href="{{ url('/tambahmurid') }}" class="card-link no-underline">
                   <div class="card" style="height: 250px; width: 250px; max-width: 1700px; border: 2px solid #000; border-radius: 10px; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);">
                       <div class="card-body card-text-zoom" style="overflow: auto; padding: 20px;">
                           <p style="color: black;"><b>List Siswa</b></p>
@@ -84,7 +84,7 @@
 
       <div class="flex justify-center w-full">
           <div class="col-lg-4 mb-3 mr-4">
-              <a href="nilaiX.php" class="card-link no-underline">
+              <a href="{{ url('/absen') }}" class="card-link no-underline">
                   <div class="card" style="height: 250px; width: 250px; max-width: 1700px; border: 2px solid #000; border-radius: 10px; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);">
                       <div class="card-body card-text-zoom" style="overflow: auto; padding: 20px;">
                           <p style="color: black;"><b>List Absensi</b></p>
