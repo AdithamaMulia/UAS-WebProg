@@ -232,8 +232,8 @@
       </div>
   </section>
 
-  <section id="contact" style="background: linear-gradient(90deg, #eee2dc 0%, #bab2b5 50%);">
-  <div class="contact-container flex justify-center items-center" data-aos="slide-up">
+  <section id="contact" style="background: linear-gradient(90deg, #eee2dc 0%, #bab2b5 50%); ">
+  <div class="contact-container  flex justify-center items-center" data-aos="slide-up">
     <div class="contact-content text-center">
       <h2 class="section-title">Contact Us</h2>
       <p class="section-description">We'd love to hear from you.</p>

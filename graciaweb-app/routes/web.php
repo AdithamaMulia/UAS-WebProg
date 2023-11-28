@@ -66,3 +66,4 @@ Route::get('/admineditmapel/update/{mapelID}', 'App\Http\Controllers\MapelContro
 // miscellanous
 Route::get('/test', function () {return view('testing');});
 Route::get('/backup', function () {return view('backup');});
+

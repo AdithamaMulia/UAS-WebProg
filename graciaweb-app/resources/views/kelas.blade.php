@@ -98,7 +98,7 @@ h2 {
         }
 
         .blue-top {
-            background-color: #7285A5;
+            background-color: #FEC994;
             padding: 40px;
         }
     
@@ -117,7 +117,7 @@ h2 {
     </style>
 </head>
 @include('navbar')
-<body style="background-color: #a4a4a4;">
+<body style="background-color: #eee2dc;">
     <div class="box-main">
         <br />
         <div class="card mb-3 mx-auto" style="max-width: 1400px;">
