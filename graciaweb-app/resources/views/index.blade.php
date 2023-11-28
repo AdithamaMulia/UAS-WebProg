@@ -171,7 +171,7 @@
         <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
           <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow" data-aos="zoom-in" style="background-color: #f0e4da;">
             <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-              <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+              <p class="w-full text-gray-600 text-xs md:text-sm px-6 mt-3">
                 Fasilitas Sekolah
               </p>
               <div class="w-full font-bold text-xl text-gray-800 px-6">
@@ -192,7 +192,7 @@
         <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
           <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow" data-aos="zoom-in" style="background-color: #f0e4da;">
             <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-              <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+              <p class="w-full text-gray-600 text-xs md:text-sm px-6 mt-3">
               Fasilitas Sekolah
               </p>
               <div class="w-full font-bold text-xl text-gray-800 px-6">
@@ -212,7 +212,7 @@
         <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
           <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow" data-aos="zoom-in" style="background-color: #f0e4da;">
             <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-              <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+              <p class="w-full text-gray-600 text-xs md:text-sm px-6 mt-3">
               Fasilitas Sekolah
               </p>
               <div class="w-full font-bold text-xl text-gray-800 px-6">
