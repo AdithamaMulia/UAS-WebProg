@@ -71,7 +71,7 @@
               <a href="nilaiX.php" class="card-link no-underline">
                   <div class="card" style="height: 250px; width: 250px; max-width: 1700px; border: 2px solid #000; border-radius: 10px; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);">
                       <div class="card-body card-text-zoom" style="overflow: auto; padding: 20px;">
-                          <p style="color: black;"><b>List Nilai</b></p>
+                          <p style="color: black;"><b>List Siswa</b></p>
                           <br />
                           <div class="blue-top" style="height: 10px; background-color: #6C8B9F;"></div>
                           <div class="nested-box" style="margin-top: 10px;  height: calc(100% - 40px);"></div>

@@ -61,6 +61,7 @@
     <br />
     <div class="card mb-3" style="width:100%; max-width: 1200px;">
         <h2 style="padding-left: 15px; font-size: 30px;">Daftar Absen Siswa</h2>
+        <h2 style="padding-left: 15px; font-size: 30px;">Kelas ...</h2>
         <br />
         <div class="input-container" style="padding-left: 15px;">
             <label for="tanggal">Tanggal:</label>
@@ -86,7 +87,7 @@
                         <td style="width: 250px;">loren ipsum</td>
                         <td style="width: 20px; text-align: center;"><input type="checkbox" id="remember" name="remember"></td>
                         <td style="width: 180px;">
-                        <select id="dropdown" style="border: 1px solid #000;">
+                        <select id="dropdown" style="border: 1px solid #000; border-radius: 5px;">
                             <option value="hadir">Hadir</option>
                             <option value="sakit">Sakit</option>
                             <option value="izin">Izin</option>
