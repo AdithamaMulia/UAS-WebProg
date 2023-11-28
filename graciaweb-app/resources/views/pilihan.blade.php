@@ -61,17 +61,17 @@
 
   <div class="container pt-24 md:pt-48 px-6 mx-auto flex flex-wrap flex-col md:flex-row items-center justify-center">
     <div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
-        <h1 class="my-4 text-3xl md:text-5xl text-purple-800 font-bold leading-tight text-center md:text-left slide-in-bottom-h1">List Nilai dan Absensi </h1>
-        <p class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Data Absensi dan Nilai siswa</p> 
+        <h1 class="my-4 text-3xl md:text-5xl text-purple-800 font-bold leading-tight text-center md:text-left slide-in-bottom-h1">List Siswa dan Absensi </h1>
+        <p class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Data Absensi dan Daftar siswa</p> 
         <div class="flex w-full justify-center md:justify-start pb-24 lg:pb-0 fade-in">
 
            
           <div class="flex justify-center w-full">
           <div class="col-lg-4 mb-3 mr-4">
-              <a href="nilaiX.php" class="card-link no-underline">
+              <a href="{{ url('/tambahmurid') }}" class="card-link no-underline">
                   <div class="card" style="height: 250px; width: 250px; max-width: 1700px; border: 2px solid #000; border-radius: 10px; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);">
                       <div class="card-body card-text-zoom" style="overflow: auto; padding: 20px;">
-                          <p style="color: black;"><b>List Nilai</b></p>
+                          <p style="color: black;"><b>List Siswa</b></p>
                           <br />
                           <div class="blue-top" style="height: 10px; background-color: #6C8B9F;"></div>
                           <div class="nested-box" style="margin-top: 10px;  height: calc(100% - 40px);"></div>
@@ -84,7 +84,7 @@
 
       <div class="flex justify-center w-full">
           <div class="col-lg-4 mb-3 mr-4">
-              <a href="nilaiX.php" class="card-link no-underline">
+              <a href="{{ url('/absen') }}" class="card-link no-underline">
                   <div class="card" style="height: 250px; width: 250px; max-width: 1700px; border: 2px solid #000; border-radius: 10px; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);">
                       <div class="card-body card-text-zoom" style="overflow: auto; padding: 20px;">
                           <p style="color: black;"><b>List Absensi</b></p>
