@@ -24,9 +24,6 @@
                     <a class="hover:text-gray-500" href="{{ url('/kelas') }}">Class List</a>
                 </li>
                 <li>
-                    <a class="hover:text-gray-500" href="{{ url('/mapel') }}">Course Overview</a>
-                </li>
-                <li>
                     <a class="hover:text-gray-500" href="#contact">Contact Us</a>
                 </li>
                 <li>
