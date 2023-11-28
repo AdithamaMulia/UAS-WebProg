@@ -327,16 +327,14 @@
         }
         return false;
       }
-      AOS.init({
-      duration: 800,
-      once: true,
-      reverse: true
-    });
 
     </script>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({
+        duration: 900
+      });
+
     </script>
     </body>
   </body>
