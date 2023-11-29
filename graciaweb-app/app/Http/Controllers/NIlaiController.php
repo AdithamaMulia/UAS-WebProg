@@ -7,48 +7,67 @@ use Illuminate\Http\Request;
 
 class NilaiController extends Controller
 {
-    public function index()
-    {
-        $nilais = graciaNilai::all();
-        return view('crudnilai', ['nilais' => $nilais]);
-    }
-
     public function store(Request $request)
-    {
-        $request->validate([
-            'kelas' => 'required',
-            'deskripsi' => 'required',
-        ]);
+{
+    $request->validate([
+        'userID' => 'required',
+        'mapelID' => 'required',
+        'nilaiUTS' => 'nullable|numeric',
+        'nilaiUAS' => 'nullable|numeric',
+        'nilaiUH1' => 'nullable|numeric',
+        'nilaiUH2' => 'nullable|numeric',
+        'nilaiUH3' => 'nullable|numeric',
+        'nilaiUH4' => 'nullable|numeric',
+        'nilaiAkhir' => 'nullable|numeric',
+        'semester' => 'required|in:Ganjil,Genap',
+    ]);
 
-        $kelas = new graciaNilai();
-        $kelas->nama_kelas = $request->kelas;
-        $kelas->deskripsi = $request->deskripsi;
+    $nilai = new Nilai();
+    $nilai->userID = $request->userID;
+    $nilai->mapelID = $request->mapelID;
+    $nilai->nilaiUTS = $request->nilaiUTS;
+    $nilai->nilaiUAS = $request->nilaiUAS;
+    $nilai->nilaiUH1 = $request->nilaiUH1;
+    $nilai->nilaiUH2 = $request->nilaiUH2;
+    $nilai->nilaiUH3 = $request->nilaiUH3;
+    $nilai->nilaiUH4 = $request->nilaiUH4;
+    $nilai->nilaiAkhir = $request->nilaiAkhir;
+    $nilai->semester = $request->semester;
+    $nilai->save();
 
-        $kelas->save();
+    return redirect('/nilai')->with('success', 'Data added successfully');
+}
 
-        return redirect('/adminkelasindex')->with('success', 'Data added successfully');
-    }
+public function update(Request $request, $nilaiID)
+{
+    $request->validate([
+        'userID' => 'required',
+        'mapelID' => 'required',
+        'nilaiUTS' => 'nullable|numeric',
+        'nilaiUAS' => 'nullable|numeric',
+        'nilaiUH1' => 'nullable|numeric',
+        'nilaiUH2' => 'nullable|numeric',
+        'nilaiUH3' => 'nullable|numeric',
+        'nilaiUH4' => 'nullable|numeric',
+        'nilaiAkhir' => 'nullable|numeric',
+        'semester' => 'required|in:Ganjil,Genap',
+    ]);
 
-    public function edit($kelasID)
-    {
-        $nilais = graciaNilai::where('kelasID', $kelasID)->first();
-        return view('editkelas', ['class' => $nilais]);
-    }
-
-
-    public function update(Request $request, $kelasID)
-    {
-        $request->validate([
-            'nama_kelas' => 'required',
-            'deskripsi' => 'required',
-        ]);
-
-        graciaNilai::where('kelasID', $kelasID)
+    Nilai::where('nilaiID', $nilaiID)
         ->update([
-            'nama_kelas' => $request->input('nama_kelas'),
-            'deskripsi' => $request->input('deskripsi'),
+            'userID' => $request->input('userID'),
+            'mapelID' => $request->input('mapelID'),
+            'nilaiUTS' => $request->input('nilaiUTS'),
+            'nilaiUAS' => $request->input('nilaiUAS'),
+            'nilaiUH1' => $request->input('nilaiUH1'),
+            'nilaiUH2' => $request->input('nilaiUH2'),
+            'nilaiUH3' => $request->input('nilaiUH3'),
+            'nilaiUH4' => $request->input('nilaiUH4'),
+            'nilaiAkhir' => $request->input('nilaiAkhir'),
+            'semester' => $request->input('semester'),
         ]);
 
-        return redirect('/adminkelasindex')->with('success', 'Data updated successfully');
-    }
+    return redirect('/nilai')->with('success', 'Data updated successfully');
+}
+
 }

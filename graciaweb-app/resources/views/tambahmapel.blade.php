@@ -72,7 +72,7 @@
 </head>
 <body>
     <div class="card">
-        <h2 style="text-align: left;">Edit Mapel</h2>
+        <h2 style="text-align: left;">Tambah Mata Pelajaran</h2>
         <div style="color: green;"></div>
         <form action="{{ route('adminmapel.add') }}" method="post"> 
             @csrf
@@ -81,6 +81,7 @@
                 <input type="text" id="nama_mapel" name="nama_mapel" style="width: 100%; max-width: 280px;" placeholder="Mata Pelajaran" required>
             </div>
             <div class="form-group">
+                <p>Must Use Existing ID Kelas</p>
                 <label for="kelasID">ID Kelas</label>
                 <input type="text" id="kelasID" name="kelasID" style="width: 100%; max-width: 280px;" placeholder="ID Kelas" required>
             </div>

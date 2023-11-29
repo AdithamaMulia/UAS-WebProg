@@ -24,7 +24,7 @@ class AbsensiController extends Controller
         ]);
 
         $absen = new graciaAbsen();
-        $absen->kelasID = $request->kelasID;
+        $absen->userID = $request->userID;
         $absen->tanggal = $request->tanggal;
         $absen->userID = $request->userID;
         $absen->keterangan = $request->keterangan;
@@ -46,7 +46,7 @@ class AbsensiController extends Controller
 
         $absen = graciaabsen::find($id);
 
-        $absen->kelasID = $request->kelasID;
+        $absen->userID = $request->userID;
         $absen->tanggal = $request->tanggal;
         $absen->userID = $request->userID;
         $absen->keterangan = $request->keterangan;

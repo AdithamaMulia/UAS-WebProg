@@ -24,9 +24,6 @@
                     <a class="hover:text-gray-500" href="{{ url('/kelas') }}">Class List</a>
                 </li>
                 <li>
-                    <a class="hover:text-gray-500" href="{{ url('/mapel') }}">Course Overview</a>
-                </li>
-                <li>
                     <a class="hover:text-gray-500" href="#contact">Contact Us</a>
                 </li>
                 <li>
@@ -36,12 +33,12 @@
                     <a class="hover:text-gray-500" href="{{ url('/enroll-now') }}">Enroll Now</a>
                 </li>
                 <li>
-                    <a class="hover:text-gray-500" href="{{ url('/adminpage2') }}">Admin</a>
+                    <a class="hover:text-gray-500" href="{{ url('/listadmin') }}">Admin</a>
                 </li>
             </ul>
         </div>
         <div class="flex items-center gap-6">
-            <a href="{{ url('/login') }}"><button class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">Login</button></a>
+            <a href="{{ url('/home') }}"><button class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">Logout</button></a>
             <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
         </div>
     </nav>

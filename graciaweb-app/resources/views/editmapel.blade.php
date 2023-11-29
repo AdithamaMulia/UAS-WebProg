@@ -78,11 +78,11 @@
             @csrf
             <div class="form-group">
                 <label for="nama_mapel">Mata Pelajaran</label>
-                <input type="text" id="nama_mapel" name="nama_mapel" style="width: 100%; max-width: 280px;" placeholder="{{ $mapel->nama_mapel }}" required>
+                <input type="text" id="nama_mapel" name="nama_mapel" style="width: 100%; max-width: 280px;" placeholder="Nama Mapel" value="{{ $mapel->nama_mapel }}" required>
             </div>
             <div class="form-group">
                 <label for="kelasID">ID Kelas</label>
-                <input type="text" id="kelasID" name="kelasID" style="width: 100%; max-width: 280px;" placeholder="{{ $mapel->kelasID }}" required>
+                <input type="text" id="kelasID" name="kelasID" style="width: 100%; max-width: 280px;" placeholder="ID Kelas" value="{{ $mapel->kelasID }}" required>
                 <p>Must Use Existing ID Kelas</p> 
             </div>
             <div class="form-group">
