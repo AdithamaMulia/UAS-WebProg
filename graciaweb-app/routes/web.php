@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KelasController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\MapelController;
+use App\Http\Controllers\SessionController;
 
 
 /*
@@ -16,6 +17,9 @@ use App\Http\Controllers\MapelController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+//login
+Route::get('/', [SessionController::class, 'signin']);
+Route::post('/login', [SessionController::class, 'login']);
 
 // murid
 Route::get('/home', function () {return view('index');});
@@ -28,7 +32,6 @@ Route::get('/tambahmurid', function () {return view('addsiswa');});
 Route::get('/mapel', function () {return view('course');});
 Route::get('/kelas', function () {return view('kelas');});
 Route::get('/list', function () {return view('pilihan');});
-Route::get('/login', function () {return view('login');});
 Route::get('/editsiswa', function () {return view('editsiswadariguru');});
 Route::get('/guruaddsiswa', function () {return view('gurutambahsiswa');});
 
