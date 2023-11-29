@@ -103,8 +103,8 @@
             </div>
             <div class="text-end">
                 <br />
-                    <a href="#" class="btn btn-primary">Back</a>
-                    <a href="#" class="btn btn-primary">Submit</a>
+                    <a href="{{ url('/adminasben') }}" class="btn btn-primary">Back</a>
+                    <a href="{{ url('/adminabsen/hari/' . $absensi->tanggal) }}" class="btn btn-primary">Submit</a>
                 </div>
             </div>
     </div>
