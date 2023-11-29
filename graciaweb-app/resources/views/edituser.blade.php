@@ -79,23 +79,23 @@
             @csrf
             <div class="form-group">
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username" style="width: 100%; max-width: 280px;" placeholder="{{ $user->username }}" required>
+                <input type="text" id="username" name="username" style="width: 100%; max-width: 280px;" value="{{ $user->username }}" placeholder="Username" required>
             </div>
             <div class="form-group">
                 <label for="nama_depan">Nama Depan</label>
-                <input type="text" id="nama_depan" name="nama_depan" style="width: 100%; max-width: 280px;" placeholder="{{ $user->nama_depan }}" required>
+                <input type="text" id="nama_depan" name="nama_depan" style="width: 100%; max-width: 280px;" value="{{ $user->nama_depan }}" placeholder="Nama Depan" required>
             </div>
             <div class="form-group">
                 <label for="nama_belakang">Nama Belakang</label>
-                <input type="text" id="nama_belakang" name="nama_belakang" style="width: 100%; max-width: 280px;" placeholder="{{ $user->nama_belakang }}" required>
+                <input type="text" id="nama_belakang" name="nama_belakang" style="width: 100%; max-width: 280px;" value="{{ $user->nama_belakang }}" placeholder="Nama Belakang" required>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" style="width: 100%; max-width: 280px;" placeholder="{{ $user->password }}" required>
+                <input type="password" id="password" name="password" style="width: 100%; max-width: 280px;" value="{{ $user->password }}" placeholder="Password" required>
             </div>
             <div class="form-group">
                 <label for="tanggal_lahir">Tanggal Lahir</label>
-                <input type="date" id="tanggal_lahir" name="tanggal_lahir" style="width: 100%; max-width: 280px;" placeholder="{{ $user->tanggal_lahir }}" required>
+                <input type="date" id="tanggal_lahir" name="tanggal_lahir" style="width: 100%; max-width: 280px;" value="{{ $user->tanggal_lahir }}" required>
             </div>
             <div>
                 <label>Jenis Kelamin</label>
@@ -110,23 +110,23 @@
             <br />
             <div class="form-group">
                 <label for="alamat">Alamat</label>
-                <input type="text" id="alamat" name="alamat" style="width: 100%; max-width: 280px;" placeholder="{{ $user->alamat }}" required>
+                <input type="text" id="alamat" name="alamat" style="width: 100%; max-width: 280px;" value="{{ $user->alamat }}" placeholder="Alamat" required>
             </div>
             <div class="form-group">
                 <label for="nis">NIS</label>
-                <input type="text" id="nis" name="nis" style="width: 100%; max-width: 280px;" placeholder="{{ $user->nis }}" required>
+                <input type="text" id="nis" name="nis" style="width: 100%; max-width: 280px;" value="{{ $user->nis }}" placeholder="NIS" required>
             </div>
             <div class="form-group">
                 <label for="agama">Agama</label>
-                <input type="text" id="agama" name="agama" style="width: 100%; max-width: 280px;" placeholder="{{ $user->agama }}" required>
+                <input type="text" id="agama" name="agama" style="width: 100%; max-width: 280px;" value="{{ $user->agama }}" placeholder="Agama" required>
             </div>
             <div class="form-group">
                 <label for="nama_orangtua">Nama Orangtua</label>
-                <input type="text" id="nama_orangtua" name="nama_orangtua" style="width: 100%; max-width: 280px;" placeholder="{{ $user->nama_orangtua }}" required>
+                <input type="text" id="nama_orangtua" name="nama_orangtua" style="width: 100%; max-width: 280px;" value="{{ $user->nama_orangtua }}" placeholder="Nama Orangtua" required>
             </div>
             <div class="form-group">
                 <label for="tempat_lahir">Tempat Lahir</label>
-                <input type="text" id="tempat_lahir" name="tempat_lahir" style="width: 100%; max-width: 280px;" placeholder="{{ $user->tempat_lahir }}" required>
+                <input type="text" id="tempat_lahir" name="tempat_lahir" style="width: 100%; max-width: 280px;" value="{{ $user->tempat_lahir }}" placeholder="Tempat Lahir" required>
             </div>
             <div>
                 <label for="role">Role</label>
