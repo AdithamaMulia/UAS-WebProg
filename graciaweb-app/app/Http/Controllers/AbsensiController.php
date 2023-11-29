@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\graciaAbsen;
+use App\Models\graciaAbsensi;
 use Illuminate\Http\Request;
 
 class AbsensiController extends Controller
 {
     public function index()
     {
-        $classes = graciaAbsen::all();
-        return view('crudabsen', ['absen' => $absen]);
+        $absensi = graciaAbsensi::all();
+        return view('crudabsen', ['absensi' => $absensi]);
     }
 
     public function store(Request $request)
@@ -23,7 +23,7 @@ class AbsensiController extends Controller
             'keterangan' => 'required',
         ]);
 
-        $absen = new graciaAbsen();
+        $absen = new graciaAbsensi();
         $absen->userID = $request->userID;
         $absen->tanggal = $request->tanggal;
         $absen->userID = $request->userID;
@@ -44,7 +44,7 @@ class AbsensiController extends Controller
             'keterangan' => 'required',
         ]);
 
-        $absen = graciaabsen::find($id);
+        $absen = graciaabsensi::find($id);
 
         $absen->userID = $request->userID;
         $absen->tanggal = $request->tanggal;
