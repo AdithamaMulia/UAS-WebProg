@@ -161,15 +161,15 @@
   </section>
     <section class="bg-white border-b py-8" style="background: linear-gradient(90deg, #edc7b7 0%, #eddbcc 100%);">
       <div class="container mx-auto flex flex-wrap pt-4 pb-12">
-        <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800" data-aos="fade-down">
+        <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
         FACILITIES
         </h2>
         <br />
-        <div class="w-full mb-4" data-aos="fade-down">
+        <div class="w-full mb-4">
           <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
         <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow" data-aos="zoom-in" style="background-color: #f0e4da;">
+          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow style="background-color: #f0e4da;">
             <a href="#" class="flex flex-wrap no-underline hover:no-underline">
               <p class="w-full text-gray-600 text-xs md:text-sm px-6 mt-3">
                 Fasilitas Sekolah
@@ -183,14 +183,14 @@
             </a>
           </div>
           <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6" style="background-color: #edded1;">
-        <div class="flex items-center justify-start" data-aos="zoom-in" >
+        <div class="flex items-center justify-start">
           <img src="{{ asset('img') }}/computer.jpg" alt="laptop image" class="imgFluid ml-auto">
         </div>
     </div>
 
         </div>
         <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow" data-aos="zoom-in" style="background-color: #f0e4da;">
+          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow" style="background-color: #f0e4da;">
             <a href="#" class="flex flex-wrap no-underline hover:no-underline">
               <p class="w-full text-gray-600 text-xs md:text-sm px-6 mt-3">
               Fasilitas Sekolah
@@ -204,13 +204,13 @@
             </a>
           </div>
           <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6" style="background-color: #edded1;">
-        <div class="flex items-center justify-start" data-aos="zoom-in">
+        <div class="flex items-center justify-start">
         <img src="{{ asset('img') }}/sciencelab.jpg" alt="laptop image" class="imgFluid ml-auto">
         </div>
           </div>
         </div>
         <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow" data-aos="zoom-in" style="background-color: #f0e4da;">
+          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow" style="background-color: #f0e4da;">
             <a href="#" class="flex flex-wrap no-underline hover:no-underline">
               <p class="w-full text-gray-600 text-xs md:text-sm px-6 mt-3">
               Fasilitas Sekolah
@@ -224,7 +224,7 @@
             </a>
           </div>
           <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6" style="background-color: #edded1;">
-        <div class="flex items-center justify-start" data-aos="zoom-in">
+        <div class="flex items-center justify-start">
         <img src="{{ asset('img') }}/musicroom.jpg" alt="laptop image" class="imgFluid ml-auto">
         </div>
           </div>
@@ -233,7 +233,7 @@
   </section>
 
   <section id="contact" style="background: linear-gradient(90deg, #eee2dc 0%, #bab2b5 50%); ">
-  <div class="contact-container  flex justify-center items-center" data-aos="slide-up">
+  <div class="contact-container  flex justify-center items-center">
     <div class="contact-content text-center">
       <h2 class="section-title">Contact Us</h2>
       <p class="section-description">We'd love to hear from you.</p>

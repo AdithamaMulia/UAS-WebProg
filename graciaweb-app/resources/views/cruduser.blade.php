@@ -155,13 +155,6 @@
         @endforeach
     </tbody>
 </table>
-        <a href="{{ url('/adminadduser') }}" class="ml-2 border border-primary rounded px-2 py-1">
-            <i class="fa fa-plus text-primary"></i>   
-            Add Data
-        </a>
-    
-    <br/>
-    <br/>
     <h3 class="text-2xl ml-2 font-sans"><strong>User Guru</strong></h3>
     <table class="table table-striped">
     <thead class="thead-dark">
@@ -206,12 +199,6 @@
         @endforeach
     </tbody>
 </table>
-<a href="{{ url('/adminadduser') }}" class="ml-2 border border-primary rounded px-2 py-1">
-            <i class="fa fa-plus text-primary"></i>   
-            Add Data
-        </a>
-    <br/>
-    <br/>
     <h3 class="text-2xl ml-2 font-sans"><strong>User Admin</strong></h3>
     <table class="table table-striped">
     <thead class="thead-dark">
