@@ -5,6 +5,8 @@ use App\Http\Controllers\KelasController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\MapelController;
 use App\Http\Controllers\AbsensiController;
+use App\Http\Controllers\SessionController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +18,9 @@ use App\Http\Controllers\AbsensiController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+//login
+Route::get('/', [SessionController::class, 'signin']);
+Route::post('/login', [SessionController::class, 'login']);
 
 // murid
 Route::get('/home', function () {return view('index');});
@@ -28,7 +33,6 @@ Route::get('/tambahmurid', function () {return view('addsiswa');});
 Route::get('/mapel', function () {return view('course');});
 Route::get('/kelas', function () {return view('kelas');});
 Route::get('/list', function () {return view('pilihan');});
-Route::get('/login', function () {return view('login');});
 Route::get('/editsiswa', function () {return view('editsiswadariguru');});
 Route::get('/guruaddsiswa', function () {return view('gurutambahsiswa');});
 
@@ -72,4 +76,3 @@ Route::get('/admineditmapel/update/{mapelID}', 'App\Http\Controllers\MapelContro
 // miscellanous
 Route::get('/test', function () {return view('testing');});
 Route::get('/backup', function () {return view('backup');});
-

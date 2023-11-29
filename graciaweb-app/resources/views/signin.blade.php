@@ -92,10 +92,11 @@
 <body class="background">
     <div class="card">
         <h2>Login</h2>
-        <form>
+        <form action="login" method="POST">
+            @csrf
             <div class="form-group">
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" style="width: 280px;" placeholder="Enter your email" required>
+                <label for="username">Username</label>
+                <input type="text" value="{{Session::get('username')}}" id="username" name="username" style="width: 280px;" placeholder="Enter your username" required>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
@@ -112,9 +113,12 @@
             </div>
             <br />
             <div class="btn-container">
-                <button type="submit" class="btn">Login</button>
+                <button name="submit" type="submit" class="btn">Login</button>
             </div>
         </form>
+        <?php
+
+        ?>
     </div>
 </body>
 </html>
