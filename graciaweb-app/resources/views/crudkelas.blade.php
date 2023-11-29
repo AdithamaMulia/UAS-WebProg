@@ -24,7 +24,7 @@
     <h3>Daftar Kelas</h3>
     <table>
         <tr>
-            <th style="max-width:20px;">No</th>
+            <th style="max-width:20px;">ID Kelas</th>
             <th>Kelas</th>
             <th>Deskripsi</th>
             <th>Tgl. Dibuat</th>
@@ -33,7 +33,7 @@
         </tr>
         @foreach($classes as $key => $class)
             <tr>
-                <td style="max-width:20px;">{{ $key + 1 }}</td>
+                <td style="max-width:20px;">{{ $class->kelasID }}</td>
                 <td><a href="{{ url('/adminkelas') }}" style="text-decoration: none;">{{ $class->nama_kelas }}</a></td>
                 <td>{{ $class->deskripsi }}</td>
                 <td>{{ $class->created_at }}</td>
