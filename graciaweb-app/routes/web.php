@@ -38,6 +38,7 @@ Route::post('/adminkelasadd', [KelasController::class, 'store'])->name('adminkel
 Route::post('/adminkelasupdate/{kelasID}', [KelasController::class, 'update'])->name('adminkelas.update');
 Route::get('/admineditkelas/update/{kelasID}', 'App\Http\Controllers\KelasController@edit')->name('admineditkelas.update');
 
+Route::get('/listadmin', function () {return view('pilihanadmin');});
 
 Route::get('/adminmurid', function () {return view('crudmurid');});
 Route::get('/adminnilai', function () {return view('crudnilai');});
