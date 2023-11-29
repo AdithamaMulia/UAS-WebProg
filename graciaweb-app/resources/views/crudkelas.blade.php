@@ -101,7 +101,7 @@
     <thead class="thead-dark">
         
         <tr>
-            <th style="max-width:20px;">ID Kelas</th>
+            <th style="max-width:35px;">ID Kelas</th>
             <th>Kelas</th>
             <th>Deskripsi</th>
             <th>Tgl. Dibuat</th>
@@ -112,7 +112,7 @@
     <tbody>
         @foreach($classes as $key => $class)
             <tr>
-                <td style="max-width:20px;">{{ $class->kelasID }}</td>
+                <td style="max-width:35px;">{{ $class->kelasID }}</td>
                 <td>{{ $class->nama_kelas }}</td>
                 <td>{{ $class->deskripsi }}</td>
                 <td>{{ $class->created_at }}</td>
