@@ -38,7 +38,7 @@
             </ul>
         </div>
         <div class="flex items-center gap-6">
-            <a href="{{ url('/login') }}"><button class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">Login</button></a>
+            <a href="{{ url('/login') }}"><button class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">Logout</button></a>
             <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
         </div>
     </nav>

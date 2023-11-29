@@ -62,18 +62,18 @@
     <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center" data-aos="fade-up">
       <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left" data-aos="fade-right">
         <p class="uppercase tracking-loose w-full">Sekolah Gracia</p>
-        <h1 class="my-4 text-5xl font-bold leading-tight" data-aos="fade-left">
+        <h1 class="my-4 text-5xl font-bold leading-tight mr-4" data-aos="fade-left">
           The Best Education you
           Can Get!!
         </h1>
         <p class="leading-normal text-2xl mb-8" data-aos="fade-up">
           Providing quality education opens doors to a brighter future. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
         </p>
-        <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out" style="margin-top: -10px" data-aos="zoom-in">
+        <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out mr-4" style="margin-top: -10px" data-aos="zoom-in">
           Lets Begin!!
         </button>
       </div>
-      <div class="w-full md:w-3/5 py-6 text-center" data-aos="fade-left">
+      <div class="w-full md:w-3/5 py-6 text-center  " data-aos="fade-left">
       <img src="{{ asset('img') }}/sekolah1.jpg" alt="laptop image" class="imgFluid">
       </div>
     </div>
