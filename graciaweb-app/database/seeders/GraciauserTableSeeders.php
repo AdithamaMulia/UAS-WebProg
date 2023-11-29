@@ -26,6 +26,21 @@ class GraciauserTableSeeders extends Seeder
             'nama_orangtua' => 'null',
             'tempat_lahir' => 'null',
             'role' => 'admin'
-        ]);
+        ],);
+
+        DB::table('graciauser')->insert([
+        'username' => 'agus',
+        'nama_depan' => 'agus',
+        'nama_belakang' => 'Null',
+        'password' => Hash::make('aguslapar'),
+        'gender' => 'Laki-Laki',
+        'tanggal_lahir' => '2022-12-09',
+        'alamat' => 'jalan UMN',
+        'nis' => '000123',
+        'agama' => 'universal',
+        'nama_orangtua' => 'ibu',
+        'tempat_lahir' => 'diumn',
+        'role' => 'student'
+        ],);
     }
 }

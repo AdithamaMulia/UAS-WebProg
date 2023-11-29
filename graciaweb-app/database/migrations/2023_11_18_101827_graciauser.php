@@ -14,7 +14,7 @@ return new class extends Migration //untuk laravel versi dibawah 8.3.7 pakai ini
             $table->string('nama_depan');
             $table->string('nama_belakang')->nullable();
             $table->string('password');
-            $table->enum('gender', ['Laki-Laki', 'Perempuan']);
+            $table->enum('gender', ['Laki-Laki', 'Perempuan',]);
             $table->date('tanggal_lahir')->nullable();
             $table->string('alamat');
             $table->string('nis');

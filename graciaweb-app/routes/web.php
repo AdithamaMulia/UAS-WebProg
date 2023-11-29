@@ -21,6 +21,9 @@ use App\Http\Controllers\SessionController;
 Route::get('/', [SessionController::class, 'signin']);
 Route::post('/login', [SessionController::class, 'login']);
 
+//logout
+Route::get('/logout', [SessionController::class, 'logout']);
+
 // murid
 Route::get('/home', function () {return view('index');});
 Route::get('/nilaimapel', function () {return view('nilai');});

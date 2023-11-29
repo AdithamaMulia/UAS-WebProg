@@ -48,5 +48,8 @@ class SessionController extends Controller
                 return redirect('/')->withErrors('Username atau password tidak valid');
             }
         }
-
+    function logout(){
+        Auth::logout();
+        return redirect('/');
+    }
 }

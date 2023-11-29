@@ -1,11 +1,11 @@
     <?php ?>
 
     <style>
-       
+
         header {
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
-        
+
     </style>
     <header class="bg-white sticky-top">
     <nav class="flex justify-between items-center w-[92%] h-[75px] mx-auto">
@@ -38,7 +38,7 @@
             </ul>
         </div>
         <div class="flex items-center gap-6">
-            <a href="{{ url('/home') }}"><button class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">Logout</button></a>
+            <a href="/logout"><button class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">Logout</button></a>
             <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
         </div>
     </nav>
