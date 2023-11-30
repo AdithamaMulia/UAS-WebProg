@@ -106,7 +106,7 @@
             </div>
             <div class="text-end">
                 <br />
-                    <a href="{{ url('/adminabsen') }}" class="btn btn-primary">Back</a>
+                    <a href="{{ url('/listadmin') }}" class="btn btn-primary">Back</a>
                     @foreach($absensi as $key)
                     <a href="{{ url('/adminabsen/hari/' . $absensi->tanggal) }}" class="btn btn-primary">Submit</a>
                     @endforeach
