@@ -23,7 +23,7 @@ return new class extends Migration //untuk laravel versi dibawah 8.3.7 pakai ini
             $table->string('tempat_lahir');
             $table->timestamps();
             $table->enum('role', ['student', 'teacher', 'admin']);
-            $table->unsignedBigInteger('kelasID');
+            $table->unsignedBigInteger('kelasID')->nullable();
             $table->index('nama_depan');
             $table->index('nama_belakang');
             $table->foreign('kelasID')->references('kelasID')->on('kelas');
