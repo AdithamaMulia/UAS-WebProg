@@ -43,8 +43,8 @@
         .navbar {
         position: sticky;
         top: 0;
-        z-index: 1000; 
-        background-color: #fff; 
+        z-index: 1000;
+        background-color: #fff;
         }
 
         .sticky-top {
@@ -52,7 +52,7 @@
         top: 0;
         z-index: 1000;
         }
-        
+
     </style>
 </head>
 <body style="background-color: #a4a4a4;">
@@ -86,25 +86,30 @@
                 <td style="width: 40px;">Kehadiran</td>
                 <td style="width: 180px;">Keterangan</td>
             </tr>
+                @foreach($absensi as $key)
                     <tr>
-                        <td style="width: 20px;"></td>
-                        <td style="width: 250px;"></td>
+
+                        <td style="width: 20px;">{{ $key + 1 }}</td>
+                        <td style="width: 250px;">{{ $absensi->nama }}</td>
                         <td style="width: 20px; text-align: center;"><input type="checkbox" id="remember" name="remember"></td>
                         <td style="width: 180px;">
-                        <select id="dropdown" style="border: 1px solid #000; border-radius: 5px;">
-                            <option value="hadir">Hadir</option>
-                            <option value="sakit">Sakit</option>
-                            <option value="izin">Izin</option>
-                            <option value="tanpaketerangan">Tanpa Keterangan</option>
-                        </select></td>
+                            <select id="keterangan" style="border: 1px solid #000; border-radius: 5px;">
+                                <option value="hadir" {{ $absensi->Keterangan == 'Hadir' ? 'selected' : '' }}>Hadir</option>
+                                <option value="sakit" {{ $absensi->Keterangan == 'Sakit' ? 'selected' : '' }}>Sakit</option>
+                                <option value="izin" {{ $absensi->Keterangan == 'Izin' ? 'selected' : '' }}>Izin</option>
+                                <option value="tanpaketerangan" {{ $absensi->Keterangan == 'Tanpa Keterangan' ? 'selected' : '' }}>Tanpa Keterangan</option>
+                            </select></td>
                     </tr>
+                @endforeach
                 </table>
 
             </div>
             <div class="text-end">
                 <br />
-                    <a href="{{ url('/adminasben') }}" class="btn btn-primary">Back</a>
+                    <a href="{{ url('/adminabsen') }}" class="btn btn-primary">Back</a>
+                    @foreach($absensi as $key)
                     <a href="{{ url('/adminabsen/hari/' . $absensi->tanggal) }}" class="btn btn-primary">Submit</a>
+                    @endforeach
                 </div>
             </div>
     </div>

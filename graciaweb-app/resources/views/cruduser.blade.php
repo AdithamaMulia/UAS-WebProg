@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <script src="https://cdn.tailwindcss.com"></script>   
-    <link rel="stylesheet" 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
     <title>CRUD USER</title>
@@ -55,7 +55,7 @@
         transform: scale(1.05);
         transition: transform 0.3s ease-in-out;
     }
-    
+
             *{
         padding: 0;
         margin: 0;
@@ -96,7 +96,7 @@
         }
         }
 
-    
+
     </style>
 </head>
 <body>
@@ -106,7 +106,7 @@
         @endif
     <br/>
     <a href="{{ url('/home') }}" class="ml-2 rounded px-2 py-1">
-    <i class="fa fa-home text-primary"></i>    
+    <i class="fa fa-home text-primary"></i>
     Home Page</a>
     <h3 class="text-2xl ml-2 font-sans"><strong>User Murid</strong></h3>
 
@@ -132,6 +132,7 @@
     </thead>
     <tbody>
         @foreach($users as $key => $user)
+        @if($user->role == 'student')
             <tr>
                 <td>{{ $user->userID }}</td>
                 <td>{{ $user->username }}</td>
@@ -152,6 +153,7 @@
                 </td>
 
             </tr>
+        @endif
         @endforeach
     </tbody>
 </table>
@@ -176,6 +178,7 @@
     </thead>
     <tbody>
         @foreach($users as $key => $user)
+        @if($user->role == 'teacher')
             <tr>
                 <td>{{ $user->userID }}</td>
                 <td>{{ $user->username }}</td>
@@ -196,6 +199,7 @@
             </td>
 
             </tr>
+        @endif
         @endforeach
     </tbody>
 </table>
@@ -220,6 +224,7 @@
     </thead>
     <tbody>
         @foreach($users as $key => $user)
+        @if($user->role == 'admin')
             <tr>
                 <td style="max-width:20px;">{{ $user->userID }}</td>
                 <td>{{ $user->username }}</td>
@@ -240,17 +245,18 @@
             </td>
 
             </tr>
+        @endif
         @endforeach
     </tbody>
 </table>
 <a href="{{ url('/adminadduser') }}" class="ml-2 border border-primary rounded px-2 py-1">
-            <i class="fa fa-plus text-primary"></i>   
+            <i class="fa fa-plus text-primary"></i>
             Add Data
         </a>
         <br/>
         <br/>
-    <a href="{{ url('/home') }}" class="ml-2 border border-primary rounded px-2 py-1">
-    <i class="fa fa-arrow-left text-primary"></i>    
+    <a href="{{ url('/listadmin') }}" class="ml-2 border border-primary rounded px-2 py-1">
+    <i class="fa fa-arrow-left text-primary"></i>
         Back
     </a>
 </body>
