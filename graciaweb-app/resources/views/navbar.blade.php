@@ -27,7 +27,7 @@
                     <a class="hover:text-gray-500" href="#contact">Contact Us</a>
                 </li>
                 <li>
-                    <a class="hover:text-gray-500" href="{{ url('/about-us') }}">About Us</a>
+                    <a class="hover:text-gray-500" href="{{ url('/aboutus') }}">About Us</a>
                 </li>
                 <li>
                     <a class="hover:text-gray-500" href="{{ url('/enroll-now') }}">Enroll Now</a>
