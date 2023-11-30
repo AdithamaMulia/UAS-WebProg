@@ -14,6 +14,7 @@ return new class extends Migration //untuk laravel versi dibawah 8.3.7 pakai ini
             $table->unsignedBigInteger('userID');
             $table->date('tanggal');
             $table->enum('keterangan', ['Hadir', 'Sakit', 'Izin', 'Tanpa Keterangan']);
+            $table->enum('semester', ['Ganjil', 'Genap']);
             $table->timestamps();
             $table->foreign('userID')->references('userID')->on('graciauser');
             $table->foreign('kelasID')->references('kelasID')->on('kelas');

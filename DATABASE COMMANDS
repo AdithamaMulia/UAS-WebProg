@@ -17,10 +17,8 @@ CREATE TABLE graciauser (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     role ENUM('student', 'teacher', 'admin') NOT NULL,
     kelasID INT,
-    nilai INT,
     PRIMARY KEY (userID),
     FOREIGN KEY(kelasID) REFERENCES kelas(kelasID),
-    FOREIGN KEY(nilaiID) REFERENCES mapel(nilaiID),
     INDEX idx_nama_depan (nama_depan),
     INDEX idx_nama_belakang (nama_belakang)
 );
