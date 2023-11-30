@@ -43,6 +43,7 @@ class UserController extends Controller
         $user->nama_orangtua = $request->nama_orangtua;
         $user->tempat_lahir = $request->tempat_lahir;
         $user->role = $request->role;
+        $user->kelasID = $request->kelasID;
 
         $user->save();
 
@@ -86,6 +87,7 @@ class UserController extends Controller
             'nama_orangtua' => $request->input('nama_orangtua'),
             'tempat_lahir' => $request->input('tempat_lahir'),
             'role' => $request->input('role'),
+            'kelasID' => $request->input('kelasID'),
         ]);
 
         return redirect('/adminuserindex')->with('success', 'Data updated successfully');

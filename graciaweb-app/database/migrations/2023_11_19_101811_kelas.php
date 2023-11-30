@@ -10,9 +10,8 @@ return new class extends Migration //untuk laravel versi dibawah 8.3.7 pakai ini
     {
         Schema::create('kelas', function (Blueprint $table) {
             $table->id('kelasID');
-            $table->unsignedBigInteger('userID');
-            $table->foreign('userID')->references('userID')->on('graciauser');
             $table->string('nama_kelas');
+            $table->enum('tingkat', ['10', '11', '12']);
             $table->string('deskripsi')->nullable();
             $table->timestamps();
             $table->index('nama_kelas');

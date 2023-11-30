@@ -11,10 +11,8 @@ return new class extends Migration //untuk laravel versi dibawah 8.3.7 pakai ini
         Schema::create('mapel', function (Blueprint $table) {
             $table->id('mapelID');
             $table->string('nama_mapel');
-            $table->unsignedBigInteger('userID');
             $table->enum('tingkat', ['10', '11', '12']);
             $table->timestamps();
-            $table->foreign('userID')->references('userID')->on('graciauser');
             $table->index('nama_mapel');
         });
     }

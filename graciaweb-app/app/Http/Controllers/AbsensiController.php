@@ -42,6 +42,7 @@ class AbsensiController extends Controller
             'tanggal' => 'required',
             'userID' => 'required',
             'keterangan' => 'required',
+            'semester' => 'required|in:Ganjil,Genap',
         ]);
 
         $absen = graciaabsensi::find($id);
@@ -49,6 +50,7 @@ class AbsensiController extends Controller
         $absen->userID = $request->userID;
         $absen->tanggal = $request->tanggal;
         $absen->userID = $request->userID;
+        $absen->semester = $request->semester;
         $absen->keterangan = $request->keterangan;
 
         $absen->save();
