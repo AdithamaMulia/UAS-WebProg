@@ -71,10 +71,4 @@ class KelasController extends Controller
         // Kirim data ke view tabelkelasiswa.blade.php
         return view('crudmurid', compact('kelas'));
     }
-
-    public function absensi()
-    {
-        return $this->hasMany(graciaAbsensi::class);
-    }
-
 }

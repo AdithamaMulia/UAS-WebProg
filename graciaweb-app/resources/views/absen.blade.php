@@ -64,12 +64,9 @@
         <br />
         <div class="text-2l ml-2 font-sans" style="padding-left: 10px;">
         <select id="semester" name="semester" style="width :100%; max-width:300px; height: 30px; font-size: 18px; margin-top: 5px; border: 1px solid #000;">
-            <option value="Ganjil">10 Mipa</option>
-            <option value="Genap">10 IPS</option>
-            <option value="Genap">11 MIPA</option>
-            <option value="Genap">11 IPS</option>
-            <option value="Genap">12 MIPA</option>
-            <option value="Genap">12 IPS</option>
+            @foreach($kelas as $key => $kelas)
+                <option value="{{ $kelas->kelasID }}">{{ $kelas->nama_kelas }}</option>
+            @endforeach
         </select>
     </div>
         <br />

@@ -8,4 +8,9 @@ class graciaAbsensi extends Model
 {
     protected $table = 'absensi';
     protected $guarded = ['absenID', 'kelasID', 'userID', 'tanggal', 'keterangan', 'semester', 'created_at', 'updated_at'];
+
+    public function absensi()
+    {
+        return $this->morphTo();
+    }
 }

@@ -22,5 +22,10 @@ class graciaUser extends Model
     {
         return $this->password; // Kolom password
     }
+
+    public function absensiRecords()
+    {
+        return $this->morphMany(graciaAbsensi::class, 'absensi');
+    }
 }
 

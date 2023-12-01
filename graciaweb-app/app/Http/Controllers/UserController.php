@@ -65,4 +65,9 @@ class UserController extends Controller
 
         return redirect('/adminuserindex')->with('success', 'Data added successfully');
     }
+
+    public function absensi()
+    {
+        return $this->morphMany(graciaAbsensi::class, 'absensi');
+    }
 }

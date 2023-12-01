@@ -6,6 +6,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\MapelController;
 use App\Http\Controllers\AbsensiController;
 use App\Http\Controllers\SessionController;
+use App\Http\Controllers\Controller;
 
 
 /*
@@ -31,7 +32,7 @@ Route::get('/nilaimapel', function () {return view('nilai');});
 Route::get('/raport', function () {return view('nilai1');});
 
 // guru
-Route::get('/absen', function () {return view('absen');})->name('absen');
+Route::get('/absen', [Controller::class, 'indexabsen'])->name('absen');
 Route::get('/tambahmurid', function () {return view('addsiswa');});
 Route::get('/mapel', function () {return view('course');});
 Route::get('/kelas', [KelasController::class, 'indexutkguru']);
