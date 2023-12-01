@@ -62,13 +62,13 @@ class KelasController extends Controller
 
     public function showTabelKelasSiswa($kelasID)
     {
-        // Lakukan operasi yang diperlukan untuk menampilkan tabel kelas siswa
-        // Misalnya, ambil data kelas berdasarkan $kelasID
+        // Ambil data kelas berdasarkan $kelasID
+        $kelas = graciaKelas::findOrFail($kelasID);
 
-        // Contoh:
-        $kelas = graciaKelas::findOrFail($kelasID); // Menggunakan model Kelas, ganti dengan nama model yang sesuai
+        // Ambil siswa dari kelas
+        $siswa = $kelas->siswa; // Mendapatkan siswa dari relasi yang telah didefinisikan
 
-        // Kirim data ke view tabelkelasiswa.blade.php
-        return view('crudmurid', compact('kelas'));
+        // Kirim data ke view crudmurid.blade.php dengan variabel $siswa
+        return view('crudmurid', compact('siswa'));
     }
 }
