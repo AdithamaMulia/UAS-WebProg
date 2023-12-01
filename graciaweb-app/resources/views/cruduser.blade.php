@@ -115,7 +115,7 @@
     <table class="table table-striped">
     <thead class="thead-dark">
         <tr>
-            <th>ID</th>
+            <th>ID User</th>
             <th>Username</th>
             <th>Nama</th>
             <th>Password</th>

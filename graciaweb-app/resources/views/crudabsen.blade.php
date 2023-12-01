@@ -81,7 +81,7 @@
             <div class="row" style="padding-left: 15px;">
             <table>
                 <tr>
-                <td style="width: 20px;">No.</td>
+                <td style="width: 20px;">ID Absen</td>
                 <td style="width: 250px;">Nama</td>
                 <td style="width: 40px;">Kehadiran</td>
                 <td style="width: 180px;">Keterangan</td>

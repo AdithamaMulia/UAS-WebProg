@@ -100,7 +100,7 @@
     <table class="table table-striped">
     <thead class="thead-dark">
         <tr>
-            <th style="max-width:20px;">No</th>
+            <th style="max-width:20px;">ID Mapel</th>
             <th>Mata Pelajaran</th>
             <th>Kelas</th>
             <th>Tgl. Dibuat</th>

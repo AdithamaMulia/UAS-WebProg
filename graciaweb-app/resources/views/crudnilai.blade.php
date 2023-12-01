@@ -109,7 +109,7 @@
     <table class="table table-striped">
     <thead class="thead-dark">
     <tr>
-        <th style="max-width: 20px; text-align: center; vertical-align: middle;" rowspan="2">No</th>
+        <th style="max-width: 20px; text-align: center; vertical-align: middle;" rowspan="2">ID</th>
         <th style="text-align: center; vertical-align: middle;" rowspan="2">Mata Pelajaran</th>
         <th colspan="4" style="text-align: center;">Nilai Ulangan</th>
         <th style="text-align: center; vertical-align: middle;" rowspan="2">Nilai UTS</th>
