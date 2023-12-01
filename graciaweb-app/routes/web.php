@@ -38,7 +38,7 @@ Route::get('/kelas', function () {return view('kelas');});
 Route::get('/list', function () {return view('pilihan');});
 Route::get('/editsiswa', function () {return view('editsiswadariguru');});
 Route::get('/guruaddsiswa', function () {return view('gurutambahsiswa');});
-Route::get('/adminmurid', [UserController::class, 'index2']);
+Route::get('/adminmurid/{kelasID}', 'KelasController@showTabelKelasSiswa');
 
 // admin
 Route::get('/adminkelasindex', [KelasController::class, 'index']);

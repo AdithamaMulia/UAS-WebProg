@@ -94,7 +94,7 @@ table {
 <a href="{{ url('/home') }}" class="ml-2 rounded px-2 py-1">
     <i class="fa fa-home text-primary"></i>
     Home Page</a>
-    <h3 class="text-2xl ml-2 font-sans"><strong>Siswa Kelas 12 MIPA</strong></h3>
+    <h3 class="text-2xl ml-2 font-sans"><strong>Siswa {{ $class->nama_kelas }}</strong></h3>
     <br />
     <table class="table table-striped">
     <thead class="thead-dark">

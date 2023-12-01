@@ -17,7 +17,6 @@ class KelasController extends Controller
     {
         $request->validate([
             'kelas' => 'required',
-            'deskripsi' => 'required',
             'tingkat' => 'required',
         ]);
 
@@ -42,7 +41,6 @@ class KelasController extends Controller
     {
         $request->validate([
             'nama_kelas' => 'required',
-            'deskripsi' => 'required',
             'tingkat' => 'required',
         ]);
 
@@ -55,4 +53,17 @@ class KelasController extends Controller
 
         return redirect('/adminkelasindex')->with('success', 'Data updated successfully');
     }
+
+    public function showTabelKelasSiswa($kelasID)
+    {
+        // Lakukan operasi yang diperlukan untuk menampilkan tabel kelas siswa
+        // Misalnya, ambil data kelas berdasarkan $kelasID
+
+        // Contoh:
+        $kelas = graciaKelas::findOrFail($kelasID); // Menggunakan model Kelas, ganti dengan nama model yang sesuai
+
+        // Kirim data ke view tabelkelasiswa.blade.php
+        return view('crudmurid', compact('kelas'));
+    }
+
 }
