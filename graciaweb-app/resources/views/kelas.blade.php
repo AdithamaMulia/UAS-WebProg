@@ -132,7 +132,7 @@ h2 {
                                     <div class="card-body card-text-zoom" style="overflow: auto;">
                                         <p style="color: black;"><b>{{ $class->nama_kelas }}</b></p>
                                     <br />
-                                        <div class="blue-top"></div>
+                                        <div class="blue-top">{{ $class->deskripsi }}</div>
                                         <div class="nested-box">
                                         </div>
                                     </div>
