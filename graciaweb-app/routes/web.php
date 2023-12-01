@@ -34,7 +34,7 @@ Route::get('/raport', function () {return view('nilai1');});
 Route::get('/absen', function () {return view('absen');})->name('absen');
 Route::get('/tambahmurid', function () {return view('addsiswa');});
 Route::get('/mapel', function () {return view('course');});
-Route::get('/kelas', [KelasController::class, 'index']);
+Route::get('/kelas', [KelasController::class, 'indexutkguru']);
 Route::get('/list', function () {return view('pilihan');});
 Route::get('/editsiswa', function () {return view('editsiswadariguru');});
 Route::get('/guruaddsiswa', function () {return view('gurutambahsiswa');});

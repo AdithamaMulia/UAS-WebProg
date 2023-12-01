@@ -13,6 +13,12 @@ class KelasController extends Controller
         return view('crudkelas', ['classes' => $classes]);
     }
 
+    public function indexutkguru()
+    {
+        $classes = graciaKelas::all();
+        return view('kelas', ['classes' => $classes]);
+    }
+
     public function store(Request $request)
     {
         $request->validate([
