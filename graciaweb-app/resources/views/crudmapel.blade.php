@@ -102,7 +102,6 @@
         <tr>
             <th style="max-width:20px;">No</th>
             <th>Mata Pelajaran</th>
-            <th>ID Kelas</th>
             <th>Kelas</th>
             <th>Tgl. Dibuat</th>
             <th>Last Update</th>
@@ -114,7 +113,6 @@
             <tr>
                 <td style="max-width:20px;">{{ $key + 1 }}</td>
                 <td>{{ $mapel->nama_mapel }}</td>
-                <td>{{ $mapel->kelasID }}</td>
                 <td>Kelas {{ $mapel->tingkat }}</td>
                 <td>{{ $mapel->created_at }}</td>
                 <td>{{ $mapel->updated_at }}</td>
