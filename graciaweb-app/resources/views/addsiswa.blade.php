@@ -88,55 +88,68 @@
             font-size: 10px;
         }
         }
+        .box-main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 100%;
+            margin: auto;
+            margin-top : 20px;
+            height: 100%;
+        }
     </style>
 </head>
 <body style="background-color: #a4a4a4;">
 @include('navbar')
-<div class="box-main">
+<div class="box-main" style="text-align:center;">
     <br />
     <div class="card mb-3" style="width:100%; max-width: 1200px;">
-        <h2 style="padding-left: 15px; font-size: 30px;">Daftar Siswa</h2>
+        <h2 style="padding-left: 15px; font-size: 30px; text-align: left;">Daftar Siswa</h2>
         <br />
-        <h2 style="padding-left: 15px; font-size: 24px;">Siswa kelas ...</h2>
-        <div class="card-body">
-            <div class="row" style="padding-left: 15px;">
-            <table>
-                <tr>
-                    <th>No</th>
-                    <th>Nama Siswa</th>
-                    <th>NIS</th>
-                    <th>Tempat Lahir</th>
-                    <th>Tanggal Lahir</th>
-                    <th>Jenis Kelamin</th>
-                    <th>Agama</th>
-                    <th>Alamat</th>
-                    <th>Edit</th>
-                    <th>Nilai</th>
-                </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><a href="{{ url('/editsiswa') }}">Edit</a></td>
-                        <td><a href="{{ url('/nilaimapel') }}">Nilai</a></td>
-                    </tr>
-            </table>
-            <a href="{{ url('/adminaddsiswa') }}" class="ml-2 border border-primary rounded px-2 py-1">
+        <h3 class="text-2xl ml-2 font-sans" style="text-align: left;"><strong>Siswa Kelas 12 IPS</strong></h3>
+    <br />
+    <table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>No</th>
+            <th>Nama Siswa</th>
+            <th>NIS</th>
+            <th>Tempat Lahir</th>
+            <th>Tanggal Lahir</th>
+            <th>Jenis Kelamin</th>
+            <th>Agama</th>
+            <th>Alamat</th>
+            <th>Edit</th>
+            <th>Nilai</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <a href="{{ url('/admineditsiswa') }}">
+                        <i class="fa fa-pencil text-primary"></i> Edit
+                    </a>
+                </td>
+                <td><a href="{{ url('/adminnilai') }}">Nilai</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="{{ url('/adminaddsiswa') }}" class="ml-2 border border-primary rounded px-2 py-1" style="max-width: 120px;">
             <i class="fa fa-plus text-primary"></i>
             Add Data
         </a>
-    <br />
-    <br />
-    <a href="{{ url('/listadmin') }}" class="ml-2 border border-primary rounded px-2 py-1">
+    <a href="{{ url('/listadmin') }}" class="ml-2 border border-primary rounded px-2 py-1" style="max-width: 120px; margin-top: 5px;">
     <i class="fa fa-arrow-left text-primary"></i>
         Back
     </a>
-    </div>
 </div>
 </body>
 </html>
