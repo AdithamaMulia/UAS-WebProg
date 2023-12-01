@@ -72,4 +72,9 @@ class KelasController extends Controller
         return view('crudmurid', compact('kelas'));
     }
 
+    public function absensi()
+    {
+        return $this->hasMany(graciaAbsensi::class);
+    }
+
 }
