@@ -31,13 +31,14 @@ Route::get('/nilaimapel', function () {return view('nilai');});
 Route::get('/raport', function () {return view('nilai1');});
 
 // guru
-Route::get('/absen', function () {return view('absen');});
+Route::get('/absen', function () {return view('absen');})->name('absen');
 Route::get('/tambahmurid', function () {return view('addsiswa');});
 Route::get('/mapel', function () {return view('course');});
 Route::get('/kelas', function () {return view('kelas');});
 Route::get('/list', function () {return view('pilihan');});
 Route::get('/editsiswa', function () {return view('editsiswadariguru');});
 Route::get('/guruaddsiswa', function () {return view('gurutambahsiswa');});
+Route::get('/adminmurid', [UserController::class, 'index']);
 
 // admin
 Route::get('/adminkelasindex', [KelasController::class, 'index']);
@@ -51,8 +52,6 @@ Route::get('/adminabsen', function () {return view('crudabsen');});
 Route::get('/adminabsen', [AbsensiController::class, 'index']);
 Route::get('/adminabsen/hari/{tanggal}', 'App\Http\Controllers\AbsensiController@index')->name('adminabsen.update');
 
-
-Route::get('/adminmurid', function () {return view('crudmurid');});
 Route::get('/adminnilai', function () {return view('crudnilai');});
 Route::get('/adminaddsiswa', function () {return view('tambahsiswa');});
 Route::get('/adminaddkelas', function () {return view('tambahkelas');});
