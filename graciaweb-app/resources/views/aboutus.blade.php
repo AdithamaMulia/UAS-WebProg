@@ -83,17 +83,21 @@
         .mission-box li {
             margin-bottom: 8px; 
         }
+        
     </style>
 </head>
 <body>
     @include('navbar')
-    <div class="image-section ">
+    <div class="image-section">
+    <figure>
         <img src="{{ asset('img') }}/sekolah1.jpg" alt="laptop image" class="imgFluid">
-    </div>
+        <figcaption>Your Image Caption Here</figcaption>
+    </figure>
+</div>
 
     <div class="content-section">
     <div class="box mission-box">
-        <h2 class= font-bold text-lg"> Vision</h2>
+        <h2 class= "font-bold text-lg"> Vision</h2>
         <div class="mission-list-container font-sans">
             <ol style="text-align: left;">
                 <li>“Terwujudnya peserta didik Sekolah Gracia yang berakhlak mulia, cerdas, trampil,
