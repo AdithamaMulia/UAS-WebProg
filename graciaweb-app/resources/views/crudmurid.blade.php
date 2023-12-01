@@ -94,7 +94,7 @@ table {
 <a href="{{ url('/home') }}" class="ml-2 rounded px-2 py-1">
     <i class="fa fa-home text-primary"></i>
     Home Page</a>
-    <h3 class="text-2xl ml-2 font-sans"><strong>Siswa {{ $class->nama_kelas }}</strong></h3>
+    <h3 class="text-2xl ml-2 font-sans"><strong>Siswa Kelas 12 MIPA</strong></h3>
     <br />
     <table class="table table-striped">
     <thead class="thead-dark">
@@ -110,18 +110,18 @@ table {
         </tr>
     </thead>
     <tbody>
-    @foreach($murid as $key => $murid)
-        @if($murid->role == 'student')
+    @foreach($kelas as $key => $user)
+        @if($user->role == 'student')
             <tr>
-                <td>{{ $murid->nama_depan }} {{ $murid->nama_belakang }}</td>
-                <td>{{ $murid->nis }}</td>
-                <td>{{ $murid->tempat_lahir }}</td>
-                <td>{{ $murid->tanggal_lahir }}</td>
-                <td>{{ $murid->gender }}</td>
-                <td>{{ $murid->agama }}</td>
-                <td>{{ $murid->alamat }}</td>
+                <td>{{ $user->nama_depan }} {{ $user->nama_belakang }}</td>
+                <td>{{ $user->nis }}</td>
+                <td>{{ $user->tempat_lahir }}</td>
+                <td>{{ $user->tanggal_lahir }}</td>
+                <td>{{ $user->gender }}</td>
+                <td>{{ $user->agama }}</td>
+                <td>{{ $user->alamat }}</td>
                 <td>
-                    <a href="{{ url('/adminedituser/update/' . $murid->userID) }}">
+                    <a href="{{ url('/adminedituser/update/' . $user->userID) }}">
                         <i class="fa fa-pencil text-primary"></i> Edit
                     </a>
                 </td>
