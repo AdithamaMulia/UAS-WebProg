@@ -84,6 +84,15 @@
                 <label for="deskripsi">Deskripsi</label>
                 <input type="text" id="deskripsi" name="deskripsi" style="width: 100%; max-width: 280px;" placeholder="{{ $class->deskripsi }}" value="{{ $class->deskripsi }}" required>
             </div>
+            <div>
+                <label for="tingkat">Tingkat</label>
+                <br />
+                <select id="tingkat" name="tingkat" style="width :100%; max-width:300px; height: 30px; font-size: 18px; margin-top: 5px;">
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+            </div>
             <br />
             <div class="btn-container" style="text-align: left;">
                 <button type="submit" class="btn">Edit Kelas</button>

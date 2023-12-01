@@ -124,28 +124,22 @@ h2 {
             <h2 style="padding-left: 15px; font-size: 30px"><strong>Class of :</strong></h2>
             <div class="card-body">
                 <div class="row">
-                    <?php
-                    for ($i = 1; $i <= 9; $i++) {
-                        echo '
+                    @foreach($class as $key => $class )
                         <div class="col-lg-4 mb-3">
-                            <a href="nilai' . $i . '.php" class="card-link no-underline">
+                            <a href="{{ url('list') }}" class="card-link no-underline">
                                 <div class="card" style="height: 200px; width: 100%; max-width: 400px;">
                                     
                                     <div class="card-body card-text-zoom" style="overflow: auto;">
-                                        <p style="color: black;"><b>Kelas ' . $i . '</b></p>
+                                        <p style="color: black;"><b>{{ $class->nama_kelas }}</b></p>
                                     <br />
-                                        <div class="blue-top"></div>
+                                        <div class="blue-top">{{ $class->deskripsi }}</div>
                                         <div class="nested-box">
-                                       
-
                                         </div>
                                     </div>
                                 </div>
                             </a>
                         </div>
-                        ';
-                    }
-                    ?>
+                    @endforeach
                 </div>
             </div>
         </div>

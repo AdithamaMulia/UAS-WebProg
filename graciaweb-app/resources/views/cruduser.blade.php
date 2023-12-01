@@ -115,7 +115,7 @@
     <table class="table table-striped">
     <thead class="thead-dark">
         <tr>
-            <th>ID</th>
+            <th>ID User</th>
             <th>Username</th>
             <th>Nama</th>
             <th>Password</th>
@@ -125,6 +125,7 @@
             <th>Agama</th>
             <th>NIS</th>
             <th>Role</th>
+            <th>Class ID</th>
             <th>Last Update</th>
             <th>Tgl Dibuat</th>
             <th>Edit</th>
@@ -144,6 +145,7 @@
                 <td>{{ $user->agama }}</td>
                 <td>{{ $user->nis }}</td>
                 <td>{{ $user->role }}</td>
+                <td>{{ $user->kelasID }}</td>
                 <td>{{ $user->updated_at }}</td>
                 <td>{{ $user->created_at }}</td>
                 <td>
