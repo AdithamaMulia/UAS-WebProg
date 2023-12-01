@@ -60,50 +60,78 @@
 <div class="box-main">
     <br />
     <div class="card mb-3" style="width:100%; max-width: 1200px;">
+    @if(session('success'))
+        <div id="success" style="color: green;">{{ session('success') }}</div>
+        <script>
+            setTimeout(function(){
+                document.getElementById('success').style.display = 'none';
+            }, 5000);
+        </script>
+    @endif
         <h2 style="padding-left: 15px; font-size: 30px;">Daftar Absen Siswa</h2>
         <br />
-        <div class="text-2l ml-2 font-sans" style="padding-left: 10px;">
-        <select id="semester" name="semester" style="width :100%; max-width:300px; height: 30px; font-size: 18px; margin-top: 5px; border: 1px solid #000;">
-            @foreach($kelas as $key => $kelas)
-                <option value="{{ $kelas->kelasID }}">{{ $kelas->nama_kelas }}</option>
-            @endforeach
-        </select>
-    </div>
-        <br />
-        <div class="input-container" style="padding-left: 15px;">
-            <label for="tanggal">Tanggal:</label>
-            <input type="date" id="tanggal" name="tanggal" style="border: 1px solid #000;">
-        </div>
-        <div class="card-body">
-            <div class="row" style="padding-left: 15px;">
-            <table>
-                <tr>
-                <td style="width: 20px;">No.</td>
-                <td style="width: 250px;">Nama</td>
-                <td style="width: 40px;">Kehadiran</td>
-                <td style="width: 180px;">Keterangan</td>
-            </tr>
-                    <tr>
-                        <td style="width: 20px;"></td>
-                        <td style="width: 250px;"></td>
-                        <td style="width: 20px; text-align: center;"><input type="checkbox" id="remember" name="remember"></td>
-                        <td style="width: 180px;">
-                        <select id="dropdown" style="border: 1px solid #000; border-radius: 5px;">
-                            <option value="hadir">Hadir</option>
-                            <option value="sakit">Sakit</option>
-                            <option value="izin">Izin</option>
-                            <option value="tanpaketerangan">Tanpa Keterangan</option>
-                        </select></td>
-                    </tr>
-                </table>
-
+        <form id="absenForm" action="/absensubmit" method="post">
+            @csrf
+            <div class="text-2l ml-2 font-sans" style="padding-left: 10px;">
+                <select id="kelas" name="kelas" style="width: 100%; max-width: 300px; height: 30px; font-size: 18px; margin-top: 5px; border: 1px solid #000;">
+                    @foreach($kelas as $key => $kelas)
+                        <option value="{{ $kelas->kelasID }}">{{ $kelas->nama_kelas }}</option>
+                    @endforeach
+                </select>
             </div>
-            <div class="text-end">
-                <br />
-                    <a href="#" class="btn btn-primary">Back</a>
-                    <a href="#" class="btn btn-primary">Submit</a>
+            <br />
+            <div class="input-container" style="padding-left: 15px;">
+                <label for="tanggal">Tanggal:</label>
+                <input type="date" id="tanggal" name="tanggal" style="border: 1px solid #000;" required>
+
+                <p>Semester: </p>
+                <select id="semester" name="semester" style="width: 100%; max-width: 300px; height: 30px; font-size: 18px; margin-top: 5px; border: 1px solid #000;">
+                    <option value="Genap">Genap</option>
+                    <option value="Ganjil">Ganjil</option>
+                </select>
+            </div>
+            <div class="card-body">
+                <div class="row" style="padding-left: 15px;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 20px;">ID</th>
+                                <th style="width: 250px;">Nama</th>
+                                <th style="width: 40px;">Kehadiran</th>
+                                <th style="width: 180px;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        @foreach($users as $key => $user)
+                            @if($user->role == 'student')
+                                <tr>
+                                    <td>{{ $user->userID }}</td>
+                                    <td>{{ $user->nama_depan }} {{ $user->nama_belakang }}</td>
+                                    <td>
+                                        <input type="hidden" name="user_ids[]" value="{{ $user->userID }}">
+                                        <input type="checkbox" id="remember_{{ $user->userID }}" name="remember[{{ $user->userID }}]">
+                                    </td>
+                                    <td>
+                                        <select name="keterangan[{{ $user->userID }}]" style="border: 1px solid #000; border-radius: 5px;">
+                                            <option value="Hadir">Hadir</option>
+                                            <option value="Sakit">Sakit</option>
+                                            <option value="Izin">Izin</option>
+                                            <option value="Tanpa Keterangan">Tanpa Keterangan</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            @endif
+                        @endforeach
+                        </tbody>
+                    </table>
+                </div>
+                <div class="text-end">
+                    <br />
+                    <a href="{{ url('/kelas')}}" class="btn btn-primary">Back</a>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
             </div>
+        </form>
     </div>
 </div>
 </body>

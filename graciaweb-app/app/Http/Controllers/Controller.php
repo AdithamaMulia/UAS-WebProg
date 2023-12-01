@@ -14,9 +14,9 @@ class Controller extends BaseController
 
     public function indexabsen()
     {
-        $murid = graciaUser::with('absensiRecords')->get();
-        $kelas = graciaKelas::with('absensiRecords')->get();
+        $users = graciaUser::with('absensi')->get();
+        $kelas = graciaKelas::with('absensi')->get();
 
-        return view('absen', ['murid' => $murid, 'kelas' => $kelas]);
+        return view('absen', ['users' => $users, 'kelas' => $kelas]);
     }
 }

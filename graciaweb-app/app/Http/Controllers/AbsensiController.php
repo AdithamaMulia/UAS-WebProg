@@ -31,7 +31,7 @@ class AbsensiController extends Controller
 
         $absen->save();
 
-        return redirect('/adminabsen')->with('success', 'Data added successfully');
+        return redirect('/absen')->with('success', 'Data added successfully');
     }
 
     public function update(Request $request, $id)
@@ -45,7 +45,7 @@ class AbsensiController extends Controller
             'semester' => 'required|in:Ganjil,Genap',
         ]);
 
-        $absen = graciaabsensi::find($id);
+        $absen = graciaAbsensi::find($id);
 
         $absen->userID = $request->userID;
         $absen->tanggal = $request->tanggal;
@@ -55,6 +55,22 @@ class AbsensiController extends Controller
 
         $absen->save();
 
-        return redirect('/adminabsen')->with('success', 'Data updated successfully');
+        return redirect('/absen')->with('success', 'Data updated successfully');
+    }
+
+    public function submitAbsen(Request $request)
+    {
+        foreach ($request->input('user_ids') as $userID) {
+            $absensi = new graciaAbsensi();
+            $absensi->userID = $userID;
+            $absensi->keterangan = $request->input('remember')[$userID] ?? null;
+            $absensi->keterangan = $request->input('keterangan')[$userID] ?? null;
+            $absensi->tanggal = $request->input('tanggal');
+            $absensi->kelasID = $request->input('kelas');
+            $absensi->semester = $request->input('semester');
+
+            $absensi->save();
+        }
+        return redirect('/absen')->with('success', 'Data updated successfully');
     }
 }

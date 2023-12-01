@@ -33,6 +33,7 @@ Route::get('/raport', function () {return view('nilai1');});
 
 // guru
 Route::get('/absen', [Controller::class, 'indexabsen'])->name('absen');
+Route::post('/absensubmit', [AbsensiController::class, 'submitAbsen'])->name('absen');
 Route::get('/tambahmurid', function () {return view('addsiswa');});
 Route::get('/mapel', function () {return view('course');});
 Route::get('/kelas', [KelasController::class, 'indexutkguru']);
