@@ -13,6 +13,12 @@ class UserController extends Controller
         return view('cruduser', ['users' => $users]);
     }
 
+    public function index2()
+    {
+        $murid = graciaUser::all();
+        return view('crudmurid', ['murid' => $murid]);
+    }
+
     public function store(Request $request)
     {
         $request->validate([

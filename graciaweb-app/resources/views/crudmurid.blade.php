@@ -94,180 +94,11 @@ table {
 <a href="{{ url('/home') }}" class="ml-2 rounded px-2 py-1">
     <i class="fa fa-home text-primary"></i>
     Home Page</a>
-    <h3 class="text-2xl ml-2 font-sans"><strong>Siswa Kelas 10 MIPA</strong></h3>
-    <br />
-    <table class="table table-striped">
-    <thead class="thead-dark">
-        <tr>
-            <th>No</th>
-            <th>Nama Siswa</th>
-            <th>NIS</th>
-            <th>Tempat Lahir</th>
-            <th>Tanggal Lahir</th>
-            <th>Jenis Kelamin</th>
-            <th>Agama</th>
-            <th>Alamat</th>
-            <th>Edit</th>
-            <th>Nilai</th>
-        </tr>
-    </thead>
-    <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <a href="{{ url('/admineditsiswa') }}">
-                        <i class="fa fa-pencil text-primary"></i> Edit
-                    </a>
-                </td>
-                <td><a href="{{ url('/adminnilai') }}">Nilai</a></td>
-            </tr>
-        </tbody>
-    </table>
-    <a href="{{ url('/adminaddsiswa') }}" class="ml-2 border border-primary rounded px-2 py-1">
-            <i class="fa fa-plus text-primary"></i>
-            Add Data
-        </a>
-    <br />
-    <br />
-    <h3 class="text-2xl ml-2 font-sans"><strong>Siswa Kelas 10 IPS</strong></h3>
-    <br />
-    <table class="table table-striped">
-    <thead class="thead-dark">
-        <tr>
-            <th>No</th>
-            <th>Nama Siswa</th>
-            <th>NIS</th>
-            <th>Tempat Lahir</th>
-            <th>Tanggal Lahir</th>
-            <th>Jenis Kelamin</th>
-            <th>Agama</th>
-            <th>Alamat</th>
-            <th>Edit</th>
-            <th>Nilai</th>
-        </tr>
-    </thead>
-    <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <a href="{{ url('/admineditsiswa') }}">
-                        <i class="fa fa-pencil text-primary"></i> Edit
-                    </a>
-                </td>
-                <td><a href="{{ url('/adminnilai') }}">Nilai</a></td>
-            </tr>
-        </tbody>
-    </table>
-    <a href="{{ url('/adminaddsiswa') }}" class="ml-2 border border-primary rounded px-2 py-1">
-            <i class="fa fa-plus text-primary"></i>
-            Add Data
-        </a>
-    <br />
-    <br />
-    <h3 class="text-2xl ml-2 font-sans"><strong>Siswa Kelas 11 MIPA</strong></h3>
-    <br />
-    <table class="table table-striped">
-    <thead class="thead-dark">
-        <tr>
-            <th>No</th>
-            <th>Nama Siswa</th>
-            <th>NIS</th>
-            <th>Tempat Lahir</th>
-            <th>Tanggal Lahir</th>
-            <th>Jenis Kelamin</th>
-            <th>Agama</th>
-            <th>Alamat</th>
-            <th>Edit</th>
-            <th>Nilai</th>
-        </tr>
-    </thead>
-    <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <a href="{{ url('/admineditsiswa') }}">
-                        <i class="fa fa-pencil text-primary"></i> Edit
-                    </a>
-                </td>
-                <td><a href="{{ url('/adminnilai') }}">Nilai</a></td>
-            </tr>
-        </tbody>
-    </table>
-    <a href="{{ url('/adminaddsiswa') }}" class="ml-2 border border-primary rounded px-2 py-1">
-            <i class="fa fa-plus text-primary"></i>
-            Add Data
-        </a>
-    <br />
-    <br />
-    <h3 class="text-2xl ml-2 font-sans"><strong>Siswa Kelas 11 IPS</strong></h3>
-    <br />
-    <table class="table table-striped">
-    <thead class="thead-dark">
-        <tr>
-            <th>No</th>
-            <th>Nama Siswa</th>
-            <th>NIS</th>
-            <th>Tempat Lahir</th>
-            <th>Tanggal Lahir</th>
-            <th>Jenis Kelamin</th>
-            <th>Agama</th>
-            <th>Alamat</th>
-            <th>Edit</th>
-            <th>Nilai</th>
-        </tr>
-    </thead>
-    <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <a href="{{ url('/admineditsiswa') }}">
-                        <i class="fa fa-pencil text-primary"></i> Edit
-                    </a>
-                </td>
-                <td><a href="{{ url('/adminnilai') }}">Nilai</a></td>
-            </tr>
-        </tbody>
-    </table>
-    <a href="{{ url('/adminaddsiswa') }}" class="ml-2 border border-primary rounded px-2 py-1">
-            <i class="fa fa-plus text-primary"></i>
-            Add Data
-        </a>
-    <br />
-    <br />
     <h3 class="text-2xl ml-2 font-sans"><strong>Siswa Kelas 12 MIPA</strong></h3>
     <br />
     <table class="table table-striped">
     <thead class="thead-dark">
         <tr>
-            <th>No</th>
             <th>Nama Siswa</th>
             <th>NIS</th>
             <th>Tempat Lahir</th>
@@ -275,76 +106,30 @@ table {
             <th>Jenis Kelamin</th>
             <th>Agama</th>
             <th>Alamat</th>
-            <th>Edit</th>
             <th>Nilai</th>
         </tr>
     </thead>
     <tbody>
+    @foreach($murid as $key => $murid)
+        @if($murid->role == 'student')
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>{{ $murid->nama_depan }} {{ $murid->nama_belakang }}</td>
+                <td>{{ $murid->nis }}</td>
+                <td>{{ $murid->tempat_lahir }}</td>
+                <td>{{ $murid->tanggal_lahir }}</td>
+                <td>{{ $murid->gender }}</td>
+                <td>{{ $murid->agama }}</td>
+                <td>{{ $murid->alamat }}</td>
                 <td>
-                    <a href="{{ url('/admineditsiswa') }}">
+                    <a href="{{ url('/adminedituser/update/' . $murid->userID) }}">
                         <i class="fa fa-pencil text-primary"></i> Edit
                     </a>
                 </td>
-                <td><a href="{{ url('/adminnilai') }}">Nilai</a></td>
             </tr>
+        @endif
+        @endforeach
         </tbody>
     </table>
-    <a href="{{ url('/adminaddsiswa') }}" class="ml-2 border border-primary rounded px-2 py-1">
-            <i class="fa fa-plus text-primary"></i>
-            Add Data
-        </a>
-    <br />
-    <br />
-    <h3 class="text-2xl ml-2 font-sans"><strong>Siswa Kelas 12 IPS</strong></h3>
-    <br />
-    <table class="table table-striped">
-    <thead class="thead-dark">
-        <tr>
-            <th>No</th>
-            <th>Nama Siswa</th>
-            <th>NIS</th>
-            <th>Tempat Lahir</th>
-            <th>Tanggal Lahir</th>
-            <th>Jenis Kelamin</th>
-            <th>Agama</th>
-            <th>Alamat</th>
-            <th>Edit</th>
-            <th>Nilai</th>
-        </tr>
-    </thead>
-    <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <a href="{{ url('/admineditsiswa') }}">
-                        <i class="fa fa-pencil text-primary"></i> Edit
-                    </a>
-                </td>
-                <td><a href="{{ url('/adminnilai') }}">Nilai</a></td>
-            </tr>
-        </tbody>
-    </table>
-    <a href="{{ url('/adminaddsiswa') }}" class="ml-2 border border-primary rounded px-2 py-1">
-            <i class="fa fa-plus text-primary"></i>
-            Add Data
-        </a>
-    <br />
     <br />
     <a href="{{ url('/listadmin') }}" class="ml-2 border border-primary rounded px-2 py-1">
     <i class="fa fa-arrow-left text-primary"></i>
