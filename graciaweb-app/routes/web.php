@@ -51,7 +51,7 @@ Route::get('/admineditkelas/update/{kelasID}', 'App\Http\Controllers\KelasContro
 Route::get('/listadmin', function () {return view('pilihanadmin');});
 Route::get('/adminabsen', function () {return view('crudabsen');});
 
-Route::get('/adminabsen', [AbsensiController::class, 'index']);
+Route::get('/adminabsen', [Controller::class, 'indexabsen']);
 Route::get('/adminabsen/hari/{tanggal}', 'App\Http\Controllers\AbsensiController@index')->name('adminabsen.update');
 
 Route::get('/adminnilai', function () {return view('crudnilai');});

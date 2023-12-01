@@ -126,7 +126,7 @@ h2 {
                 <div class="row">
                     @foreach($class as $key => $class )
                         <div class="col-lg-4 mb-3">
-                            <a href="{{ url('list') }}" class="card-link no-underline">
+                            <a href="{{ url('/list/' . $class->kelasID) }}" class="card-link no-underline">
                                 <div class="card" style="height: 200px; width: 100%; max-width: 400px;">
                                     
                                     <div class="card-body card-text-zoom" style="overflow: auto;">
