@@ -15,8 +15,8 @@ class KelasController extends Controller
 
     public function indexutkguru()
     {
-        $classes = graciaKelas::all();
-        return view('kelas', ['classes' => $classes]);
+        $class = graciaKelas::all();
+        return view('kelas', ['class' => $class]);
     }
 
     public function store(Request $request)
