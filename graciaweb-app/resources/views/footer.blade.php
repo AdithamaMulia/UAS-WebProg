@@ -128,7 +128,8 @@ ul li a:hover{
 }
 
 .follow-us {
-    margin-left: px; 
+    margin-left: 100px; 
+    
 }
 
 * {
@@ -151,14 +152,23 @@ ul li a:hover{
     color:white;
 }
 
-.fot1{
-    
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+    margin: auto;
+    margin-left: 145px;
 }
+
+
 
     </style>
 </head>
 <body>
-    <footer class="fot1">
+<div class="container">
+        <footer class="fot1">
         <div class="footer-col">
             <h4>Address Info</h4>
             <h3> <strong> Gracia </strong> <strong class="s1">School</strong></h3>
@@ -190,6 +200,7 @@ ul li a:hover{
                 <a href="https://www.instagram.com/schoolgracia/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA=="><i class="fab fa-instagram"></i></a>
             </div>
         </div>
+</div>
     </footer>
 </body>
 </html>
