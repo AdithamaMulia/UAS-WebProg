@@ -29,5 +29,10 @@ class graciaUser extends Model
     {
         return $this->morphTo('absensi', 'absensi_type', 'absensi');
     }
+
+    public function kelas()
+    {
+        return $this->belongsTo(graciaKelas::class, 'kelasID', 'kelasID');
+    }
 }
 

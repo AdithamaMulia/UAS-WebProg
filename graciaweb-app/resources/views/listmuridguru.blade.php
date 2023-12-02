@@ -104,14 +104,13 @@
 <div class="box-main" style="text-align:center;">
     <br />
     <div class="card mb-3" style="width:100%; max-width: 1200px;">
-        <h2 style="padding-left: 15px; font-size: 30px; text-align: left;">Daftar Siswa</h2>
-        <br />
-        <h3 class="text-2xl ml-2 font-sans" style="text-align: left;"><strong>Siswa Kelas 12 IPS</strong></h3>
+    <br />
+        <h3 class="text-2xl ml-2 font-sans" style="text-align: left;"><strong>Daftar Siswa Kelas {{ $class->tingkat }} {{ $class->nama_kelas }}</strong></h3>
     <br />
     <table class="table table-striped">
     <thead class="thead-dark">
         <tr>
-            <th>No</th>
+            <th>ID</th>
             <th>Nama Siswa</th>
             <th>NIS</th>
             <th>Tempat Lahir</th>
@@ -119,27 +118,29 @@
             <th>Jenis Kelamin</th>
             <th>Agama</th>
             <th>Alamat</th>
-            <th>Edit</th>
             <th>Nilai</th>
         </tr>
     </thead>
     <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <a href="{{ url('/admineditsiswa') }}">
-                        <i class="fa fa-pencil text-primary"></i> Edit
-                    </a>
-                </td>
-                <td><a href="{{ url('/adminnilai') }}">Nilai</a></td>
-            </tr>
+        @foreach($class as $key => $class)
+            @if($class->role == 'student')
+                <tr>
+                    <td>{{ $class->userID }}</td>
+                    <td>{{ $class->nama_depan }} {{ $class->nama_belakang }}</td>
+                    <td>{{ $class->nis }}</td>
+                    <td>{{ $class->tempat_lahir }}</td>
+                    <td>{{ $class->tanggal_lahir }}</td>
+                    <td>{{ $class->gender }}</td>
+                    <td>{{ $class->agama }}</td>
+                    <td>{{ $class->alamat }}</td>
+                    <td>
+                        <a href="{{ url('/adminedituser/update/' . $class->userID) }}">
+                            <i class="fa fa-pencil text-primary"></i> Edit
+                        </a>
+                    </td>
+                </tr>
+            @endif
+            @endforeach
         </tbody>
     </table>
     <a href="{{ url('/adminaddsiswa') }}" class="ml-2 border border-primary rounded px-2 py-1" style="max-width: 120px;">

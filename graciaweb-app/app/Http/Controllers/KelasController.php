@@ -19,6 +19,20 @@ class KelasController extends Controller
         return view('kelas', ['class' => $class]);
     }
 
+    public function filtered($kelasID)
+    {
+        $class = graciaKelas::with('user')->where('kelasID', $kelasID);
+        return view('listmuridguru', ['class' => $class]);
+    }
+
+
+
+    public function pilihan($kelasID)
+    {
+        $class = graciaKelas::where('kelasID', $kelasID)->first();
+        return view('pilihan', ['class' => $class]);
+    }
+
     public function store(Request $request)
     {
         $request->validate([
@@ -40,6 +54,11 @@ class KelasController extends Controller
     {
         $classes = graciaKelas::where('kelasID', $kelasID)->first();
         return view('editkelas', ['class' => $classes]);
+    }
+
+    public function user()
+    {
+        return $this->hasOne(graciaUser::class, 'kelasID', 'kelasID');
     }
 
 

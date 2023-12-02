@@ -34,10 +34,10 @@ Route::get('/raport', function () {return view('nilai1');});
 // guru
 Route::get('/absen', [Controller::class, 'indexabsen'])->name('absen');
 Route::post('/absensubmit', [AbsensiController::class, 'submitAbsen'])->name('absen');
-Route::get('/tambahmurid', function () {return view('addsiswa');});
+Route::get('/listmurid/{kelasID}', [KelasController::class, 'filtered']);
 Route::get('/mapel', function () {return view('course');});
 Route::get('/kelas', [KelasController::class, 'indexutkguru']);
-Route::get('/list', function () {return view('pilihan');});
+Route::get('/list/{kelasID}', [KelasController::class, 'pilihan']);
 Route::get('/editsiswa', function () {return view('editsiswadariguru');});
 Route::get('/guruaddsiswa', function () {return view('gurutambahsiswa');});
 Route::get('/adminmurid/{kelasID}', 'App\Http\Controllers\KelasController@showTabelKelasSiswa');
