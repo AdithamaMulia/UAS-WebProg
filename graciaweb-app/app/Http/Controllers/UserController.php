@@ -29,6 +29,11 @@ class UserController extends Controller
         return graciaUser::where('username', $username)->exists();
     }
 
+    protected function isNISTaken($nis)
+    {
+        return graciaUser::where('nis', $nis)->exists();
+    }
+
     public function store(Request $request)
     {
         $request->validate([
@@ -39,12 +44,22 @@ class UserController extends Controller
             'gender' => 'required',
             'tanggal_lahir' => 'required',
             'alamat' => 'required',
-            'nis' => 'required',
             'agama' => 'required',
-            'nama_orangtua' => 'required',
             'tempat_lahir' => 'required',
             'role' => 'required',
         ]);
+
+        $inputUsername = $request->username;
+
+        if ($this->isUsernameTaken($inputUsername)) {
+            return redirect()->back()->with('error', 'Username is already taken.');
+        }
+
+        $inputNis = $request->nis;
+
+        if ($this->isNISTaken($inputNis)) {
+            return redirect()->back()->with('error', 'Username is already taken.');
+        }
 
         $user = new graciaUser();
 
@@ -71,16 +86,11 @@ class UserController extends Controller
         $user->role = $request->role;
         $user->kelasID = $request->kelasID;
 
-        $inputUsername = $request->input('username');
-
-        if ($this->isUsernameTaken($inputUsername)) {
-            return redirect()->back()->with('error', 'Username is already taken.');
-        }
-
         $user->save();
 
         return redirect('/adminuserindex')->with('success', 'Data added successfully');
     }
+
 
     public function edit($userID)
     {
@@ -98,9 +108,7 @@ class UserController extends Controller
             'gender' => 'required',
             'tanggal_lahir' => 'required',
             'alamat' => 'required',
-            'nis' => 'required',
             'agama' => 'required',
-            'nama_orangtua' => 'required',
             'tempat_lahir' => 'required',
             'role' => 'required',
         ]);
