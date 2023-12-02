@@ -62,38 +62,27 @@
   <body class="l" style="font-family: 'Source Sans Pro', sans-serif;">
 
   @include('navbar')
-  <div class="pt-24 gradient1">
-    <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center" data-aos="fade-up">
-      <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left" data-aos="fade-right">
-        <p class="uppercase tracking-loose w-full">Sekolah Gracia</p>
-        <h1 class="my-4 text-5xl font-bold leading-tight mr-4" data-aos="fade-left">
-          The Best Education you
-          Can Get!!
-        </h1>
-        <p class="leading-normal text-2xl mb-8" data-aos="fade-up">
-          Providing quality education opens doors to a brighter future. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
-        </p>
-        <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out mr-4" style="margin-top: -10px" data-aos="zoom-in">
-          Lets Begin!!
-        </button>
+      <div class="pt-24 gradient1">
+        <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center" data-aos="fade-up">
+          <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left" data-aos="fade-right">
+            <p class="uppercase tracking-loose w-full">Sekolah Gracia</p>
+            <h1 class="my-4 text-5xl font-bold leading-tight mr-4" data-aos="fade-left">
+              The Best Education you
+              Can Get!!
+            </h1>
+            <p class="leading-normal text-2xl mb-8" data-aos="fade-up">
+              Providing quality education opens doors to a brighter future. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+            </p>
+            <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out mr-4" style="margin-top: -10px" data-aos="zoom-in">
+              Lets Begin!!
+            </button>
+          </div>
+          <div class="w-full md:w-3/5 py-6 text-center  " data-aos="fade-left">
+          <img src="{{ asset('img') }}/sekolah1.jpg" alt="laptop image" class="imgFluid">
+          </div>
+        </div>
       </div>
-      <div class="w-full md:w-3/5 py-6 text-center  " data-aos="fade-left">
-      <img src="{{ asset('img') }}/sekolah1.jpg" alt="laptop image" class="imgFluid">
-      </div>
-    </div>
-  </div>
-<div class="br">
-       <br class="br"> </br>
-       <br class="br"> </br>
-       <br class="br"> </br>
-       <br class="br"> </br>
-       <br class="br"> </br>
-       <br class="br"> </br>
-
-
-  </div>
-
-
+      <hr />
       </div>
     </div>
 
@@ -156,7 +145,7 @@
           <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
         <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow style="background-color: #f0e4da;">
+          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow" style="background-color: #f0e4da;">
             <a href="#" class="flex flex-wrap no-underline hover:no-underline">
               <p class="w-full text-gray-600 text-xs md:text-sm px-6 mt-3">
                 Fasilitas Sekolah
@@ -218,28 +207,7 @@
         </div>
       </div>
   </section>
-
-  <section id="contact" style="background: linear-gradient(90deg, #eee2dc 0%, #bab2b5 50%); ">
-  <div class="contact-container  flex justify-center items-center">
-    <div class="contact-content text-center">
-      <h2 class="section-title">Contact Us</h2>
-      <p class="section-description">We'd love to hear from you.</p>
-      <div class="contact-form">
-        <h2>Contact Information:</h2>
-        <a><i class="fas fa-light fa-phone">    021-5983597</i></a>
-        <a href="https://www.instagram.com/schoolgracia/"><i class="fa-brands fa-instagram">    @schoolgracia</i></a>
-      </div>
-      <div class="contact-hours">
-        <p>Opening Hours</p>
-        <p>Mon-Fri 07:00 - 16:00</p>
-        <p>Saturday 08.00- 12.00</p>
-      </div>
-      <br/>
-      <br/>
-      <i class="fas fa-light fa-location-dot">    Jl. Permata Sari A12 No. 007-009 Kelurahan Binong, Kecamatan Curug, Kabupaten Tangerang, Provinsi Banten</i>
-    </div>
-  </div>
-  </section>
+  
   @include('footer')
 
     <script>
