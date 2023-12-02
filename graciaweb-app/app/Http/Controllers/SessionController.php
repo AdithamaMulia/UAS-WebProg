@@ -13,7 +13,7 @@ use PhpParser\Node\Stmt\Return_;
 class SessionController extends Controller
 {
         function signin(){
-            return view('signin');
+            return view('sesi/signin');
         }
 
         function login(Request $request)

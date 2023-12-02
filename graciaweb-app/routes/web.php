@@ -20,13 +20,15 @@ use App\Http\Controllers\Controller;
 |
 */
 //login
-Route::get('/', [SessionController::class, 'signin']);
-Route::post('/login', [SessionController::class, 'login']);
+Route::middleware('guest')->group(function () {
+Route::get('/sesi', [SessionController::class, 'signin'])->name('login');
+Route::post('/sesi/login', [SessionController::class, 'login']);
 
 //logout
 Route::get('/logout', [SessionController::class, 'logout']);
 
 // murid
+Route::get('/', function () {return view('index');})->middleware('auth');
 Route::get('/home', function () {return view('index');});
 Route::get('/nilaimapel', function () {return view('nilai');});
 Route::get('/raport', function () {return view('nilai1');});
@@ -82,4 +84,4 @@ Route::get('/test', function () {return view('testing');});
 Route::get('/backup', function () {return view('backup');});
 Route::get('/aboutus', function () {return view('aboutus');});
 Route::get('/footer', function () {return view('footer');});
-
+});

@@ -23,8 +23,8 @@
       .navbar {
       position: sticky;
       top: 0;
-      z-index: 1000; 
-      background-color: #fff; 
+      z-index: 1000;
+      background-color: #fff;
      }
 
      .sticky-top {
@@ -32,22 +32,22 @@
     top: 0;
     z-index: 1000;
     }
-    
+
     .gradient1 {
-    background: linear-gradient(90deg, #edc7b7 0%, #eee2dc 100%); 
+    background: linear-gradient(90deg, #edc7b7 0%, #eee2dc 100%);
     }
 
     .imgFluid {
-      border-radius: 12px; 
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+      border-radius: 12px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
       height: 100%;
       max-height: 800px;
       width: 100%;
       max-width: 850px;
     }
     .imgFluid1{
-      border-radius: 12px; 
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+      border-radius: 12px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
       height: 100%;
       max-height: 500px;
       width: 100%;
@@ -82,9 +82,9 @@
         <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
     <linearGradient id="waveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" style="stop-color: #f7a400" /> 
-        <stop offset="50%" style="stop-color: #f3e0e6" /> 
-        <stop offset="100%" style="stop-color: #fffacd" /> 
+        <stop offset="0%" style="stop-color: #f7a400" />
+        <stop offset="50%" style="stop-color: #f3e0e6" />
+        <stop offset="100%" style="stop-color: #fffacd" />
     </linearGradient>
     </defs>
         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
