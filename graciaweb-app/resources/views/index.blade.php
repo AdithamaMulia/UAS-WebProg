@@ -240,7 +240,7 @@
     </div>
   </div>
   </section>
-  
+  @include('footer')
 
     <script>
       var scrollpos = window.scrollY;
