@@ -38,6 +38,12 @@
             </ul>
         </div>
         <div class="flex items-center gap-6">
+            <script type="text/javascript">
+                window.history.forward();
+                function noBack() {
+                    window.history.forward();
+                }
+            </script>
             <a href="/logout"><button class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">Logout</button></a>
             <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
         </div>

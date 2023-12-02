@@ -87,11 +87,17 @@
             background-blend-mode: darken;
         }
     </style>
+        <script type="text/javascript">
+            window.history.forward();
+            function noBack() {
+                window.history.forward();
+            }
+        </script>
 </head>
 <body class="background">
     <div class="card">
         <h2>Login</h2>
-        <form action="login" method="POST">
+        <form action="/sesi/login" method="POST">
             @csrf
             <div class="form-group">
                 <label for="username">Username</label>

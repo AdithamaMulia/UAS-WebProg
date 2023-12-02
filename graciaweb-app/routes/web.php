@@ -20,13 +20,15 @@ use App\Http\Controllers\Controller;
 |
 */
 //login
-Route::get('/', [SessionController::class, 'signin']);
-Route::post('/login', [SessionController::class, 'login']);
+Route::middleware('guest')->group(function () {
+Route::get('/sesi', [SessionController::class, 'signin'])->name('login');
+Route::post('/sesi/login', [SessionController::class, 'login']);
 
 //logout
 Route::get('/logout', [SessionController::class, 'logout']);
 
 // murid
+Route::get('/', function () {return view('index');})->middleware('auth');
 Route::get('/home', function () {return view('index');});
 Route::get('/nilaimapel', function () {return view('nilai');});
 Route::get('/raport', function () {return view('nilai1');});
@@ -34,10 +36,10 @@ Route::get('/raport', function () {return view('nilai1');});
 // guru
 Route::get('/absen', [Controller::class, 'indexabsen'])->name('absen');
 Route::post('/absensubmit', [AbsensiController::class, 'submitAbsen'])->name('absen');
-Route::get('/tambahmurid', function () {return view('addsiswa');});
+Route::get('/listmurid/{kelasID}', [Controller::class, 'filtered']);
 Route::get('/mapel', function () {return view('course');});
 Route::get('/kelas', [KelasController::class, 'indexutkguru']);
-Route::get('/list', function () {return view('pilihan');});
+Route::get('/list/{kelasID}', [KelasController::class, 'pilihan']);
 Route::get('/editsiswa', function () {return view('editsiswadariguru');});
 Route::get('/guruaddsiswa', function () {return view('gurutambahsiswa');});
 Route::get('/adminmurid/{kelasID}', 'App\Http\Controllers\KelasController@showTabelKelasSiswa');
@@ -82,4 +84,4 @@ Route::get('/test', function () {return view('testing');});
 Route::get('/backup', function () {return view('backup');});
 Route::get('/aboutus', function () {return view('aboutus');});
 Route::get('/footer', function () {return view('footer');});
-
+});

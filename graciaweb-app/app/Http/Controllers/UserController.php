@@ -19,6 +19,11 @@ class UserController extends Controller
         return view('crudmurid', ['murid' => $murid]);
     }
 
+    public function kelas()
+    {
+        return $this->hasOne(graciaKelas::class, 'kelasID', 'kelasID');
+    }
+
     public function store(Request $request)
     {
         $request->validate([

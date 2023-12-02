@@ -14,5 +14,10 @@ class graciaKelas extends Model
     {
         return $this->morphTo('absensi', 'absensi_type', 'absensi');
     }
+
+    public function user()
+    {
+        return $this->hasOne(graciaUser::class, 'kelasID', 'kelasID');
+    }
 }
 
