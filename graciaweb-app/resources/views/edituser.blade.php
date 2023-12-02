@@ -91,7 +91,7 @@
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" style="width: 100%; max-width: 280px;" value="{{ $user->password }}" placeholder="Password" required>
+                <input type="password" id="password" name="password" style="width: 100%; max-width: 280px;" placeholder="Password">
             </div>
             <div class="form-group">
                 <label for="tanggal_lahir">Tanggal Lahir</label>
