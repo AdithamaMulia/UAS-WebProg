@@ -24,6 +24,16 @@ class UserController extends Controller
         return $this->hasOne(graciaKelas::class, 'kelasID', 'kelasID');
     }
 
+    protected function isUsernameTaken($username)
+    {
+        return graciaUser::where('username', $username)->exists();
+    }
+
+    protected function isNISTaken($nis)
+    {
+        return graciaUser::where('nis', $nis)->exists();
+    }
+
     public function store(Request $request)
     {
         $request->validate([
@@ -34,12 +44,22 @@ class UserController extends Controller
             'gender' => 'required',
             'tanggal_lahir' => 'required',
             'alamat' => 'required',
-            'nis' => 'required',
             'agama' => 'required',
-            'nama_orangtua' => 'required',
             'tempat_lahir' => 'required',
             'role' => 'required',
         ]);
+
+        $inputUsername = $request->username;
+
+        if ($this->isUsernameTaken($inputUsername)) {
+            return redirect()->back()->with('error', 'Username is already taken.');
+        }
+
+        $inputNis = $request->nis;
+
+        if ($this->isNISTaken($inputNis)) {
+            return redirect()->back()->with('error', 'NIS is already taken.');
+        }
 
         $user = new graciaUser();
 
@@ -69,6 +89,48 @@ class UserController extends Controller
         $user->save();
 
         return redirect('/adminuserindex')->with('success', 'Data added successfully');
+    }
+
+
+    public function edit($userID)
+    {
+        $user = graciaUser::where('userID', $userID)->first();
+        return view('edituser', ['user' => $user]);
+    }
+
+    public function update(Request $request, $userID)
+    {
+        $request->validate([
+            'username' => 'required',
+            'nama_depan' => 'required',
+            'nama_belakang' => 'required',
+            'password' => 'required',
+            'gender' => 'required',
+            'tanggal_lahir' => 'required',
+            'alamat' => 'required',
+            'agama' => 'required',
+            'tempat_lahir' => 'required',
+            'role' => 'required',
+        ]);
+
+        graciaUser::where('userID', $userID)
+        ->update([
+            'username' => $request->input('username'),
+            'nama_depan' => $request->input('nama_depan'),
+            'nama_belakang' => $request->input('nama_belakang'),
+            'password' => $request->input('password'),
+            'gender' => $request->input('gender'),
+            'tanggal_lahir' => $request->input('tanggal_lahir'),
+            'alamat' => $request->input('alamat'),
+            'nis' => $request->input('nis'),
+            'agama' => $request->input('agama'),
+            'nama_orangtua' => $request->input('nama_orangtua'),
+            'tempat_lahir' => $request->input('tempat_lahir'),
+            'role' => $request->input('role'),
+            'kelasID' => $request->input('kelasID'),
+        ]);
+
+        return redirect('/adminuserindex')->with('success', 'Data updated successfully');
     }
 
     public function absensi()
