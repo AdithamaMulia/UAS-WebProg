@@ -58,7 +58,7 @@ class UserController extends Controller
         $inputNis = $request->nis;
 
         if ($this->isNISTaken($inputNis)) {
-            return redirect()->back()->with('error', 'Username is already taken.');
+            return redirect()->back()->with('error', 'NIS is already taken.');
         }
 
         $user = new graciaUser();
