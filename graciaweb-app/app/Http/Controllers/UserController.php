@@ -113,6 +113,18 @@ class UserController extends Controller
             'role' => 'required',
         ]);
 
+        $inputUsername = $request->username;
+
+        if ($this->isUsernameTaken($inputUsername)) {
+            return redirect()->back()->with('error', 'Username is already taken.');
+        }
+
+        $inputNis = $request->nis;
+
+        if ($this->isNISTaken($inputNis)) {
+            return redirect()->back()->with('error', 'NIS is already taken.');
+        }
+
         graciaUser::where('userID', $userID)
         ->update([
             'username' => $request->input('username'),
