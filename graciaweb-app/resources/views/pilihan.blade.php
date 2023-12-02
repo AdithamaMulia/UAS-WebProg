@@ -105,33 +105,6 @@
 </div>
 </div>
 
-<section id="contact">
-  <div class="contact-container flex justify-center items-center">
-    <div class="contact-content text-center">
-      <h2 class="section-title">Contact Us</h2>
-      <p class="section-description">We'd love to hear from you.</p>
-      <div class="contact-form">
-        <h2>Contact Information:</h2>
-        <a><i class="fas fa-light fa-phone">    021-5983597</i></a>
-        <a href="https://www.instagram.com/schoolgracia/"><i class="fa-brands fa-instagram">    @schoolgracia</i></a>
-      </div>
-      <div class="contact-hours">
-        <p>Opening Hours</p>
-        <p>Mon-Fri 07:00 - 16:00</p>
-        <p>Saturday 08.00- 12.00</p>
-      </div>
-      <br/>
-      <br/>
-      <i class="fas fa-light fa-location-dot">    Jl. Permata Sari A12 No. 007-009 Kelurahan Binong, Kecamatan Curug, Kabupaten Tangerang, Provinsi Banten</i>
-    </div>
-  </div>
-
-
-
-
-
+@include('footer')
 </body>
-
-
-
 </html>
