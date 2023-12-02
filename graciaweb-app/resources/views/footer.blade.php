@@ -9,7 +9,8 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-300">
-    <div class="container mx-auto p-4 bg-gray-800">
+    <section class="bg-gray-800">
+    <div class="container mx-auto p-4">
         <footer class="flex flex-wrap justify-between items-start py-12 px-10">
             <div class="w-full sm:w-1/2 lg:w-1/4 text-white">
                 <h4 class="text-yellow-500 text-xl font-medium mb-6">Address Info</h4>
@@ -48,5 +49,6 @@
             </div>
         </footer>
     </div>
+                </section>
 </body>
 </html>
