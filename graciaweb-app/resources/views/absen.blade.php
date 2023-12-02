@@ -128,7 +128,7 @@
                 <div class="text-end">
                     <br />
                     <a href="{{ url('/kelas')}}" class="btn btn-primary">Back</a>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary" style="background-color: blue;">Submit</button>
                 </div>
             </div>
         </form>

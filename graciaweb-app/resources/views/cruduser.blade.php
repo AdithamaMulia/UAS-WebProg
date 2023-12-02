@@ -118,7 +118,6 @@
             <th>ID User</th>
             <th>Username</th>
             <th>Nama</th>
-            <th>Password</th>
             <th>Jenis Kelamin</th>
             <th>Tanggal Lahir</th>
             <th>Alamat</th>
@@ -138,7 +137,6 @@
                 <td>{{ $user->userID }}</td>
                 <td>{{ $user->username }}</td>
                 <td>{{ $user->nama_depan }} {{ $user->nama_belakang }}</td>
-                <td>{{ $user->password }}</td>
                 <td>{{ $user->gender }}</td>
                 <td>{{ $user->tanggal_lahir }}</td>
                 <td>{{ $user->alamat }}</td>
@@ -166,7 +164,6 @@
             <th>ID</th>
             <th>Username</th>
             <th>Nama</th>
-            <th>Password</th>
             <th>Jenis Kelamin</th>
             <th>Tanggal Lahir</th>
             <th>Alamat</th>
@@ -185,7 +182,6 @@
                 <td>{{ $user->userID }}</td>
                 <td>{{ $user->username }}</td>
                 <td>{{ $user->nama_depan }} {{ $user->nama_belakang }}</td>
-                <td>{{ $user->password }}</td>
                 <td>{{ $user->gender }}</td>
                 <td>{{ $user->tanggal_lahir }}</td>
                 <td>{{ $user->alamat }}</td>
@@ -212,7 +208,6 @@
             <th style="max-width:20px;">ID</th>
             <th>Username</th>
             <th>Nama</th>
-            <th>Password</th>
             <th>Jenis Kelamin</th>
             <th>Tanggal Lahir</th>
             <th>Alamat</th>
@@ -231,7 +226,6 @@
                 <td style="max-width:20px;">{{ $user->userID }}</td>
                 <td>{{ $user->username }}</td>
                 <td>{{ $user->nama_depan }} {{ $user->nama_belakang }}</td>
-                <td>{{ $user->password }}</td>
                 <td>{{ $user->gender }}</td>
                 <td>{{ $user->tanggal_lahir }}</td>
                 <td>{{ $user->alamat }}</td>
