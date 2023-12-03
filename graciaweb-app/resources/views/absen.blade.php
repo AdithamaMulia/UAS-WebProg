@@ -151,18 +151,12 @@
 
     <h2 class="text-3xl font-bold text-blue-pigeon mt-3" style="padding-left: 15px;">Daftar Absen Siswa</h2>
         <br />
-        <form id="absenForm" action="/absensubmit" method="post">
+        <form id="absenForm" action="{{ url('/absensubmit/' . $kelas->kelasID)}}" method="post">
             @csrf
-            <div class="text-2l ml-2 font-sans" style="padding-left: 10px;">
-                <select id="kelas" name="kelas" style="width: 100%; max-width: 300px; height: 30px; font-size: 18px; margin-top: 5px; border: 1px solid #000;">
-                    @foreach($kelas as $key => $kelas)
-                        <option value="{{ $kelas->kelasID }}">{{$kelas->tingkat}} {{ $kelas->nama_kelas }}</option>
-                    @endforeach
-                </select>
-            </div>
+            <div class="text-2l ml-2 font-sans" style="padding-left: 10px;">{{$kelas->tingkat}} {{ $kelas->nama_kelas }}</div>
             <br />
             <div class="input-container" style="padding-left: 15px;">
-                <label for="tanggal">Tanggal:</label>
+                <label for="tanggal">Tanggal: {{$absen->tanggal}}</label>
                 <input type="date" id="tanggal" name="tanggal" style="border: 1px solid #000;" required>
 
                 <p>Semester: </p>
@@ -185,24 +179,25 @@
                         <tbody id="dataBody">
                         @foreach($users as $key => $user)
                             @if($user->role == 'student')
-                            @if($user->kelasID == $kelas->kelasID)
-                                <tr>
-                                    <td class="increment">1</td>
-                                    <td>{{ $user->nama_depan }} {{ $user->nama_belakang }}</td>
-                                    <td>
-                                        <input type="hidden" name="user_ids[]" value="{{ $user->userID }}">
-                                        <input type="checkbox" id="remember_{{ $user->userID }}" name="remember[{{ $user->userID }}]">
-                                    </td>
-                                    <td>
-                                        <select name="keterangan[{{ $user->userID }}]" style="border: 1px solid #000; border-radius: 5px;">
-                                            <option value="Hadir">Hadir</option>
-                                            <option value="Sakit">Sakit</option>
-                                            <option value="Izin">Izin</option>
-                                            <option value="Tanpa Keterangan">Tanpa Keterangan</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                            @endif
+                                @if($user->kelasID == $kelas->kelasID)
+                                    <tr>
+                                        <td class="increment">1</td>
+                                        <td>{{ $user->nama_depan }} {{ $user->nama_belakang }}</td>
+                                        <td>
+                                            <input type="hidden" name="userID[]" value="{{ $user->userID }}">
+                                            <input type="checkbox" id="userID" name="{{ $user->userID }}">
+                                        </td>
+                                        <input type="hidden" name="kelasID" value="{{ $kelas->kelasID }}">
+                                        <td>
+                                            <select name="keterangan[{{ $user->userID }}]" style="border: 1px solid #000; border-radius: 5px;">
+                                                <option value="Hadir">Hadir</option>
+                                                <option value="Sakit">Sakit</option>
+                                                <option value="Izin">Izin</option>
+                                                <option value="Tanpa Keterangan">Tanpa Keterangan</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                @endif
                             @endif
                         @endforeach
                         </tbody>
