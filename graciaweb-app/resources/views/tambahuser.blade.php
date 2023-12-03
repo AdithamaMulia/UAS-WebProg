@@ -83,14 +83,14 @@
             </script>
         @endif
         <form action="{{ route('adminuser.add') }}" method="post">
-        @csrf
+            @csrf
             <div class="form-group">
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username" style="width: 100%; max-width: 280px;" placeholder="Username" required>
+                <input type="text" id="username" name="username" style="width: 100%; max-width: 280px;" placeholder="Username" >
             </div>
             <div class="form-group">
                 <label for="nama_depan">Nama Depan</label>
-                <input type="text" id="nama_depan" name="nama_depan" style="width: 100%; max-width: 280px;" placeholder="Nama Depan" required>
+                <input type="text" id="nama_depan" name="nama_depan" style="width: 100%; max-width: 280px;" placeholder="Nama Depan" >
             </div>
             <div class="form-group">
                 <label for="nama_belakang">Nama Belakang</label>
@@ -98,7 +98,7 @@
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" style="width: 100%; max-width: 280px;" placeholder="Password" required>
+                <input type="password" id="password" name="password" style="width: 100%; max-width: 280px;" placeholder="Password" >
             </div>
             <div>
                 <label>Jenis Kelamin</label>
@@ -112,7 +112,7 @@
             </div>
             <div class="form-group">
                 <label for="tanggal_lahir">Tanggal Lahir</label>
-                <input type="date" id="tanggal_lahir" name="tanggal_lahir" style="width: 100%; max-width: 280px;" placeholder="Tanggal Lahir" required>
+                <input type="date" id="tanggal_lahir" name="tanggal_lahir" style="width: 100%; max-width: 280px;" placeholder="Tanggal Lahir" >
             </div>
             <br />
             <div class="form-group">
@@ -125,7 +125,7 @@
             </div>
             <div class="form-group">
                 <label for="agama">Agama</label>
-                <input type="text" id="agama" name="agama" style="width: 100%; max-width: 280px;" placeholder="Agama" required>
+                <input type="text" id="agama" name="agama" style="width: 100%; max-width: 280px;" placeholder="Agama" >
             </div>
             <div class="form-group">
                 <label for="nama_orangtua">Nama Orangtua</label>
@@ -133,7 +133,7 @@
             </div>
             <div class="form-group">
                 <label for="tempat_lahir">Tempat Lahir</label>
-                <input type="text" id="tempat_lahir" name="tempat_lahir" style="width: 100%; max-width: 280px;" placeholder="Tempat Lahir" required>
+                <input type="text" id="tempat_lahir" name="tempat_lahir" style="width: 100%; max-width: 280px;" placeholder="Tempat Lahir" >
             </div>
             <div>
                 <label for="role">Role</label>

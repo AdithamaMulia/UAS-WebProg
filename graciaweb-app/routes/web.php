@@ -59,6 +59,7 @@ Route::get('/adminabsen', [Controller::class, 'indexabsen']);
 Route::get('/adminabsen/hari/{tanggal}', 'App\Http\Controllers\AbsensiController@index')->name('adminabsen.update');
 
 Route::get('/adminaddsiswa', function () {return view('tambahsiswa');});
+Route::post('/addUserToClass/{userID}', [UserController::class, 'addUserToClass'])->name('addUserToClass');
 Route::get('/adminaddkelas', function () {return view('tambahkelas');});
 Route::get('/adminaddmapel', function () {return view('tambahmapel');});
 Route::get('/adminaddnilai', function () {return view('tambahnilai');});

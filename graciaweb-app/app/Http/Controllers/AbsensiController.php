@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\graciaAbsensi;
+use App\Models\graciaKelas;
 use Illuminate\Http\Request;
 
 class AbsensiController extends Controller

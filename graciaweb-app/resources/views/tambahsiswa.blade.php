@@ -82,56 +82,15 @@
                 }, 5000);
             </script>
         @endif
-        <form action="{{ url('/adminpage8') }}" method="post">
+        <form action="{{ route('addUserToClass', ['kelasID' => $kelas]) }}" method="POST">
+            @csrf
             <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" style="width: 100%; max-width: 280px;" placeholder="Username" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" style="width: 100%; max-width: 280px;" placeholder="Email" required>
-            </div>
-            <div class="form-group">
-                <label for="nama_depan">Nama Depan</label>
-                <input type="text" id="nama_depan" name="nama_depan" style="width: 100%; max-width: 280px;" placeholder="Nama Depan" required>
-            </div>
-            <div class="form-group">
-                <label for="nama_belakang">Nama Belakang</label>
-                <input type="text" id="nama_belakang" name="nama_belakang" style="width: 100%; max-width: 280px;" placeholder="Nama Belakang" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" style="width: 100%; max-width: 280px;" placeholder="Password" required>
-            </div>
-            <div class="form-group">
-                <label for="tempat_lahir">Tempat Lahir</label>
-                <input type="text" id="tanggal_lahir" name="tanggal_lahir" style="width: 100%; max-width: 280px;" placeholder="Tempat Lahir" required>
-            </div>
-            <div class="form-group">
-                <label for="tanggal_lahir">Tanggal Lahir</label>
-                <input type="date" id="tanggal_lahir" name="tanggal_lahir" style="width: 100%; max-width: 280px;" placeholder="Tanggal Lahir" required>
-            </div>
-            <div>
-                <label>Jenis Kelamin</label>
-                <div>
-                <input type="radio" id="gender_laki" name="gender" value="Laki-Laki" /> Laki-laki
-                <input type="radio" id="gender_perempuan" name="gender" value="Perempuan" /> Perempuan
-                </div>
-            </div>
-            <br />
-            <div class="form-group">
-                <label for="alamat">Alamat</label>
-                <input type="text" id="alamat" name="alamat" style="width: 100%; max-width: 280px;" placeholder="Alamat" required>
-            </div>
-            <div class="form-group">
-                <label for="nis">NIS</label>
-                <input type="text" id="nis" name="nis" style="width: 100%; max-width: 280px;" placeholder="NIS" required>
-            </div>
-            <div>
-                <label for="role">Role</label>
-                <br />
-                <select id="role" name="role" style="width :100%; max-width:300px; height: 30px; font-size: 18px; margin-top: 5px;">
-                    <option value="student">Murid</option>
+                <label for="kelasID">Pilih Kelas:</label>
+                <select name="kelasID" id="kelasID">
+                    <!-- Tampilkan opsi kelas yang tersedia -->
+                    @foreach($siswa as $user)
+                        <option value="{{ $siswa->userID }}">{{ $siswa->nama_depan }}</option>
+                    @endforeach
                 </select>
             </div>
             <br />
@@ -139,7 +98,7 @@
                 <button type="submit" class="btn">Tambah Siswa</button>
                 <br />
                 <br />
-                <a href="{{ url('/adminpage8') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
+                <a href="{{ url('/adminmurid/' . $class->kelasID) }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
             </div>
         </form>
     </div>
