@@ -44,7 +44,12 @@ Route::get('/list/{kelasID}', [KelasController::class, 'pilihan']);
 Route::get('/editsiswa', function () {return view('editsiswadariguru');});
 Route::get('/guruaddsiswa', function () {return view('gurutambahsiswa');});
 Route::get('/adminmurid/{kelasID}', 'App\Http\Controllers\KelasController@showTabelKelasSiswa');
-Route::get('/nilaisiswa/{userID}/{mapelID}', [NilaiController::class, 'directnilai'])->name('nilai');
+Route::get('/nilaisiswa/{userID}/{mapelID}', [Controller::class, 'indexnilai'])->name('nilai.index');
+
+
+
+Route::post('/nilaisiswa/{userID}/{mapelID}', [NilaiController::class, 'store'])->name('nilai.store');
+Route::get('/editnilai/{userID}/{mapelID}', [NilaiController::class, 'edit'])->name('nilai');
 
 // admin
 Route::get('/adminkelasindex', [KelasController::class, 'index']);

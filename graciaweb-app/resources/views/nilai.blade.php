@@ -47,8 +47,8 @@
     <br />
     <div class="card mb-3" style="width:100%; max-width: 1200px;">
         <h2 style="padding-left: 15px; font-size: 30px;">Nilai Siswa</h2>
-        <p style="padding-left: 15px;">Nama :</p>
-        <p style="padding-left: 15px;">NIK :</p>
+        <p style="padding-left: 15px;">Nama : {{$user->nama_depan}}  {{$user->nama_belakang}}</p>
+        <p style="padding-left: 15px;">NIS : {{$user->nis}}</p>
         <div style ="padding-left: 15px;">
                 <select id="semester" name="semester" style="width :100%; max-width:300px; height: 30px; font-size: 18px; margin-top: 5px; border: 1px solid #000;">
                     <option value="Ganjil">Ganjil</option>
@@ -57,7 +57,7 @@
             </div>
         <div class="card-body">
             <div class="row">
-                <table>
+            <table>
                 <tr>
                     <th style="max-width: 30px; text-align: center; vertical-align: middle;" rowspan="2">No</th>
                     <th style="text-align: center; vertical-align: middle;" rowspan="2">Mata Pelajaran</th>
@@ -73,19 +73,30 @@
                     <th style="max-width: 20px; text-align: center;">3</th>
                     <th style="max-width: 20px; text-align: center;">4</th>
                 </tr>
-                <tr>
-                    <td style="max-width: 30px; text-align: center;"></td>
-                    <td style="text-align: center; vertical-align: middle;"></td>
-                    <td style="max-width: 20px; text-align: center;"></td>
-                    <td style="max-width: 20px; text-align: center;"></td>
-                    <td style="max-width: 20px; text-align: center;"></td>
-                    <td style="max-width: 20px; text-align: center;"></td>
-                    <td style="max-width: 20px; text-align: center;"></td>
-                    <td style="max-width: 20px; text-align: center;"></td>
-                    <td style="max-width: 20px; text-align: center;"></td>
-                    <td><a href="edit_data.php?table=makanan&id=">Edit</a></td>
-                </tr>
-                </table>
+
+                @foreach ($mapel as $index => $mapelItem)
+                    @php
+                        // Check if the index exists in the $user->nilai array
+                        $nilaiItem = isset($user->nilai[$index]) ? $user->nilai[$index] : null;
+                    @endphp
+                    <tr>
+                        <td style="max-width: 30px; text-align: center;">{{ $index + 1 }}</td>
+                        <td style="text-align: center; vertical-align: middle;">{{ $mapelItem->nama_mapel }}</td>
+                        @if ($nilaiItem)
+                            <td style="max-width: 20px; text-align: center;">{{ $nilaiItem->nilaiUH1 }}</td>
+                            <td style="max-width: 20px; text-align: center;">{{ $nilaiItem->nilaiUH2 }}</td>
+                            <td style="max-width: 20px; text-align: center;">{{ $nilaiItem->nilaiUH3 }}</td>
+                            <td style="max-width: 20px; text-align: center;">{{ $nilaiItem->nilaiUH4 }}</td>
+                            <td style="max-width: 20px; text-align: center;">{{ $nilaiItem->nilaiUTS }}</td>
+                            <td style="max-width: 20px; text-align: center;">{{ $nilaiItem->nilaiUAS }}</td>
+                            <td style="max-width: 20px; text-align: center;">{{ $nilaiItem->nilaiAkhir }}</td>
+                        @else
+                            <td colspan="8">No grade available</td>
+                        @endif
+                        <td><a href="{{ url('/editnilai/' . $user->userID . '/' . $mapelItem->mapelID) }}">Edit</a></td>
+                    </tr>
+                @endforeach
+            </table>
                 <div class="text-end">
                     <br />
                     <a href="{{ url('/listmurid/' . $class->kelasID) }}" class="btn btn-primary">Back</a>
