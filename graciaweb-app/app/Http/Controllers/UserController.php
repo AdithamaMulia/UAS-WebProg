@@ -144,4 +144,40 @@ class UserController extends Controller
         return $this->morphMany(graciaAbsensi::class, 'siswa');
     }
 
+    public function addUserToClass(Request $request, $userID)
+    {
+        // Ambil data user berdasarkan ID yang diberikan
+        $user = graciaUser::find($userID);
+
+        if (!$user) {
+            // Jika user tidak ditemukan, kembalikan pesan error atau response yang sesuai
+            return response()->json(['message' => 'User not found'], 404);
+        }
+
+        // Ambil data kelas yang dikirimkan dalam request
+        $kelasID = $request->input('kelasID');
+        $kelas = graciaKelas::find($kelasID);
+
+        if (!$kelas) {
+            // Jika kelas tidak ditemukan, kembalikan pesan error atau response yang sesuai
+            return response()->json(['message' => 'Class not found'], 404);
+        }
+
+        // Tambahkan user ke dalam kelas dengan menggunakan relasi yang ada (contoh: relasi many-to-many)
+        $user->kelas()->attach($kelasID);
+
+        // Jika Anda ingin memberikan pesan berhasil, Anda dapat mengembalikan response sukses
+        // return response()->json(['message' => 'User added to class successfully'], 200);
+
+        // Ambil ulang data kelas setelah user ditambahkan
+        $kelas = graciaKelas::findOrFail($kelasID);
+
+        // Anda dapat menyesuaikan data apa yang ingin Anda tampilkan di view 'crudmurid'
+        $siswa = $user; // Misalnya, Anda ingin menampilkan data user yang ditambahkan ke kelas
+        // Namun, pastikan Anda sudah memiliki variabel $siswa yang sesuai dengan kebutuhan
+
+        return view('tambahsiswa', compact('kelasID', 'siswa', 'kelas'));
+    }
+
+
 }

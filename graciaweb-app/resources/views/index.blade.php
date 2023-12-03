@@ -71,7 +71,7 @@
               Can Get!!
             </h1>
             <p class="leading-normal text-2xl mb-8" data-aos="fade-up">
-              Providing quality education opens doors to a brighter future. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+            Memberikan kualitas edukasi yang baik untuk masa depan. sekolah Gracia selalu berusaha memberikan yang terbaik dalam mendidik siswa baik dalam akademik, pembentukan karakter dan menggali potensi yang dimiliki siswa sehingga siswa menjadi anak yang berakhlak mulia, disiplin, cerdas, terampil, aktif, kreatif, berwawasan luas dan mandiri.
             </p>
             <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out mr-4" style="margin-top: -10px" data-aos="zoom-in">
               Lets Begin!!
@@ -112,7 +112,7 @@
             Education Matters
           </h3>
           <p class="text-gray-600 mb-8">
-            Providing quality education opens doors to a brighter future. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+          Memberikan pendidikan berkualitas membuka pintu menuju masa depan yang lebih cerah. Kita akan menjadikan peserta didik menjadi berakhlak mulia, disiplin, aktif, cerdas dan kreatif dalam berbagai hal
           </p>
         </div>
         <div class="w-full sm:w-1/2 p-6 mt-6 flex" data-aos="slide-left">
@@ -136,7 +136,7 @@
       Join Us Now!!
     </h3>
     <p class="text-gray-600 mb-8">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+      Kami akan memastikan untuk memberikan Anda kualitas pendidikan terbaik
     </p>
   </div>
   </p>
@@ -164,7 +164,7 @@
                 Computer Laboratory
               </div>
               <p class="text-gray-800 text-base px-6 mb-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+                Disini kami menyediakan fasilitas berupa komputer yang dapat digunakan sebagai fasilitas untuk belajar
               </p>
             </a>
           </div>
@@ -185,7 +185,7 @@
                 Science Laboratory
               </div>
               <p class="text-gray-800 text-base px-6 mb-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+                Kami menyediakan lab laboratory untuk melakukan eksperimen yang memiliki hubungna dengan kejadian nyata dan melakukan penelitian
               </p>
             </a>
           </div>
@@ -205,7 +205,7 @@
                 Music Room
               </div>
               <p class="text-gray-800 text-base px-6 mb-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+                Disini kami menyiapkan fasilitas untuk bermain musik. Dalam ruangan ini ada fasilitas berupa alat musik keyboard dan lain-lain
               </p>
             </a>
           </div>

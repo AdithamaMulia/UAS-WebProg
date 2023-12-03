@@ -61,7 +61,7 @@
 
     <div class="container pt-24 md:pt-48 px-6 mx-auto flex flex-wrap flex-col md:flex-row items-center justify-center">
         <div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start h-96">
-            <h1 class="my-4 text-3xl md:text-5xl text-purple-800 font-bold leading-tight text-center md:text-left slide-in-bottom-h1">List Siswa dan Absensi Kelas {{$class->tingkat}} {{$class->nama_kelas}} </h1>
+            <h1 class="my-4 text-3xl md:text-5xl text-purple-800 font-bold leading-tight text-center md:text-left slide-in-bottom-h1">Daftar Siswa dan Absensi Kelas {{$class->tingkat}} {{$class->nama_kelas}} </h1>
             <p class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Data Absensi dan Daftar siswa</p> 
             <div class="flex flex-col md:flex-row w-full justify-center md:justify-start pb-24 lg:pb-0 fade-in">
                 <div class="flex flex-col w-full md:w-1/2 lg:w-2/4 mb-4 md:mb-0">
@@ -69,11 +69,11 @@
                         <a href="{{ url('/listmurid/' . $class->kelasID) }}" class="card-link no-underline">
                             <div class="card" style="max-width: 100%; border: 2px solid #000; border-radius: 10px; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);">
                                 <div class="card-body card-text-zoom" style="overflow: auto; padding: 20px;">
-                                    <p style="color: black;"><b>List Siswa</b></p>
+                                    <p style="color: black;"><b>Daftar Siswa</b></p>
                                     <br />
                                     <div class="blue-top" style="height: 10px; background-color: #6C8B9F;"></div>
                                     <div class="nested-box" style="margin-top: 10px;  height: calc(100% - 40px);"></div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus metus et lorem sollicitudin ultrices. .</p>
+                                    <p>Terdapat daftar siswa yang dari kelas-kelas berbeda di sekolah Gracia</p>
                                 </div>
                             </div>
                         </a>
@@ -85,11 +85,11 @@
                         <a href="{{ url('/absen') }}" class="card-link no-underline">
                             <div class="card" style="max-width: 100%; border: 2px solid #000; border-radius: 10px; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);">
                                 <div class="card-body card-text-zoom" style="overflow: auto; padding: 20px;">
-                                    <p style="color: black;"><b>List Absensi</b></p>
+                                    <p style="color: black;"><b>Daftar Absensi</b></p>
                                     <br />
                                     <div class="blue-top" style="height: 10px; background-color: #6C8B9F;"></div>
                                     <div class="nested-box" style="margin-top: 10px; ; height: calc(100% - 40px);">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus metus et lorem sollicitudin ultrices. .</p>
+                                        <p>Terdapat daftar siswa dan guru dapat melakukan absen setiap harinya</p>
                                     </div>
                                 </div>
                             </div>

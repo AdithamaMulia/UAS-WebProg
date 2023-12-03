@@ -29,7 +29,8 @@ Route::post('/sesi/login', [SessionController::class, 'login']);
 Route::get('/logout', [SessionController::class, 'logout']);
 
 // murid
-Route::get('/', function () {return view('index');})->middleware('auth');
+Route::middleware('auth')->group(function () {
+Route::get('/', function () {return view('index');});
 Route::get('/home', function () {return view('index');});
 Route::get('/nilaimapel', function () {return view('nilai');});
 Route::get('/raport', function () {return view('nilai1');});
@@ -64,6 +65,7 @@ Route::get('/adminabsen', [Controller::class, 'indexabsen']);
 Route::get('/adminabsen/hari/{tanggal}', 'App\Http\Controllers\AbsensiController@index')->name('adminabsen.update');
 
 Route::get('/adminaddsiswa', function () {return view('tambahsiswa');});
+Route::post('/addUserToClass/{userID}', [UserController::class, 'addUserToClass'])->name('addUserToClass');
 Route::get('/adminaddkelas', function () {return view('tambahkelas');});
 Route::get('/adminaddmapel', function () {return view('tambahmapel');});
 Route::get('/adminaddnilai', function () {return view('tambahnilai');});
@@ -90,4 +92,5 @@ Route::get('/test', function () {return view('testing');});
 Route::get('/backup', function () {return view('backup');});
 Route::get('/aboutus', function () {return view('aboutus');});
 Route::get('/footer', function () {return view('footer');});
+});
 });

@@ -1,3 +1,5 @@
+{{-- Ini file berisi tabel nama siswa beerdasarkan kelas masing masing --}}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -152,6 +154,12 @@ table {
         @endforeach
         </tbody>
     </table>
+    <a href="{{ url('/adminaddsiswa') }}" class="ml-2 border border-primary rounded px-2 py-1">
+        <i class="fa fa-plus text-primary"></i>
+        Add Data
+    </a>
+    <br />
+
     <br />
     <a href="{{ url('/adminkelasindex') }}" class="ml-2 border border-primary rounded px-2 py-1">
     <i class="fa fa-arrow-left text-primary"></i>

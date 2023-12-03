@@ -54,17 +54,6 @@
         }
 
     </style>
-    <script>
-        // Ambil semua elemen <td> yang memiliki kelas 'increment'
-        const incrementCells = document.querySelectorAll('.increment');
-
-        // Loop melalui setiap elemen dan tambahkan nomor urut yang telah ditingkatkan
-        incrementCells.forEach(cell => {
-          let currentNumber = parseInt(cell.textContent); // Mendapatkan nomor urut yang ada di dalam <td>
-          currentNumber++; // Menambahkan 1 ke nomor urut saat ini
-          cell.textContent = currentNumber; // Menampilkan nomor urut yang telah ditingkatkan
-        });
-      </script>
 </head>
 <body style="background-color: #a4a4a4;">
 @include('navbar')
