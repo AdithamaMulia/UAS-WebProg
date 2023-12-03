@@ -100,8 +100,6 @@
     </style>
 </head>
 <body>
-<div style="background-color: gray; height: 50px;">
-    </div>
 <h2 class="text-3xl font-bold text-blue-pigeon text-center mt-3">Welcome, Admin!!</h2>
     @if(session('success'))
         <div id="success" style="color: green;">{{ session('success') }}</div>
