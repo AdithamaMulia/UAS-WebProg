@@ -40,10 +40,11 @@
         z-index: 1000; 
         background-color: #fff; 
         }
-
-        .content {
-        margin-top: 250px;
-    }
+        @media (max-width: 767px) {
+                .content {
+                margin-top: 250px;
+            }
+        }
 	</style>
 
 </head>
