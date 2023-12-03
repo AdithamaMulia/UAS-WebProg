@@ -90,6 +90,8 @@
     </style>
 </head>
 <body>
+    <div style="background-color: gray; height: 50px;">
+    </div>
     <h2 class="text-3xl font-bold text-blue-pigeon text-center mt-3">Welcome, Admin!!</h2>
     <br/>
     <a href="{{ url('/home') }}" class="ml-2 rounded px-2 py-1">
