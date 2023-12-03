@@ -54,6 +54,17 @@
         }
 
     </style>
+    <script>
+        // Ambil semua elemen <td> yang memiliki kelas 'increment'
+        const incrementCells = document.querySelectorAll('.increment');
+
+        // Loop melalui setiap elemen dan tambahkan nomor urut yang telah ditingkatkan
+        incrementCells.forEach(cell => {
+          let currentNumber = parseInt(cell.textContent); // Mendapatkan nomor urut yang ada di dalam <td>
+          currentNumber++; // Menambahkan 1 ke nomor urut saat ini
+          cell.textContent = currentNumber; // Menampilkan nomor urut yang telah ditingkatkan
+        });
+      </script>
 </head>
 <body style="background-color: #a4a4a4;">
 @include('navbar')
@@ -103,17 +114,18 @@
                     <table>
                         <thead>
                             <tr>
-                                <th style="width: 20px;">ID</th>
+                                <th style="width: 20px;">No</th>
                                 <th style="width: 250px;">Nama</th>
                                 <th style="width: 40px;">Kehadiran</th>
                                 <th style="width: 180px;">Keterangan</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="dataBody">
                         @foreach($users as $key => $user)
                             @if($user->role == 'student')
+                            @if($user->kelasID == $kelas->kelasID)
                                 <tr>
-                                    <td>{{ $user->userID }}</td>
+                                    <td class="increment">1</td>
                                     <td>{{ $user->nama_depan }} {{ $user->nama_belakang }}</td>
                                     <td>
                                         <input type="hidden" name="user_ids[]" value="{{ $user->userID }}">
@@ -128,6 +140,7 @@
                                         </select>
                                     </td>
                                 </tr>
+                            @endif
                             @endif
                         @endforeach
                         </tbody>
