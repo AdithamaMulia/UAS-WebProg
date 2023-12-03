@@ -92,4 +92,6 @@ Route::get('/test', function () {return view('testing');});
 Route::get('/backup', function () {return view('backup');});
 Route::get('/aboutus', function () {return view('aboutus');});
 Route::get('/footer', function () {return view('footer');});
+Route::get('/contact', function () {return view('contact');});
+
 

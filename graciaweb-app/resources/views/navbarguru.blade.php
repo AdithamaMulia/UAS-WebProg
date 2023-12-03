@@ -72,7 +72,7 @@
             <a class="hover:text-gray-500" href="/kelas">Class List</a>
           </li>
           <li>
-            <a class="hover:text-gray-500" href="#contact">Contact Us</a>
+            <a class="hover:text-gray-500" href="/contact">Contact Us</a>
           </li>
           <li>
             <a class="hover:text-gray-500" href="/aboutus">About Us</a>
