@@ -13,7 +13,7 @@ class graciaUser extends Model
     use HasFactory;
 
     protected $table = 'graciauser';
-    protected $guarded = ['username', 'nama_depan', 'nama_belakang', 'password', 'gender', 'tanggal_lahir', 'alamat', 'nis', 'agama', 'nama_orangtua', 'tempat_lahir', 'kelasID', 'created_at', 'updated_at', 'role'];
+    protected $guarded = ['username', 'nama_depan', 'nama_belakang', 'password', 'gender', 'tanggal_lahir', 'alamat', 'nis', 'agama', 'nama_orangtua', 'tempat_lahir', 'kelasID', 'created_at', 'updated_at'];
 
     public function getAuthIdentifierName()
     {
