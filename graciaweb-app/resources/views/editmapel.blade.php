@@ -73,6 +73,14 @@
     <div class="card">
         <h2 style="text-align: left;">Edit Mapel</h2>
         <div style="color: green;"></div>
+        @if(session('error'))
+            <div style="color: red;">{{ session('error') }}</div>
+            <script>
+                setTimeout(function(){
+                    document.getElementById('error').style.display = 'none';
+                }, 5000);
+            </script>
+        @endif
         <form action="{{ route('adminmapel.update', ['mapelID' => $mapel->mapelID]) }}" method="post"> 
             @csrf
             <div class="form-group">

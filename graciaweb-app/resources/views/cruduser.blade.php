@@ -101,9 +101,21 @@
 </head>
 <body>
 <h2 class="text-3xl font-bold text-blue-pigeon text-center mt-3">Welcome, Admin!!</h2>
-        @if(session('success'))
-            <div style="color: green;">{{ session('success') }}</div>
-        @endif
+    @if(session('success'))
+        <div id="success" style="color: green;">{{ session('success') }}</div>
+        <script>
+            setTimeout(function(){
+                document.getElementById('success').style.display = 'none';
+            }, 5000);
+        </script>
+    @elseif(session('error'))
+        <div id="error" style="color: red;">{{ session('error') }}</div>
+        <script>
+            setTimeout(function(){
+                document.getElementById('error').style.display = 'none';
+            }, 5000);
+        </script>
+    @endif
     <br/>
     <a href="{{ url('/home') }}" class="ml-2 rounded px-2 py-1">
     <i class="fa fa-home text-primary"></i>

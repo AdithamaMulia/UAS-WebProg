@@ -67,6 +67,13 @@
                 document.getElementById('success').style.display = 'none';
             }, 5000);
         </script>
+    @elseif(session('error'))
+        <div id="error" style="color: red;">{{ session('error') }}</div>
+        <script>
+            setTimeout(function(){
+                document.getElementById('error').style.display = 'none';
+            }, 5000);
+        </script>
     @endif
         <h2 style="padding-left: 15px; font-size: 30px;">Daftar Absen Siswa</h2>
         <br />

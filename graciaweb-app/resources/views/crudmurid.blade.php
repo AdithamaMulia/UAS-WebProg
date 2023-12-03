@@ -94,6 +94,22 @@ table {
 <a href="{{ url('/home') }}" class="ml-2 rounded px-2 py-1">
     <i class="fa fa-home text-primary"></i>
     Home Page</a>
+
+    @if(session('success'))
+        <div id="success" style="color: green;">{{ session('success') }}</div>
+        <script>
+            setTimeout(function(){
+                document.getElementById('success').style.display = 'none';
+            }, 5000);
+        </script>
+    @elseif(session('error'))
+        <div id="error" style="color: red;">{{ session('error') }}</div>
+        <script>
+            setTimeout(function(){
+                document.getElementById('error').style.display = 'none';
+            }, 5000);
+        </script>
+    @endif
     <h3 class="text-2xl ml-2 font-sans"><strong>Siswa Kelas 12 MIPA</strong></h3>
     <br />
     <table class="table table-striped">

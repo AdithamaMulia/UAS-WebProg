@@ -76,6 +76,11 @@
         <h2 style="text-align: left;">Tambah User</h2>
         @if(session('error'))
             <div style="color: red;">{{ session('error') }}</div>
+            <script>
+                setTimeout(function(){
+                    document.getElementById('error').style.display = 'none';
+                }, 5000);
+            </script>
         @endif
         <form action="{{ route('adminuser.add') }}" method="post">
         @csrf

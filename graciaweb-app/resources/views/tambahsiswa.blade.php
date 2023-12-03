@@ -74,6 +74,14 @@
 <body style="background-color: #a4a4a4;">
     <div class="card">
         <h2 style="text-align: left;">Tambah Siswa</h2>
+        @if(session('error'))
+            <div style="color: red;">{{ session('error') }}</div>
+            <script>
+                setTimeout(function(){
+                    document.getElementById('error').style.display = 'none';
+                }, 5000);
+            </script>
+        @endif
         <form action="{{ url('/adminpage8') }}" method="post">
             <div class="form-group">
                 <label for="username">Username</label>

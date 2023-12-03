@@ -72,8 +72,13 @@
 <body style="background-color: #a4a4a4;">
     <div class="card">
         <h2 style="text-align: left;">Tambah Daftar Kelas</h2>
-        @if(session('success'))
-            <div style="color: green;">{{ session('success') }}</div>
+        @if(session('error'))
+            <div style="color: red;">{{ session('error') }}</div>
+            <script>
+                setTimeout(function(){
+                    document.getElementById('error').style.display = 'none';
+                }, 5000);
+            </script>
         @endif
         <form action="{{ route('adminkelas.add') }}" method="post">
         @csrf

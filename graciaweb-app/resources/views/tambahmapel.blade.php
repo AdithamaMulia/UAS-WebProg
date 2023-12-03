@@ -72,7 +72,14 @@
 <body>
     <div class="card">
         <h2 style="text-align: left;">Tambah Mata Pelajaran</h2>
-        <div style="color: green;"></div>
+        @if(session('error'))
+            <div style="color: red;">{{ session('error') }}</div>
+            <script>
+                setTimeout(function(){
+                    document.getElementById('error').style.display = 'none';
+                }, 5000);
+            </script>
+        @endif
         <form action="{{ route('adminmapel.add') }}" method="post"> 
             @csrf
             <div class="form-group">
