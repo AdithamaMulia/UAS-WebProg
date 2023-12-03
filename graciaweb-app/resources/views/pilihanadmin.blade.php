@@ -64,7 +64,7 @@
 		</div>
 	</div>
     <div class="container pt-24 md:pt-48 px-6 mx-auto flex flex-wrap flex-col md:flex-row items-center justify-center">
-        <div class="flex flex-col w-full xl:w-4/5 justify-center lg:items-start h-36 mt-20">
+        <div class="flex flex-col w-full xl:w-3/5 justify-center lg:items-start h-36 mt-20">
             <h1 class="my-4 text-3xl md:text-5xl text-purple-800 font-bold leading-tight text-center md:text-left slide-in-bottom-h1">Daftar User, kelas, Mata pelajaran dan Absensi </h1>
             <p class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Data User, kelas, Mata pelajaran dan Absensi</p> 
             <div class="flex flex-col md:flex-row w-full justify-center md:justify-start pb-24 lg:pb-0 fade-in">
@@ -125,7 +125,7 @@
                                     <br />
                                     <div class="blue-top" style="height: 10px; background-color: #6C8B9F;"></div>
                                     <div class="nested-box" style="margin-top: 10px; ; height: calc(100% - 40px);">
-                                        <p>Admin dapat melihat jejak histori absen pada kelas dan di hari tertentu</p>
+                                        <p>Admin dapat melihat jejak histori absen pada setiap murid dan setiap kelas dan di hari tertentu</p>
                                     </div>
                                 </div>
                             </div>
