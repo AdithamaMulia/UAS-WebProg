@@ -91,7 +91,7 @@
                             <td style="max-width: 20px; text-align: center;">{{ $nilaiItem->nilaiUAS }}</td>
                             <td style="max-width: 20px; text-align: center;">{{ $nilaiItem->nilaiAkhir }}</td>
                         @else
-                            <td colspan="8">No grade available</td>
+                            <td colspan="7">No grade available</td>
                         @endif
                         <td><a href="{{ url('/editnilai/' . $user->userID . '/' . $mapelItem->mapelID) }}">Edit</a></td>
                     </tr>

@@ -43,7 +43,7 @@
       top: 75px;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     }
-    /* Show the list on smaller screens by default */
+   
     @media (max-width: 768px) {
       .nav-links.show {
         display: flex;
@@ -59,7 +59,7 @@
     <nav class="flex justify-between items-center w-[92%] h-[75px] mx-auto">
       <div class="flex items-center">
         <a href="{{ url('/home') }}">
-          <img class="w-16 cursor-pointer" src="Img/LogoSekolah.png" alt="...">
+          <img class="w-16 cursor-pointer" src="{{ asset('img/LogoSekolah.png') }}">
         </a>
         <p class="ml-2"><strong>Sekolah Gracia</strong></p>
       </div>
@@ -92,7 +92,7 @@
             <a class="hover:text-gray-500" href="/kelas">Class List</a>
           </li>
           <li>
-            <a class="hover:text-gray-500" href="#contact">Contact Us</a>
+            <a class="hover:text-gray-500" href="/contact">Contact Us</a>
           </li>
           <li>
             <a class="hover:text-gray-500" href="/aboutus">About Us</a>
@@ -114,6 +114,7 @@
       const navLinks = document.getElementById('navLinks');
       navLinks.classList.toggle('show');
     }
+
   </script>
 </body>
 </html>
