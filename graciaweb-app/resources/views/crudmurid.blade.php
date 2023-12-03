@@ -115,7 +115,6 @@ table {
         <h3 class="text-2xl ml-2 font-sans"><strong>{{ $class->tingkat }} {{ $class->nama_kelas }}</strong></h3>
     @endif
     @endif
-    <h3 class="text-2xl ml-2 font-sans"><strong>Siswa Kelas 12 MIPA</strong></h3>
     <br />
     <table class="table table-striped">
     <thead class="thead-dark">
