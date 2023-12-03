@@ -21,5 +21,10 @@ class graciaKelas extends Model
         return $this->hasMany(graciaUser::class, 'kelasID', 'kelasID');
     }
 
+    public function mapels()
+    {
+        return $this->hasManyThrough(graciaMapel::class, graciaNilai::class, 'kelasID', 'mapelID', 'kelasID', 'mapelID');
+    }
+
 }
 

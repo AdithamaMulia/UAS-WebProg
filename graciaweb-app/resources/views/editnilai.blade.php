@@ -71,51 +71,61 @@
 </head>
 <body style="background-color: #a4a4a4;">
     <div class="card">
-        <h2 style="text-align: left;">Edit Nilai</h2>
+        <h2 style="text-align: left;">Edit Nilai {{$mapel->nama_mapel}}, {{$user->nama_depan}}  {{$user->nama_belakang}}</h2>
         @if(session('error'))
-            <div style="color: red;">{{ session('error') }}</div>
+            <div id="error" style="color: red;">{{ session('error') }}</div>
             <script>
                 setTimeout(function(){
                     document.getElementById('error').style.display = 'none';
                 }, 5000);
             </script>
         @endif
-        <form action="{{ url('/adminpage4') }}" method="get">
-            <div class="form-group">
-                <label for="mapel">Mata Pelajaran</label>
-                <input type="text" id="mapel" name="mapel" style="width: 100%; max-width: 280px;" placeholder="Mata pelajaran">
+        <form action="{{ url('/nilaisiswa/' . $user->userID . '/' . $mapel->mapelID) }}" method="post">
+            @csrf
+            <div>
+                <label for="semester">Semester</label>
+                <br />
+                <select id="semester" name="semester" style="width :100%; max-width:300px; height: 30px; font-size: 18px; margin-top: 5px;">
+                    <option value="Ganjil">Ganjil</option>
+                    <option value="Genap">Genap</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="nilaiUH1">Ulangan 1</label>
-                <input type="text" id="nilaiUH1" name="nilaiUH1" style="width: 100%; max-width: 280px;" placeholder="Ulangan 1">
+                <input type="number" id="nilaiUH1" name="nilaiUH1" style="width: 100%; max-width: 280px;" placeholder="Ulangan 1" value="{{$nilai->nilaiUH1 ?? '0'}}">
             </div>
             <div class="form-group">
                 <label for="nilaiUH2">Ulangan 2</label>
-                <input type="text" id="nilaiUH2" name="nilaiUH2" style="width: 100%; max-width: 280px;" placeholder="Ulangan 2">
+                <input type="number" id="nilaiUH2" name="nilaiUH2" style="width: 100%; max-width: 280px;" placeholder="Ulangan 2" value="{{$nilai->nilaiUH2 ?? '0'}}">
             </div>
             <div class="form-group">
                 <label for="nilaiUH3">Ulangan 3</label>
-                <input type="text" id="nilaiUH3" name="nilaiUH3" style="width: 100%; max-width: 280px;" placeholder="Ulangan 3">
+                <input type="number" id="nilaiUH3" name="nilaiUH3" style="width: 100%; max-width: 280px;" placeholder="Ulangan 3" value="{{$nilai->nilaiUH3 ?? '0'}}">
             </div>
             <div class="form-group">
                 <label for="nilaiUH4">Ulangan 4</label>
-                <input type="text" id="nilaiUH4" name="nilaiUH4" style="width: 100%; max-width: 280px;" placeholder="Ulangan 4">
+                <input type="number" id="nilaiUH4" name="nilaiUH4" style="width: 100%; max-width: 280px;" placeholder="Ulangan 4" value="{{$nilai->nilaiUH4 ?? '0'}}">
             </div>
             <div class="form-group">
                 <label for="nilaiUTS">UTS</label>
-                <input type="text" id="nilaiUTS" name="nilaiUTS" style="width: 100%; max-width: 280px;" placeholder="UTS">
+                <input type="number" id="nilaiUTS" name="nilaiUTS" style="width: 100%; max-width: 280px;" placeholder="UTS" value="{{$nilai->nilaiUTS ?? '0'}}"> 
             </div>
             <div class="form-group">
                 <label for="nilaiUAS">UAS</label>
-                <input type="text" id="nilaiUAS" name="nilaiUAS" style="width: 100%; max-width: 280px;" placeholder="UAS">
+                <input type="number" id="nilaiUAS" name="nilaiUAS" style="width: 100%; max-width: 280px;" placeholder="UAS" value="{{$nilai->nilaiUAS ?? '0'}}">
+            </div>
+            <div class="form-group">
+                <label for="nilaiAkhir">Nilai Akhir</label>
+                <input type="number" id="nilaiAkhir" name="nilaiAkhir" style="width: 100%; max-width: 280px;" placeholder="Nilai Akhir" value="{{$nilai->nilaiAkhir ?? '0'}}">
             </div>
             <br />
+            <input type="hidden" name="userID" value="{{$user->userID}}">
+            <input type="hidden" name="mapelID" value="{{$mapel->mapelID}}">
             <div class="btn-container" style="text-align: left;">
                 <button type="submit" class="btn">Edit Nilai</button>
-                <a href="{{ url('/') }}" class="btn btn-primary" style="text-decoration: none;">Delete</a>
                 <br />
                 <br />
-                <a href="{{ url('/adminnilai') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
+                <a href="{{ url('/nilaisiswa/' . $mapel->mapelID . '/' . $user->userID) }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
             </div>
         </form>
     </div>

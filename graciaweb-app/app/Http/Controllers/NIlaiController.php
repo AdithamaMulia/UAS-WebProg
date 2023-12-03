@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\graciaUser;
+use App\Models\graciaKelas;
 use App\Models\graciaNilai;
+use App\Models\graciaMapel;
 use Illuminate\Http\Request;
 
 class NilaiController extends Controller
@@ -34,7 +37,7 @@ class NilaiController extends Controller
             'semester' => 'required|in:Ganjil,Genap',
         ]);
 
-        $nilai = new Nilai();
+        $nilai = new graciaNilai();
         $nilai->userID = $request->userID;
         $nilai->mapelID = $request->mapelID;
         $nilai->nilaiUTS = $request->nilaiUTS;
@@ -45,12 +48,18 @@ class NilaiController extends Controller
         $nilai->nilaiUH4 = $request->nilaiUH4;
         $nilai->nilaiAkhir = $request->nilaiAkhir;
         $nilai->semester = $request->semester;
-        
-        if($nilai->save()){
-            return redirect('/crudnilai')->with('success', 'Data added successfully');
-        }else {
-            return redirect('/crudnilai')->with('error', 'Error.');
-        }
+
+        $nilai->save();
+        return redirect('/home')->with('success', 'Data added successfully');
+    }
+
+    public function edit($userID, $mapelID)
+    {
+        $nilai = graciaNilai::where('userID', $userID)->first();
+        $user = graciaUser::where('userID', $userID)->first();
+        $mapel = graciaMapel::where('mapelID', $mapelID)->first();
+
+        return view('editnilai', compact('nilai', 'user', 'mapel'));
     }
 
     public function update(Request $request, $nilaiID)
@@ -68,7 +77,7 @@ class NilaiController extends Controller
             'semester' => 'required|in:Ganjil,Genap',
         ]);
 
-        Nilai::where('nilaiID', $nilaiID)
+        graciaNilai::where('nilaiID', $nilaiID)
             ->update([
                 'userID' => $request->input('userID'),
                 'mapelID' => $request->input('mapelID'),

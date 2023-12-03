@@ -13,4 +13,9 @@ class graciaNilai extends Model
     {
         return $this->belongsTo(graciaUser::class, 'userID', 'userID');
     }
+
+    public function mapel()
+    {
+        return $this->belongsTo(graciaMapel::class, 'mapelID');
+    }
 }
