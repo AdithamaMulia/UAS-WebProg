@@ -27,4 +27,12 @@ class Controller extends BaseController
 
         return view('listmuridguru', compact('class', 'user'));
     }
+
+    public function indexnilai($nilaiID)
+    {
+        $class = graciaKelas::with('user')->where('kelasID', $kelasID)->first();
+        $user = graciaUser::where('kelasID', $kelasID)->get();
+
+        return view('listmuridguru', compact('class', 'user'));
+    }
 }
