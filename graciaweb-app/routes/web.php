@@ -29,7 +29,8 @@ Route::post('/sesi/login', [SessionController::class, 'login']);
 Route::get('/logout', [SessionController::class, 'logout']);
 
 // murid
-Route::get('/', function () {return view('index');})->middleware('auth');
+Route::middleware('auth')->group(function () {
+Route::get('/', function () {return view('index');});
 Route::get('/home', function () {return view('index');});
 Route::get('/nilaimapel', function () {return view('nilai');});
 Route::get('/raport', function () {return view('nilai1');});
@@ -86,4 +87,5 @@ Route::get('/test', function () {return view('testing');});
 Route::get('/backup', function () {return view('backup');});
 Route::get('/aboutus', function () {return view('aboutus');});
 Route::get('/footer', function () {return view('footer');});
+});
 });
