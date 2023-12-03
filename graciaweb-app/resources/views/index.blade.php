@@ -82,9 +82,19 @@
           </div>
         </div>
       </div>
-      <hr />
       </div>
     </div>
+
+    <section class="br">
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+      </section>
 
     <section class="border-b py-8" style="background: linear-gradient(90deg, #edc7b7 0%, #eee2dc 100%);">
       <div class="container max-w-5xl mx-auto m-8">
@@ -283,6 +293,14 @@
         }
         return false;
       }
+
+      function toggleNavbar() {
+      var navbar = document.querySelector('.navbar');
+      navbar.classList.toggle('hidden');
+    }function toggleNavbar() {
+      var navbar = document.querySelector('.navbar');
+      navbar.classList.toggle('hidden');
+    }
 
     </script>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
