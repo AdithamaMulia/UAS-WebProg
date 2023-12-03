@@ -44,94 +44,94 @@
 	</style>
 
 </head>
-
-
 <body class="" style="font-family: 'Source Sans Pro', sans-serif;">
 
 @include('navbar')
 
 <div class="h-screen pb-14 bg-right bg-cover" style="background-image: url('{{ asset('img/bg.svg') }}');">
-	<div class="w-full container mx-auto p-6">
-			
-		<div class="w-full flex items-center justify-between">
-		
+	<div class="w-full container mx-auto p-6">		
+		<div class="w-full flex items-center justify-between">	
 		</div>
-
 	</div>
+    <div class="container pt-24 md:pt-48 px-6 mx-auto flex flex-wrap flex-col md:flex-row items-center justify-center">
+    <div class="flex flex-col w-full xl:w-4/5 justify-center lg:items-start h-36">
+        <h1 class="my-4 text-3xl md:text-5xl text-purple-800 font-bold leading-tight text-center md:text-left slide-in-bottom-h1">List User, kelas, Mata pelajaran dan Absensi </h1>
+        <p class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Data User, kelas, Mata pelajaran dan Absensi</p> 
+        <div class="flex flex-col md:flex-row w-full justify-center md:justify-start pb-24 lg:pb-0 fade-in">
+            <div class="flex flex-col w-full md:w-1/2 lg:w-2/4 mb-4 md:mb-0">
+                <div class="col-lg-4 mb-3 mr-4">
+                    <a href="{{ url('/adminuserindex') }}" class="card-link no-underline">
+                        <div class="card" style="max-width: 100%; border: 2px solid #000; border-radius: 10px; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);">
+                            <div class="card-body card-text-zoom" style="overflow: auto; padding: 20px;">
+                                <p style="color: black;"><b>List User</b></p>
+                                <br />
+                                <div class="blue-top" style="height: 10px; background-color: #6C8B9F;"></div>
+                                <div class="nested-box" style="margin-top: 10px;  height: calc(100% - 40px);"></div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus metus et lorem sollicitudin ultrices. .</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
 
-  <div class="container pt-24 md:pt-48 px-6 mx-auto flex flex-wrap flex-col md:flex-row items-center justify-center">
-    <div class="flex flex-col w-full xl:w-4/5 justify-center lg:items-start">
-        <h1 class="my-4 text-3xl md:text-5xl text-purple-800 font-bold leading-tight text-center md:text-left slide-in-bottom-h1">Admin User, Mapel, Kelas dan Absen</h1>
-        <p class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Data User, Kelas, Mapel dan Absen</p> 
-        <div class="flex w-full justify-center md:justify-start pb-24 lg:pb-0 fade-in">
+            <div class="flex flex-col w-full md:w-1/2 lg:w-2/4 mb-4 md:mb-0">
+                <div class="col-lg-4 mb-3 mr-4">
+                    <a href="{{ url('/adminkelasindex') }}" class="card-link no-underline">
+                        <div class="card" style="max-width: 100%; border: 2px solid #000; border-radius: 10px; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);">
+                            <div class="card-body card-text-zoom" style="overflow: auto; padding: 20px;">
+                                <p style="color: black;"><b>List Kelas</b></p>
+                                <br />
+                                <div class="blue-top" style="height: 10px; background-color: #6C8B9F;"></div>
+                                <div class="nested-box" style="margin-top: 10px;  height: calc(100% - 40px);"></div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus metus et lorem sollicitudin ultrices. .</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
 
-        <div class="flex justify-center w-full">
-        <div class="col-lg-4 mb-3 mr-4">
-            <a href="{{ url('/adminuserindex') }}" class="card-link no-underline">
-                <div class="card" style="height: 250px; width: 250px; max-width: 1700px; border: 2px solid #000; border-radius: 10px; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);">
-                    <div class="card-body" style="overflow: auto; padding: 20px;">
-                        <p style="color: black;"><b>List User</b></p>
-                        <br />
-                        <div class="blue-top" style="height: 10px; background-color: #6C8B9F;"></div>
-                        <div class="nested-box" style="margin-top: 10px; height: calc(100% - 40px);"></div>
-                        <p>Data yang berisi daftar user dari role siswa, guru dan admin</p>
-                    </div>
+            <div class="flex flex-col w-full md:w-1/2 lg:w-2/4 mb-4 md:mb-0">
+                <div class="col-lg-4 mb-3 mr-4">
+                    <a href="{{ url('/adminmapelindex') }}" class="card-link no-underline">
+                        <div class="card" style="max-width: 100%; border: 2px solid #000; border-radius: 10px; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);">
+                            <div class="card-body card-text-zoom" style="overflow: auto; padding: 20px;">
+                                <p style="color: black;"><b>List Mata Pelajaran</b></p>
+                                <br />
+                                <div class="blue-top" style="height: 10px; background-color: #6C8B9F;"></div>
+                                <div class="nested-box" style="margin-top: 10px;  height: calc(100% - 40px);"></div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus metus et lorem sollicitudin ultrices. .</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
-      </div>
+            </div>
 
-      <div class="flex justify-center w-full">
-        <div class="col-lg-4 mb-3 mr-4">
-            <a href="{{ url('/adminkelasindex') }}" class="card-link no-underline">
-                <div class="card" style="height: 250px; width: 250px; max-width: 1700px; border: 2px solid #000; border-radius: 10px; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);">
-                    <div class="card-body" style="overflow: auto; padding: 20px;">
-                        <p style="color: black;"><b>List Kelas</b></p>
-                        <br />
-                        <div class="blue-top" style="height: 10px; background-color: #6C8B9F;"></div>
-                        <div class="nested-box" style="margin-top: 10px; height: calc(100% - 40px);"></div>
-                        <p>Data yang berisi daftar kelas di SMA Gracia School</p>
-                    </div>
+            <div class="flex flex-col w-full md:w-1/2">
+                <div class="col-lg-4 mb-3 mr-4">
+                    <a href="{{ url('/absen') }}" class="card-link no-underline">
+                        <div class="card" style="max-width: 100%; border: 2px solid #000; border-radius: 10px; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);">
+                            <div class="card-body card-text-zoom" style="overflow: auto; padding: 20px;">
+                                <p style="color: black;"><b>List Absensi</b></p>
+                                <br />
+                                <div class="blue-top" style="height: 10px; background-color: #6C8B9F;"></div>
+                                <div class="nested-box" style="margin-top: 10px; ; height: calc(100% - 40px);">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus metus et lorem sollicitudin ultrices. .</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
+            </div>
         </div>
-      </div>
-      <div class="flex justify-center w-full">
-        <div class="col-lg-4 mb-3 mr-4">
-            <a href="{{ url('/adminmapelindex') }}" class="card-link no-underline">
-                <div class="card" style="height: 250px; width: 250px; max-width: 1700px; border: 2px solid #000; border-radius: 10px; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);">
-                    <div class="card-body" style="overflow: auto; padding: 20px;">
-                        <p style="color: black;"><b>List Mata Pelajaran</b></p>
-                        <br />
-                        <div class="blue-top" style="height: 10px; background-color: #6C8B9F;"></div>
-                        <div class="nested-box" style="margin-top: 10px; height: calc(100% - 40px);"></div>
-                        <p>Data yang berisi daftar mata pelajaran di SMA Gracia School</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-      </div>
-      <div class="flex justify-center w-full">
-        <div class="col-lg-4 mb-3 mr-4">
-            <a href="{{ url('/adminabsen') }}" class="card-link no-underline">
-                <div class="card" style="height: 250px; width: 250px; max-width: 1700px; border: 2px solid #000; border-radius: 10px; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);">
-                    <div class="card-body" style="overflow: auto; padding: 20px;">
-                        <p style="color: black;"><b>List Absen</b></p>
-                        <br />
-                        <div class="blue-top" style="height: 10px; background-color: #6C8B9F;"></div>
-                        <div class="nested-box" style="margin-top: 10px; height: calc(100% - 40px);"></div>
-                        <p>Data yang berisi daftar Absensi dari setiap kelas di SMA Gracia School</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-      </div>
+    </div>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
+    </section>
 @include('footer')
+
 </body>
 </html>
