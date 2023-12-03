@@ -15,7 +15,7 @@
       display: none;
       position: absolute;
       background-color: white;
-      width: auto;
+      width: 100%;
       left: 0;
       top: -100%;
       transition: top 0.5s ease;
@@ -24,7 +24,7 @@
     .nav-links ul {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: left;
       gap: 1rem;
       list-style: none;
       margin: 0;
