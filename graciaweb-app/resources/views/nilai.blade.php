@@ -88,7 +88,7 @@
                 </table>
                 <div class="text-end">
                     <br />
-                    <a href="#" class="btn btn-primary">Back</a>
+                    <a href="{{ url('/listmurid/' . $class->kelasID) }}" class="btn btn-primary">Back</a>
                 </div>
             </div>
         </div>

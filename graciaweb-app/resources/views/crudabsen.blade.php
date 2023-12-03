@@ -134,7 +134,7 @@
                 </div>
                 <div class="text-end">
                     <br />
-                    <a href="{{ url('/kelas')}}" class="btn btn-primary">Back</a>
+                    <a href="{{ url('/listadmin') }}" class="btn btn-primary">Back</a>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
             </div>
