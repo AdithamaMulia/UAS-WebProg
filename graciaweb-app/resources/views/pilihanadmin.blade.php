@@ -41,6 +41,9 @@
         background-color: #fff; 
         }
 
+        .content {
+        margin-top: 250px;
+    }
 	</style>
 
 </head>
@@ -53,8 +56,9 @@
 		<div class="w-full flex items-center justify-between">	
 		</div>
 	</div>
+    <section class="content">
     <div class="container pt-24 md:pt-48 px-6 mx-auto flex flex-wrap flex-col md:flex-row items-center justify-center">
-    <div class="flex flex-col w-full xl:w-4/5 justify-center lg:items-start h-36">
+    <div class="flex flex-col w-full xl:w-4/5 justify-center lg:items-start h-36 mt-20">
         <h1 class="my-4 text-3xl md:text-5xl text-purple-800 font-bold leading-tight text-center md:text-left slide-in-bottom-h1">List User, kelas, Mata pelajaran dan Absensi </h1>
         <p class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Data User, kelas, Mata pelajaran dan Absensi</p> 
         <div class="flex flex-col md:flex-row w-full justify-center md:justify-start pb-24 lg:pb-0 fade-in">
@@ -130,6 +134,23 @@
 </div>
 </div>
 </div>
+    </section>
+
+    <section>
+        <div> 
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
     </section>
 @include('footer')
 
