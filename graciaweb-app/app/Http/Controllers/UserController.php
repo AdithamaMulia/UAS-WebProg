@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\graciaUser;
+use App\Models\graciaKelas;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -38,6 +39,7 @@ class UserController extends Controller
             'agama' => 'required',
             'nama_orangtua' => 'required',
             'tempat_lahir' => 'required',
+            'Kelas' => 'required',
             'role' => 'required',
         ]);
 
@@ -75,4 +77,10 @@ class UserController extends Controller
     {
         return $this->morphMany(graciaAbsensi::class, 'absensi');
     }
+
+    public function siswa()
+    {
+        return $this->morphMany(graciaAbsensi::class, 'siswa');
+    }
+
 }

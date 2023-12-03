@@ -9,6 +9,7 @@ class graciaKelas extends Model
 {
     protected $table = 'kelas';
     protected $guarded = ['kelasID', 'tingkat', 'nama_kelas', 'deskripsi', 'created_at', 'updated_at'];
+    protected $primaryKey = 'kelasID';
 
     public function absensi(): MorphTo
     {
@@ -17,7 +18,8 @@ class graciaKelas extends Model
 
     public function user()
     {
-        return $this->hasOne(graciaUser::class, 'kelasID', 'kelasID');
+        return $this->hasMany(graciaUser::class, 'kelasID', 'kelasID');
     }
+
 }
 

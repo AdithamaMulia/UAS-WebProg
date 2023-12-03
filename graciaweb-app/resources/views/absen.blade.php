@@ -43,8 +43,8 @@
         .navbar {
         position: sticky;
         top: 0;
-        z-index: 1000; 
-        background-color: #fff; 
+        z-index: 1000;
+        background-color: #fff;
         }
 
         .sticky-top {
@@ -52,7 +52,7 @@
         top: 0;
         z-index: 1000;
         }
-        
+
     </style>
 </head>
 <body style="background-color: #a4a4a4;">
@@ -75,7 +75,7 @@
             <div class="text-2l ml-2 font-sans" style="padding-left: 10px;">
                 <select id="kelas" name="kelas" style="width: 100%; max-width: 300px; height: 30px; font-size: 18px; margin-top: 5px; border: 1px solid #000;">
                     @foreach($kelas as $key => $kelas)
-                        <option value="{{ $kelas->kelasID }}">{{ $kelas->nama_kelas }}</option>
+                        <option value="{{ $kelas->kelasID }}">{{$kelas->tingkat}} {{ $kelas->nama_kelas }}</option>
                     @endforeach
                 </select>
             </div>

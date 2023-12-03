@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\graciaKelas;
+use App\Models\graciaUser;
 use Illuminate\Http\Request;
 
 class KelasController extends Controller
@@ -87,7 +88,10 @@ class KelasController extends Controller
         // Ambil siswa dari kelas
         $siswa = $kelas->siswa; // Mendapatkan siswa dari relasi yang telah didefinisikan
 
+        $kelas = graciaKelas::all();
+        $siswa = graciaUser::all();
         // Kirim data ke view crudmurid.blade.php dengan variabel $siswa
-        return view('crudmurid', compact('siswa'));
+        return view('crudmurid', compact('kelasID','siswa','kelas'));
     }
+
 }
