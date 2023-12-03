@@ -217,9 +217,9 @@
         </div>
       </div>
   </section>
-  
+  <div id="footerSection">
   @include('footer')
-
+  </div>
     <script>
       var scrollpos = window.scrollY;
       var header = document.getElementById("header");
@@ -308,6 +308,8 @@
         AOS.init({
         duration: 900
       });
+
+      
 
     </script>
     </body>

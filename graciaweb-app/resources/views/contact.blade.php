@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>About Us</title>
+	<title>Contact Us</title>
 	<meta name="description" content="">
 	<meta name="keywords" content="">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -59,7 +59,7 @@
         }
         .content p {
             margin-bottom: 20px;
-            text-align: justify;
+            text-align: center;
         }
 
         .content p:first-child {
@@ -68,6 +68,14 @@
 
         .content p:last-child {
             margin-bottom: 0;
+        }
+
+        .center-text {
+            text-align: center;
+        }
+
+        body{
+            overflow: hidden;
         }
 	</style>
 
@@ -86,40 +94,29 @@
 		</div>
 
 	</div>
+    
+    <div class="content">
+        <div class="center-text animated slide-in-bottom">
+            <h1 class="text-center bounce-top-icons"> Contact Us </h1>
 
-<div class="content">
-        <div class="interesting-content">
-            <h1 class="text-center bounce-top-icons"> History </h1>
-
-            <p class="animated slide-in-bottom">Motto Sekolah Gracia adalah “The Best Education You can Get” artinya sekolah Gracia selalu berusaha memberikan yang terbaik dalam mendidik siswa baik dalam akademik, pembentukan karakter dan menggali potensi yang dimiliki siswa sehingga siswa menjadi anak yang berakhlak mulia, disiplin, cerdas, terampil, aktif, kreatif, berwawasan luas dan mandiri.</p>
-
-            <p class="animated slide-in-bottom">Sekolah Gracia adalah sekolah umum yang memiliki keanekaragaman dalam memberikan pendidikan agama sehingga terdapat Agama Islam, Kristen Protestan, Kristen Katolik, dan Buddha dari tingkat TK sampai dengan tingkat SMA.</p>
-
-            <p class="animated slide-in-bottom">Pada awalnya Gracia membuka 2 kelas tingkat Preschool pada tanggal 5 Juni 2000 berlokasi di Jl.Cendana Golf No.32-Lippo Karawaci dengan terdiri dari 4 guru dan 20 siswa.</p>
-
-            <p class="animated slide-in-bottom">Gracia mengalami peningkatan jumlah siswa tingkat preschool sehingga memerlukan ruang belajar dimana kapasitas kelas sudah tidak memadai dengan jumlah siswa yang semakin meningkat.</p>
             
-            <p class="animated slide-in-bottom">Pada tahun 2003-2005  Gracia pindah ke Ruko Little Asia No.888-890, Lippo Karawaci untuk dapat membuka 5 kelas untuk Preschool dan TK  dan waktu belajar pun dibagi menjadi 3 kali dalam sehari sehingga dapat memberikan yang mengoptimalkan proses belajar mengajar untuk siswa Preschool. </p>
+            <p class="animated slide-in-bottom">Hubungi kami melalui kontak di bawah:</p>
 
-            <p class="animated slide-in-bottom">Gracia mulai melakukan pembangunan Gedung sekolah di tahun 2006 berlokasi di Jl.Permata Sari A12 No.9 untuk tingkat Preschool, TK dan SD (Sekolah Dasar) terdiri dari  23 ruang belajar siswa, ruang guru, perpustakaan, laboratorium IPA dan Komputer, ruang audio visual,  lapangan olahraga/bermain, lapangan parkir, kantin dengan guru-guru berpengalaman mendidik siswa sejak tahun 2000. Gedung Sekolah selesai dibangun pada tahun 2007 dan semua kelas penuh secara bertahap dari kelas Preschool, TK dan SD.</p>
+            <p class="animated slide-in-bottom">Preschool-TK-SMP-SMA : <strong>Ibu Intan Rahmawati, S.Pd 085779380626</strong></p>
 
-            <p class="animated slide-in-bottom">Orangtua siswa pun memberikan support agar Sekolah Gracia membuka tingkat SMP sehingga dimulai pembangunan Gedung sekolah di tahun 2012 berlokasi di Jl.Permata Sari A12 No.8 untuk tingkat SMP (Sekolah Menengah Pertama) terdiri dari 11 kelas belajar dan semua kelas penuh secara bertahap.</p>
+            <p class="animated slide-in-bottom">SD : <strong>Bpk Oyo Setiawan,A.Md/Lia Nita Sari Hp. 087772718559/085966617889</strong></p>
 
-            <p class="animated slide-in-bottom">Gracia membuka tingkat SMA (Sekolah Menengah Pertama) di tahun 2015 berlokasi di Jl.Permata Sari A12 No.7 untuk jurusan IPA&IPS terdiri dari 9 kelas belajar.
+            <p class="animated slide-in-bottom"><strong>Opening Hours</strong></p>
 
-            <p class="animated slide-in-bottom">TK Gracia memberikan pelajaran Baca, Tulis dan Hitung di kelas K-I dan K-II (4-6 tahun) sehingga lulusan TK Gracia diharapkan sudah dapat membaca, menulis dan berhitung baik dalam Bahasa Indonesia maupun dalam Bahasa Inggris. Selain akademik yang diberikan setiap hari di sekolah, siswa diberikan pelajaran dancing, drawing, art&craft sehingga potensi dan bakat siswa dapat semakin meningkat dan berkembang dan dapat mengikuti lomba-lomba yang diadakan di luar sekolah.</p>
+            <p class="animated slide-in-bottom"><strong>Mon-Fri 07:00 - 16:00</strong></p>
 
-            <p class="animated slide-in-bottom">Kurikulum Gracia adalah kurikulum Nasional yang selalu mendapatkan bimbingan dan arahan dari Dinas Pendidikan Provinsi Banten/Kabupaten Tangerang sehingga siswa diwajibkan tetap mengikuti Ujian Nasional dan Ujian Sekolah Berstandar Nasional yang merupakan persyaratan mendapatkan Ijasah secara resmi dari Dinas Pendidikan dan dapat melanjutkan ke jenjang lebih tinggi dimanapun siswa akan melanjutkan di kemudian hari.</p>
+            <p class="animated slide-in-bottom"><strong>Saturday 08.00- 12.00</strong></p>
 
-            <p class="animated slide-in-bottom">Selain Kurikulum Nasional, Gracia mengadopsi Kurikulum dari Singapura untuk beberapa bidang studi seperti: Mathematics, Science, English, Physics, Biology dan Chemistry sehingga potensi siswa akan semakin berkembang dan meningkat dalam bidang matematika dan IPA dalam Bahasa lain yaitu Bahasa Inggris.</p>
+            <br />
+            <br />
+            <br />
+            <br />
 
-            <p class="animated slide-in-bottom">Dalam hal kebahasaan, selain Bahasa Indonesia dan Bahasa Inggris maka Gracia memberikan bidang studi Bahasa Mandarin dimana kita ketahui Bersama bahwa Bahasa Mandarin menjadi Bahasa yang dibutuhkan. </p>
-
-            <p class="animated slide-in-bottom">Dalam menggali potensi dalam bidang musik maka Gracia telah memfasilitasi ruang Band untuk siswa yang memiliki bakat dapat membentuk group Band Gracia.</p>
-
-            <p class="animated slide-in-bottom">Pembentukan karakter siswa  diberikan dalam bentuk pembiasaan kegiatan seperti saling berbagi, sabar menunggu antrian, dan juga tidak lupa untuk selalu menghormati&menghargai baik dalam perkataan maupun perbuatan kepada sesama teman dan orang yang lebih tua diajarkan di semua usia siswa Gracia.</p>
-            
-            <br/>
         </div>
     </div>
 
