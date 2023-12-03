@@ -28,12 +28,12 @@ Route::post('/sesi/login', [SessionController::class, 'login']);
 Route::get('/logout', [SessionController::class, 'logout']);
 
 // murid
-Route::middleware('auth')->group(function () {
+
 Route::get('/', function () {return view('index');});
-});
 Route::get('/home', function () {return view('index');});
 Route::get('/nilaimapel', function () {return view('nilai');});
 Route::get('/raport', function () {return view('nilai1');});
+
 
 // guru
 Route::get('/absen/{kelasID}', [Controller::class, 'indexabsen'])->name('absen');
@@ -53,6 +53,7 @@ Route::post('/nilaisiswa/{userID}/{mapelID}', [NilaiController::class, 'store'])
 Route::get('/editnilai/{userID}/{mapelID}', [NilaiController::class, 'edit'])->name('nilai');
 
 // admin
+Route::group(['middleware'=>['admin']],function() {
 Route::get('/adminkelasindex', [KelasController::class, 'index']);
 Route::post('/adminkelasadd', [KelasController::class, 'store'])->name('adminkelas.add');
 Route::post('/adminkelasupdate/{kelasID}', [KelasController::class, 'update'])->name('adminkelas.update');
@@ -71,7 +72,6 @@ Route::get('/adminaddmapel', function () {return view('tambahmapel');});
 Route::get('/adminaddnilai', function () {return view('tambahnilai');});
 Route::get('/adminadduser', function () {return view('tambahuser');});
 
-
 Route::get('/adminuserindex', [UserController::class, 'index']);
 Route::post('/adminuseradd', [UserController::class, 'store'])->name('adminuser.add');
 Route::post('/adminuserupdate/{userID}', [UserController::class, 'update'])->name('adminuser.update');
@@ -86,6 +86,7 @@ Route::get('/adminmapelindex', [MapelController::class, 'index']);
 Route::post('/adminmapeladd', [MapelController::class, 'store'])->name('adminmapel.add');
 Route::post('/adminmapelupdate/{mapelID}', [MapelController::class, 'update'])->name('adminmapel.update');
 Route::get('/admineditmapel/update/{mapelID}', 'App\Http\Controllers\MapelController@edit')->name('admineditmapel.update');
+});
 
 // miscellanous
 Route::get('/test', function () {return view('testing');});
