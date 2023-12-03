@@ -78,9 +78,6 @@
             <a class="hover:text-gray-500" href="/aboutus">About Us</a>
           </li>
           <li>
-            <a class="hover:text-gray-500" href="/enroll-now">Enroll Now</a>
-          </li>
-          <li>
             <a class="hover:text-gray-500" href="/listadmin">Admin</a>
           </li>
         </ul>
@@ -99,9 +96,6 @@
           </li>
           <li>
             <a class="hover:text-gray-500" href="/aboutus">About Us</a>
-          </li>
-          <li>
-            <a class="hover:text-gray-500" href="/enroll-now">Enroll Now</a>
           </li>
           <li>
             <a class="hover:text-gray-500" href="/listadmin">Admin</a>
