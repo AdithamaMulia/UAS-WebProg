@@ -57,10 +57,7 @@
             </div>
         <div class="card-body">
             <div class="row">
-                <?php
-                $numRows = 12;
-                echo '<table>';
-                echo '
+                <table>
                 <tr>
                     <th style="max-width: 30px; text-align: center; vertical-align: middle;" rowspan="2">No</th>
                     <th style="text-align: center; vertical-align: middle;" rowspan="2">Mata Pelajaran</th>
@@ -68,8 +65,6 @@
                     <th style="text-align: center; vertical-align: middle;" rowspan="2">Nilai UTS</th>
                     <th style="text-align: center; vertical-align: middle;" rowspan="2">Nilai UAS</th>
                     <th style="text-align: center; vertical-align: middle;" rowspan="2">Nilai Akhir</th>
-                    <th style="text-align: center; vertical-align: middle;" rowspan="2">Last Update</th>
-                    <th style="text-align: center; vertical-align: middle;" rowspan="2">Tgl Dibuat</th>
                     <th style="text-align: center; vertical-align: middle;" rowspan="2">Edit</th>
                 </tr>
                 <tr>
@@ -78,27 +73,19 @@
                     <th style="max-width: 20px; text-align: center;">3</th>
                     <th style="max-width: 20px; text-align: center;">4</th>
                 </tr>
-                ';
-                for ($i = 1; $i <= $numRows; $i++) {
-                    echo '
-                    <tr>
-                        <td style="max-width: 30px; text-align: center;"></td>
-                        <td style="text-align: center; vertical-align: middle;"></td>
-                        <td style="max-width: 20px; text-align: center;"></td>
-                        <td style="max-width: 20px; text-align: center;"></td>
-                        <td style="max-width: 20px; text-align: center;"></td>
-                        <td style="max-width: 20px; text-align: center;"></td>
-                        <td style="max-width: 20px; text-align: center;"></td>
-                        <td style="max-width: 20px; text-align: center;"></td>
-                        <td style="max-width: 20px; text-align: center;"></td>
-                        <td style="max-width: 20px; text-align: center;"></td>
-                        <td style="max-width: 20px; text-align: center;"></td>
-                        <td><a href="edit_data.php?table=makanan&id=">Edit</a></td>
-                    </tr>
-                    ';
-                }
-                echo '</table>';
-                ?>
+                <tr>
+                    <td style="max-width: 30px; text-align: center;"></td>
+                    <td style="text-align: center; vertical-align: middle;"></td>
+                    <td style="max-width: 20px; text-align: center;"></td>
+                    <td style="max-width: 20px; text-align: center;"></td>
+                    <td style="max-width: 20px; text-align: center;"></td>
+                    <td style="max-width: 20px; text-align: center;"></td>
+                    <td style="max-width: 20px; text-align: center;"></td>
+                    <td style="max-width: 20px; text-align: center;"></td>
+                    <td style="max-width: 20px; text-align: center;"></td>
+                    <td><a href="edit_data.php?table=makanan&id=">Edit</a></td>
+                </tr>
+                </table>
                 <div class="text-end">
                     <br />
                     <a href="#" class="btn btn-primary">Back</a>

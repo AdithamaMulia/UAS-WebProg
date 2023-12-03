@@ -20,13 +20,6 @@ class KelasController extends Controller
         return view('kelas', ['class' => $class]);
     }
 
-    public function filtered($kelasID)
-    {
-        $class = graciaKelas::with('user')->where('kelasID', $kelasID);
-        return view('listmuridguru', ['class' => $class]);
-    }
-
-
 
     public function pilihan($kelasID)
     {

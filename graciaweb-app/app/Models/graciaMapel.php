@@ -8,4 +8,9 @@ class graciaMapel extends Model
 {
     protected $table = 'mapel';
     protected $fillable = ['nama_mapel', 'tingkat', 'created_at', 'updated_at'];
+
+    public function nilai()
+    {
+        return $this->hasMany(graciaNilai::class, 'nilaiID', 'nilaiID');
+    }
 }

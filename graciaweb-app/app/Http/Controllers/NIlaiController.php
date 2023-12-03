@@ -13,6 +13,12 @@ class NilaiController extends Controller
         return view('crudnilai', ['nilai' => $nilai]);
     }
 
+    public function directnilai()
+    {
+        $nilai = graciaNilai::all();
+        return view('nilai', ['nilai' => $nilai]);
+    }
+
     public function store(Request $request)
     {
         $request->validate([
@@ -39,9 +45,12 @@ class NilaiController extends Controller
         $nilai->nilaiUH4 = $request->nilaiUH4;
         $nilai->nilaiAkhir = $request->nilaiAkhir;
         $nilai->semester = $request->semester;
-        $nilai->save();
-
-        return redirect('/crudnilai')->with('success', 'Data added successfully');
+        
+        if($nilai->save()){
+            return redirect('/crudnilai')->with('success', 'Data added successfully');
+        }else {
+            return redirect('/crudnilai')->with('error', 'Error.');
+        }
     }
 
     public function update(Request $request, $nilaiID)

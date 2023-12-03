@@ -34,5 +34,10 @@ class graciaUser extends Model
     {
         return $this->belongsTo(graciaKelas::class, 'kelasID', 'kelasID');
     }
+
+    public function nilai()
+    {
+        return $this->hasMany(graciaNilai::class, 'userID', 'userID');
+    }
 }
 

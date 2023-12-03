@@ -5,6 +5,7 @@ use App\Http\Controllers\KelasController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\MapelController;
 use App\Http\Controllers\AbsensiController;
+use App\Http\Controllers\NilaiController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\Controller;
 
@@ -36,13 +37,14 @@ Route::get('/raport', function () {return view('nilai1');});
 // guru
 Route::get('/absen', [Controller::class, 'indexabsen'])->name('absen');
 Route::post('/absensubmit', [AbsensiController::class, 'submitAbsen'])->name('absen');
-Route::get('/listmurid/{kelasID}', [KelasController::class, 'filtered']);
+Route::get('/listmurid/{kelasID}', [Controller::class, 'filtered']);
 Route::get('/mapel', function () {return view('course');});
 Route::get('/kelas', [KelasController::class, 'indexutkguru']);
 Route::get('/list/{kelasID}', [KelasController::class, 'pilihan']);
 Route::get('/editsiswa', function () {return view('editsiswadariguru');});
 Route::get('/guruaddsiswa', function () {return view('gurutambahsiswa');});
 Route::get('/adminmurid/{kelasID}', 'App\Http\Controllers\KelasController@showTabelKelasSiswa');
+Route::get('/nilaisiswa/{userID}/{mapelID}', [NilaiController::class, 'directnilai'])->name('nilai');
 
 // admin
 Route::get('/adminkelasindex', [KelasController::class, 'index']);
@@ -56,7 +58,6 @@ Route::get('/adminabsen', function () {return view('crudabsen');});
 Route::get('/adminabsen', [Controller::class, 'indexabsen']);
 Route::get('/adminabsen/hari/{tanggal}', 'App\Http\Controllers\AbsensiController@index')->name('adminabsen.update');
 
-Route::get('/adminnilai', function () {return view('crudnilai');});
 Route::get('/adminaddsiswa', function () {return view('tambahsiswa');});
 Route::get('/adminaddkelas', function () {return view('tambahkelas');});
 Route::get('/adminaddmapel', function () {return view('tambahmapel');});
