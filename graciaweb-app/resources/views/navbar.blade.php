@@ -43,7 +43,7 @@
       top: 75px;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     }
-    /* Show the list on smaller screens by default */
+   
     @media (max-width: 768px) {
       .nav-links.show {
         display: flex;
