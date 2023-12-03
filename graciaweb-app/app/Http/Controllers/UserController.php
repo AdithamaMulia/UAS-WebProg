@@ -47,7 +47,6 @@ class UserController extends Controller
             'alamat' => 'required',
             'agama' => 'required',
             'tempat_lahir' => 'required',
-            'Kelas' => 'required',
             'role' => 'required',
         ]);
 
