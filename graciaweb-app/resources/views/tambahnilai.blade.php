@@ -11,7 +11,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
             margin: 0;
         }
 
@@ -73,6 +72,14 @@
 <body style="background-color: #a4a4a4;">
     <div class="card">
         <h2 style="text-align: left;">Tambah Nilai</h2>
+        @if(session('error'))
+            <div style="color: red;">{{ session('error') }}</div>
+            <script>
+                setTimeout(function(){
+                    document.getElementById('error').style.display = 'none';
+                }, 5000);
+            </script>
+        @endif
         <form action="{{ url('/adminpage4') }}" method="get">
             <div class="form-group">
                 <label for="mapel">Mata Pelajaran</label>
@@ -107,7 +114,7 @@
                 <button type="submit" class="btn">Tambah Nilai</button>
                 <br />
                 <br />
-                <a href="{{ url('/adminpage4') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
+                <a href="{{ url('/adminnilai') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
             </div>
         </form>
     </div>

@@ -67,7 +67,15 @@
                 document.getElementById('success').style.display = 'none';
             }, 5000);
         </script>
+    @elseif(session('error'))
+        <div id="error" style="color: red;">{{ session('error') }}</div>
+        <script>
+            setTimeout(function(){
+                document.getElementById('error').style.display = 'none';
+            }, 5000);
+        </script>
     @endif
+
         <h2 style="padding-left: 15px; font-size: 30px;">Daftar Absen Siswa</h2>
         <br />
         <form id="absenForm" action="/absensubmit" method="post">
@@ -128,7 +136,7 @@
                 <div class="text-end">
                     <br />
                     <a href="{{ url('/kelas')}}" class="btn btn-primary">Back</a>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary" style="background-color: blue;">Submit</button>
                 </div>
             </div>
         </form>

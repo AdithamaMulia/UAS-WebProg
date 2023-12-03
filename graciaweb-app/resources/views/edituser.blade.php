@@ -74,7 +74,14 @@
 <body style="background-color: #a4a4a4;">
     <div class="card">
         <h2 style="text-align: left;">Edit User</h2>
-            <div style="color: green;"></div>
+            @if(session('error'))
+                <div style="color: red;">{{ session('error') }}</div>
+                <script>
+                    setTimeout(function(){
+                        document.getElementById('error').style.display = 'none';
+                    }, 5000);
+                </script>
+            @endif
         <form action="{{ route('adminuser.update', ['userID' => $user->userID]) }}" method="post">
             @csrf
             <div class="form-group">
@@ -91,7 +98,7 @@
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" style="width: 100%; max-width: 280px;" value="{{ $user->password }}" placeholder="Password" required>
+                <input type="password" id="password" name="password" style="width: 100%; max-width: 280px;" placeholder="Password">
             </div>
             <div class="form-group">
                 <label for="tanggal_lahir">Tanggal Lahir</label>
@@ -114,7 +121,7 @@
             </div>
             <div class="form-group">
                 <label for="nis">NIS</label>
-                <input type="text" id="nis" name="nis" style="width: 100%; max-width: 280px;" value="{{ $user->nis }}" placeholder="NIS" required>
+                <input type="text" id="nis" name="nis" style="width: 100%; max-width: 280px;" value="{{ $user->nis }}" placeholder="NIS">
             </div>
             <div class="form-group">
                 <label for="agama">Agama</label>
@@ -122,7 +129,7 @@
             </div>
             <div class="form-group">
                 <label for="nama_orangtua">Nama Orangtua</label>
-                <input type="text" id="nama_orangtua" name="nama_orangtua" style="width: 100%; max-width: 280px;" value="{{ $user->nama_orangtua }}" placeholder="Nama Orangtua" required>
+                <input type="text" id="nama_orangtua" name="nama_orangtua" style="width: 100%; max-width: 280px;" value="{{ $user->nama_orangtua }}" placeholder="Nama Orangtua">
             </div>
             <div class="form-group">
                 <label for="tempat_lahir">Tempat Lahir</label>

@@ -122,19 +122,19 @@
         </tr>
     </thead>
     <tbody>
-        @foreach($class as $key => $class)
-            @if($class->role == 'student')
+        @foreach($user as $key => $user)
+            @if($user->role == 'student')
                 <tr>
-                    <td>{{ $class->userID }}</td>
-                    <td>{{ $class->nama_depan }} {{ $class->nama_belakang }}</td>
-                    <td>{{ $class->nis }}</td>
-                    <td>{{ $class->tempat_lahir }}</td>
-                    <td>{{ $class->tanggal_lahir }}</td>
-                    <td>{{ $class->gender }}</td>
-                    <td>{{ $class->agama }}</td>
-                    <td>{{ $class->alamat }}</td>
+                    <td>{{ $user->userID }}</td>
+                    <td>{{ $user->nama_depan }} {{ $user->nama_belakang }}</td>
+                    <td>{{ $user->nis }}</td>
+                    <td>{{ $user->tempat_lahir }}</td>
+                    <td>{{ $user->tanggal_lahir }}</td>
+                    <td>{{ $user->gender }}</td>
+                    <td>{{ $user->agama }}</td>
+                    <td>{{ $user->alamat }}</td>
                     <td>
-                        <a href="{{ url('/adminedituser/update/' . $class->userID) }}">
+                        <a href="{{ url('/adminedituser/update/' . $user->userID) }}">
                             <i class="fa fa-pencil text-primary"></i> Edit
                         </a>
                     </td>
@@ -143,11 +143,7 @@
             @endforeach
         </tbody>
     </table>
-    <a href="{{ url('/adminaddsiswa') }}" class="ml-2 border border-primary rounded px-2 py-1" style="max-width: 120px;">
-            <i class="fa fa-plus text-primary"></i>
-            Add Data
-        </a>
-    <a href="{{ url('/listadmin') }}" class="ml-2 border border-primary rounded px-2 py-1" style="max-width: 120px; margin-top: 5px;">
+    <a href="{{ url('/list/' . $class->kelasID) }}" class="ml-2 border border-primary rounded px-2 py-1" style="max-width: 120px; margin-top: 5px;">
     <i class="fa fa-arrow-left text-primary"></i>
         Back
     </a>

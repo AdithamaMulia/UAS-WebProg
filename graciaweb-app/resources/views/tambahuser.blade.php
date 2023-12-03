@@ -74,8 +74,13 @@
 <body style="background-color: #a4a4a4;">
     <div class="card">
         <h2 style="text-align: left;">Tambah User</h2>
-        @if(session('success'))
-            <div style="color: green;">{{ session('success') }}</div>
+        @if(session('error'))
+            <div style="color: red;">{{ session('error') }}</div>
+            <script>
+                setTimeout(function(){
+                    document.getElementById('error').style.display = 'none';
+                }, 5000);
+            </script>
         @endif
         <form action="{{ route('adminuser.add') }}" method="post">
         @csrf
@@ -116,7 +121,7 @@
             </div>
             <div class="form-group">
                 <label for="nis">NIS</label>
-                <input type="text" id="nis" name="nis" style="width: 100%; max-width: 280px;" placeholder="NIS" required>
+                <input type="text" id="nis" name="nis" style="width: 100%; max-width: 280px;" placeholder="NIS">
             </div>
             <div class="form-group">
                 <label for="agama">Agama</label>
@@ -124,7 +129,7 @@
             </div>
             <div class="form-group">
                 <label for="nama_orangtua">Nama Orangtua</label>
-                <input type="text" id="nama_orangtua" name="nama_orangtua" style="width: 100%; max-width: 280px;" placeholder="Nama Orangtua" required>
+                <input type="text" id="nama_orangtua" name="nama_orangtua" style="width: 100%; max-width: 280px;" placeholder="Nama Orangtua">
             </div>
             <div class="form-group">
                 <label for="tempat_lahir">Tempat Lahir</label>

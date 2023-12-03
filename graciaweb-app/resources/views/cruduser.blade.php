@@ -101,9 +101,21 @@
 </head>
 <body>
 <h2 class="text-3xl font-bold text-blue-pigeon text-center mt-3">Welcome, Admin!!</h2>
-        @if(session('success'))
-            <div style="color: green;">{{ session('success') }}</div>
-        @endif
+    @if(session('success'))
+        <div id="success" style="color: green;">{{ session('success') }}</div>
+        <script>
+            setTimeout(function(){
+                document.getElementById('success').style.display = 'none';
+            }, 5000);
+        </script>
+    @elseif(session('error'))
+        <div id="error" style="color: red;">{{ session('error') }}</div>
+        <script>
+            setTimeout(function(){
+                document.getElementById('error').style.display = 'none';
+            }, 5000);
+        </script>
+    @endif
     <br/>
     <a href="{{ url('/home') }}" class="ml-2 rounded px-2 py-1">
     <i class="fa fa-home text-primary"></i>
@@ -115,17 +127,15 @@
     <table class="table table-striped">
     <thead class="thead-dark">
         <tr>
-            <th>ID User</th>
+            <th>ID</th>
             <th>Username</th>
             <th>Nama</th>
-            <th>Password</th>
             <th>Jenis Kelamin</th>
             <th>Tanggal Lahir</th>
             <th>Alamat</th>
             <th>Agama</th>
             <th>NIS</th>
             <th>Role</th>
-            <th>Class ID</th>
             <th>Last Update</th>
             <th>Tgl Dibuat</th>
             <th>Edit</th>
@@ -138,14 +148,12 @@
                 <td>{{ $user->userID }}</td>
                 <td>{{ $user->username }}</td>
                 <td>{{ $user->nama_depan }} {{ $user->nama_belakang }}</td>
-                <td>{{ $user->password }}</td>
                 <td>{{ $user->gender }}</td>
                 <td>{{ $user->tanggal_lahir }}</td>
                 <td>{{ $user->alamat }}</td>
                 <td>{{ $user->agama }}</td>
                 <td>{{ $user->nis }}</td>
                 <td>{{ $user->role }}</td>
-                <td>{{ $user->kelasID }}</td>
                 <td>{{ $user->updated_at }}</td>
                 <td>{{ $user->created_at }}</td>
                 <td>
@@ -166,7 +174,6 @@
             <th>ID</th>
             <th>Username</th>
             <th>Nama</th>
-            <th>Password</th>
             <th>Jenis Kelamin</th>
             <th>Tanggal Lahir</th>
             <th>Alamat</th>
@@ -185,7 +192,6 @@
                 <td>{{ $user->userID }}</td>
                 <td>{{ $user->username }}</td>
                 <td>{{ $user->nama_depan }} {{ $user->nama_belakang }}</td>
-                <td>{{ $user->password }}</td>
                 <td>{{ $user->gender }}</td>
                 <td>{{ $user->tanggal_lahir }}</td>
                 <td>{{ $user->alamat }}</td>
@@ -212,7 +218,6 @@
             <th style="max-width:20px;">ID</th>
             <th>Username</th>
             <th>Nama</th>
-            <th>Password</th>
             <th>Jenis Kelamin</th>
             <th>Tanggal Lahir</th>
             <th>Alamat</th>
@@ -231,7 +236,6 @@
                 <td style="max-width:20px;">{{ $user->userID }}</td>
                 <td>{{ $user->username }}</td>
                 <td>{{ $user->nama_depan }} {{ $user->nama_belakang }}</td>
-                <td>{{ $user->password }}</td>
                 <td>{{ $user->gender }}</td>
                 <td>{{ $user->tanggal_lahir }}</td>
                 <td>{{ $user->alamat }}</td>
