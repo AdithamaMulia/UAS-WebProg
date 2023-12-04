@@ -53,13 +53,14 @@ Route::post('/nilaisiswa/{userID}/{mapelID}', [NilaiController::class, 'store'])
 Route::get('/editnilai/{userID}/{mapelID}', [NilaiController::class, 'edit'])->name('nilai');
 
 // admin
-Route::group(['middleware'=>['admin']],function() {
+Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'as' => 'admin'], function(){
+    Route::get('/listadmin', function () {
+        return view('pilihanadmin'); // Ganti dengan tampilan atau logika yang sesuai
+    })->name('admin.listadmin');
 Route::get('/adminkelasindex', [KelasController::class, 'index']);
 Route::post('/adminkelasadd', [KelasController::class, 'store'])->name('adminkelas.add');
 Route::post('/adminkelasupdate/{kelasID}', [KelasController::class, 'update'])->name('adminkelas.update');
 Route::get('/admineditkelas/update/{kelasID}', 'App\Http\Controllers\KelasController@edit')->name('admineditkelas.update');
-
-Route::get('/listadmin', function () {return view('pilihanadmin');});
 Route::get('/adminabsen', function () {return view('crudabsen');});
 
 Route::get('/adminabsen', [Controller::class, 'indexabsen']);
@@ -87,7 +88,6 @@ Route::post('/adminmapeladd', [MapelController::class, 'store'])->name('adminmap
 Route::post('/adminmapelupdate/{mapelID}', [MapelController::class, 'update'])->name('adminmapel.update');
 Route::get('/admineditmapel/update/{mapelID}', 'App\Http\Controllers\MapelController@edit')->name('admineditmapel.update');
 });
-
 // miscellanous
 Route::get('/test', function () {return view('testing');});
 Route::get('/backup', function () {return view('backup');});
