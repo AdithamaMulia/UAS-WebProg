@@ -2,17 +2,19 @@
 
 namespace App\Models;
 
+use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Authenticatable as AuthenticableTrait;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 
-class graciaUser extends Model
+class graciaUser extends Model implements Authenticatable
 {
     use AuthenticableTrait;
     use HasFactory;
 
     protected $table = 'graciauser';
+    protected $primaryKey = 'userID';
     protected $guarded = ['username', 'nama_depan', 'nama_belakang', 'password', 'gender', 'tanggal_lahir', 'alamat', 'nis', 'agama', 'nama_orangtua', 'tempat_lahir', 'kelasID', 'created_at', 'updated_at'];
 
     public function getAuthIdentifierName()
