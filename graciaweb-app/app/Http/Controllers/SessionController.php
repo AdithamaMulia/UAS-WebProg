@@ -40,7 +40,7 @@ class SessionController extends Controller
                 if ($user->role === 'admin') {
                     return redirect()->route('adminadmin.listadmin')->with('success', 'Berhasil login sebagai admin');
                 } else if ($user->role === 'student') {
-                    return redirect('/home')->with('success', 'Berhasil login sebagai siswa');
+                    return redirect()->route('studentstudent.index')->with('success', 'Berhasil login sebagai siswa');
                 } else if ($user->role === 'teacher') {
                     return redirect('/absen')->with('success', 'Berhasil login sebagai guru');
                 }
