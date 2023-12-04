@@ -31,14 +31,17 @@ Route::get('/', function () {return view('index');})->middleware('auth');
 // murid
 Route::group(['prefix' => 'student', 'middleware' => ['auth'], 'as' => 'student'], function(){
     Route::get('/home', function () {
-        return view('index'); // Ganti dengan tampilan atau logika yang sesuai
-    })->name('student.index');
+        return view('indexmurid'); // Ganti dengan tampilan atau logika yang sesuai
+    })->name('student.indexmurid');
     Route::get('/nilaimapel', function () {return view('nilai');});
     Route::get('/raport', function () {return view('nilai1');});
 });
 
 // guru
-Route::group(['prefix' => 'student', 'middleware' => ['auth'], 'as' => 'student'], function(){
+Route::group(['prefix' => 'teacher', 'middleware' => ['auth'], 'as' => 'teacher'], function(){
+    Route::get('/homeguru', function () {
+        return view('indexguru'); // Ganti dengan tampilan atau logika yang sesuai
+    })->name('teacher.indexguru');
     Route::get('/absen/{kelasID}', [Controller::class, 'indexabsen'])->name('absen');
     Route::post('/absensubmit/{kelasID}', [AbsensiController::class, 'submitAbsen'])->name('absen');
     Route::get('/listmurid/{kelasID}', [Controller::class, 'filtered']);
