@@ -82,7 +82,7 @@
                     }, 5000);
                 </script>
             @endif
-        <form action="{{ route('adminuser.update', ['userID' => $user->userID]) }}" method="post">
+        <form action="{{ url('/admin/adminuserupdate/' . $user->userID) }}" method="post">
             @csrf
             <div class="form-group">
                 <label for="username">Username</label>
@@ -147,10 +147,10 @@
             <br />
             <div class="btn-container" style="text-align: left;">
                 <button type="submit" class="btn">Edit User</button>
-                <a href="{{ url('/') }}" class="btn btn-primary" style="text-decoration: none;">Delete</a>
+                <a href="{{ url('/admin/adminuserdelete/'.$user->userID) }}" class="btn btn-primary" style="text-decoration: none;" onclick="return confirm('Are you sure you want to delete this item?')">Delete</a>
                 <br />
                 <br />
-                <a href="{{ url('admin/adminuserindex') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
+                <a href="{{ url('/admin/adminuserindex') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
             </div>
         </form>
     </div>

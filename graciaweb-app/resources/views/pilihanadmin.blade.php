@@ -70,7 +70,7 @@
             <div class="flex flex-col md:flex-row w-full justify-center md:justify-start pb-24 lg:pb-0 fade-in">
                 <div class="flex flex-col w-full md:w-1/2 lg:w-2/4 mb-4 md:mb-0">
                     <div class="col-lg-4 mb-3 mr-4">
-                        <a href="/admin/adminuserindex" class="card-link no-underline">
+                        <a href="{{ url('admin/adminuserindex') }}" class="card-link no-underline">
                             <div class="card" style="max-width: 100%; border: 2px solid #000; border-radius: 10px; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);">
                                 <div class="card-body card-text-zoom" style="overflow: auto; padding: 20px;">
                                     <p style="color: black;"><b>Daftar User</b></p>
@@ -86,7 +86,7 @@
 
                 <div class="flex flex-col w-full md:w-1/2 lg:w-2/4 mb-4 md:mb-0">
                     <div class="col-lg-4 mb-3 mr-4">
-                        <a href="{{ url('/admin/adminkelasindex') }}" class="card-link no-underline">
+                        <a href="{{ url('admin/adminkelasindex') }}" class="card-link no-underline">
                             <div class="card" style="max-width: 100%; border: 2px solid #000; border-radius: 10px; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);">
                                 <div class="card-body card-text-zoom" style="overflow: auto; padding: 20px;">
                                     <p style="color: black;"><b>Daftar Kelas</b></p>
@@ -102,7 +102,7 @@
 
                 <div class="flex flex-col w-full md:w-1/2 lg:w-2/4 mb-4 md:mb-0">
                     <div class="col-lg-4 mb-3 mr-4">
-                        <a href="{{ url('/admin/adminmapelindex') }}" class="card-link no-underline">
+                        <a href="{{ url('admin/adminmapelindex') }}" class="card-link no-underline">
                             <div class="card" style="max-width: 100%; border: 2px solid #000; border-radius: 10px; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);">
                                 <div class="card-body card-text-zoom" style="overflow: auto; padding: 20px;">
                                     <p style="color: black;"><b>Daftar Mata Pelajaran</b></p>
@@ -118,7 +118,7 @@
 
                 <div class="flex flex-col w-full md:w-1/2">
                     <div class="col-lg-4 mb-3 mr-4">
-                        <a href="{{ route('adminabsen', ['kelasID' => $kelasID]) }}" class="card-link no-underline">
+                        <a href="{{ url('admin/kelas') }}" class="card-link no-underline">
                             <div class="card" style="max-width: 100%; border: 2px solid #000; border-radius: 10px; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);">
                                 <div class="card-body card-text-zoom" style="overflow: auto; padding: 20px;">
                                     <p style="color: black;"><b>Daftar Absensi</b></p>

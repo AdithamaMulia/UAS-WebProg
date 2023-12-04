@@ -114,8 +114,13 @@ class UserController extends Controller
             'role' => 'required',
         ]);
 
-        graciaUser::where('userID', $userID)
-        ->update([
+        $user = graciaUser::find($userID);
+
+        if (!$user) {
+            return redirect('admin/adminuserindex')->with('error', 'User not found');
+        }
+
+        $user->update([
             'username' => $request->input('username'),
             'nama_depan' => $request->input('nama_depan'),
             'nama_belakang' => $request->input('nama_belakang'),
@@ -131,7 +136,23 @@ class UserController extends Controller
             'kelasID' => $request->input('kelasID'),
         ]);
 
-        return redirect('/adminuserindex')->with('success', 'Data updated successfully');
+        return redirect('admin/adminuserindex')->with('success', 'Data updated successfully');
+    }
+
+    public function delete($userID) {
+        // Temukan data yang akan dihapus
+        $user = graciaUser::find($userID);
+
+        if (!$user) {
+            // Handle jika data tidak ditemukan
+            return redirect('admin/adminuserindex');
+        }
+
+        // Lakukan proses penghapusan data
+        $user->delete();
+
+        // Redirect dengan pesan sukses
+        return redirect('admin/adminuserindex');
     }
 
     public function absensi()

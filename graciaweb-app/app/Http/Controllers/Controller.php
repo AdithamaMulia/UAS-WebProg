@@ -29,8 +29,7 @@ class Controller extends BaseController
         }])->where('kelasID', $kelasID)->get();
 
         // Mengubah view yang di-return menjadi 'crudabsen'
-        return view('crudabsen', ['users' => $users, 'kelas' => $kelas, 'absen' => $absen])
-            ->with('pilihanadmin', ['kelasID' => $kelasID]);
+        return view('crudabsen', ['users' => $users, 'kelas' => $kelas, 'absen' => $absen]);
     }
 
     public function filtered($kelasID)

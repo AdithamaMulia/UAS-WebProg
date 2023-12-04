@@ -69,6 +69,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'as' => 'admin'], f
     Route::get('/admineditkelas/update/{kelasID}', 'App\Http\Controllers\KelasController@edit')->name('admineditkelas.update');
 
     Route::get('/adminabsen/{kelasID}', [Controller::class, 'indexabsen']);
+    Route::get('/list/{kelasID}', [KelasController::class, 'pilihan']);
+    Route::get('/kelas', [KelasController::class, 'indexutkguru']);
     Route::get('/adminabsen/hari/{tanggal}', 'App\Http\Controllers\AbsensiController@index')->name('adminabsen.update');
 
     Route::get('/adminaddsiswa', function () {return view('tambahsiswa');});
@@ -76,14 +78,16 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'as' => 'admin'], f
     Route::get('/adminaddkelas', function () {return view('tambahkelas');});
     Route::get('/adminaddmapel', function () {return view('tambahmapel');});
     Route::get('/adminaddnilai', function () {return view('tambahnilai');});
-    Route::get('/adminadduser', function () {return view('tambahuser');});
     Route::get('/adminmurid/{kelasID}', 'App\Http\Controllers\KelasController@showTabelKelasSiswa');
 
+    //crud tabel user
     Route::get('/adminuserindex', [UserController::class, 'index'])->name('adminuser.index');
-    Route::post('/adminuseradd', [UserController::class, 'store'])->name('adminuser.add');
-    Route::post('/adminuserupdate/{userID}', [UserController::class, 'update'])->name('adminuser.update');
-    Route::get('/adminedituser/update/{userID}', 'App\Http\Controllers\UserController@edit')->name('adminedituser.update');
-
+    Route::get('/adminadduser', function () {return view('tambahuser');});
+    Route::post('/adminuseradd', [UserController::class, 'store']);
+    Route::post('/adminuserupdate/{userID}', [UserController::class, 'update']);
+    Route::get('/adminedituser/update/{userID}', [UserController::class, 'edit']);
+    Route::get('/adminuserdelete/{userID}', [UserController::class, 'delete']);
+    //
 
     Route::get('/admineditnilai', function () {return view('editnilai');});
     Route::get('/admineditsiswa', function () {return view('editsiswa');});

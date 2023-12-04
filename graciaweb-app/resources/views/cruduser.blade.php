@@ -157,7 +157,7 @@
                 <td>{{ $user->updated_at }}</td>
                 <td>{{ $user->created_at }}</td>
                 <td>
-                    <a href="{{ url('/adminedituser/update/' . $user->userID) }}">
+                    <a href="{{ url('/admin/adminedituser/update/' . $user->userID) }}">
                         <i class="fa fa-pencil text-primary"></i> Edit
                     </a>
                 </td>
@@ -201,7 +201,7 @@
                 <td>{{ $user->updated_at }}</td>
                 <td>{{ $user->created_at }}</td>
             <td>
-                <a href="{{ url('/adminedituser/update/' . $user->userID) }}">
+                <a href="{{ url('/admin/adminedituser/update/' . $user->userID) }}">
                     <i class="fa fa-pencil text-primary"></i> Edit
                 </a>
             </td>
@@ -245,7 +245,7 @@
                 <td>{{ $user->updated_at }}</td>
                 <td>{{ $user->created_at }}</td>
             <td>
-                <a href="{{ url('/adminedituser/update/' . $user->userID) }}">
+                <a href="{{ url('/admin/adminedituser/update/' . $user->userID) }}">
                     <i class="fa fa-pencil"></i> Edit
                 </a>
             </td>

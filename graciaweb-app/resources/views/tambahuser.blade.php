@@ -82,7 +82,7 @@
                 }, 5000);
             </script>
         @endif
-        <form action="{{ route('adminuser.add') }}" method="post">
+        <form action="{{ url('admin/adminuseradd') }}" method="post">
             @csrf
             <div class="form-group">
                 <label for="username">Username</label>
