@@ -106,7 +106,7 @@
                 <a href="{{ url('/') }}" class="btn btn-primary" style="text-decoration: none;">Delete</a>
                 <br />
                 <br />
-                <a href="{{ url('/adminkelasindex') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
+                <a href="{{ url('admin/adminkelasindex') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
             </div>
         </form>
     </div>

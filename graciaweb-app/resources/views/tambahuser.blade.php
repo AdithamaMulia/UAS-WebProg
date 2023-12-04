@@ -149,7 +149,7 @@
                 <button type="submit" class="btn">Tambah User</button>
                 <br />
                 <br />
-                <a href="{{ url('/adminuserindex') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
+                <a href="{{ url('admin/adminuserindex') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
             </div>
         </form>
     </div>

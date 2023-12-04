@@ -100,7 +100,7 @@
                 <button type="submit" class="btn">Tambah Mapel</button>
                 <br />
                 <br />
-                <a href="{{ url('/adminmapelindex') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
+                <a href="{{ url('admin/adminmapelindex') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
             </div>
         </form>
     </div>

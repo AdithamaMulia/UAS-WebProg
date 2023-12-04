@@ -114,7 +114,7 @@
                 <button type="submit" class="btn">Tambah Nilai</button>
                 <br />
                 <br />
-                <a href="{{ url('/adminnilai') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
+                <a href="{{ url('admin/adminnilai') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
             </div>
         </form>
     </div>

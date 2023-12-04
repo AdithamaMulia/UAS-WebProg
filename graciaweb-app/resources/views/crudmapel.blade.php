@@ -141,13 +141,13 @@
         @endforeach
     </tbody>
     </table>
-    <a href="{{ url('/adminaddmapel') }}" class="ml-2 border border-primary rounded px-2 py-1">
+    <a href="{{ url('admin/adminaddmapel') }}" class="ml-2 border border-primary rounded px-2 py-1">
             <i class="fa fa-plus text-primary"></i>
             Add Data
         </a>
         <br />
     <br />
-    <a href="{{ url('/listadmin') }}" class="ml-2 border border-primary rounded px-2 py-1">
+    <a href="{{ url('admin/listadmin') }}" class="ml-2 border border-primary rounded px-2 py-1">
     <i class="fa fa-arrow-left text-primary"></i>
         Back
     </a>

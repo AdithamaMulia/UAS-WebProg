@@ -154,14 +154,14 @@ table {
         @endforeach
         </tbody>
     </table>
-    <a href="{{ url('/adminaddsiswa') }}" class="ml-2 border border-primary rounded px-2 py-1">
+    <a href="{{ url('admin/adminaddsiswa') }}" class="ml-2 border border-primary rounded px-2 py-1">
         <i class="fa fa-plus text-primary"></i>
         Add Data
     </a>
     <br />
 
     <br />
-    <a href="{{ url('/adminkelasindex') }}" class="ml-2 border border-primary rounded px-2 py-1">
+    <a href="{{ url('admin/adminkelasindex') }}" class="ml-2 border border-primary rounded px-2 py-1">
     <i class="fa fa-arrow-left text-primary"></i>
         Back
     </a>
