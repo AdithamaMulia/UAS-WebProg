@@ -89,7 +89,7 @@ class UserController extends Controller
 
         $user->save();
 
-        return redirect('/adminuserindex')->with('success', 'Data added successfully');
+        return redirect('/admin/adminuserindex')->with('success', 'Data added successfully');
     }
 
 

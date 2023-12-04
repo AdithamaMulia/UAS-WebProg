@@ -77,7 +77,7 @@
     @endif
         <h2 style="padding-left: 15px; font-size: 30px;">Daftar Absen Siswa</h2>
         <br />
-        <form id="absenForm" action="/absensubmit" method="post">
+        <form id="absenForm" action="/admin/absensubmit" method="post">
             @csrf
             <div class="text-2l ml-2 font-sans" style="padding-left: 10px;">
                 <select id="kelas" name="kelas" style="width: 100%; max-width: 300px; height: 30px; font-size: 18px; margin-top: 5px; border: 1px solid #000;">

@@ -134,7 +134,7 @@
                     <td>{{ $user->agama }}</td>
                     <td>{{ $user->alamat }}</td>
                     <td>
-                        <a href="{{ url('/nilaisiswa/' . $class->kelasID . '/' . $user->userID) }}">
+                        <a href="{{ url('/teacher/nilaisiswa/' . $class->kelasID . '/' . $user->userID) }}">
                             <i class="fa fa-pencil text-primary"></i> Edit
                         </a>
                     </td>
@@ -143,7 +143,7 @@
             @endforeach
         </tbody>
     </table>
-    <a href="{{ url('/list/' . $class->kelasID) }}" class="ml-2 border border-primary rounded px-2 py-1" style="max-width: 120px; margin-top: 5px;">
+    <a href="{{ url('/teacher/list/' . $class->kelasID) }}" class="ml-2 border border-primary rounded px-2 py-1" style="max-width: 120px; margin-top: 5px;">
     <i class="fa fa-arrow-left text-primary"></i>
         Back
     </a>

@@ -6,7 +6,7 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        
+
 * {
     margin: 0;
     padding: 0;
@@ -101,12 +101,12 @@ h2 {
             background-color: #FEC994;
             padding: 40px;
         }
-    
+
         .navbar {
         position: sticky;
         top: 0;
-        z-index: 1000; 
-        background-color: #fff; 
+        z-index: 1000;
+        background-color: #fff;
         }
 
         .sticky-top {
@@ -116,7 +116,7 @@ h2 {
         }
     </style>
 </head>
-@include('navbar')
+@include('navbarguru')
 <body style="background-color: #eee2dc;">
     <div class="box-main">
         <br />
@@ -126,11 +126,11 @@ h2 {
                 <div class="row">
                     @foreach($class as $key => $class )
                         <div class="col-lg-4 mb-3">
-                            <a href="{{ url('/list/' . $class->kelasID) }}" class="card-link no-underline">
+                            <a href="{{ url('/teacher/list/' . $class->kelasID) }}" class="card-link no-underline">
                                 <div class="card" style="height: 200px; width: 100%; max-width: 400px;">
-                                    
+
                                     <div class="card-body card-text-zoom" style="overflow: auto;">
-                                        <p style="color: black;"><b>{{ $class->nama_kelas }}</b></p>
+                                        <p style="color: black;"><b>{{ $class->tingkat }} {{ $class->nama_kelas }}</b></p>
                                     <br />
                                         <div class="blue-top">{{ $class->deskripsi }}</div>
                                         <div class="nested-box">

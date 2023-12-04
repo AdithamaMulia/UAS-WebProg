@@ -43,7 +43,7 @@
       top: 75px;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     }
-   
+
     @media (max-width: 768px) {
       .nav-links.show {
         display: flex;
@@ -63,13 +63,13 @@
         </a>
         <p class="ml-2"><strong>Sekolah Gracia</strong></p>
       </div>
-      <div class="nav-links" id="navLinks"> 
+      <div class="nav-links" id="navLinks">
         <ul class="hidden md:flex md:flex-row flex-col md:items-center gap-7">
           <li>
-            <a class="hover:text-gray-500" href="/home">Home</a>
+            <a class="hover:text-gray-500" href="#">Home</a>
           </li>
           <li>
-            <a class="hover:text-gray-500" href="/kelas">Class List</a>
+            <a class="hover:text-gray-500" href="/admin/adminkelasindex">Class List</a>
           </li>
           <li>
             <a class="hover:text-gray-500" href="#contact">Contact Us</a>
@@ -83,16 +83,16 @@
         </ul>
       </div>
 
-      <div id="navLinks"> 
+      <div id="navLinks">
         <ul class="hidden md:flex md:flex-row flex-col md:items-center gap-7">
           <li>
-            <a class="hover:text-gray-500" href="/home">Home</a>
+            <a class="hover:text-gray-500" href="#">Home</a>
           </li>
           <li>
-            <a class="hover:text-gray-500" href="/kelas">Class List</a>
+            <a class="hover:text-gray-500" href="/admin/adminkelasindex">Class List</a>
           </li>
           <li>
-            <a class="hover:text-gray-500" href="/contact">Contact Us</a>
+            <a class="hover:text-gray-500" href="#contact">Contact Us</a>
           </li>
           <li>
             <a class="hover:text-gray-500" href="/aboutus">About Us</a>

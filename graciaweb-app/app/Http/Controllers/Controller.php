@@ -23,13 +23,15 @@ class Controller extends BaseController
         if (!$kelas) {
             abort(404);
         }
+
         $users = graciaUser::with(['absensi' => function ($query) use ($kelasID) {
             $query->where('kelasID', $kelasID);
         }])->where('kelasID', $kelasID)->get();
 
-        return view('absen', ['users' => $users, 'kelas' => $kelas, 'absen' => $absen]);
+        // Mengubah view yang di-return menjadi 'crudabsen'
+        return view('crudabsen', ['users' => $users, 'kelas' => $kelas, 'absen' => $absen])
+            ->with('pilihanadmin', ['kelasID' => $kelasID]);
     }
-
 
     public function filtered($kelasID)
     {
