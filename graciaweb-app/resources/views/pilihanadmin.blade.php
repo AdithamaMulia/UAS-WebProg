@@ -15,19 +15,19 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
 
-	<style>		
-		
-		 
+	<style>
+
+
 		.slide-in-bottom{-webkit-animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) both;animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) both}
 		.slide-in-bottom-h1{-webkit-animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) .5s both;animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) .5s both}
 		.slide-in-bottom-subtitle{-webkit-animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) .75s both;animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) .75s both}
 		.fade-in{-webkit-animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) 1s both;animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) 1s both}
 		.bounce-top-icons{-webkit-animation:bounce-top .9s 1s both;animation:bounce-top .9s 1s both}
-		
+
 		@-webkit-keyframes slide-in-bottom{0%{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes slide-in-bottom{0%{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
 		@-webkit-keyframes bounce-top{0%{-webkit-transform:translateY(-45px);transform:translateY(-45px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in;opacity:1}24%{opacity:1}40%{-webkit-transform:translateY(-24px);transform:translateY(-24px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}65%{-webkit-transform:translateY(-12px);transform:translateY(-12px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}82%{-webkit-transform:translateY(-6px);transform:translateY(-6px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}93%{-webkit-transform:translateY(-4px);transform:translateY(-4px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}25%,55%,75%,87%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}100%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out;opacity:1}}@keyframes bounce-top{0%{-webkit-transform:translateY(-45px);transform:translateY(-45px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in;opacity:1}24%{opacity:1}40%{-webkit-transform:translateY(-24px);transform:translateY(-24px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}65%{-webkit-transform:translateY(-12px);transform:translateY(-12px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}82%{-webkit-transform:translateY(-6px);transform:translateY(-6px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}93%{-webkit-transform:translateY(-4px);transform:translateY(-4px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}25%,55%,75%,87%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}100%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out;opacity:1}}
 		@-webkit-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes fade-in{0%{opacity:0}100%{opacity:1}}
-    
+
     .sticky-top {
         position: sticky;
         top: 0;
@@ -37,8 +37,8 @@
         .navbar {
         position: sticky;
         top: 0;
-        z-index: 1000; 
-        background-color: #fff; 
+        z-index: 1000;
+        background-color: #fff;
         }
         @media (max-width: 767px) {
                 .content {
@@ -59,18 +59,18 @@
 @include('navbar')
 <section class="content">
 <div class="h-screen pb-14 bg-right bg-cover" style="background-image: url('{{ asset('img/bg.svg') }}');">
-	<div class="w-full container mx-auto p-6">		
-		<div class="w-full flex items-center justify-between">	
+	<div class="w-full container mx-auto p-6">
+		<div class="w-full flex items-center justify-between">
 		</div>
 	</div>
     <div class="container pt-24 md:pt-48 px-6 mx-auto flex flex-wrap flex-col md:flex-row items-center justify-center">
         <div class="flex flex-col w-full xl:w-3/5 justify-center lg:items-start h-36 mt-20">
             <h1 class="my-4 text-3xl md:text-5xl text-purple-800 font-bold leading-tight text-center md:text-left slide-in-bottom-h1">Daftar User, kelas, Mata pelajaran dan Absensi </h1>
-            <p class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Data User, kelas, Mata pelajaran dan Absensi</p> 
+            <p class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Data User, kelas, Mata pelajaran dan Absensi</p>
             <div class="flex flex-col md:flex-row w-full justify-center md:justify-start pb-24 lg:pb-0 fade-in">
                 <div class="flex flex-col w-full md:w-1/2 lg:w-2/4 mb-4 md:mb-0">
                     <div class="col-lg-4 mb-3 mr-4">
-                        <a href="{{ url('admin/adminuserindex') }}" class="card-link no-underline">
+                        <a href="/admin/adminuserindex" class="card-link no-underline">
                             <div class="card" style="max-width: 100%; border: 2px solid #000; border-radius: 10px; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);">
                                 <div class="card-body card-text-zoom" style="overflow: auto; padding: 20px;">
                                     <p style="color: black;"><b>Daftar User</b></p>
@@ -86,7 +86,7 @@
 
                 <div class="flex flex-col w-full md:w-1/2 lg:w-2/4 mb-4 md:mb-0">
                     <div class="col-lg-4 mb-3 mr-4">
-                        <a href="{{ url('admin/adminkelasindex') }}" class="card-link no-underline">
+                        <a href="{{ url('/admin/adminkelasindex') }}" class="card-link no-underline">
                             <div class="card" style="max-width: 100%; border: 2px solid #000; border-radius: 10px; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);">
                                 <div class="card-body card-text-zoom" style="overflow: auto; padding: 20px;">
                                     <p style="color: black;"><b>Daftar Kelas</b></p>
@@ -102,7 +102,7 @@
 
                 <div class="flex flex-col w-full md:w-1/2 lg:w-2/4 mb-4 md:mb-0">
                     <div class="col-lg-4 mb-3 mr-4">
-                        <a href="{{ url('admin/adminmapelindex') }}" class="card-link no-underline">
+                        <a href="{{ url('/admin/adminmapelindex') }}" class="card-link no-underline">
                             <div class="card" style="max-width: 100%; border: 2px solid #000; border-radius: 10px; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);">
                                 <div class="card-body card-text-zoom" style="overflow: auto; padding: 20px;">
                                     <p style="color: black;"><b>Daftar Mata Pelajaran</b></p>
@@ -118,7 +118,7 @@
 
                 <div class="flex flex-col w-full md:w-1/2">
                     <div class="col-lg-4 mb-3 mr-4">
-                        <a href="{{ url('admin/adminabsen') }}" class="card-link no-underline">
+                        <a href="{{ route('adminabsen', ['kelasID' => $kelasID]) }}" class="card-link no-underline">
                             <div class="card" style="max-width: 100%; border: 2px solid #000; border-radius: 10px; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);">
                                 <div class="card-body card-text-zoom" style="overflow: auto; padding: 20px;">
                                     <p style="color: black;"><b>Daftar Absensi</b></p>

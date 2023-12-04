@@ -51,24 +51,24 @@ Route::group(['prefix' => 'teacher', 'middleware' => ['auth'], 'as' => 'teacher'
     Route::get('/editsiswa', function () {return view('editsiswadariguru');});
     Route::get('/guruaddsiswa', function () {return view('gurutambahsiswa');});
     Route::get('/nilaisiswa/{userID}/{mapelID}', [Controller::class, 'indexnilai'])->name('nilai.index');
+    Route::post('/nilaisiswa/{userID}/{mapelID}', [NilaiController::class, 'store'])->name('nilai.store');
+    Route::get('/editnilai/{userID}/{mapelID}', [NilaiController::class, 'edit'])->name('nilai');
 });
-
-
-Route::post('/nilaisiswa/{userID}/{mapelID}', [NilaiController::class, 'store'])->name('nilai.store');
-Route::get('/editnilai/{userID}/{mapelID}', [NilaiController::class, 'edit'])->name('nilai');
 
 // admin
 Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'as' => 'admin'], function(){
     Route::get('/listadmin', function () {
         return view('pilihanadmin'); // Ganti dengan tampilan atau logika yang sesuai
     })->name('admin.listadmin');
+    Route::get('/home', function () {
+        return view('index'); // Ganti dengan tampilan atau logika yang sesuai
+    })->name('student.index');
     Route::get('/adminkelasindex', [KelasController::class, 'index']);
     Route::post('/adminkelasadd', [KelasController::class, 'store'])->name('adminkelas.add');
     Route::post('/adminkelasupdate/{kelasID}', [KelasController::class, 'update'])->name('adminkelas.update');
     Route::get('/admineditkelas/update/{kelasID}', 'App\Http\Controllers\KelasController@edit')->name('admineditkelas.update');
-    Route::get('/adminabsen', function () {return view('crudabsen');});
 
-    Route::get('/adminabsen', [Controller::class, 'indexabsen']);
+    Route::get('/adminabsen/{kelasID}', [Controller::class, 'indexabsen']);
     Route::get('/adminabsen/hari/{tanggal}', 'App\Http\Controllers\AbsensiController@index')->name('adminabsen.update');
 
     Route::get('/adminaddsiswa', function () {return view('tambahsiswa');});
@@ -79,7 +79,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'as' => 'admin'], f
     Route::get('/adminadduser', function () {return view('tambahuser');});
     Route::get('/adminmurid/{kelasID}', 'App\Http\Controllers\KelasController@showTabelKelasSiswa');
 
-    Route::get('admin/admin/adminuserindex', [UserController::class, 'index']);
+    Route::get('/adminuserindex', [UserController::class, 'index'])->name('adminuser.index');
     Route::post('/adminuseradd', [UserController::class, 'store'])->name('adminuser.add');
     Route::post('/adminuserupdate/{userID}', [UserController::class, 'update'])->name('adminuser.update');
     Route::get('/adminedituser/update/{userID}', 'App\Http\Controllers\UserController@edit')->name('adminedituser.update');
