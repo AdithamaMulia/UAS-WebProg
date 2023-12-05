@@ -152,6 +152,7 @@
             <div style="padding-left: 10px;">
                     <br />
                     <a href="{{ url('/admin/list')}}" class="btn btn-primary">Back</a>
+                    <button type="submit" class="btn btn-primary" style="background-color: blue;">Submit</button>
                 </div>
                 <br />
         </form>
