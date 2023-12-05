@@ -69,7 +69,7 @@
             <a class="hover:text-gray-500" href="{{url('/admin/home')}}">Home</a>
           </li>
           <li>
-            <a class="hover:text-gray-500" href="{{url('/admin/adminkelasindex')}}">Class List</a>
+            <a class="hover:text-gray-500" href="{{url('/admin/kelas')}}">Class List</a>
           </li>
           <li>
             <a class="hover:text-gray-500" href="{{url('/contact')}}">Contact Us</a>
@@ -89,7 +89,7 @@
             <a class="hover:text-gray-500" href="{{url('/admin/home')}}">Home</a>
           </li>
           <li>
-            <a class="hover:text-gray-500" href="{{url('/admin/adminkelasindex')}}">Class List</a>
+            <a class="hover:text-gray-500" href="{{url('/admin/kelas')}}">Class List</a>
           </li>
           <li>
             <a class="hover:text-gray-500" href="{{url('/contact')}}">Contact Us</a>
