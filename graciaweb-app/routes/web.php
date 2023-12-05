@@ -64,6 +64,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'as' => 'admin'], f
         return view('index'); // Ganti dengan tampilan atau logika yang sesuai
     })->name('student.index');
 
+    //absen
+    Route::get('/setelahabsen', function () {return view('tanggalsemester');});
+
     //crud kelas
     Route::get('/adminkelasindex', [KelasController::class, 'index']);
     Route::post('/adminkelasadd', [KelasController::class, 'store']);
