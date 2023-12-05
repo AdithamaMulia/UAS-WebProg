@@ -9,11 +9,23 @@ use Illuminate\Http\Request;
 
 class AbsensiController extends Controller
 {
-    public function index($kelasID)
+    public function index(Request $request)
     {
-        $absensi = graciaAbsensi::where('kelasID', $kelasID);
-        $kelas = graciaKelas::where('kelasID', $kelasID)->first();
-        return view('absen', compact('absensi', 'kelas'));
+        $absen = graciaAbsensi::where('kelasID', $request->kelasID)
+            ->whereBetween('tanggal', [$request->tanggal, $request->tanggal]) // Filter by tanggal
+            ->get();
+        $kelas = graciaKelas::where('kelasID', $request->kelasID)->first();
+        return view('absen', compact('absen', 'kelas'));
+    }
+
+    public function pilihkapan(Request $request)
+    {
+        $absensi = graciaAbsensi::where('kelasID', $request->kelasID)
+            ->whereBetween('semester', [$request->semester, $request->semester]) // Filter by semester
+            ->whereBetween('tanggal', [$request->tanggal, $request->tanggal]) // Filter by tanggal
+            ->get();
+        $kelas = graciaKelas::where('kelasID', $request->kelasID)->first();
+        return view('tanggalsemester', compact('absensi', 'kelas'));
     }
 
     public function store(Request $request)
@@ -24,6 +36,7 @@ class AbsensiController extends Controller
             'tanggal' => 'required',
             'userID' => 'required',
             'keterangan' => 'required',
+            'semester' => 'required|in:Ganjil,Genap',
         ]);
 
         $absen = new graciaAbsensi();
@@ -64,17 +77,24 @@ class AbsensiController extends Controller
     public function submitAbsen(Request $request, $kelasID)
     {
         foreach ($request->input('userID') as $userID) {
-            $absensi = new graciaAbsensi();
-            $absensi->userID = $userID;
-            $absensi->keterangan = $request->input('keterangan')[$userID] ?? null;
-            $absensi->tanggal = $request->input('tanggal');
-            $absensi->kelasID = $request->input('kelas');
-            $absensi->semester = $request->input('semester');
-            $absensi->kelasID = $kelasID;
+            $absensi = graciaAbsensi::where('absenID', $request->absenID)->first() ?? null;
 
-            $absensi->save();
-        }
+            if ($absensi) {
+                $userID = $absensi->userID;
+                $absensi->update([
+                    'keterangan' => $request->input('keterangan')[$userID],
+                ]);
+            } else {
+                $absensi = new graciaAbsensi();
+                $absensi->userID = $userID;
+                $absensi->keterangan = $request->input('keterangan')[$userID] ?? null;
+                $absensi->tanggal = $request->input('tanggal');
+                $absensi->kelasID = $request->input('kelasID');
+                $absensi->semester = $request->input('semester');
+                $absensi->save(); 
+            }
+        }        
 
-        return redirect('/absen/' . $request->input('kelasID'))->with('success', 'Data updated successfully');
+        return redirect('teacher/setelahabsen/' . $request->kelasID)->with('success', 'Data updated successfully');
     }
 }

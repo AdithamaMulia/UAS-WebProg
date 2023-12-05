@@ -133,21 +133,16 @@
 <div class="box-main">
     <br />
     <div class="card mb-3" style="width:100%; max-width: 1200px;">
-    <h2 class="text-3xl font-bold text-blue-pigeon mt-3" style="padding-left: 15px;">Daftar Absen Siswa</h2>
+    <h2 class="text-3xl font-bold text-blue-pigeon mt-3" style="padding-left: 15px;">Pilih Tanggal Absensi</h2>
         <br />
-        <form id="absen" action="#" method="post">
+        <form id="absen" action="{{ url('/teacher/absen') }}" method="get">
             @csrf
             <div class="text-2l ml-2 font-sans" style="padding-left: 10px;"></div>
             <br />
             <div class="input-container" style="padding-left: 15px;">
                 <label for="tanggal">Tanggal:</label>
                 <input type="date" id="tanggal" name="tanggal" style="border: 1px solid #000;" required>
-
-                <p>Semester: </p>
-                <select id="semester" name="semester" style="width: 100%; max-width: 300px; height: 30px; font-size: 18px; margin-top: 5px; border: 1px solid #000;">
-                    <option value="Genap">Genap</option>
-                    <option value="Ganjil">Ganjil</option>
-                </select>
+                <input type="hidden" id="kelasID" name="kelasID" style="border: 1px solid #000;" value="{{$kelas->kelasID}}" required>
             </div>
             <div style="padding-left: 10px;">
                     <br />

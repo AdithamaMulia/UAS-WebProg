@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Http\Request;
 use App\Models\graciaUser;
 use App\Models\graciaKelas;
 use App\Models\graciaNilai;
@@ -15,10 +16,14 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
 
-    public function indexabsen($kelasID)
+    public function indexabsen(Request $request)
     {
+        $kelasID = $request->kelasID;
+        $tanggal = $request->tanggal;
         $kelas = graciaKelas::with('absensi')->where('kelasID', $kelasID)->first();
-        $absen = graciaAbsensi::where('kelasID', $kelasID)->first();
+        $absen = graciaAbsensi::where('kelasID', $kelasID)
+            ->where('tanggal', $tanggal)
+            ->first();
 
         if (!$kelas) {
             abort(404);
@@ -29,7 +34,7 @@ class Controller extends BaseController
         }])->where('kelasID', $kelasID)->get();
 
         // Mengubah view yang di-return menjadi 'crudabsen'
-        return view('crudabsen', ['users' => $users, 'kelas' => $kelas, 'absen' => $absen]);
+        return view('absen', ['users' => $users, 'kelas' => $kelas, 'absen' => $absen]);
     }
 
     public function filtered($kelasID)
