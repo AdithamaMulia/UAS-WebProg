@@ -75,16 +75,11 @@
             }, 5000);
         </script>
     @endif
-        <h2 style="padding-left: 15px; font-size: 30px;">Daftar Absen Siswa</h2>
+        <h2 style="padding-left: 15px; font-size: 30px;">Daftar Absen Siswa  {{ $kelas->tingkat }} {{ $kelas->nama_kelas }}</h2>
         <br />
         <form id="absenForm" action="/admin/absensubmit" method="post">
             @csrf
             <div class="text-2l ml-2 font-sans" style="padding-left: 10px;">
-                <select id="kelas" name="kelas" style="width: 100%; max-width: 300px; height: 30px; font-size: 18px; margin-top: 5px; border: 1px solid #000;">
-                    @foreach($kelas as $key => $kelas)
-                        <option value="{{ $kelas->kelasID }}">{{ $kelas->nama_kelas }}</option>
-                    @endforeach
-                </select>
             </div>
             <br />
             <div class="input-container" style="padding-left: 15px;">
