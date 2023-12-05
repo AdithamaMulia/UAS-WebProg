@@ -129,7 +129,7 @@
             </div>
             <div class="form-group">
                 <label for="nama_orangtua">Nama Orangtua</label>
-                <input type="text" id="nama_orangtua" name="nama_orangtua" style="width: 100%; max-width: 280px;" placeholder="Nama Orangtua">
+                <input type="text" id="nama_orangtua" name="nama_orangtua" style="width: 100%; max-width: 280px;" placeholder="Nama Orangtua" required>
             </div>
             <div class="form-group">
                 <label for="tempat_lahir">Tempat Lahir</label>

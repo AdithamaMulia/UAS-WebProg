@@ -48,6 +48,8 @@ class UserController extends Controller
             'agama' => 'required',
             'tempat_lahir' => 'required',
             'role' => 'required',
+            'nis' => 'required',
+            'nama_orangtua' => 'required',
         ]);
 
         $inputUsername = $request->username;
@@ -112,6 +114,8 @@ class UserController extends Controller
             'agama' => 'required',
             'tempat_lahir' => 'required',
             'role' => 'required',
+            'nis' => 'required',
+            'nama_orangtua' => 'required',
         ]);
 
         $user = graciaUser::find($userID);
