@@ -181,6 +181,7 @@
                                     <td class="increment">1</td>
                                     <td>{{ $user->nama_depan }} {{ $user->nama_belakang }}</td>
                                     <td>{{ $absen ? $absen->keterangan : 'NULL' }}</td>
+                                        <input type="hidden" name="userID[]" value="{{ $user->userID }}">  
                                     <input type="hidden" name="kelasID" value="{{ $kelas->kelasID }}">
                                     <input type="hidden" name="absenID[{{ $user->userID }}]" value="{{ $absen ? $absen->absenID : '' }}">
                                     <input type="hidden" id="semester" name="semester" style="border: 1px solid #000;" value="Ganjil" required>
