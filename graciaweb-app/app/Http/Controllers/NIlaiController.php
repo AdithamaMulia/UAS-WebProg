@@ -27,7 +27,7 @@ class NilaiController extends Controller
         $request->validate([
             'userID' => 'required',
             'mapelID' => 'required',
-            'nilaiUTS' => 'nullable|numeric',   
+            'nilaiUTS' => 'nullable|numeric',
             'nilaiUAS' => 'nullable|numeric',
             'nilaiUH1' => 'nullable|numeric',
             'nilaiUH2' => 'nullable|numeric',
@@ -50,14 +50,16 @@ class NilaiController extends Controller
         $nilai->semester = $request->semester;
 
         $nilai->save();
-        return redirect('/home')->with('success', 'Data added successfully');
+        return redirect('/teacher/homeguru')->with('success', 'Data added successfully');
     }
 
     public function edit($userID, $mapelID)
     {
-        $nilai = graciaNilai::where('userID', $userID)->first();
         $user = graciaUser::where('userID', $userID)->first();
         $mapel = graciaMapel::where('mapelID', $mapelID)->first();
+        $nilai = graciaNilai::where('userID', $userID)
+        ->where('mapelID', $mapel->mapelID) // Sesuaikan ini dengan mapelID yang diinginkan
+        ->first();
 
         return view('editnilai', compact('nilai', 'user', 'mapel'));
     }

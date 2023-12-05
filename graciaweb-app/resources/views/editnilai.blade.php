@@ -80,7 +80,7 @@
                 }, 5000);
             </script>
         @endif
-        <form action="{{ url('/nilaisiswa/' . $user->userID . '/' . $mapel->mapelID) }}" method="post">
+        <form action="{{ url('/teacher/nilaisiswa/' . $user->userID . '/' . $mapel->mapelID) }}" method="post">
             @csrf
             <div>
                 <label for="semester">Semester</label>
@@ -108,7 +108,7 @@
             </div>
             <div class="form-group">
                 <label for="nilaiUTS">UTS</label>
-                <input type="number" id="nilaiUTS" name="nilaiUTS" style="width: 100%; max-width: 280px;" placeholder="UTS" value="{{$nilai->nilaiUTS ?? '0'}}"> 
+                <input type="number" id="nilaiUTS" name="nilaiUTS" style="width: 100%; max-width: 280px;" placeholder="UTS" value="{{$nilai->nilaiUTS ?? '0'}}">
             </div>
             <div class="form-group">
                 <label for="nilaiUAS">UAS</label>
@@ -125,7 +125,7 @@
                 <button type="submit" class="btn">Edit Nilai</button>
                 <br />
                 <br />
-                <a href="{{ url('/nilaisiswa/' . $mapel->mapelID . '/' . $user->userID) }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
+                <a href="{{ url('/teacher/nilaisiswa/' . $mapel->mapelID . '/' . $user->userID) }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
             </div>
         </form>
     </div>

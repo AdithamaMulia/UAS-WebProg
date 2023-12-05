@@ -40,7 +40,7 @@ class Controller extends BaseController
         return view('listmuridguru', compact('class', 'user'));
     }
 
-    public function indexnilai($userID, $kelasID)
+    public function indexnilai($kelasID, $userID)
     {
         $nilai = graciaNilai::where('userID', $userID)->get();
         $class = graciaKelas::where('kelasID', $kelasID)->first();

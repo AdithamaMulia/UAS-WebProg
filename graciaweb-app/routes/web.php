@@ -50,7 +50,7 @@ Route::group(['prefix' => 'teacher', 'middleware' => ['auth'], 'as' => 'teacher'
     Route::get('/list/{kelasID}', [KelasController::class, 'pilihan']);
     Route::get('/editsiswa', function () {return view('editsiswadariguru');});
     Route::get('/guruaddsiswa', function () {return view('gurutambahsiswa');});
-    Route::get('/nilaisiswa/{userID}/{mapelID}', [Controller::class, 'indexnilai'])->name('nilai.index');
+    Route::get('/nilaisiswa/{userID}/{kelasID}', [Controller::class, 'indexnilai'])->name('nilai.index');
     Route::post('/nilaisiswa/{userID}/{mapelID}', [NilaiController::class, 'store'])->name('nilai.store');
     Route::get('/editnilai/{userID}/{mapelID}', [NilaiController::class, 'edit'])->name('nilai');
 });

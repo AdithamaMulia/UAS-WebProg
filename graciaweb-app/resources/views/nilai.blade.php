@@ -93,13 +93,13 @@
                         @else
                             <td colspan="7">No grade available</td>
                         @endif
-                        <td><a href="{{ url('/editnilai/' . $user->userID . '/' . $mapelItem->mapelID) }}">Edit</a></td>
+                        <td><a href="{{ url('/teacher/editnilai/' . $user->userID . '/' . $mapelItem->mapelID) }}">Edit</a></td>
                     </tr>
                 @endforeach
             </table>
                 <div class="text-end">
                     <br />
-                    <a href="{{ url('/listmurid/' . $class->kelasID) }}" class="btn btn-primary">Back</a>
+                    <a href="{{ url('/teacher/listmurid/' . $class->kelasID) }}" class="btn btn-primary">Back</a>
                 </div>
             </div>
         </div>
