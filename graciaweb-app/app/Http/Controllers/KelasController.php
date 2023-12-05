@@ -41,7 +41,7 @@ class KelasController extends Controller
 
         $kelas->save();
 
-        return redirect('/adminkelasindex')->with('success', 'Data added successfully');
+        return redirect('/admin/adminkelasindex')->with('success', 'Data added successfully');
     }
 
     public function edit($kelasID)
@@ -70,7 +70,23 @@ class KelasController extends Controller
             'tingkat' => $request->input('tingkat'),
         ]);
 
-        return redirect('/adminkelasindex')->with('success', 'Data updated successfully');
+        return redirect('/admin/adminkelasindex')->with('success', 'Data updated successfully');
+    }
+
+    public function delete($kelasID) {
+        // Temukan data yang akan dihapus
+        $class = graciaKelas::find($kelasID);
+
+        if (!$class) {
+            // Handle jika data tidak ditemukan
+            return redirect('admin/adminkelasindex');
+        }
+
+        // Lakukan proses penghapusan data
+        $class->delete();
+
+        // Redirect dengan pesan sukses
+        return redirect('admin/adminkelasindex');
     }
 
     public function showTabelKelasSiswa($kelasID)

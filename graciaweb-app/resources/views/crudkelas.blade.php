@@ -131,13 +131,13 @@
         @foreach($classes as $key => $class)
             <tr>
                 <td style="max-width:40px;">{{ $class->kelasID }}</td>
-                <td><a href="{{ url('/adminmurid/' . $class->kelasID) }}">{{ $class->nama_kelas }}</a></td>
+                <td><a href="{{ url('/admin/adminmurid/' . $class->kelasID) }}">{{ $class->nama_kelas }}</a></td>
                 <td>{{ $class->deskripsi }}</td>
                 <td>{{ $class->tingkat }}</td>
                 <td>{{ $class->created_at }}</td>
                 <td>{{ $class->updated_at }}</td>
                 <td>
-                <a href="{{ url('/admineditkelas/update/' . $class->kelasID) }}">
+                <a href="{{ url('/admin/admineditkelas/update/' . $class->kelasID) }}">
                     <i class="fa fa-pencil text-primary"></i> Edit
                 </a>
             </td>

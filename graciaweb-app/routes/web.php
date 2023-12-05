@@ -63,10 +63,15 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'as' => 'admin'], f
     Route::get('/home', function () {
         return view('index'); // Ganti dengan tampilan atau logika yang sesuai
     })->name('student.index');
+
+    //crud kelas
     Route::get('/adminkelasindex', [KelasController::class, 'index']);
-    Route::post('/adminkelasadd', [KelasController::class, 'store'])->name('adminkelas.add');
-    Route::post('/adminkelasupdate/{kelasID}', [KelasController::class, 'update'])->name('adminkelas.update');
+    Route::post('/adminkelasadd', [KelasController::class, 'store']);
+    Route::get('/adminaddkelas', function () {return view('tambahkelas');});
+    Route::post('/adminkelasupdate/{kelasID}', [KelasController::class, 'update']);
     Route::get('/admineditkelas/update/{kelasID}', 'App\Http\Controllers\KelasController@edit')->name('admineditkelas.update');
+    Route::get('/adminkelasdelete/{kelasID}', [KelasController::class, 'delete']);
+    //
 
     Route::get('/adminabsen/{kelasID}', [Controller::class, 'indexabsen']);
     Route::get('/list/{kelasID}', [KelasController::class, 'pilihan']);
@@ -75,7 +80,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'as' => 'admin'], f
 
     Route::get('/adminaddsiswa', function () {return view('tambahsiswa');});
     Route::post('/addUserToClass/{userID}', [UserController::class, 'addUserToClass'])->name('addUserToClass');
-    Route::get('/adminaddkelas', function () {return view('tambahkelas');});
     Route::get('/adminaddmapel', function () {return view('tambahmapel');});
     Route::get('/adminaddnilai', function () {return view('tambahnilai');});
     Route::get('/adminmurid/{kelasID}', 'App\Http\Controllers\KelasController@showTabelKelasSiswa');

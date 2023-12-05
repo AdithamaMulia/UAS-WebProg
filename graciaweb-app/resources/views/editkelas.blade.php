@@ -81,7 +81,7 @@
                 }, 5000);
             </script>
         @endif
-        <form action="{{ route('adminkelas.update', ['kelasID' => $class->kelasID]) }}" method="post">
+        <form action="{{ url('admin/adminkelasupdate', ['kelasID' => $class->kelasID]) }}" method="post">
             @csrf
             <div class="form-group">
                 <label for="nama_kelas">Kelas</label>
@@ -103,7 +103,7 @@
             <br />
             <div class="btn-container" style="text-align: left;">
                 <button type="submit" class="btn">Edit Kelas</button>
-                <a href="{{ url('/') }}" class="btn btn-primary" style="text-decoration: none;">Delete</a>
+                <a href="{{ url('/admin/adminkelasdelete/'.$class->kelasID) }}" class="btn btn-primary" style="text-decoration: none;" onclick="return confirm('Are you sure you want to delete this item?')">Delete</a>
                 <br />
                 <br />
                 <a href="{{ url('admin/adminkelasindex') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
