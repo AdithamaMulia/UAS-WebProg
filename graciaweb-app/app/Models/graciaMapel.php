@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class graciaMapel extends Model
 {
     protected $table = 'mapel';
+    protected $primaryKey = 'mapelID';
     protected $fillable = ['mapelID', 'nama_mapel', 'tingkat', 'created_at', 'updated_at'];
 
     public function nilai()

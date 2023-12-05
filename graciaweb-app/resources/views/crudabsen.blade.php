@@ -77,7 +77,7 @@
     @endif
         <h2 style="padding-left: 15px; font-size: 30px;">Daftar Absen Siswa  {{ $kelas->tingkat }} {{ $kelas->nama_kelas }}</h2>
         <br />
-        <form id="absenForm" action="/admin/absensubmit" method="post">
+        <form id="absenForm" action="{{ url('/teacher/absensubmit/') }}" method="post">
             @csrf
             <div class="text-2l ml-2 font-sans" style="padding-left: 10px;">
             </div>

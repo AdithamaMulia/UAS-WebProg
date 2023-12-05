@@ -81,7 +81,7 @@
                 }, 5000);
             </script>
         @endif
-        <form action="{{ route('adminmapel.add') }}" method="post"> 
+        <form action="{{ url('admin/adminmapeladd') }}" method="post">
             @csrf
             <div class="form-group">
                 <label for="nama_mapel">Mata Pelajaran</label>

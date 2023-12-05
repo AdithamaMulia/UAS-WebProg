@@ -25,7 +25,7 @@ class MapelController extends Controller
 
         $mapel->save();
 
-        return redirect('/adminmapelindex')->with('success', 'Data added successfully');
+        return redirect('/admin/adminmapelindex')->with('success', 'Data added successfully');
     }
 
     public function edit($mapelID)
@@ -47,6 +47,22 @@ class MapelController extends Controller
             'tingkat' => $request->input('tingkat'),
         ]);
 
-        return redirect('/adminmapelindex')->with('success', 'Data updated successfully');
+        return redirect('/admin/adminmapelindex')->with('success', 'Data updated successfully');
+    }
+
+    public function delete($mapelID) {
+        // Temukan data yang akan dihapus
+        $mapel = graciaMapel::find($mapelID);
+
+        if (!$mapel) {
+            // Handle jika data tidak ditemukan
+            return redirect('admin/adminmapelindex');
+        }
+
+        // Lakukan proses penghapusan data
+        $mapel->delete();
+
+        // Redirect dengan pesan sukses
+        return redirect('admin/adminmapelindex');
     }
 }

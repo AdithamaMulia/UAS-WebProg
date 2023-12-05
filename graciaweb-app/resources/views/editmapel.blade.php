@@ -82,7 +82,7 @@
                 }, 5000);
             </script>
         @endif
-        <form action="{{ route('adminmapel.update', ['mapelID' => $mapel->mapelID]) }}" method="post"> 
+        <form action="{{ url('admin/adminmapelupdate', ['mapelID' => $mapel->mapelID]) }}" method="post">
             @csrf
             <div class="form-group">
                 <label for="nama_mapel">Mata Pelajaran</label>
@@ -99,7 +99,7 @@
             <br />
             <div class="btn-container" style="text-align: left;">
                 <button type="submit" class="btn">Edit Mapel</button>
-                <a href="{{ url('/') }}" class="btn btn-primary" style="text-decoration: none;">Delete</a>
+                <a href="{{ url('/admin/adminmapeldelete/'.$mapel->mapelID) }}" class="btn btn-primary" style="text-decoration: none;" onclick="return confirm('Are you sure you want to delete this item?')">Delete</a>
                 <br />
                 <br />
                 <a href="{{ url('admin/adminmapelindex') }}" class="btn btn-primary" style="text-decoration: none;">Back</a>

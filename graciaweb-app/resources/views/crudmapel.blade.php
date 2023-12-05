@@ -133,7 +133,7 @@
                 <td>{{ $mapel->created_at }}</td>
                 <td>{{ $mapel->updated_at }}</td>
                 <td>
-                    <a href="{{ url('/admineditmapel/update/' . $mapel->mapelID) }}">
+                    <a href="{{ url('/admin/admineditmapel/update/' . $mapel->mapelID) }}">
                         <i class="fa fa-pencil text-primary"></i> Edit
                     </a>
                 </td>

@@ -77,14 +77,19 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'as' => 'admin'], f
     Route::get('/adminaddsiswa/update/{kelasID}', [UserController::class, 'addtoclass']);
     Route::post('/addUserToClass/{kelasID}', [UserController::class, 'addUserToClass'])->name('addUserToClass');
     //
-
-    Route::get('/adminabsen/{kelasID}', [Controller::class, 'indexabsen']);
-    Route::get('/list/{kelasID}', [KelasController::class, 'pilihan']);
     Route::get('/kelas', [KelasController::class, 'indexutkguru']);
     Route::get('/adminabsen/hari/{tanggal}', 'App\Http\Controllers\AbsensiController@index')->name('adminabsen.update');
 
+    //crud mapel
+    Route::get('/adminmapelindex', [MapelController::class, 'index']);
     Route::get('/adminaddmapel', function () {return view('tambahmapel');});
+    Route::post('/adminmapeladd', [MapelController::class, 'store']);
+    Route::post('/adminmapelupdate/{mapelID}', [MapelController::class, 'update']);
+    Route::get('/admineditmapel/update/{mapelID}', 'App\Http\Controllers\MapelController@edit')->name('admineditmapel.update');
+    Route::get('/adminmapeldelete/{mapelID}', [MapelController::class, 'delete']);
+    //
     Route::get('/adminaddnilai', function () {return view('tambahnilai');});
+
 
     //crud tabel user
     Route::get('/adminuserindex', [UserController::class, 'index'])->name('adminuser.index');
@@ -97,12 +102,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'as' => 'admin'], f
 
     Route::get('/admineditnilai', function () {return view('editnilai');});
     Route::get('/admineditsiswa', function () {return view('editsiswa');});
-
-
-    Route::get('/adminmapelindex', [MapelController::class, 'index']);
-    Route::post('/adminmapeladd', [MapelController::class, 'store'])->name('adminmapel.add');
-    Route::post('/adminmapelupdate/{mapelID}', [MapelController::class, 'update'])->name('adminmapel.update');
-    Route::get('/admineditmapel/update/{mapelID}', 'App\Http\Controllers\MapelController@edit')->name('admineditmapel.update');
 });
 // miscellanous
 Route::get('/test', function () {return view('testing');});
