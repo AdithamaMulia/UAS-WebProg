@@ -23,7 +23,7 @@ class Controller extends BaseController
         $kelas = graciaKelas::with('absensi')->where('kelasID', $kelasID)->first();
         $absen = graciaAbsensi::where('kelasID', $kelasID)
             ->where('tanggal', $tanggal)
-            ->first();
+            ->get();
 
         if (!$kelas) {
             abort(404);
@@ -34,7 +34,7 @@ class Controller extends BaseController
         }])->where('kelasID', $kelasID)->get();
 
         // Mengubah view yang di-return menjadi 'crudabsen'
-        return view('absen', ['users' => $users, 'kelas' => $kelas, 'absen' => $absen]);
+        return view('absen', ['users' => $users, 'kelas' => $kelas, 'absen' => $absen, 'tanggal' => $tanggal]);
     }
 
     public function filtered($kelasID)

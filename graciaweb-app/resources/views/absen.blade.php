@@ -154,15 +154,15 @@
         <div class="text-2l ml-2 font-sans" style="padding-left: 10px;">{{$kelas->tingkat}} {{ $kelas->nama_kelas }}</div>
         <br />
         <div class="input-container" style="padding-left: 15px;">
-            <label for="tanggalv">Absensi dari Tanggal: {{$absen ? $absen->tanggal : 'NULL'}}</label>
-            <input type="hidden" id="tanggalv" name="tanggalv" style="border: 1px solid #000;" value="{{$absen ? $absen->tanggal : ''}}" required>
+            <label for="tanggalv">Absensi dari Tanggal: {{$tanggal ? $tanggal : 'NULL'}}</label>
+            <input type="hidden" id="tanggalv" name="tanggalv" style="border: 1px solid #000;" value="{{$tanggal ? $tanggal : ''}}" required>
         </div>
         <form id="absenForm" action="{{ url('/teacher/absensubmit/' . $kelas->kelasID)}}" method="post">
             @csrf
             <div class="card-body">
             <div class="input-container" style="padding-left: 15px;">
                 <label for="tanggal">Update/Add Absensi Tanggal: </label>
-                <input type="date" id="tanggal" name="tanggal" style="border: 1px solid #000;" value="{{$absen ? $absen->tanggal : ''}}" required>
+                <input type="date" id="tanggal" name="tanggal" style="border: 1px solid #000;" value="{{$tanggal ? $tanggal : ''}}" required>
             </div>
                 <div class="row" style="padding-left: 15px;">
                 <table class="table table-striped">
@@ -176,25 +176,27 @@
                         </thead>
                         <tbody id="dataBody">
                         @foreach($users as $key => $user)
-                            @if($user->role == 'student' && $user->kelasID == $kelas->kelasID)
-                                <tr>
-                                    <td class="increment">1</td>
-                                    <td>{{ $user->nama_depan }} {{ $user->nama_belakang }}</td>
-                                    <td>{{ $absen ? $absen->keterangan : 'NULL' }}</td>
+                            @foreach($absen as $kuy => $absenItem)
+                                @if($user->role == 'student' && $user->kelasID == $kelas->kelasID && $absenItem->userID == $user->userID)
+                                    <tr>
+                                        <td class="increment">1</td>
+                                        <td>{{ $user->nama_depan }} {{ $user->nama_belakang }}</td>
+                                        <td>{{ $absenItem->keterangan ?? 'NULL' }}</td>
                                         <input type="hidden" name="userID[]" value="{{ $user->userID }}">  
-                                    <input type="hidden" name="kelasID" value="{{ $kelas->kelasID }}">
-                                    <input type="hidden" name="absenID[{{ $user->userID }}]" value="{{ $absen ? $absen->absenID : '' }}">
-                                    <input type="hidden" id="semester" name="semester" style="border: 1px solid #000;" value="Ganjil" required>
-                                    <td>
-                                        <select name="keterangan[{{ $user->userID }}]" style="border: 1px solid #000; border-radius: 5px;">
-                                            <option value="Hadir">Hadir</option>
-                                            <option value="Sakit">Sakit</option>
-                                            <option value="Izin">Izin</option>
-                                            <option value="Tanpa Keterangan">Tanpa Keterangan</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                            @endif
+                                        <input type="hidden" name="kelasID" value="{{ $kelas->kelasID }}">
+                                        <input type="hidden" name="absenID[{{ $user->userID }}]" value="{{ $absenItem->absenID ?? '' }}">
+                                        <input type="hidden" id="semester" name="semester" style="border: 1px solid #000;" value="Ganjil" required>
+                                        <td>
+                                            <select name="keterangan[{{ $absenItem->absenID }}]" style="border: 1px solid #000; border-radius: 5px;">
+                                                <option value="Hadir">Hadir</option>
+                                                <option value="Sakit">Sakit</option>
+                                                <option value="Izin">Izin</option>
+                                                <option value="Tanpa Keterangan">Tanpa Keterangan</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                @endif
+                            @endforeach
                         @endforeach
                         </tbody>
                     </table>

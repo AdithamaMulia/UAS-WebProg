@@ -76,25 +76,27 @@ class AbsensiController extends Controller
 
     public function submitAbsen(Request $request, $kelasID)
     {
-        foreach ($request->input('userID') as $userID) {
-            $absensi = graciaAbsensi::where('absenID', $request->absenID)->first() ?? null;
+        foreach ($request->input('absenID') as $absenID) {
+            foreach ($request->input('userID') as $userID) {
+                $absensi = graciaAbsensi::where('userID', $request->userID)
+                    ->where('absenID', $request->absenID)
+                    ->first() ?? null;
 
-            if ($absensi) {
-                $userID = $absensi->userID;
-                $absensi->update([
-                    'keterangan' => $request->input('keterangan')[$userID],
-                ]);
-            } else {
-                $absensi = new graciaAbsensi();
-                $absensi->userID = $userID;
-                $absensi->keterangan = $request->input('keterangan')[$userID] ?? null;
-                $absensi->tanggal = $request->input('tanggal');
-                $absensi->kelasID = $request->input('kelasID');
-                $absensi->semester = $request->input('semester');
-                $absensi->save(); 
-            }
-        }        
-
+                if ($absensi) {
+                    $absensi->update([
+                        'keterangan' => $request->input('keterangan')[$absenID],
+                    ]);
+                } else {
+                    $absensi = new graciaAbsensi();
+                    $absensi->userID = $userID;
+                    $absensi->keterangan = $request->input('keterangan')[$userID] ?? null;
+                    $absensi->tanggal = $request->input('tanggal');
+                    $absensi->kelasID = $request->input('kelasID');
+                    $absensi->semester = $request->input('semester');
+                    $absensi->save(); 
+                }
+            }        
+        }
         return redirect('teacher/setelahabsen/' . $request->kelasID)->with('success', 'Data updated successfully');
     }
 }
