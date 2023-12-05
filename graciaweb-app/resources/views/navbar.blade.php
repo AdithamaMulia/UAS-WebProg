@@ -78,7 +78,7 @@
             <a class="hover:text-gray-500" href="/aboutus">About Us</a>
           </li>
           <li>
-            <a class="hover:text-gray-500" href="admin/listadmin">Admin</a>
+            <a class="hover:text-gray-500" href="{{url('/admin/listadmin')}}">Admin</a>
           </li>
         </ul>
       </div>
@@ -98,7 +98,7 @@
             <a class="hover:text-gray-500" href="/aboutus">About Us</a>
           </li>
           <li>
-            <a class="hover:text-gray-500" href="admin/listadmin">Admin</a>
+            <a class="hover:text-gray-500" href="{{url('/admin/listadmin')}}">Admin</a>
           </li>
         </ul>
       </div>
