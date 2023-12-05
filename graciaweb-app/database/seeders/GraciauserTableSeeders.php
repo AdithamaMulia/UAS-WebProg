@@ -19,7 +19,7 @@ class GraciauserTableSeeders extends Seeder
             'nama_depan' => 'admin',
             'nama_belakang' => 'Null',
             'password' => Hash::make('admin123'),
-            'gender' => 'lainnya',
+            'gender' => 'Laki-Laki',
             'alamat' => 'null',
             'nis' => 'null',
             'agama' => 'null',

@@ -86,19 +86,19 @@
             @csrf
             <div class="form-group">
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username" style="width: 100%; max-width: 280px;" placeholder="Username" >
+                <input type="text" id="username" name="username" style="width: 100%; max-width: 280px;" placeholder="Username" required>
             </div>
             <div class="form-group">
                 <label for="nama_depan">Nama Depan</label>
-                <input type="text" id="nama_depan" name="nama_depan" style="width: 100%; max-width: 280px;" placeholder="Nama Depan" >
+                <input type="text" id="nama_depan" name="nama_depan" style="width: 100%; max-width: 280px;" placeholder="Nama Depan" required>
             </div>
             <div class="form-group">
                 <label for="nama_belakang">Nama Belakang</label>
-                <input type="text" id="nama_belakang" name="nama_belakang" style="width: 100%; max-width: 280px;" placeholder="Nama Belakang">
+                <input type="text" id="nama_belakang" name="nama_belakang" style="width: 100%; max-width: 280px;" placeholder="Nama Belakang" required>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" style="width: 100%; max-width: 280px;" placeholder="Password" >
+                <input type="password" id="password" name="password" style="width: 100%; max-width: 280px;" placeholder="Password" required>
             </div>
             <div>
                 <label>Jenis Kelamin</label>
@@ -112,20 +112,20 @@
             </div>
             <div class="form-group">
                 <label for="tanggal_lahir">Tanggal Lahir</label>
-                <input type="date" id="tanggal_lahir" name="tanggal_lahir" style="width: 100%; max-width: 280px;" placeholder="Tanggal Lahir" >
+                <input type="date" id="tanggal_lahir" name="tanggal_lahir" style="width: 100%; max-width: 280px;" placeholder="Tanggal Lahir" required>
             </div>
             <br />
             <div class="form-group">
                 <label for="alamat">Alamat</label>
-                <input type="text" id="alamat" name="alamat" style="width: 100%; max-width: 280px;" placeholder="Alamat">
+                <input type="text" id="alamat" name="alamat" style="width: 100%; max-width: 280px;" placeholder="Alamat" required>
             </div>
             <div class="form-group">
                 <label for="nis">NIS</label>
-                <input type="text" id="nis" name="nis" style="width: 100%; max-width: 280px;" placeholder="NIS">
+                <input type="text" id="nis" name="nis" style="width: 100%; max-width: 280px;" placeholder="NIS" required>
             </div>
             <div class="form-group">
                 <label for="agama">Agama</label>
-                <input type="text" id="agama" name="agama" style="width: 100%; max-width: 280px;" placeholder="Agama" >
+                <input type="text" id="agama" name="agama" style="width: 100%; max-width: 280px;" placeholder="Agama" required>
             </div>
             <div class="form-group">
                 <label for="nama_orangtua">Nama Orangtua</label>
@@ -133,7 +133,7 @@
             </div>
             <div class="form-group">
                 <label for="tempat_lahir">Tempat Lahir</label>
-                <input type="text" id="tempat_lahir" name="tempat_lahir" style="width: 100%; max-width: 280px;" placeholder="Tempat Lahir" >
+                <input type="text" id="tempat_lahir" name="tempat_lahir" style="width: 100%; max-width: 280px;" placeholder="Tempat Lahir" required>
             </div>
             <div>
                 <label for="role">Role</label>
