@@ -118,7 +118,7 @@ class UserController extends Controller
             'nama_orangtua' => 'required',
         ]);
 
-        $user = graciaUser::find($userID);
+        $user = graciaUser::where('userID', $userID)->first();
 
         if (!$user) {
             return redirect('admin/adminuserindex')->with('error', 'User not found');
@@ -139,6 +139,8 @@ class UserController extends Controller
             'role' => $request->input('role'),
             'kelasID' => $request->input('kelasID'),
         ]);
+
+        dd($request->all());
 
         return redirect('admin/adminuserindex')->with('success', 'Data updated successfully');
     }
