@@ -121,7 +121,7 @@
             </div>
             <div class="form-group">
                 <label for="nis">NIS</label>
-                <input type="text" id="nis" name="nis" style="width: 100%; max-width: 280px;" value="{{ $user->nis }}" placeholder="NIS">
+                <input type="text" id="nis" name="nis" style="width: 100%; max-width: 280px;" value="{{ $user->nis }}" placeholder="NIS" required>
             </div>
             <div class="form-group">
                 <label for="agama">Agama</label>
@@ -129,7 +129,7 @@
             </div>
             <div class="form-group">
                 <label for="nama_orangtua">Nama Orangtua</label>
-                <input type="text" id="nama_orangtua" name="nama_orangtua" style="width: 100%; max-width: 280px;" value="{{ $user->nama_orangtua }}" placeholder="Nama Orangtua">
+                <input type="text" id="nama_orangtua" name="nama_orangtua" style="width: 100%; max-width: 280px;" value="{{ $user->nama_orangtua }}" placeholder="Nama Orangtua" required>
             </div>
             <div class="form-group">
                 <label for="tempat_lahir">Tempat Lahir</label>
