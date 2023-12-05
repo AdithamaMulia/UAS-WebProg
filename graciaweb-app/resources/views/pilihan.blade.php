@@ -82,7 +82,7 @@
 
                 <div class="flex flex-col w-full md:w-1/2">
                     <div class="col-lg-4 mb-3 mr-4">
-                        <a href="{{ url('/teacher/absen/' . $class->kelasID ) }}" class="card-link no-underline">
+                        <a href="{{ url('/teacher/setelahabsen/' . $class->kelasID ) }}" class="card-link no-underline">
                             <div class="card" style="max-width: 100%; border: 2px solid #000; border-radius: 10px; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);">
                                 <div class="card-body card-text-zoom" style="overflow: auto; padding: 20px;">
                                     <p style="color: black;"><b>Daftar Absensi</b></p>

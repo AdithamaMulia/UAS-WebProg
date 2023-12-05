@@ -140,8 +140,6 @@ class UserController extends Controller
             'kelasID' => $request->input('kelasID'),
         ]);
 
-        dd($request->all());
-
         return redirect('admin/adminuserindex')->with('success', 'Data updated successfully');
     }
 

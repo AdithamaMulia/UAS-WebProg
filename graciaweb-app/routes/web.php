@@ -42,7 +42,7 @@ Route::group(['prefix' => 'teacher', 'middleware' => ['auth'], 'as' => 'teacher'
     Route::get('/homeguru', function () {
         return view('indexguru'); // Ganti dengan tampilan atau logika yang sesuai
     })->name('teacher.indexguru');
-    Route::get('/absen/{kelasID}', [Controller::class, 'indexabsen'])->name('absen');
+    Route::get('/absen', [Controller::class, 'indexabsen'])->name('absen');
     Route::post('/absensubmit/{kelasID}', [AbsensiController::class, 'submitAbsen'])->name('absen');
     Route::get('/listmurid/{kelasID}', [Controller::class, 'filtered']);
     Route::get('/mapel', function () {return view('course');});
@@ -53,6 +53,9 @@ Route::group(['prefix' => 'teacher', 'middleware' => ['auth'], 'as' => 'teacher'
     Route::get('/nilaisiswa/{userID}/{mapelID}', [Controller::class, 'indexnilai'])->name('nilai.index');
     Route::post('/nilaisiswa/{userID}/{mapelID}', [NilaiController::class, 'store'])->name('nilai.store');
     Route::get('/editnilai/{userID}/{mapelID}', [NilaiController::class, 'edit'])->name('nilai');
+
+    //absen
+    Route::get('/setelahabsen/{kelasID}', [AbsensiController::class, 'pilihkapan'])->name('kapanabsen');
 });
 
 // admin
@@ -63,9 +66,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'as' => 'admin'], f
     Route::get('/home', function () {
         return view('index'); // Ganti dengan tampilan atau logika yang sesuai
     })->name('student.index');
-
-    //absen
-    Route::get('/setelahabsen', function () {return view('tanggalsemester');});
 
     //crud kelas
     Route::get('/adminkelasindex', [KelasController::class, 'index']);
