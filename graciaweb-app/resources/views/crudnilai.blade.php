@@ -92,7 +92,7 @@
 <body>
     <h2 class="text-3xl font-bold text-blue-pigeon text-center mt-3">Welcome, Admin!!</h2>
     <br/>
-    <a href="{{ url('/home') }}" class="ml-2 rounded px-2 py-1">
+    <a href="{{ url('/admin/home') }}" class="ml-2 rounded px-2 py-1">
     <i class="fa fa-home text-primary"></i>
     Home Page</a>
     @if(session('success'))
@@ -156,20 +156,20 @@
         <td style="max-width: 20px; text-align: center;"></td>
         <td style="max-width: 20px; text-align: center;"></td>
         <td>
-            <a href="{{ url('/adminaddnilai') }}">
+            <a href="{{ url('/admin/adminaddnilai') }}">
                 <i class="fa fa-pencil text-primary"></i> Edit
             </a>
         </td>
     </tr>
     </tbody>
     </table>
-    <a href="{{ url('admin/adminaddnilai') }}" class="ml-2 border border-primary rounded px-2 py-1">
+    <a href="{{ url('/admin/adminaddnilai') }}" class="ml-2 border border-primary rounded px-2 py-1">
             <i class="fa fa-plus text-primary"></i>
             Add Data
         </a>
     <br />
     <br />
-    <a href="{{ url('admin/listadmin') }}" class="ml-2 border border-primary rounded px-2 py-1">
+    <a href="{{ url('/admin/listadmin') }}" class="ml-2 border border-primary rounded px-2 py-1">
     <i class="fa fa-arrow-left text-primary"></i>
         Back
     </a>

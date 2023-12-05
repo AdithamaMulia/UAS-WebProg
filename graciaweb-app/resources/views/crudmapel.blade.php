@@ -92,7 +92,7 @@
 <body>
     <h2 class="text-3xl font-bold text-blue-pigeon text-center mt-3">Welcome, Admin!!</h2>
     <br/>
-    <a href="{{ url('/home') }}" class="ml-2 rounded px-2 py-1">
+    <a href="{{ url('/admin/home') }}" class="ml-2 rounded px-2 py-1">
     <i class="fa fa-home text-primary"></i>
     Home Page</a>
 
