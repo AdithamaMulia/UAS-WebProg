@@ -82,14 +82,17 @@
                 }, 5000);
             </script>
         @endif
-        <form action="{{ route('addUserToClass', ['kelasID' => $kelas]) }}" method="POST">
+        <form action="{{ url('admin/addUserToClass', ['kelasID' => $kelas]) }}" method="POST">
             @csrf
             <div class="form-group">
-                <label for="kelasID">Pilih Kelas:</label>
-                <select name="kelasID" id="kelasID">
-                    <!-- Tampilkan opsi kelas yang tersedia -->
-                    @foreach($siswa as $user)
-                        <option value="{{ $siswa->userID }}">{{ $siswa->nama_depan }}</option>
+                <label for="kelasID">Kelas {{ $kelas->tingkat }} {{ $kelas->nama_kelas }}</label>
+
+                <label for="userID">Pilih murid: </label>
+                <select name="userID" id="userID">
+                    @foreach($user as $key => $murid)
+                    @if($murid->role == 'student')
+                        <option value="{{ $murid->userID }}">{{ $murid->nama_depan }}</option>
+                    @endif
                     @endforeach
                 </select>
             </div>
@@ -98,7 +101,7 @@
                 <button type="submit" class="btn">Tambah Siswa</button>
                 <br />
                 <br />
-                <a href="{{ url('/adminmurid/' . $class->kelasID) }}" class="btn btn-primary" style="text-decoration: none;">Back</a>
+                <a href="{{ url('/admin/adminkelasindex')}}" class="btn btn-primary" style="text-decoration: none;">Back</a>
             </div>
         </form>
     </div>

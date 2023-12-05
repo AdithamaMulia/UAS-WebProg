@@ -154,7 +154,7 @@ table {
         @endforeach
         </tbody>
     </table>
-    <a href="{{ url('admin/adminaddsiswa') }}" class="ml-2 border border-primary rounded px-2 py-1">
+    <a href="{{ url('admin/adminaddsiswa/update/' . $class->kelasID) }}" class="ml-2 border border-primary rounded px-2 py-1">
         <i class="fa fa-plus text-primary"></i>
         Add Data
     </a>

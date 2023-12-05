@@ -165,40 +165,38 @@ class UserController extends Controller
         return $this->morphMany(graciaAbsensi::class, 'siswa');
     }
 
-    public function addUserToClass(Request $request, $userID)
+    public function addtoclass($kelasID)
     {
-        // Ambil data user berdasarkan ID yang diberikan
+        // Mendapatkan userID dari graciaUser yang kelasID-nya null
+        $user = graciaUser::whereNull('kelasID')->get();
+
+        // Mendapatkan kelas dari graciaKelas sesuai kelasID yang diterima dari URL
+        $kelas = graciaKelas::where('kelasID', $kelasID)->first();
+
+        return view('tambahsiswa', ['user' => $user, 'kelas' => $kelas]);
+    }
+
+
+
+    public function addUserToClass(Request $request, $kelasID)
+    {
+        // Ambil userID dari input form
+        $userID = $request->input('userID');
+
+        // Ambil user yang dipilih
         $user = graciaUser::find($userID);
 
         if (!$user) {
-            // Jika user tidak ditemukan, kembalikan pesan error atau response yang sesuai
-            return response()->json(['message' => 'User not found'], 404);
+            return redirect()->back()->with('error', 'User not found');
         }
 
-        // Ambil data kelas yang dikirimkan dalam request
-        $kelasID = $request->input('kelasID');
-        $kelas = graciaKelas::find($kelasID);
+        // Tambahkan user ke dalam kelas
+        $user->kelasID = $kelasID;
+        $user->save();
 
-        if (!$kelas) {
-            // Jika kelas tidak ditemukan, kembalikan pesan error atau response yang sesuai
-            return response()->json(['message' => 'Class not found'], 404);
-        }
-
-        // Tambahkan user ke dalam kelas dengan menggunakan relasi yang ada (contoh: relasi many-to-many)
-        $user->kelas()->attach($kelasID);
-
-        // Jika Anda ingin memberikan pesan berhasil, Anda dapat mengembalikan response sukses
-        // return response()->json(['message' => 'User added to class successfully'], 200);
-
-        // Ambil ulang data kelas setelah user ditambahkan
-        $kelas = graciaKelas::findOrFail($kelasID);
-
-        // Anda dapat menyesuaikan data apa yang ingin Anda tampilkan di view 'crudmurid'
-        $siswa = $user; // Misalnya, Anda ingin menampilkan data user yang ditambahkan ke kelas
-        // Namun, pastikan Anda sudah memiliki variabel $siswa yang sesuai dengan kebutuhan
-
-        return view('tambahsiswa', compact('kelasID', 'siswa', 'kelas'));
+        return redirect('/admin/adminkelasindex')->with('success', 'User added to class successfully');
     }
+
 
 
 }
