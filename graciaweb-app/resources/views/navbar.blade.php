@@ -66,19 +66,19 @@
       <div class="nav-links" id="navLinks">
         <ul class="hidden md:flex md:flex-row flex-col md:items-center gap-7">
           <li>
-            <a class="hover:text-gray-500" href="#">Home</a>
+            <a class="hover:text-gray-500" href="{{url('/admin/home')}}">Home</a>
           </li>
           <li>
-            <a class="hover:text-gray-500" href="/admin/adminkelasindex">Class List</a>
+            <a class="hover:text-gray-500" href="{{url('/admin/adminkelasindex')}}">Class List</a>
           </li>
           <li>
-            <a class="hover:text-gray-500" href="#contact">Contact Us</a>
+            <a class="hover:text-gray-500" href="{{url('/contact')}}">Contact Us</a>
           </li>
           <li>
-            <a class="hover:text-gray-500" href="/aboutus">About Us</a>
+            <a class="hover:text-gray-500" href="{{url('/aboutus')}}">About Us</a>
           </li>
           <li>
-            <a class="hover:text-gray-500" href="admin/listadmin">Admin</a>
+            <a class="hover:text-gray-500" href="{{url('/admin/listadmin')}}">Admin</a>
           </li>
         </ul>
       </div>
@@ -86,19 +86,19 @@
       <div id="navLinks">
         <ul class="hidden md:flex md:flex-row flex-col md:items-center gap-7">
           <li>
-            <a class="hover:text-gray-500" href="#">Home</a>
+            <a class="hover:text-gray-500" href="{{url('/admin/home')}}">Home</a>
           </li>
           <li>
-            <a class="hover:text-gray-500" href="/admin/adminkelasindex">Class List</a>
+            <a class="hover:text-gray-500" href="{{url('/admin/adminkelasindex')}}">Class List</a>
           </li>
           <li>
-            <a class="hover:text-gray-500" href="#contact">Contact Us</a>
+            <a class="hover:text-gray-500" href="{{url('/contact')}}">Contact Us</a>
           </li>
           <li>
-            <a class="hover:text-gray-500" href="/aboutus">About Us</a>
+            <a class="hover:text-gray-500" href="{{url('/aboutus')}}">About Us</a>
           </li>
           <li>
-            <a class="hover:text-gray-500" href="admin/listadmin">Admin</a>
+            <a class="hover:text-gray-500" href="{{url('/admin/listadmin')}}">Admin</a>
           </li>
         </ul>
       </div>

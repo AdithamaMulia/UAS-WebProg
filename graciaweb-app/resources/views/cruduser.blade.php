@@ -117,7 +117,7 @@
         </script>
     @endif
     <br/>
-    <a href="{{ url('/home') }}" class="ml-2 rounded px-2 py-1">
+    <a href="{{ url('/admin/home') }}" class="ml-2 rounded px-2 py-1">
     <i class="fa fa-home text-primary"></i>
     Home Page</a>
     <h3 class="text-2xl ml-2 font-sans"><strong>User Murid</strong></h3>
