@@ -50,7 +50,7 @@ class NilaiController extends Controller
         $nilai->semester = $request->semester;
 
         $nilai->save();
-        return redirect('/teacher/homeguru')->with('success', 'Data added successfully');
+        return redirect('/teacher/nilaisiswa')->with('success', 'Data added successfully');
     }
 
     public function edit($userID, $mapelID)
@@ -93,7 +93,7 @@ class NilaiController extends Controller
                 'semester' => $request->input('semester'),
             ]);
 
-        return redirect('/crudnilai')->with('success', 'Data updated successfully');
+            return redirect('/teacher/crudnilai/' . $request->userID . '/' . $request->mapelID)->with('success', 'Data updated successfully');
     }
 
 }
