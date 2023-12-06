@@ -33,7 +33,7 @@ class Controller extends BaseController
             $query->where('kelasID', $kelasID);
         }])->where('kelasID', $kelasID)->get();
 
-        // Mengubah view yang di-return menjadi 'crudabsen'
+        // Mengubah view yang di-return menjadi 'absen'
         return view('absen', ['users' => $users, 'kelas' => $kelas, 'absen' => $absen, 'tanggal' => $tanggal]);
     }
 

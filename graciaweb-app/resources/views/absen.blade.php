@@ -176,27 +176,28 @@
                         </thead>
                         <tbody id="dataBody">
                         @foreach($users as $key => $user)
-                            @foreach($absen as $kuy => $absenItem)
-                                @if($user->role == 'student' && $user->kelasID == $kelas->kelasID && $absenItem->userID == $user->userID)
-                                    <tr>
-                                        <td class="increment">1</td>
-                                        <td>{{ $user->nama_depan }} {{ $user->nama_belakang }}</td>
-                                        <td>{{ $absenItem->keterangan ?? 'NULL' }}</td>
-                                        <input type="hidden" name="userID[]" value="{{ $user->userID }}">  
-                                        <input type="hidden" name="kelasID" value="{{ $kelas->kelasID }}">
-                                        <input type="hidden" name="absenID[{{ $user->userID }}]" value="{{ $absenItem->absenID ?? '' }}">
-                                        <input type="hidden" id="semester" name="semester" style="border: 1px solid #000;" value="Ganjil" required>
-                                        <td>
-                                            <select name="keterangan[{{ $absenItem->absenID }}]" style="border: 1px solid #000; border-radius: 5px;">
-                                                <option value="Hadir">Hadir</option>
-                                                <option value="Sakit">Sakit</option>
-                                                <option value="Izin">Izin</option>
-                                                <option value="Tanpa Keterangan">Tanpa Keterangan</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                @endif
-                            @endforeach
+                            @if($user->role == 'student' && $user->kelasID == $kelas->kelasID)
+                                @php
+                                    $absenItem = $absen->where('userID', $user->userID)->first();
+                                @endphp
+                                <tr>
+                                    <td class="increment">1</td>
+                                    <td>{{ $user->nama_depan }} {{ $user->nama_belakang }}</td>
+                                    <td>{{ $absenItem ? $absenItem->keterangan : 'NULL' }}</td>
+                                    <input type="hidden" name="userID[]" value="{{ $user->userID }}">  
+                                    <input type="hidden" name="kelasID" value="{{ $kelas->kelasID }}">
+                                    <input type="hidden" name="absenID[{{ $user->userID }}]" value="{{ $absenItem->absenID ?? '' }}">
+                                    <input type="hidden" id="semester" name="semester" style="border: 1px solid #000;" value="Ganjil" required>
+                                    <td>
+                                        <select name="keterangan[{{ $user ? $user->userID : ''}}]" style="border: 1px solid #000; border-radius: 5px;">
+                                            <option value="Hadir">Hadir</option>
+                                            <option value="Sakit">Sakit</option>
+                                            <option value="Izin">Izin</option>
+                                            <option value="Tanpa Keterangan">Tanpa Keterangan</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            @endif
                         @endforeach
                         </tbody>
                     </table>
