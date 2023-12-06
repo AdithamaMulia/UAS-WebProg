@@ -104,18 +104,18 @@ class UserController extends Controller
     public function update(Request $request, $userID)
     {
         $request->validate([
-            'username' => 'required',
-            'nama_depan' => 'required',
-            'nama_belakang' => 'required',
-            'password' => 'required',
-            'gender' => 'required',
-            'tanggal_lahir' => 'required',
-            'alamat' => 'required',
-            'agama' => 'required',
-            'tempat_lahir' => 'required',
-            'role' => 'required',
-            'nis' => 'required',
-            'nama_orangtua' => 'required',
+            'username',
+            'nama_depan',
+            'nama_belakang',
+            'password',
+            'gender',
+            'tanggal_lahir',
+            'alamat',
+            'agama',
+            'tempat_lahir',
+            'role',
+            'nis',
+            'nama_orangtua',
         ]);
 
         $user = graciaUser::where('userID', $userID)->first();
@@ -128,7 +128,7 @@ class UserController extends Controller
             'username' => $request->input('username'),
             'nama_depan' => $request->input('nama_depan'),
             'nama_belakang' => $request->input('nama_belakang'),
-            'password' => $request->input('password'),
+            'password' => $request->has('password') ? bcrypt($request->input('password')) : $user->password,
             'gender' => $request->input('gender'),
             'tanggal_lahir' => $request->input('tanggal_lahir'),
             'alamat' => $request->input('alamat'),
@@ -139,6 +139,8 @@ class UserController extends Controller
             'role' => $request->input('role'),
             'kelasID' => $request->input('kelasID'),
         ]);
+
+        $user->save();
 
         return redirect('admin/adminuserindex')->with('success', 'Data updated successfully');
     }
