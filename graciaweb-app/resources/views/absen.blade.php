@@ -175,13 +175,16 @@
                             </tr>
                         </thead>
                         <tbody id="dataBody">
+                        @php
+                            $c = 1;
+                        @endphp
                         @foreach($users as $key => $user)
                             @if($user->role == 'student' && $user->kelasID == $kelas->kelasID)
                                 @php
                                     $absenItem = $absen->where('userID', $user->userID)->first();
                                 @endphp
                                 <tr>
-                                    <td class="increment">1</td>
+                                    <td class="increment">{{$c}}</td>
                                     <td>{{ $user->nama_depan }} {{ $user->nama_belakang }}</td>
                                     <td>{{ $absenItem ? $absenItem->keterangan : 'NULL' }}</td>
                                     <input type="hidden" name="userID[]" value="{{ $user->userID }}">  
@@ -197,6 +200,9 @@
                                         </select>
                                     </td>
                                 </tr>
+                                @php
+                                    $c++;
+                                @endphp
                             @endif
                         @endforeach
                         </tbody>
