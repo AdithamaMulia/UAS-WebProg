@@ -84,7 +84,7 @@ class AbsensiController extends Controller
 
                 if ($absensi) {
                     $absensi->update([
-                        'keterangan' => $request->input('keterangan')[$absenID],
+                        'keterangan' => $request->input('keterangan')[$userID],
                     ]);
                 } else {
                     $absensi = new graciaAbsensi();
