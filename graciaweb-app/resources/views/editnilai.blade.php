@@ -121,6 +121,7 @@
             <br />
             <input type="hidden" name="userID" value="{{$user->userID}}">
             <input type="hidden" name="mapelID" value="{{$mapel->mapelID}}">
+            <input type="hidden" name="mapelID" value="{{$mapel->kelasID}}">
             <div class="btn-container" style="text-align: left;">
                 <button type="submit" class="btn">Edit Nilai</button>
                 <br />

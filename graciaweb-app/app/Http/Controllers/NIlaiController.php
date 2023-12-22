@@ -93,7 +93,7 @@ class NilaiController extends Controller
                 'semester' => $request->input('semester'),
             ]);
 
-            return redirect('/teacher/crudnilai/' . $request->userID . '/' . $request->mapelID)->with('success', 'Data updated successfully');
+            return redirect('/teacher/nilaisiswa/' . $request->kelasID . '/' . $request->userID)->with('success', 'Data updated successfully');
     }
 
 }
