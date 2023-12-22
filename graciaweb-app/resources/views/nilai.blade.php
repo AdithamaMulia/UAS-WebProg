@@ -99,7 +99,7 @@
             </table>
                 <div class="text-end">
                     <br />
-                    <a href="{{ url('/teacher/listmurid/' . $class->kelasID) }}" class="btn btn-primary">Back</a>
+                    <a href="{{ url('/teacher/listmurid/' . $user->kelasID) }}" class="btn btn-primary">Back</a>
                 </div>
             </div>
         </div>
