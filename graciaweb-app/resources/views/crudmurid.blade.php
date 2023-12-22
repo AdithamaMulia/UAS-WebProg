@@ -144,7 +144,7 @@ table {
                 <td>{{ $user->agama }}</td>
                 <td>{{ $user->alamat }}</td>
                 <td>
-                    <a href="{{ url('/admin/nilaisiswa/' . $user->userID . '/' . $class->kelasID) }}">
+                    <a href="{{ url('/teacher/nilaisiswa/' . $user->userID . '/' . $class->kelasID) }}">
                         <i class="fa fa-pencil text-primary"></i> Edit
                     </a>
                 </td>

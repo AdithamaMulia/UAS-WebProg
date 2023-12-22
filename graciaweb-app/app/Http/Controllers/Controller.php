@@ -45,15 +45,24 @@ class Controller extends BaseController
         return view('listmuridguru', compact('class', 'user'));
     }
 
-    public function indexnilai($kelasID, $userID)
+    public function indexnilai($userID, $kelasID)
     {
-        $nilai = graciaNilai::where('userID', $userID)->get();
-        $class = graciaKelas::where('kelasID', $kelasID)->first();
-        $user = graciaUser::with('nilai')->where('userID', $userID)->first();
-        $mapel = graciaMapel::all();
+        // Mendapatkan informasi nama dan NIS dari graciaUser berdasarkan userID
+        $userInfo = graciaUser::where('userID', $userID)->first(['nama_depan', 'nis']);
+        // Pastikan user ditemukan sebelum melanjutkan
+        if ($userInfo) {
+            $nilai = graciaNilai::where('userID', $userID)->get();
+            $class = graciaKelas::where('kelasID', $kelasID)->first();
+            $user = graciaUser::with('nilai')->where('userID', $userID)->first();
+            $mapel = graciaMapel::all();
 
-        return view('nilai', compact('class', 'user', 'nilai', 'mapel'));
+            return view('nilai', compact('class', 'user', 'nilai', 'mapel', 'userInfo'));
+        } else {
+            // Handle jika user tidak ditemukan
+            return redirect()->back()->with('error', 'User tidak ditemukan');
+        }
     }
+
 
     public function editnilai($userID, $mapelID)
     {
